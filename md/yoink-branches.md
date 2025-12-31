@@ -45,7 +45,7 @@ feat/session-timeline-repeat
 
 fix/nonfatal-missing-key-commands
 feat/keybindable-commands
-patch/keybindable-commands-with-nonfatal-missing-key-commands
+fix/reconcile-keybindable-commands-warnings
 
 #### And finally, finish up with this branch:
 
