@@ -12,7 +12,7 @@ feature/GLM (from the IgorWarzocha remote)
 #fix/session-timeline-filter-ignored-and-synthetic
 #fix/providers-safety
 fix/weird-mystery-fix
-fix/weird-mystery-fixfix/home-end-in-menus
+fix/home-end-in-menus
 #fix/display-recents-consistency
 fix/persist-sidebar
 fix/message-truncation
