@@ -7,6 +7,7 @@ feat/config-forward-compat (from the CasualDeveloper remote)
 feature/dynamic-details (from the gignit remote)
 handoff-compaction (from the IgorWarzocha remote)
 #feature/GLM (from the IgorWarzocha remote)
+feature/hot-reloading (from the IgorWarzocha remote)
 
 ### From origin:
 
@@ -25,7 +26,7 @@ feat/agent-descriptions-in-autocomplete
 feat/configurable-message-limit-wip
 feat/configurable-recent-models-limit
 feat/continue-command
-feat/experimental-dont-cache-markdown
+#feat/experimental-dont-cache-markdown
 feat/franlol--subagents-in-the-sidebar
 #feat/glob-permissions
 feat/interjections
