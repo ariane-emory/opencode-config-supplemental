@@ -2,7 +2,7 @@
 description: Fix this.
 ---
 
-The features from both of these branches seem to now be broken: 
+The features from this branch seem to now be partially broken:
 
 #### fix/nonfatal-missing-key-commands 
 
@@ -10,8 +10,10 @@ Partially broken: unknown key commands are correctly not treated as  a fatal err
 
 #### feat/keybindable-commands
 
-Completely broken: the keys bound to custom slash commands in my config aren't doing anything at all
+Seems to be working so far.
 
-The fix/reconcile-keybindable-commands-warnings branch was meant to make the prior two work properly together, but it does not appear to have worked.
+The fi//reconcile-keybindable-commands-warnings branch was meant to make the prior two work properly together, but it does not appear to have worked.
+
+Additionally, the function normally bound to ctrl+c might not be working anymore?
 
 $ARGUMENTS
