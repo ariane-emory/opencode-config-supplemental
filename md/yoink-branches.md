@@ -44,12 +44,8 @@ feat/sinister-quotes
 feat/persistant-sidebar-overlay-behaviour
 feat/no-share-in-header
 feat/session-timeline-repeat
-
-#### The order is important for these ones since the last one is a patch to reconcile the prior two:
-
-fix/nonfatal-missing-key-commands
+#fix/nonfatal-missing-key-commands
 feat/keybindable-commands
-fix/reconcile-keybindable-commands-warnings (this one is meant to make the prior two work properly together)
 
 #### And finally, finish up with this branch:
 
