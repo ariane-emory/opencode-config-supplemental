@@ -12,6 +12,6 @@ Partially broken: unknown key commands are correctly not treated as  a fatal err
 
 Completely broken: the keys bound to custom slash commands in my config aren't doing anything at all
 
-The /reconcile-keybindable-commands-warnings branch was meant to make the prior two work properly together, but it does not appear to have worked.
+The fix/reconcile-keybindable-commands-warnings branch was meant to make the prior two work properly together, but it does not appear to have worked.
 
 $ARGUMENTS
