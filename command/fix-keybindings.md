@@ -10,9 +10,7 @@ Partially broken: unknown key commands are correctly not treated as a fatal erro
 
 #### feat/keybindable-commands
 
-Command is entered but is not submitted.
-
-The fix/reconcile-keybindable-commands-warnings branch was meant to make the prior two work properly together, but it does not appear to have worked.
+Not working at all.
 
 Additionally, the function normally bound to ctrl+c might not be working anymore?
 
