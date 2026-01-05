@@ -11,41 +11,39 @@
 
 ### From origin:
 
-feat/opeoginni--display-message-tps
-feat/durutheguru--ask-user-questions
-#fix/session-timeline-filter-ignored-and-synthetic
-#fix/providers-safety
-fix/weird-mystery-fix
+#feat/opeoginni--display-message-tps
+#feat/durutheguru--ask-user-questions
+##fix/providers-safety
+#fix/weird-mystery-fix
 fix/home-end-in-menus
-#fix/display-recents-consistency
 fix/persist-sidebar
-fix/message-truncation
+#fix/message-truncation
 fix/autocompletion-filtered-order
 fix/modal-menus-filtered-order
 feat/global-compaction-threshold
-feat/agent-descriptions-in-autocomplete
-feat/configurable-message-limit-wip
-feat/configurable-recent-models-limit
+#feat/agent-descriptions-in-autocomplete
+#feat/configurable-message-limit-wip
+##feat/configurable-recent-models-limit
 feat/continue-command
-#feat/experimental-dont-cache-markdown
-feat/franlol--subagents-in-the-sidebar
-#feat/glob-permissions
-feat/interjections
-feat/jsonc-user-themes
-feat/new-session-commands
-feat/permission-indicator-in-sidebar
-feat/permission-spinner
+feat/experimental-dont-cache-markdown
+#feat/franlol--subagents-in-the-sidebar
+##feat/glob-permissions
+#feat/interjections
+#feat/jsonc-user-themes
+#feat/new-session-commands
+#feat/permission-indicator-in-sidebar
+#feat/permission-spinner
 feat/persist-sidebar-group-folding-states
 feat/shell-advice
-feat/more-themes
+#feat/more-themes
 feat/elapsed-timer
 feat/opencode-expand
 feat/sinister-quotes
-#feat/configurable-sidebar-overlay-behaviour
+##feat/configurable-sidebar-overlay-behaviour
 feat/persistant-sidebar-overlay-behaviour
 feat/no-share-in-header
-feat/session-timeline-repeat
-#fix/nonfatal-missing-key-commands
+#feat/session-timeline-repeat
+##fix/nonfatal-missing-key-commands
 feat/keybindable-commands
 
 #### And finally, finish up with this branch:
