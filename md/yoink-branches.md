@@ -44,9 +44,7 @@ feat/sinister-quotes
 feat/persistant-sidebar-overlay-behaviour
 feat/no-share-in-header
 feat/session-timeline-repeat
-
-### Then, these two branches:
-fix/nonfatal-missing-key-commands
+#fix/nonfatal-missing-key-commands
 feat/keybindable-commands
 
 #### And finally, finish up with this branch:
