@@ -8,7 +8,6 @@ feature/transparent-theme (from the JosXa remote)
 handoff-compaction (from the IgorWarzocha remote)
 feature/GLM (from the IgorWarzocha remote)
 feature/hot-reloading (from the IgorWarzocha remote)
-#feature/ask-user-question (from the durutheguru remote)
 
 ### From origin:
 
@@ -46,7 +45,7 @@ feat/sinister-quotes
 feat/persistant-sidebar-overlay-behaviour
 feat/no-share-in-header
 feat/session-timeline-repeat
-#fix/nonfatal-missing-key-commands
+fix/nonfatal-missing-key-commands
 feat/keybindable-commands
 
 #### And finally, finish up with this branch:
