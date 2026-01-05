@@ -11,7 +11,7 @@
 
 ### From origin:
 
-#feat/opeoginni--display-message-tps
+feat/opeoginni--display-message-tps
 #feat/durutheguru--ask-user-questions
 ##fix/providers-safety
 #fix/weird-mystery-fix
@@ -21,7 +21,7 @@ fix/persist-sidebar
 fix/autocompletion-filtered-order
 fix/modal-menus-filtered-order
 feat/global-compaction-threshold
-#feat/agent-descriptions-in-autocomplete
+feat/agent-descriptions-in-autocomplete
 feat/configurable-message-limit-wip
 ##feat/configurable-recent-models-limit
 feat/continue-command
