@@ -2,7 +2,7 @@
 description: Fix this.
 ---
 
-The features from this branch seem to now be partially broken:
+The features from this branch both seem to now be partially broken. They will need to be adjusted to work properly together:
 
 #### fix/nonfatal-missing-key-commands 
 
@@ -11,7 +11,5 @@ Partially broken: unknown key commands are correctly not treated as a fatal erro
 #### feat/keybindable-commands
 
 Not working at all.
-
-Additionally, the function normally bound to ctrl+c might not be working anymore?
 
 $ARGUMENTS

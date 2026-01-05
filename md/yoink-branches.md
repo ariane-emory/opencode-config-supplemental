@@ -2,11 +2,11 @@
 
 feat/display-message-tps (from the OpeOginni remote)
 feature/transparent-theme (from the JosXa remote)
-askquestion-tool (from the iljod remote)
-feat/config-forward-compat (from the CasualDeveloper remote)
-feature/dynamic-details (from the gignit remote)
+#askquestion-tool (from the iljod remote)
+#feat/config-forward-compat (from the CasualDeveloper remote)
+#feature/dynamic-details (from the gignit remote)
 handoff-compaction (from the IgorWarzocha remote)
-#feature/GLM (from the IgorWarzocha remote)
+feature/GLM (from the IgorWarzocha remote)
 feature/hot-reloading (from the IgorWarzocha remote)
 
 ### From origin:
