@@ -4,6 +4,8 @@ We need to bring several of this repository's feature/fix/experimental/wip branc
 
 If a git lock file gets in your way, just delete it and keep working on merging.
 
+**CRITICAL**: You MUST ensure that the local dev branch is up to date with origin/dev before proceeding!
+
 **IMPORTANT**: Any local changes should always be discarded in favour of the remote state. Use `git reset --hard origin/[branch-name]` to overwrite local changes with remote versions.
 
 These branches need to be brought up to date: 
