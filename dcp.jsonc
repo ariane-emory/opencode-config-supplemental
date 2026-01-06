@@ -4,7 +4,7 @@
   // Enable debug logging to ~/.config/opencode/logs/dcp/
   "debug": false,
   // Notification display: "off", "minimal", or "detailed"
-  "pruneNotification": "minimal",
+  "pruneNotification": "detailed",
   // Protect from pruning for <turns> message turns
   "turnProtection": {
     "enabled": false,
@@ -43,13 +43,21 @@
     "supersedeWrites": {
       "enabled": true
     },
+    // Prune tool inputs for errored tools after X turns
+    "purgeErrors": {
+      "enabled": true,
+      // Number of turns before errored tool inputs are pruned
+      "turns": 4,
+      // Additional tools to protect from pruning
+      "protectedTools": []
+    },
     // (Legacy) Run an LLM to analyze what tool calls are no longer relevant on idle
     "onIdle": {
       "enabled": false,
       // Additional tools to protect from pruning
       "protectedTools": [],
       // Override model for analysis (format: "provider/model")
-      // "model": "opencode/big-pickle",
+      // "model": "anthropic/claude-haiku-4-5",
       // Show toast notifications when model selection fails
       "showModelErrorToasts": true,
       // When true, fallback models are not permitted
