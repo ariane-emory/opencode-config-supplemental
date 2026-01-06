@@ -310,3 +310,5 @@ After you have finished, return to the branch on which you started.
 **ABSOLUTE RULE**: Remote repositories are ALWAYS the single source of truth. If a branch doesn't exist on any remote, it's garbage and should be deleted locally.
 
 **ABSOLUTE PROHIBITION**: NEVER use `git push --delete` or any command that modifies remote repositories. This operation is RECEIVE-ONLY.
+
+**REMEMBER**: No branch should have any local changes once you are done! Any local changes should have been discarded in order to match the remote state!

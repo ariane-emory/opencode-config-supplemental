@@ -8,4 +8,4 @@ If a git lock file gets in your way, you SHOULD just delete it and keep working 
 
 Once you have finished, if local dev and upstream/dev are at different commit hashes, then you MUST push the local dev branch to origin.
 
-Afterwards, you MUST return to the branch we were on when we started.
+Afterwards, you MUST remain on the dev branch.
