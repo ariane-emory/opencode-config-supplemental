@@ -4,6 +4,7 @@
 #feature/transparent-theme (from the JosXa remote)
 #askquestion-tool (from the iljod remote)
 #feat/config-forward-compat (from the CasualDeveloper remote)
+feature/project-files-viewer-editor (from the gignit remote)
 #feature/dynamic-details (from the gignit remote)
 #handoff-compaction (from the IgorWarzocha remote)
 #feature/GLM (from the IgorWarzocha remote)
@@ -17,13 +18,12 @@ feat/opeoginni--display-message-tps
 #fix/weird-mystery-fix
 fix/home-end-in-menus
 fix/persist-sidebar
-#fix/message-truncation
+fix/message-truncation
 fix/autocompletion-filtered-order
 fix/modal-menus-filtered-order
 feat/global-compaction-threshold
 feat/agent-descriptions-in-autocomplete
 feat/configurable-message-limit-wip
-##feat/configurable-recent-models-limit
 feat/continue-command
 feat/experimental-dont-cache-markdown
 #feat/franlol--subagents-in-the-sidebar
@@ -40,7 +40,7 @@ feat/elapsed-timer
 feat/opencode-expand
 feat/sinister-quotes
 feat/no-share-in-header
-#feat/session-timeline-repeat
+feat/session-timeline-repeat
 ##fix/nonfatal-missing-key-commands
 feat/keybindable-commands
 
