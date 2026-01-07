@@ -17,7 +17,6 @@ feat/opeoginni--display-message-tps
 #feat/durutheguru--ask-user-questions
 ##fix/providers-safety
 #fix/weird-mystery-fix
-fix/forked-message-reinsertion-7257
 fix/home-end-in-menus
 fix/persist-sidebar
 fix/message-truncation
