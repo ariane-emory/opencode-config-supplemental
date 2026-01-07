@@ -1,4 +1,4 @@
 ---
 description: VERSION reminder.
 ---
-**CRITICAL**: Did you remember to hardcode VERSION to the part of the integration branch name after the '/' character?
+It's showing 'local' in the bottom right corner instead of the correct hardcoded version string based on the integration branch's name.
