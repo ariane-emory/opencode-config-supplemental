@@ -27,7 +27,7 @@ feat/agent-descriptions-in-autocomplete
 feat/configurable-message-limit-wip
 feat/continue-command
 feat/experimental-dont-cache-markdown
-#feat/franlol--subagents-in-the-sidebar
+feat/franlol--subagents-in-the-sidebar
 feat/interjections
 feat/jsonc-user-themes
 #feat/new-session-commands
