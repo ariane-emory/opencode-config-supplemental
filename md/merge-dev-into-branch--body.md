@@ -16,4 +16,6 @@ If a pre-push hook is failing due to pre-existing errors, you may use the --no-v
 
 If you are not able to resolve any conflicts or the tests do not pass afterwards, you MUST NOT push the changes to git and you MUST ask me to step in and help you out instead. If any conflics did occur but you were able to resolve them, report on how the conflics were resolved.
 
+When you are finished, switch back to the branch that you were on before you started.
+
 Ultrathink! 
