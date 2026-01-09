@@ -12,10 +12,10 @@ If a pre-push hook is failing due to pre-existing errors, you may use the --no-v
 
 **IMPORTANT**: If you are able to merge in the changes and successfully resolve any conflicts and the tests all pass afterwards, you MUST push the changes to git.
 
-**CRITICAL**: You MUST NOT correct pre-existing errors from dev! You MUST only correct new errors introduced by the merge, pre-existing errors MUST be preserved.
-
 If you are not able to resolve any conflicts or the tests do not pass afterwards, you MUST NOT push the changes to git and you MUST ask me to step in and help you out instead. If any conflics did occur but you were able to resolve them, report on how the conflics were resolved.
 
 When you are finished, switch back to the branch that you were on before you started.
+
+**CRITICAL**: You MUST NOT correct pre-existing errors from dev! You MUST only correct new errors introduced by the merge, pre-existing errors MUST be preserved exactly. CORRECTING  PRE-EXISTING ERRORS FROM THE DEV BRANCH WOULD BE A CATASTROPHIC FAILURE!
 
 Ultrathink! 
