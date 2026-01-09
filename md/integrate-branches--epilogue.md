@@ -90,6 +90,8 @@ export const VERSION = typeof OPENCODE_VERSION === "string" ? OPENCODE_VERSION :
 
 **CRITICAL**: The version MUST match the 'YYYY-MM-DD-HH-MM' format, and must not contain the string 'opencode' or a version number like '0.0.0'. The VERSION constant MUST NOT be set dynamically! It m MUST NOT be treated as a 'fallback', it must be strictly hardcoded to this value in all cases (whether using 'bun dev' or running a compiled binary). This stricly require hardcoding the value in  packages/opencode/script/build.ts: the VERSION MUST NOT be dynamically constructed!
 
+The version MUST NOT ever be computed dynamically!
+
 This ensures the TUI sidebar shows which integration branch is running when using the development wrapper script. Commit this change along with the other finishing touches.
 
 ## Troubleshooting Remote Tracking Issues
