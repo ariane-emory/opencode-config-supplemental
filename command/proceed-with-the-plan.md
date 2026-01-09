@@ -6,4 +6,4 @@ Okay, the plan sounds pretty good to me.
 
 $ARGUMENTS
 
-Please proceed with the implemention of all phases of the plan. The code MUST build correctly and you MUST NOT introduce new test failures.
+Please proceed with the implemention of all phases of the plan. The code MUST build correctly and your changes MUST NOT introduce new test failures.
