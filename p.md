@@ -1,3 +1,7 @@
+Are you sure that the stopPropagation error isn't a pre-existing error from the dev branch? Your instructions were clear: you MUST preserve pre-existing errors from the dev branch, attempting to fix them would be a catastrophic mistake.
+
+---
+
 This branch took the first steps in rebranding the name of the product from OpenCode/opencode/OPENCODE to BaseOne/base-one/BASE_ONE. So far, all we have changed is the title that appears on the startup screen. You can compare this branch with the dev branch to see what was changed.
 
 Lets make a plan to more thoroughly rebrand the project to this new name. What steps would you recommend me take to complete the rebranding?
