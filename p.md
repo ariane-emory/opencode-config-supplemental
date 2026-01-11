@@ -1,4 +1,8 @@
-Are you sure that the stopPropagation error isn't a pre-existing error from the dev branch? Your instructions were clear: you MUST preserve pre-existing errors from the dev branch, attempting to fix them would be a catastrophic mistake.
+Did you preserve all pre-existing errors from the dev branch? If the dev branch had pre-existing errors, they MUST be preserved.
+
+---
+
+You didn't try to fix the stopPropagation or preventDefault errors, did you? I'm pretty sure that those are pre-existing error from the dev branch. Your instructions were quite clear: you MUST preserve pre-existing errors from the dev branch, attempting to fix them would be a catastrophic mistake. If you did try to fix this, you must restore the error!
 
 ---
 
