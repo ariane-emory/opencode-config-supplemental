@@ -1,6 +1,6 @@
 ### Task: Merge the latest changes from the dev branch into the $ARGUMENTS branch:
 
-First, check out the dev branch and run the tests to see what pre-existing errors exist. If the dev branch contains pre-existing errors, you MUST preserve them when you merge it into the $ARGUMENTS branch.
+First, check out the dev branch and run the tests to see what pre-existing errors exist. If the dev branch contains pre-existing errors, you MUST preserve them when you merge it into the $ARGUMENTS branch. NOTE: there are currently some pre-existing errors related to stopPropogation and preventDefault methods, be sure that you do not try to fix those!
 
 Then, check out the $ARGUMENTS branch, merge the local dev branch into it and resolve any conflicts. You can take my word that both of these branches already exist, so you don't have to waste time checking if they do before you start.
 
@@ -17,8 +17,6 @@ If a pre-push hook is failing due to pre-existing errors, you SHOULD use the --n
 **IMPORTANT**: If you are able to merge in the changes and successfully resolve any conflicts and the tests all pass afterwards (excluding any pre-existing errors from the dev branch, which MUST be preserved), you MUST push the changes to git.
 
 If you are not able to resolve any conflicts or the tests do not pass afterwards, you MUST NOT push the changes to git and you MUST ask me to step in and help you out instead. If any conflics did occur but you were able to resolve them, report on how the conflics were resolved.
-
-When you are finished, switch back to the branch that you were on before you started.
 
 **CRITICAL**: You MUST NOT correct pre-existing errors from dev! You MUST only correct new errors introduced by the merge, pre-existing errors MUST be preserved exactly. CORRECTING  PRE-EXISTING ERRORS FROM THE DEV BRANCH WOULD BE A CATASTROPHIC FAILURE!
 

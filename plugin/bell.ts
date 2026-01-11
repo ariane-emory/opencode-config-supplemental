@@ -98,9 +98,9 @@ function validateFileAccess(filePath: string): {
 
 const configPath = getConfigPath();
 const semaphoreFile = normalize(resolve(configPath, "prompt-enhancer", "prompt-enhancer-semaphore"),);
-const semaphorePresentSound = [normalize(resolve(configPath, "audio", "riff.aiff")), 0.15,];
-const noSemaphorePresentSound = [normalize(resolve(configPath, "audio", "riff2.aiff")), 0.15,];
-const permissionPromptSound = [normalize(resolve(configPath, "audio", "riff3.aiff")), 0.15,];
+const semaphorePresentSound = [normalize(resolve(configPath, "audio", "riff.aiff")), 0.25,];
+const noSemaphorePresentSound = [normalize(resolve(configPath, "audio", "riff2.aiff")), 0.25,];
+const permissionPromptSound = [normalize(resolve(configPath, "audio", "riff3.aiff")), 0.25,];
 
 // Lock file path for cross-instance coordination
 const audioLockFile = normalize(resolve(getConfigPath(), ".audio-lock"));
