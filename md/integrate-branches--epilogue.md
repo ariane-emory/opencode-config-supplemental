@@ -72,6 +72,8 @@ Modify the configuration file at ./.opencode/opencode.jsonc to include this prop
 }
 ```
 
+This is a personal theme that exists in my own configuration, so don't worry that it isn't contained in the repo itself.
+
 ## Set Integration Branch Version
 
 Update the VERSION constant in `packages/opencode/src/installation/index.ts` to display the integration branch name instead of "local". Find this line:
