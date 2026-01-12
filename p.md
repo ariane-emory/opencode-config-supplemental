@@ -1,12 +1,21 @@
+Sometimes, I implement some feature/fix in one session, and then I spend a few days testing it and feeling it out or working on different features/fixes.
+
+Then, later on, I wanna go back to that original session - where everything needed to understand the feature/fix is already in the  context so that I don't need to explain everything to the model again - to ask for some revision.
+
+But actially finding that original session in the `session_list` menu  again can be tricky because I've engages in a gajillion other OC in the intervening time, and that original session is now buried pages and pages down in the `session_list` menu.
+
+
+
+
 2026-01-07-11-24
 
 ---
 
-Did you preserve all pre-existing errors from the dev branch? If the dev branch had pre-existing errors, they MUST be preserved.
+Did you preserve all pre-existing errors from the dev branch, like the ones with preventDefault and stopPropogation? If the dev branch had pre-existing errors, they MUST be preserved.
 
 ---
 
-You correctly preserved any ore-existing errors from the dev, branch, right? You didn't try to fix the stopPropagation or preventDefault errors, did you? I'm pretty sure that those are pre-existing error from the dev branch. Your instructions were quite clear: you MUST preserve pre-existing errors from the dev branch, attempting to fix them would be a catastrophic mistake. If you did try to fix this, you must restore the error!
+You're correctly preserving any ore-existing errors from the dev, branch, right? You didn't try to fix the stopPropagation or preventDefault errors, did you? I'm pretty sure that those are pre-existing error from the dev branch. Your instructions were quite clear: you MUST preserve pre-existing errors from the dev branch, attempting to fix them would be a catastrophic mistake. If you did try to fix this, you must restore the error!
 
 ---
 

@@ -2,7 +2,6 @@
 
 #feat/display-message-tps (from the OpeOginni remote)
 #feature/transparent-theme (from the JosXa remote)
-#askquestion-tool (from the iljod remote)
 #feat/config-forward-compat (from the CasualDeveloper remote)
 feature/project-files-viewer-editor-standalone (from the gignit remote)
 feature/collapse-compaction (from the gignit remote)
@@ -16,7 +15,6 @@ feature/dynamic-details (from the gignit remote)
 
 feat/opeoginni--display-message-tps
 #feat/durutheguru--ask-user-questions
-##fix/providers-safety
 #fix/weird-mystery-fix
 fix/home-end-in-menus
 fix/persist-sidebar
