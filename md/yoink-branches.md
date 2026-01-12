@@ -30,6 +30,7 @@ feat/franlol--subagents-in-the-sidebar
 feat/interjections
 feat/jsonc-user-themes
 #feat/new-session-commands
+feat/new-session-commands-clean
 feat/permission-indicator-in-sidebar
 feat/permission-spinner
 feat/persist-sidebar-group-folding-states
