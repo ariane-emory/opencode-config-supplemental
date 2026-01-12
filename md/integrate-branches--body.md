@@ -26,7 +26,7 @@ git config --list | grep branch.integration/
 git merge feat/branch-name --no-ff -m "Merge feat/branch-name"
 ```
 
-**CRITICAL**: You may merge only from local copies of the branches, you MUST NOT pull or fetch.
+**CRITICAL**: You SHOULD merge only from local copies of the branches, you MUST NOT pull or fetch unless you are explicitly instructed to do so by the user.
 
 Do NOT switch away from the integration branch during the merge process.
 
