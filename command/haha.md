@@ -1,7 +1,7 @@
 ---
 description: Tell me a joke.
-kagent: plan
-
+agent: plan
+new_session: true
 ---
 
 Tell me a joke.
