@@ -25,6 +25,7 @@ feat/global-compaction-threshold
 feat/agent-descriptions-in-autocomplete
 feat/configurable-message-limit-wip
 feat/continue-command
+feat/session-bookmarks
 feat/experimental-dont-cache-markdown
 feat/franlol--subagents-in-the-sidebar
 feat/interjections
