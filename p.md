@@ -2,9 +2,13 @@ Sometimes, I implement some feature/fix in one session, and then I spend a few d
 
 Then, later on, I wanna go back to that original session - where everything needed to understand the feature/fix is already in the  context so that I don't need to explain everything to the model again - to ask for some revision.
 
-But actially finding that original session in the `session_list` menu  again can be tricky because I've engages in a gajillion other OC in the intervening time, and that original session is now buried pages and pages down in the `session_list` menu.
+But actually finding that original session in the `session_list` menu  again can be tricky because I've engaged in a gajillion other OC in the intervening time, and that original session is now buried pages and pages down in the `session_list` menu.
 
+So: let's add a new feature that allows the user to bookmark sessions to make them easier to locate again later. Bookedmarked sessions should be grouped separately near the top of the session list (similarly to the way that favorited models are grouped separately near the top in the modal window used by the `/models` command).
 
+Let's use `ctrl+d` as the default key to bookmark or unbookmark sessions, since this is the key that is often usualy used by web browsers to bookmark web pages.
+
+---
 
 
 2026-01-07-11-24
