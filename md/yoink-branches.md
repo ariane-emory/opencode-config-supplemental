@@ -5,7 +5,6 @@
 #feat/config-forward-compat (from the CasualDeveloper remote)
 feature/project-files-viewer-editor-standalone (from the gignit remote)
 feature/collapse-compaction (from the gignit remote)
-feature/dynamic-details (from the gignit remote)
 feature/markdown-renderer (from the gignit remote)
 #fix/restore-show-details-check (from the gignit remote)
 #handoff-compaction (from the IgorWarzocha remote)
