@@ -41,7 +41,7 @@ feat/shell-advice
 feat/elapsed-timer
 feat/opencode-expand
 feat/sinister-quotes
-feat/no-share-in-header
+#feat/no-share-in-header
 feat/session-timeline-repeat
 ##fix/nonfatal-missing-key-commands
 feat/keybindable-commands
