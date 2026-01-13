@@ -1,6 +1,6 @@
 ### Task: Merge the latest changes from the dev branch into the $ARGUMENTS branch:
 
-First, check out the dev branch and run the tests to see what pre-existing errors exist. If the dev branch contains pre-existing errors, you MUST preserve them when you merge it into the $ARGUMENTS branch. NOTE: there are currently some pre-existing errors related to stopPropogation and preventDefault methods, be sure that you do not try to fix those!
+First, check out the dev branch and run the tests to see what pre-existing errors exist. If the dev branch contains pre-existing errors, you MUST preserve them when you merge it into the $ARGUMENTS branch.
 
 Then, check out the $ARGUMENTS branch, merge the local dev branch into it and resolve any conflicts. You can take my word that both of these branches already exist, so you don't have to waste time checking if they do before you start.
 
