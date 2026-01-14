@@ -1,3 +1,11 @@
+Let's add a new setting for the opencode.jsonc file: tui.no_sidebar_auto, with false as its default value. If it is set to true in the opencode.jsonc, then the "auto" value should be treated identically to the "show" value, and the sidebar should always be shown regardless of how wide the window is.
+
+Since we are only changing the semantics of the sidebar value that is stored/read to the kv.json file,  it should only require minimal changes to the config.ts file to add the new tui.no_sidebar_auto setting. 
+
+Think the feature through thoroughly and break the feature down into small steps to produce a detailed, step-by-step plan for implementing the feature. Group the plan's steps into "phases". The code MUST build correctly and all tests MUST pass after each phase. 
+
+---
+
 Sometimes, I implement some feature/fix in one session, and then I spend a few days testing it and feeling it out or working on different features/fixes.
 
 Then, later on, I wanna go back to that original session - where everything needed to understand the feature/fix is already in the  context so that I don't need to explain everything to the model again - to ask for some revision.
