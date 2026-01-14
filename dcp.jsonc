@@ -5,7 +5,7 @@
   // Enable debug logging to ~/.config/opencode/logs/dcp/
   "debug": false,
   // Notification display: "off", "minimal", or "detailed"
-  "pruneNotification": "detailed",
+  "pruneNotification": "minimal",
   // Protect from pruning for <turns> message turns
   "turnProtection": {
     "enabled": false,
