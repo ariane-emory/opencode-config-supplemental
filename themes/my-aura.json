@@ -66,6 +66,6 @@
     "syntaxOperator": "pink",
     "syntaxPunctuation": "darkFg",
     "placeholderText": "#f00",
-    "thinkingOpacity": 0.5
+    "thinkingOpacity": 0.75
   }
 }
