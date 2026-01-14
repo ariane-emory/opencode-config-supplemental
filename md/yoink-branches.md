@@ -16,7 +16,7 @@ feature/markdown-renderer (from the gignit remote)
 feat/opeoginni--display-message-tps
 #feat/durutheguru--ask-user-questions
 #fix/weird-mystery-fix
-fix/home-end-in-menus
+fix/home-end-in-menus-clean
 fix/persist-sidebar
 fix/message-truncation
 fix/autocompletion-filtered-order
