@@ -24,9 +24,9 @@ feat/persist-sidebar-group-folding-states
 feat/persistant-sidebar-overlay-behaviour
 feat/shell-advice
 feat/elapsed-timer
+feat/keybindable-commands
 feat/opencode-expand
 feat/sinister-quotes
-feat/keybindable-commands
 
 #### And finally, finish up with this branch:
 
