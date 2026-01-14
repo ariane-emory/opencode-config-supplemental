@@ -8,7 +8,7 @@ Let's go with option $ARGUMENTS, that one sounds good to me.
 
 Proceed with implementing option $ARGUMENTS.
 
-Do not make any changes unrelated to implementing this option.
+Do not make any changes unrelated to the changes that are required to implementing option $ARGUMENTS.
 
 The code MUST build correctly and all tests (except the enterprise tests, you can ignore those) MUST pass after wards.
 
