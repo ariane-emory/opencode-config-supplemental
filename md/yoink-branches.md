@@ -22,6 +22,7 @@ feat/jsonc-user-themes
 feat/permission-indicator-in-sidebar
 feat/permission-spinner
 feat/persist-sidebar-group-folding-states
+feat/sidebar-no-auto-setting
 feat/persistant-sidebar-overlay-behaviour
 feat/shell-advice
 feat/elapsed-timer
