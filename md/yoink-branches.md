@@ -22,12 +22,12 @@ feat/jsonc-user-themes
 feat/permission-indicator-in-sidebar
 feat/permission-spinner
 feat/persist-sidebar-group-folding-states
-feat/sidebar-no-auto-setting
 feat/persistant-sidebar-overlay-behaviour
 feat/shell-advice
 feat/elapsed-timer
 feat/keybindable-commands
 feat/opencode-expand
+feat/sidebar-no-auto-setting
 feat/sinister-quotes
 
 #### And finally, finish up with this branch:
