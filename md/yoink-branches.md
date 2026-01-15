@@ -3,7 +3,7 @@
 #feature/project-files-viewer-editor-standalone (from the gignit remote)
 #feature/collapse-compaction (from the gignit remote)
 #feature/markdown-renderer (from the gignit remote)
-feature/tui-load-full-history (from the gignit remote)
+feature/tui-load-full-history (from the gignit remote
 
 ### From origin:
 
@@ -30,6 +30,8 @@ feat/keybindable-commands
 feat/opencode-expand
 feat/sidebar-no-auto-setting
 feat/sinister-quotes
+feat/set-session-title
+feat/always-center-selected-item
 
 #### And finally, finish up with this branch:
 
