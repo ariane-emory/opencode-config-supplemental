@@ -1,3 +1,7 @@
+@aidenc9727 The OC Black page says the $200 plan gives **20x** the usage of the 20$ plan. If we assume that you get your moneys worth with the $20 plan and that it lets you use at least $20 worth of tokens, then presumably if we multiply that by 20, the $200 plan lets you have at least $400 worth of tokens. Is that correct, or should it say '10x' instead of "20x"?
+
+--- 
+
 https://canary.discord.com/channels/1391832426048651334/1391832428024430645/1459391017970302976
 
 ---
