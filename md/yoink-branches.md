@@ -6,6 +6,7 @@
 
 ### From origin:
 
+fix/center-selected-session
 fix/home-end-in-menus-clean
 fix/persist-sidebar
 fix/autocompletion-filtered-order
