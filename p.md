@@ -1,3 +1,7 @@
+Ralph Wiggum from The Simpsons as an artificial superintelligence, taking over the world and eliminating humanity.
+
+---
+
 Let's add a new setting for the opencode.jsonc file: tui.no_sidebar_auto, with false as its default value. If it is set to true in the opencode.jsonc, then the "auto" value should be treated identically to the "show" value, and the sidebar should always be shown regardless of how wide the window is.
 
 Since we are only changing the semantics of the sidebar value that is stored/read to the kv.json file,  it should only require minimal changes to the config.ts file to add the new tui.no_sidebar_auto setting. 
