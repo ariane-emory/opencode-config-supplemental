@@ -1,3 +1,7 @@
+https://canary.discord.com/channels/1391832426048651334/1391832428024430645/1459391017970302976
+
+---
+
 Ralph Wiggum from The Simpsons as an artificial superintelligence, taking over the world and eliminating humanity.
 
 ---
