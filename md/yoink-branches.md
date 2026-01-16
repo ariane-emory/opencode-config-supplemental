@@ -8,7 +8,6 @@ agent-skills-commands-hot-reloading (from the IgorWarzocha remote)
 
 ### From origin:
 
-fix/center-selected-session
 fix/home-end-in-menus-clean
 fix/persist-sidebar
 fix/autocompletion-filtered-order
@@ -33,6 +32,7 @@ feat/sidebar-no-auto-setting
 feat/sinister-quotes
 feat/set-session-title
 feat/always-center-selected-item
+feat/session-timeline-repeat
 
 #### And finally, finish up with this branch:
 
