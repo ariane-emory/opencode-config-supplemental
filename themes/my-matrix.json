@@ -73,6 +73,6 @@
     "syntaxType": { "dark": "alertYellow", "light": "alertYellow" },
     "syntaxOperator": { "dark": "rainTeal", "light": "rainTeal" },
     "syntaxPunctuation": { "dark": "rainGreenHi", "light": "lightText" },
-    "thinkingOpacity": 0.65
+    "thinkingOpacity": 0.5
   }
 }
