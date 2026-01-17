@@ -13,8 +13,6 @@ RULES:
 
 **ABSOLUTE PROHIBITION**: NEVER use any `git push` command or any other command that modifies remote repositories. This operation is RECEIVE-ONLY.
 
-First, record the current branch name to return to it at the end (unless it was pruned, in which case switch back to dev instead):
-
 **IMPORTANT**: Fish shell variables do NOT persist between separate command invocations. You MUST save the original branch name to a temp file so it can be retrieved later, OR remember it yourself and use it explicitly in the final step.
 
 ```fish
@@ -303,7 +301,7 @@ LESSONS LEARNED:
 
 Use your todo list tools to keep track of your progress.
 
-After you have finished, return to the branch on which you started.
+After you have finished, return to the dev branch.
 
 **FINAL CRITICAL REMINDER**: The goal is to make local branches match their remote counterparts exactly, NOT to create all upstream branches locally. Only branches that exist on remotes should ever exist locally. 
 
