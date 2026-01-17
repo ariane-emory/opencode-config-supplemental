@@ -8,7 +8,6 @@ agent-skills-commands-hot-reloading (from the IgorWarzocha remote)
 
 ### From origin:
 
-#fix/home-end-in-menus-clean
 fix/persist-sidebar
 fix/autocompletion-filtered-order
 fix/modal-menus-filtered-order
