@@ -1,3 +1,42 @@
+Take a look at the documentation at https://opencode.ai/docs/permissions/#granular-rules-object-syntax
+
+It shows an example of using glob-based permissions for the edit tool, like this:
+
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "bash": {
+      "*": "ask",
+      "git *": "allow",
+      "npm *": "allow",
+      "rm *": "deny",
+      "grep *": "allow"
+    },
+    "edit": {
+      "*": "deny",
+      "packages/web/src/content/docs/*.mdx": "allow"
+    }
+  }
+}
+
+A user has tried using permissions that look extremely extremely similar with the permissions for external_directory, as shown here:
+
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "external_directory": {
+      "*": "ask",
+      "../sibling-project_name-*": "allow"
+    }
+  }
+}
+
+The user reports that this did not work for them. 
+
+I'd like you to investigate the issue and try to figure out whether this user's configuration should have worked. 
+
+---
+
 /private/var/folders/21/jfcl6xvd31547_0brmr5hgx80000gn/T
 rm -rfv $(ls | rg opencode-test | head -30000)  && rm -rfv $(ls | rg opencode-test | head -30000) && rm -rfv $(ls | rg opencode-test | head -30000) && rm -rfv $(ls | rg opencode-test | head -30000)
 
