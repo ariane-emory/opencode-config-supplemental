@@ -1,3 +1,9 @@
+Todo: 
+- ask_to_switch_modes tool.
+- revise /restart into reload.
+
+---
+
 gh pr view 5092
 gh pr view 9261
 gh issue view 5054
