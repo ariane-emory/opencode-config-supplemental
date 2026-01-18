@@ -45,7 +45,7 @@ I'd like you to investigate the issue and try to figure out whether this user's 
 
 ---
 
-q/private/var/folders/21/jfcl6xvd31547_0brmr5hgx80000gn/T
+/private/var/folders/21/jfcl6xvd31547_0brmr5hgx80000gn/T
 rm -rfv $(ls | rg opencode-test | head -30000)  && rm -rfv $(ls | rg opencode-test | head -30000) && rm -rfv $(ls | rg opencode-test | head -30000) && rm -rfv $(ls | rg opencode-test | head -30000)
 
 ---
