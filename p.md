@@ -1,3 +1,11 @@
+gh pr view 5092
+gh pr view 9190
+gh issue view 5054
+
+Compare these two pull requests, both of which resolve the same issue. What are the relative merits of each, and which do you think is the better solution? 
+
+---
+
 Take a look at the documentation at https://opencode.ai/docs/permissions/#granular-rules-object-syntax
 
 It shows an example of using glob-based permissions for the edit tool, like this:
@@ -37,7 +45,7 @@ I'd like you to investigate the issue and try to figure out whether this user's 
 
 ---
 
-/private/var/folders/21/jfcl6xvd31547_0brmr5hgx80000gn/T
+q/private/var/folders/21/jfcl6xvd31547_0brmr5hgx80000gn/T
 rm -rfv $(ls | rg opencode-test | head -30000)  && rm -rfv $(ls | rg opencode-test | head -30000) && rm -rfv $(ls | rg opencode-test | head -30000) && rm -rfv $(ls | rg opencode-test | head -30000)
 
 ---
