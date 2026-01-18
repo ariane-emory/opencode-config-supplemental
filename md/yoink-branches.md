@@ -5,6 +5,7 @@
 feature/markdown-renderer (from the gignit remote)
 feature/tui-load-full-history (from the gignit remote) 
 agent-skills-commands-hot-reloading (from the IgorWarzocha remote)
+readline-additions (from the aspiers remote)
 
 ### From origin:
 
