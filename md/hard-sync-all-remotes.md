@@ -301,8 +301,6 @@ LESSONS LEARNED:
 
 Use your todo list tools to keep track of your progress.
 
-After you have finished, return to the dev branch.
-
 **FINAL CRITICAL REMINDER**: The goal is to make local branches match their remote counterparts exactly, NOT to create all upstream branches locally. Only branches that exist on remotes should ever exist locally. 
 
 **ABSOLUTE RULE**: Remote repositories are ALWAYS the single source of truth. If a branch doesn't exist on any remote, it's garbage and should be deleted locally.
@@ -310,3 +308,5 @@ After you have finished, return to the dev branch.
 **ABSOLUTE PROHIBITION**: NEVER use `git push --delete` or any command that modifies remote repositories. This operation is RECEIVE-ONLY.
 
 **REMEMBER**: No branch should have any local changes once you are done! Any local changes should have been discarded in order to match the remote state!
+
+**IMPORTANT**: After you have finished, return to the dev branch.
