@@ -32,6 +32,7 @@ feat/sinister-quotes
 feat/set-session-title
 feat/always-center-selected-item
 feat/session-timeline-repeat
+feature/restart-command
 
 #### And finally, finish up with this branch:
 
