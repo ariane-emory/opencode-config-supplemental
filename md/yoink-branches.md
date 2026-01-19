@@ -8,6 +8,9 @@ readline-additions (from the aspiers remote)
 
 ### From origin:
 
+fix/dialog-datetime-alignment
+fix/session-dialog-no-wrap
+fix/metadata-update-no-timestamp
 fix/persist-sidebar
 fix/autocompletion-filtered-order
 fix/modal-menus-filtered-order
