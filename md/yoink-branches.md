@@ -7,8 +7,6 @@ feature/tui-load-full-history (from the gignit remote)
 readline-additions (from the aspiers remote)
 
 ### From origin:
-
-fix/dialog-datetime-alignment
 fix/session-dialog-no-wrap
 fix/metadata-no-update-timestamp
 fix/persist-sidebar
@@ -20,6 +18,7 @@ feat/global-compaction-threshold
 feat/configurable-message-limit-wip
 feat/continue-command
 feat/session-bookmarks
+fix/dialog-datetime-alignment (for best results, merge this one after feat/session-bookmarks)
 feat/experimental-dont-cache-markdown
 feat/interjections
 feat/jsonc-user-themes
