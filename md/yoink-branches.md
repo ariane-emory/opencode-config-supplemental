@@ -4,7 +4,7 @@ feature/project-files-viewer-editor-standalone (from the gignit remote)
 feature/collapse-compaction (from the gignit remote)
 feature/markdown-renderer (from the gignit remote)
 feature/tui-load-full-history (from the gignit remote) 
-agent-skills-commands-hot-reloading (from the IgorWarzocha remote)
+#agent-skills-commands-hot-reloading (from the IgorWarzocha remote)
 readline-additions (from the aspiers remote)
 
 ### From origin:
@@ -34,7 +34,7 @@ feat/set-session-title
 feat/always-center-selected-item
 feat/session-timeline-repeat
 feature/restart-command
-feat/automatic-list-continuation
+feat/automatic-list-continuations
 
 #### And finally, finish up with this branch:
 
