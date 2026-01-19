@@ -10,7 +10,7 @@ readline-additions (from the aspiers remote)
 
 fix/dialog-datetime-alignment
 fix/session-dialog-no-wrap
-fix/metadata-update-no-timestamp
+fix/metadata-no-update-timestamp
 fix/persist-sidebar
 fix/autocompletion-filtered-order
 fix/modal-menus-filtered-order
