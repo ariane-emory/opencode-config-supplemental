@@ -26,7 +26,6 @@ feat/persist-sidebar-group-folding-states
 feat/persistant-sidebar-overlay-behaviour
 feat/shell-advice
 feat/elapsed-timer
-feat/keybindable-commands
 feat/opencode-expand
 feat/sidebar-no-auto-setting
 feat/sinister-quotes
@@ -35,6 +34,7 @@ feat/always-center-selected-item
 feat/session-timeline-repeat
 feature/restart-command
 feat/automatic-list-continuations
+feat/keybindable-commands
 
 #### And finally, finish up with this branch:
 
