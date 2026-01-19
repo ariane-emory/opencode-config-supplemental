@@ -1,4 +1,4 @@
-# A MUST Have Plugin Plugin
+# A MUST-have plugin
 
 Automatically replaces text patterns in your prompts before they're sent to the LLM.
 
