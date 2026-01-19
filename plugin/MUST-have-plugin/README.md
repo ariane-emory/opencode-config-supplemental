@@ -1,4 +1,4 @@
-# Replacer Plugin
+# A MUST Have Plugin Plugin
 
 Automatically replaces text patterns in your prompts before they're sent to the LLM.
 
