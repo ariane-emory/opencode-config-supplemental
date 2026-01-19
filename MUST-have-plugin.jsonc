@@ -3,7 +3,7 @@
   // "debug": true,
 
   "replacements": {
-    "dfp": "Diagnose and fix this problem: ",
+    "dfp": "Diagnose and fix this problem:",
     "must": "MUST",
     "must not": "MUST NOT",
     "required": "REQUIRED",
