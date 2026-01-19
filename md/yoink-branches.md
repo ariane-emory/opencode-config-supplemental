@@ -33,7 +33,7 @@ feat/set-session-title
 feat/always-center-selected-item
 feat/session-timeline-repeat
 feature/restart-command
-feat/automatic-list-continuations
+feat/automatic-list-continuation
 feat/keybindable-commands
 
 #### And finally, finish up with this branch:
