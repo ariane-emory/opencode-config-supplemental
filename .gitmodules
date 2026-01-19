@@ -1,0 +1,3 @@
+[submodule "plugin/MUST-have-plugin"]
+	path = plugin/MUST-have-plugin
+	url = https://github.com/ariane-emory/MUST-have-plugin
