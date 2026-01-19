@@ -1,0 +1,19 @@
+{
+  // Uncomment to enable debug logging (view with: tail -f /tmp/opencode-replacer-debug.log)
+  // "debug": true,
+
+  "replacements": {
+    "dfp": "Diagnose and fix this problem: ",
+    "must": "MUST",
+    "must not": "MUST NOT",
+    "required": "REQUIRED",
+    "shall": "SHALL",
+    "shall not": "SHALL NOT",
+    "should": "SHOULD",
+    "should not": "SHOULD NOT",
+    "recommended": "RECOMMENDED",
+    "not recommended": "NOT RECOMMENDED",
+    "may": "MAY",
+    "optional": "OPTIONAL"
+  }
+}

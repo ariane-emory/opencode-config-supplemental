@@ -2,7 +2,6 @@
 
 feature/project-files-viewer-editor-standalone (from the gignit remote)
 feature/collapse-compaction (from the gignit remote)
-feature/markdown-renderer (from the gignit remote)
 feature/tui-load-full-history (from the gignit remote) 
 #agent-skills-commands-hot-reloading (from the IgorWarzocha remote)
 readline-additions (from the aspiers remote)
@@ -12,6 +11,7 @@ readline-additions (from the aspiers remote)
 fix/persist-sidebar
 fix/autocompletion-filtered-order
 fix/modal-menus-filtered-order
+feat/gignit--markdown-renderer
 feat/opeoginni--display-message-tps
 feat/global-compaction-threshold
 feat/configurable-message-limit-wip
