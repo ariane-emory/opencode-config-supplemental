@@ -3,17 +3,23 @@
   // "debug": true,
 
   "replacements": {
+    "ai": "Analyze this issue:",
     "dfp": "Diagnose and fix this problem:",
-    "must": "MUST",
-    "must not": "MUST NOT",
-    "required": "REQUIRED",
-    "shall": "SHALL",
-    "shall not": "SHALL NOT",
-    "should": "SHOULD",
-    "should not": "SHOULD NOT",
-    "recommended": "RECOMMENDED",
-    "not recommended": "NOT RECOMMENDED",
-    "may": "MAY",
-    "optional": "OPTIONAL"
+    "mnm": "Make no mistakes.",
+    "npr": "Don't create any pull requests.",
+    "pp": "Proceed with the plan.",
+    "rs": "Remove the unnecessary slop without changing the behaviour.",
+    "tp": "All tests must pass",
+    // "must": "MUST",
+    // "must not": "MUST NOT",
+    // "required": "REQUIRED",
+    // "shall": "SHALL",
+    // "shall not": "SHALL NOT",
+    // "should": "SHOULD",
+    // "should not": "SHOULD NOT",
+    // "recommended": "RECOMMENDED",
+    // "not recommended": "NOT RECOMMENDED",
+    // "may": "MAY",
+    // "optional": "OPTIONAL"
   }
 }

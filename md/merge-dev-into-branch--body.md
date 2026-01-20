@@ -10,7 +10,7 @@ If a git lock file gets in your way, just delete it and keep working on merging.
 
 Make sure that any tests in the project pass afterwards. You may ignore any pre-existing test failures in the dev branch, but we don't want to add any new test failures relative to dev. If tests fail due to a timeout (in either branch), try waiting a moment and rerunning them, it mayjust mean that that test is a bit flaky.
 
-**REMEMBER**: The global Opencode configuration might be meant for a different branch than the one on which you are working!
+**REMEMBER**: The global Opencode configuration is most likely NOT configured to be compatible with the branch on which you are working!
 
 If a pre-push hook is failing due to pre-existing errors, you SHOULD use the --no-verify flag on the push to make the push succeed.
 
