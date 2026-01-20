@@ -1,6 +1,7 @@
 {
-  // Uncomment to enable debug logging (view with: tail -f /tmp/opencode-replacer-debug.log)
-  // "debug": true,
+  // Debug logging: logs appear in ~/.local/share/opencode/log/dev.log
+  // Filter with: grep "MUST-have-plugin" ~/.local/share/opencode/log/dev.log
+  "debug": true,
 
   "replacements": {
     "ai": "Analyze this issue:",
@@ -10,16 +11,16 @@
     "pp": "Proceed with the plan.",
     "rs": "Remove the unnecessary slop without changing the behaviour.",
     "tp": "All tests must pass",
-    // "must": "MUST",
-    // "must not": "MUST NOT",
-    // "required": "REQUIRED",
-    // "shall": "SHALL",
-    // "shall not": "SHALL NOT",
-    // "should": "SHOULD",
-    // "should not": "SHOULD NOT",
-    // "recommended": "RECOMMENDED",
-    // "not recommended": "NOT RECOMMENDED",
-    // "may": "MAY",
-    // "optional": "OPTIONAL"
+    "must": "MUST",
+    "must not": "MUST NOT",
+    "required": "REQUIRED",
+    "shall": "SHALL",
+    "shall not": "SHALL NOT",
+    "should": "SHOULD",
+    "should not": "SHOULD NOT",
+    "recommended": "RECOMMENDED",
+    "not recommended": "NOT RECOMMENDED",
+    "may": "MAY",
+    "optional": "OPTIONAL"
   }
 }
