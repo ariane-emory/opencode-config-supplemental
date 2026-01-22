@@ -28,13 +28,13 @@ feat/shell-advice
 feat/elapsed-timer
 feat/opencode-expand
 feat/sidebar-no-auto-setting
-feat/sinister-quotes
 feat/set-session-title
 feat/always-center-selected-item
 feat/session-timeline-repeat
 feat/restart-command
 feat/automatic-list-continuation
 feat/keybindable-commands
+feat/sinister-quotes
 
 #### And finally, finish up with this branch:
 
