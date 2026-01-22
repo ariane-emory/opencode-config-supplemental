@@ -1,8 +1,5 @@
 ### From foreign remotes:
 
-#feature/project-files-viewer-editor-standalone (from the gignit remote)
-#feature/collapse-compaction (from the gignit remote)
-#feature/tui-load-full-history (from the gignit remote) 
 feat/markdown-renderer (from the gignit remote) 
 #agent-skills-commands-hot-reloading (from the IgorWarzocha remote)
 readline-additions (from the aspiers remote)
