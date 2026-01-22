@@ -15,8 +15,6 @@ feat/opeoginni--display-message-tps
 feat/global-compaction-threshold
 feat/configurable-message-limit-wip
 feat/continue-command
-feat/session-bookmarks
-fix/dialog-datetime-alignment (for best results, merge this one after feat/session-bookmarks)
 feat/experimental-dont-cache-markdown
 feat/interjections
 feat/jsonc-user-themes
@@ -34,6 +32,8 @@ feat/session-timeline-repeat
 feat/restart-command
 feat/automatic-list-continuation
 feat/keybindable-commands
+feat/session-bookmarks
+fix/dialog-datetime-alignment (for best results, merge this one after feat/session-bookmarks)
 feat/sinister-quotes
 
 #### And finally, finish up with this branch:
