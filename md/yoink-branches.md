@@ -10,7 +10,6 @@ readline-additions (from the aspiers remote)
 ### From origin:
 
 fix/rfc2119-question-tool
-fix/metadata-no-update-timestamp (note: this has been merged in upstream/dev, keep it for now but we'll be able to remove it soon)
 fix/persist-sidebar
 fix/autocompletion-filtered-order
 fix/modal-menus-filtered-order
