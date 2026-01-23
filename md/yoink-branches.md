@@ -29,7 +29,6 @@ feat/sidebar-no-auto-setting
 feat/set-session-title
 feat/always-center-selected-item
 feat/session-timeline-repeat
-feat/restart-command
 feat/automatic-list-continuation
 feat/keybindable-commands
 feat/session-bookmarks
