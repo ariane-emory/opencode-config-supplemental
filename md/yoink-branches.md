@@ -10,7 +10,6 @@ fix/rfc2119-question-tool
 fix/persist-sidebar
 fix/autocompletion-filtered-order
 fix/modal-menus-filtered-order
-feat/gignit--markdown-renderer
 feat/opeoginni--display-message-tps
 feat/global-compaction-threshold
 feat/configurable-message-limit-wip
