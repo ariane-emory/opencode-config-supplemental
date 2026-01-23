@@ -8,7 +8,7 @@ Then, check out the $ARGUMENTS branch, merge the local dev branch into it and re
 
 If a git lock file gets in your way, just delete it and keep working on merging.
 
-Make sure that now new test failures were introduced by the merge: you may disregard any pre-existing test failures in the dev branch, but we don't want to add any new test failures relative to dev. If tests fail due to a timeout (in either branch), try waiting a moment and rerunning them, it mayjust mean that that test is a bit flaky.
+Make sure that no new test failures were introduced by the merge: you may disregard any pre-existing test failures in the dev branch, but we don't want to add any new test failures relative to dev. If tests fail due to a timeout (in either branch), try waiting a moment and rerunning them, it mayjust mean that that test is a bit flaky.
 
 **REMEMBER**: The global Opencode configuration is most likely NOT configured to be compatible with the branch on which you are working!
 
