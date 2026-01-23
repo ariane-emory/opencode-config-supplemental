@@ -1,3 +1,5 @@
+Set the title of the current session to match the name of the integration branch and bookmark it.
+
 **CRITICAL**: After creating the integration branch, you MUST configure it to track origin (not upstream) to prevent push issues:
 
 ```fish
