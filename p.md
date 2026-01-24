@@ -1,3 +1,8 @@
+#4369 (resolved by PR #4572)
+#7251 (resolved by PR #7246)
+
+---
+
 #4572 (resolving #4369)
 #7246 (resolving #7251)
 
