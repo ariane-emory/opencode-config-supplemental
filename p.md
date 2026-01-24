@@ -6,19 +6,6 @@ $ cat ~/.local/share/opencode/auth.json
 
 ---
 
-@adamdotdev Thanks very much for the merge on Iosevka, you're a legend! I had a busy evening last night, and I'm shooting for a hat trick. :slight_smile: May I present to -you two more no-brainer easy-merging PRs, laid out on a silver platter for your delight and delectation:
-
-A fairly important bugfix for the `question` tool's UI: https://github.com/anomalyco/opencode/pull/10337
-A simple, straightforwards QoL enhancement for the titles of forked sessions: https://github.com/anomalyco/opencode/pull/10321
-
-Let me know if you've thoughts on either of these, should you find a spare moment to in which you might condescned to cast your lordly gaze upon them. :wink: 
-
---
-
-A *very* popular NerdFont for the desktop app: https://github.com/anomalyco/opencode/pull/10347
-
----
-
 bun run --cwd packages/desktop tauri dev
 
 ---
