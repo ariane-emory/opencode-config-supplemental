@@ -1,8 +1,11 @@
-Todo: 
-- ask_to_switch_modes tool.
-- revise /restart into reload.
+#4572 (resolving #4369)
+#7246 (resolving #7251)
 
 ---
+
+I need you to help me test something out to help diagnose a bug with the new OPENCODE_EXPERIMENTAL_PLAN_MODE feature. Please make some plan. It doesn't matter what it is, we just need to make the prompt appear that lets me pick whether to switch to build more after planning. 
+
+__
 
 export OPENCODE_EXPERIMENTAL_PLAN_MODE=1 
 
