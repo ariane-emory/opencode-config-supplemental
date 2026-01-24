@@ -9,13 +9,13 @@ This issue seems very similar to a pair of issues that I resolved previously:
 #4369 (resolved by PR #4572)
 #7251 (resolved by PR #7246)
 
-The Lever issue may be slightly more similar since it involves a very similar looking selction prompt with horizontally laid out options. 
+The latter of these two  issues may be slightly more similar since it involves a very similar looking selction prompt with horizontally laid out options. 
 
 You can use the gh command to examine these issues and PRs.
 
 We need to come up with a plan for resolving this third occurrence of this similar issue in the context of the prompts used by the prompts used by the OPENCODE_EXPERIMENTAL_PLAN_MODE feature.
 
-We SHOULD implement this fix in a new branch called fix/experimental-plan-feature-question-prompt-answer-colouring. Do not create any PRs yet, I'd like to be able to test the fix first. 
+We should implement this fix in a new branch called fix/experimental-plan-feature-question-prompt-answer-colouring. Do not create any PRs yet, I'd like to be able to test the fix first. 
 
 ---
 
