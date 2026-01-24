@@ -1,3 +1,24 @@
+Sometimes the new OPENCODE_EXPERIMENTAL_PLAN_MODE feature will prompt the user with a question with multiple answers and it will display the options horizontally across the top of the question prompt. 
+
+When it does this, and the theme is one where the background color is set to "none", the text of the selected answer is not visible.
+
+This is exlusively a TUI issue, the web/desktop are not involved).
+
+This issue seems very similar to a pair of issues that I resolved previously:
+
+#4369 (resolved by PR #4572)
+#7251 (resolved by PR #7246)
+
+The Lever issue may be slightly more similar since it involves a very similar looking selction prompt with horizontally laid out options. 
+
+You can use the gh command to examine these issues and PRs.
+
+We need to come up with a plan for resolving this third occurrence of this similar issue in the context of the prompts used by the prompts used by the OPENCODE_EXPERIMENTAL_PLAN_MODE feature.
+
+We SHOULD implement this fix in a new branch called fix/experimental-plan-feature-question-prompt-answer-colouring. Do not create any PRs yet, I'd like to be able to test the fix first. 
+
+---
+
 #4369 (resolved by PR #4572)
 #7251 (resolved by PR #7246)
 
