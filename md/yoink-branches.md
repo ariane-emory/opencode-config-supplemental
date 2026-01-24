@@ -31,6 +31,7 @@ feat/session-timeline-repeat
 feat/automatic-list-continuation
 feat/keybindable-commands
 feat/session-bookmarks
+fix/forked-session-titles
 fix/dialog-datetime-alignment (for best results, merge this one after feat/session-bookmarks)
 feat/sinister-quotes
 
