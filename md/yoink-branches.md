@@ -28,7 +28,7 @@ feat/elapsed-timer
 feat/opencode-expand
 feat/sidebar-no-auto-setting
 feat/set-session-title
-feat/always-center-selected-item
+feat/always-center-selected-item (temporary - merged upstream, will remove soon)
 feat/session-timeline-repeat
 feat/automatic-list-continuation
 feat/session-bookmarks
