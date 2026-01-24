@@ -1,4 +1,4 @@
-I had a busy evening last night trying to pull a hat trick. May I present to you, three no-brainer easy-merging PRs, laid out on a silver platter for your delectation:
+I had a busy evening last night and I'm tryna pull a hat trick. May I present to you, three no-brainer easy-merging PRs, laid out on a silver platter for your delectation:
 
 A fairly important bugfix for the `question` tool's UI: https://github.com/anomalyco/opencode/pull/10337
 A simple, straightforwards QoL enhancement for forking: https://github.com/anomalyco/opencode/pull/10321
