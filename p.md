@@ -1,3 +1,7 @@
+What sort of work would be needed to add a new font to the desktop app?
+
+---
+
 Sometimes the new OPENCODE_EXPERIMENTAL_PLAN_MODE feature will prompt the user with a question with multiple answers and it will display the options horizontally across the top of the question prompt. 
 
 When it does this, and the theme is one where the background color is set to "none", the text of the selected answer is not visible.
