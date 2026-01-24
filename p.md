@@ -1,3 +1,12 @@
+bun run --cwd packages/desktop tauri dev
+
+---
+
+PR #4369 (resolved issue #4369)
+PR #7251 (resolved issue #7251)
+
+---
+
 What sort of work would be needed to add a new font to the desktop app?
 
 ---
