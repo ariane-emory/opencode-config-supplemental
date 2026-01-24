@@ -7,7 +7,6 @@ readline-additions (from the aspiers remote)
 ### From origin:
 
 fix/rfc2119-question-tool
-fix/experimental-plan-feature-question-prompt-answer-colouring (temporary - merged upstream, will remove soon)
 fix/forked-session-titles (not yet merged upstream, but hopefully soon)
 fix/persist-sidebar
 fix/autocompletion-filtered-order
@@ -28,7 +27,6 @@ feat/elapsed-timer
 feat/opencode-expand
 feat/sidebar-no-auto-setting
 feat/set-session-title
-feat/always-center-selected-item (temporary - merged upstream, will remove soon)
 feat/session-timeline-repeat
 feat/automatic-list-continuation
 feat/session-bookmarks
