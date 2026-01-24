@@ -6,10 +6,12 @@ $ cat ~/.local/share/opencode/auth.json
 
 ---
 
-Thanks very much for the merge on Iosevka! I had a busy evening last night, I'm shooting for a hat trick. May I present to you two more no-brainer easy-merging PRs, laid out on a silver platter for your delectation:
+@adamdotdev Thanks very much for the merge on Iosevka, you're a legend! I had a busy evening last night, and I'm shooting for a hat trick. :slight_smile: May I present to -you two more no-brainer easy-merging PRs, laid out on a silver platter for your delight and delectation:
 
 A fairly important bugfix for the `question` tool's UI: https://github.com/anomalyco/opencode/pull/10337
-A simple, straightforwards QoL enhancement for forking: https://github.com/anomalyco/opencode/pull/10321
+A simple, straightforwards QoL enhancement for the titles of forked sessions: https://github.com/anomalyco/opencode/pull/10321
+
+Let me know if you've thoughts on either of these, should you find a spare moment to in which you might condescned to cast your lordly gaze upon them. :wink: 
 
 --
 
