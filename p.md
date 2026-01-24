@@ -1,7 +1,18 @@
-I had a busy evening last night and I'm tryna pull a hat trick. May I present to you, three no-brainer easy-merging PRs, laid out on a silver platter for your delectation:
+Yup confirmed by running bun test after doing cd packages/opencode 
+One of the tests (most likely the one for GitHub Duo integration) is wiping the auth.json
+After running the tests my auth.json looked like this:
+$ cat ~/.local/share/opencode/auth.json 
+{"gitlab":{"type":"api","key":"glpat-test-pat-token"}} 
+
+---
+
+Thanks very much for the merge on Iosevka! I had a busy evening last night, I'm shooting for a hat trick. May I present to you two more no-brainer easy-merging PRs, laid out on a silver platter for your delectation:
 
 A fairly important bugfix for the `question` tool's UI: https://github.com/anomalyco/opencode/pull/10337
 A simple, straightforwards QoL enhancement for forking: https://github.com/anomalyco/opencode/pull/10321
+
+--
+
 A *very* popular NerdFont for the desktop app: https://github.com/anomalyco/opencode/pull/10347
 
 ---
