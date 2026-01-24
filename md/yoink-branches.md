@@ -7,6 +7,8 @@ readline-additions (from the aspiers remote)
 ### From origin:
 
 fix/rfc2119-question-tool
+fix/experimental-plan-feature-question-prompt-answer-colouring (temporary - merged upstream, will remove soon)
+fix/forked-session-titles (not yet merged upstream, but hopefully soon)
 fix/persist-sidebar
 fix/autocompletion-filtered-order
 fix/modal-menus-filtered-order
@@ -29,10 +31,10 @@ feat/set-session-title
 feat/always-center-selected-item
 feat/session-timeline-repeat
 feat/automatic-list-continuation
-feat/keybindable-commands
 feat/session-bookmarks
 fix/forked-session-titles
 fix/dialog-datetime-alignment (for best results, merge this one after feat/session-bookmarks)
+feat/keybindable-commands
 feat/sinister-quotes
 
 #### And finally, finish up with this branch:
