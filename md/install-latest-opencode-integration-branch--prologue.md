@@ -6,4 +6,6 @@ The integration branches all have the date/time in their branch names, so it sho
 
 **CRITICAL**: You MUST NOT install an older integration branch! You MUST fetch first so that you can be sure you have correctly identified the latest one!
 
+Once you have identified the newest integration branch, set the session title to "Installing $BRANCH_NAME", where $BRANCH_NAME is the name of the newest integration branch, and bookmark it.
+
 Then, proceed to install it so I can run it globally from any directory.
