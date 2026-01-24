@@ -1,16 +1,10 @@
 {
-  // Debug logging: logs appear in ~/.local/share/opencode/log/dev.log
-  // Filter with: grep "MUST-have-plugin" ~/.local/share/opencode/log/dev.log
-  "debug": true,
+  // Uncomment to enable debug logging (view with: tail -f /tmp/opencode-replacer-debug.log)
+  // "debug": true,
 
   "replacements": {
-    "ai": "Analyze this issue:",
-    "dfp": "Diagnose and fix this problem:",
-    "mnm": "Make no mistakes.",
-    "npr": "Don't create any pull requests.",
-    "pp": "Proceed with the plan.",
-    "rs": "Remove the unnecessary slop without changing the behaviour.",
-    "tp": "All tests must pass",
+    "rfc": "The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this message are to be interpreted as described in RFC 2119.\n\n",
+    "dfp": "Diagnose and fix this problem: ",
     "must": "MUST",
     "must not": "MUST NOT",
     "required": "REQUIRED",
@@ -24,3 +18,7 @@
     "optional": "OPTIONAL"
   }
 }
+
+
+
+
