@@ -32,7 +32,6 @@ feat/always-center-selected-item (temporary - merged upstream, will remove soon)
 feat/session-timeline-repeat
 feat/automatic-list-continuation
 feat/session-bookmarks
-fix/forked-session-titles
 fix/dialog-datetime-alignment (for best results, merge this one after feat/session-bookmarks)
 feat/keybindable-commands
 feat/sinister-quotes
