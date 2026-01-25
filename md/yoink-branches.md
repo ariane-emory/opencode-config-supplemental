@@ -6,6 +6,7 @@ readline-additions (from the aspiers remote)
 
 ### From origin:
 
+fix/pols-adherence
 fix/rfc2119-question-tool
 fix/forked-session-titles (not yet merged upstream, but hopefully soon)
 fix/persist-sidebar
