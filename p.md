@@ -1,3 +1,14 @@
+https://github.com/IgorWarzocha/Opencode-Workflows/tree/master/agents/create-opencode-plugin
+
+drop that feller into wherever you developed the plugin and ask it to use its skills to package things up for npm and make it ready for public publication under @yourname/pluginname 
+
+
+---
+
+Dax did something, fix is presumably on the way. You can do something like `OPENCODE_DISABLE_MODELS_FETCH=1 opencode` in the mean time.
+
+---
+
 Yup confirmed by running bun test after doing cd packages/opencode 
 One of the tests (most likely the one for GitHub Duo integration) is wiping the auth.json
 After running the tests my auth.json looked like this:
