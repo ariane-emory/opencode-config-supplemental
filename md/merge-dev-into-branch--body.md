@@ -26,4 +26,4 @@ If you are not able to resolve any conflicts or the tests do not pass afterwards
 
 **CRITICAL**: I AM FUCKING SERIOUS DUDE, YOU MUST NOT TRY FIX PRE-EXISTING ERRORS FROM dev! ONLY TRY TO FIX NEW ERRORS INTRODUCED BY THE MERGE!
 
-**CRITICAL**: Try not to kill bun processes. There may be other active bun processes doing work at the same time as you are. 
+**CRITICAL**: You MUST NOT ever kill bun processes! There may be other active bun processes doing work at the same time as you are that cannot be easily restarted if you kill them! 
