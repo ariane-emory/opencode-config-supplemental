@@ -1,3 +1,7 @@
+https://canary.discord.com/channels/1391832426048651334/1391832428024430645/1465107168717050047
+
+---
+
 https://github.com/IgorWarzocha/Opencode-Workflows/tree/master/agents/create-opencode-plugin
 
 drop that feller into wherever you developed the plugin and ask it to use its skills to package things up for npm and make it ready for public publication under @yourname/pluginname 
