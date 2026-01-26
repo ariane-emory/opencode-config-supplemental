@@ -1,4 +1,26 @@
-Fork titles message, link to Aiden when he's free: https://canary.discord.com/channels/1391832426048651334/1400520061072052396/1464637593063784540
+The "Enable diff wrapping" / "Disable diff wrapping" ltem in the command_list is only visible once I have sent at least one message. I can't think of a good reason why this command SHOULD NOT always be available. 
+
+This seems very similar to the problem that was fixed here:
+gh issue diff 10497
+
+---
+
+Currently, the diff style can be set to either "auto "or "stacked" and this is controlled by the tui.diff_style setting in the opencode.jsonc file.
+
+But really, there isn't a great reason for this to be in the configuration file at all. It could easily be stored in the kv.json file instead. 
+
+Let's move it there, with the same property name (diff_style).
+
+Lets continue use "auto" and "unified" for the values ("stacked" seems to devolve to "unified" under the hood anyhow, so this seems more consistent to me).
+
+Let's provide menu items in the command_list to toggle between these two states, named either "Use automatic diff style" or "Use unified diff style", depending on the current state.
+
+When this setting is toggled view the menu item, any diffs onscreen must immediately switch to the new style. 
+
+---
+
+Fork titles message, link to Aiden when he's free: 
+https://canary.discord.com/channels/1391832426048651334/1400520061072052396/1464637593063784540
 
 ---
 
