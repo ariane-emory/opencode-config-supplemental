@@ -1,6 +1,11 @@
-The "Enable diff wrapping" / "Disable diff wrapping" ltem in the command_list is only visible once I have sent at least one message. I can't think of a good reason why this command SHOULD NOT always be available. 
+OPENCODE_DISABLE_MODELS_FETCH=1
+
+---
+
+The "Enable diff wrapping" / "Disable diff wrapping" ltem in the command_list is only visible once uI have sent at least one message. I can't think of a good reason why this command SHOULD NOT always be available. 
 
 This seems very similar to the problem that was fixed here:
+
 gh issue diff 10497
 
 ---
