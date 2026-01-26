@@ -2,7 +2,6 @@
 
 feat/markdown-renderer (from the gignit remote) 
 readline-additions (from the aspiers remote)
-timeline-tokens (from the pschiel remote)
 
 ### From origin:
 
@@ -32,6 +31,7 @@ feat/automatic-list-continuation
 feat/session-bookmarks
 fix/dialog-datetime-alignment (for best results, merge this one after feat/session-bookmarks)
 feat/keybindable-commands
+feat/pschiel--timeline-tokens
 feat/sinister-quotes
 
 #### And finally, finish up with this branch:
