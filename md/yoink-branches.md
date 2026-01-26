@@ -1,6 +1,5 @@
 ### From foreign remotes:
 
-feat/markdown-renderer (from the gignit remote) 
 readline-additions (from the aspiers remote)
 
 ### From origin:
@@ -11,6 +10,7 @@ fix/persist-sidebar
 fix/autocompletion-filtered-order
 fix/modal-menus-filtered-order
 feat/opeoginni--display-message-tps
+feat/kv-diff-style-clean (not yet merged upstream, but hopefully soon)
 feat/global-compaction-threshold
 feat/configurable-message-limit-wip
 feat/continue-command
@@ -31,6 +31,7 @@ feat/automatic-list-continuation
 feat/session-bookmarks
 fix/dialog-datetime-alignment (for best results, merge this one after feat/session-bookmarks)
 feat/keybindable-commands
+feat/gignit--markdown-renderer
 feat/pschiel--timeline-tokens
 feat/configurable-snapshot-lifespan
 feat/sinister-quotes
