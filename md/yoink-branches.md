@@ -32,6 +32,7 @@ feat/session-bookmarks
 fix/dialog-datetime-alignment (for best results, merge this one after feat/session-bookmarks)
 feat/keybindable-commands
 feat/pschiel--timeline-tokens
+feat/configurable-snapshot-lifespan
 feat/sinister-quotes
 
 #### And finally, finish up with this branch:
