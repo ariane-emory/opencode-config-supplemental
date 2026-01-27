@@ -1,3 +1,7 @@
+We need the feat/pschiel--timeline-tokens from origin.
+
+---
+
 The key insight is that the current implementation tracks git objects per project but lacks a mechanism to prune entire project directories based on the configured snapshot retention time. We need a comprehensive approach to identify and remove old project directories that have exceeded the defined age limit.
 
 ---
