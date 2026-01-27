@@ -1,4 +1,4 @@
-"kimi-k2p5": {
+"kimi-k2.5": {
           "name": "Kimi K2.5",
           "limit": {
             "context": 262144,
