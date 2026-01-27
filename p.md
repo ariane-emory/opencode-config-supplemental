@@ -1,3 +1,9 @@
+This one is a really something special: a coherent five track album that maintains a consistent mood (but with the degree of variation you would want over the course of an album), tells a cohesive story from start-to-end with foreshadowing and callbacks between the tracks that you couldn't notice until you listened through it more than once, and really makes you feel something (or at least did for me): https://suno.com/playlist/ad12b999-2112-4a4e-b558-3f1ea0c0c331
+
+Bit of a 'soulless' vibe, sure, but that's presumably intentional since the 'guide' character who's speaking is meant to be some sort of AI/program.
+
+---
+
 `OPENCODE_DISABLE_MODELS_FETCH=1 opencode`
 
 ---
