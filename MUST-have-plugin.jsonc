@@ -15,7 +15,9 @@
     "recommended": "RECOMMENDED",
     "not recommended": "NOT RECOMMENDED",
     "may": "MAY",
-    "optional": "OPTIONAL"
+    "optional": "OPTIONAL",
+    "never": "NEVER",
+    
   }
 }
 
