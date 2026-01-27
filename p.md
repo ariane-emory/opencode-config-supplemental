@@ -1,7 +1,3 @@
-Yall, 60% off code for Verdent just dropped. Probably a miscalculation on their part. Ngl, you wont get more bang for you buck for opus 4.5 than with this. The 59$ plan just costs 23$ now 😂 This is the code from some random youtuber: 4SYVI8
-
----
-
 "kimi-k2.5": {
           "name": "Kimi K2.5",
           "limit": {
@@ -53,15 +49,7 @@ Yall, 60% off code for Verdent just dropped. Probably a miscalculation on their 
         }
  
  ---
-        
- We need the feat/pschiel--timeline-tokens from origin.
-
----
-
-The key insight is that the current implementation tracks git objects per project but lacks a mechanism to prune entire project directories based on the configured snapshot retention time. We need a comprehensive approach to identify and remove old project directories that have exceeded the defined age limit.
-
----
-
+ 
 This one is a really something special: a coherent five track album that maintains a consistent mood (but with the degree of variation you would want over the course of an album), tells a cohesive story from start-to-end with foreshadowing and callbacks between the tracks that you couldn't notice until you listened through it more than once, and really makes you feel something (or at least did for me): https://suno.com/playlist/ad12b999-2112-4a4e-b558-3f1ea0c0c331
 
 Bit of a 'soulless' vibe, sure, but that's presumably intentional since the 'guide' character who's speaking is meant to be some sort of AI/program.
@@ -69,14 +57,6 @@ Bit of a 'soulless' vibe, sure, but that's presumably intentional since the 'gui
 ---
 
 `OPENCODE_DISABLE_MODELS_FETCH=1 opencode`
-
----
-
-The "Enable diff wrapping" / "Disable diff wrapping" ltem in the command_list is only visible once uI have sent at least one message. I can't think of a good reason why this command SHOULD NOT always be available. 
-
-This seems very similar to the problem that was fixed here:
-
-gh issue diff 10497
 
 ---
 
@@ -347,3 +327,4 @@ feat/fork-slash-command-with-auto-insert
 obsolete/feat/persist-sidebar
 feat/persist-mcp-group-folding-state
 feat/global-compaction-threshold
+,
