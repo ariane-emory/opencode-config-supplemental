@@ -13,7 +13,6 @@ feat/opeoginni--display-message-tps
 feat/kv-diff-style-clean (not yet merged upstream, but hopefully soon)
 feat/global-compaction-threshold
 feat/configurable-message-limit-wip
-feat/continue-command
 feat/experimental-dont-cache-markdown
 feat/interjections
 feat/jsonc-user-themes
@@ -28,6 +27,7 @@ feat/sidebar-no-auto-setting
 feat/set-session-title
 feat/session-timeline-repeat
 feat/automatic-list-continuation
+feat/continue-command
 feat/session-bookmarks
 fix/dialog-datetime-alignment (for best results, merge this one after feat/session-bookmarks)
 feat/keybindable-commands
