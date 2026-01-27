@@ -1,4 +1,56 @@
-We need the feat/pschiel--timeline-tokens from origin.
+"kimi-k2p5": {
+          "name": "Kimi K2.5",
+          "limit": {
+            "context": 262144,
+            "output": 262144
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "video"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "reasoning": true,
+          "temperature": true,
+          "structured_output": true,
+          "interleaved": {
+            "field": "reasoning_content"
+          },
+          "variants": {
+            "instant": {
+              "name": "Instant",
+              "options": {
+                "reasoning_effort": "minimal"
+              }
+            },
+            "low": {
+              "name": "Low",
+              "options": {
+                "reasoning_effort": "low"
+              }
+            },
+            "medium": {
+              "name": "Medium",
+              "options": {
+                "reasoning_effort": "medium"
+              }
+            },
+            "high": {
+              "name": "High",
+              "options": {
+                "reasoning_effort": "high"
+              }
+            }
+          }
+        }
+ 
+ ---
+        
+ We need the feat/pschiel--timeline-tokens from origin.
 
 ---
 
