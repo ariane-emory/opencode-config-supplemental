@@ -1,3 +1,7 @@
+Yall, 60% off code for Verdent just dropped. Probably a miscalculation on their part. Ngl, you wont get more bang for you buck for opus 4.5 than with this. The 59$ plan just costs 23$ now 😂 This is the code from some random youtuber: 4SYVI8
+
+---
+
 "kimi-k2.5": {
           "name": "Kimi K2.5",
           "limit": {

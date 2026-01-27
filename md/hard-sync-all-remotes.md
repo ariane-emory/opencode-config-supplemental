@@ -7,6 +7,8 @@ RULES:
 2. All branches that exist locally must be brought up to date with their remote counterparts (may include branches manually checked-out from remotes other than origin)
 3. NEVER modify remote repositories - this is a READ-ONLY synchronization operation
 
+**IMPORTANT**: You MUST delete any orphaned local branches!
+
 **CRITICAL PRINCIPLE**: Remote repositories are ALWAYS the single source of truth. Only delete branches that truly have no remote counterpart anywhere.
 
 **CRITICAL**: You MUST NOT merge local changes with upstream changes! We want the local state to exactly match remote state, any local changes MUST ALWAYS be discarded in favour of the upstream state. DO NOT MERGE!
