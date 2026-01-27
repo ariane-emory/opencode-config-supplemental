@@ -17,7 +17,7 @@
     "may": "MAY",
     "optional": "OPTIONAL",
     "never": "NEVER",
-    
+    "always": "ALWAYS",
   }
 }
 
