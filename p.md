@@ -1,4 +1,35 @@
-"kimi-k2.5": {
+Link for Aiden: https://canary.discord.com/channels/1391832426048651334/1400520061072052396/1466138629821694042
+
+---
+
+When you can spare a few moments from your tireless toil for us to bless little 'ol me with some attention:
+
+Did we not agree, the other day,  that these two were likely ready to be landed? If any concerns remain, just let me know and I'll be mire than happy to address them!
+https://github.com/anomalyco/opencode/pull/10321
+https://github.com/anomalyco/opencode/pull/10713
+
+This one also seems like a very good idea, as many people has raised issues about the snapshot folder's size and this would allow them a way to take finer grained control over how much space it uses by setting a retention time in days. It'd resolve at least 5 issues (some of which are essentially duplicates), I probably could have found more similar ones if I kept digging:
+https://github.com/anomalyco/opencode/pull/10628
+
+Still awaiting a report back from Hona about whether that fix/improvement to OPENCODE_EXPERIMENTAL_DISABLE_COPY_ON_SELECT worked for him on windows or not, so that PR remains in draft state for now.
+
+---
+
+1466 1492 7572 0483 008
+
+---
+
+
+|-----------------------|----------|
+| GLM-4.6               | 181 KLOC | 
+| GLM-4.7               | 521 KLOC | 
+| AGY Gemini 3 Flash    | 168 KLOC | 
+| AGY Gemini 3 Pro High | 168 KLOC | 
+| Opus 4.5              | 164 KLOC | 
+|-----------------------|----------|
+
+
+uh"kimi-k2.5": {
           "name": "Kimi K2.5",
           "limit": {
             "context": 262144,
