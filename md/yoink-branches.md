@@ -1,6 +1,7 @@
 ### From foreign remotes:
 
 readline-additions (from the aspiers remote)
+add-bash-env-parameter (from the taxilian remote)
 
 ### From origin:
 
