@@ -6,7 +6,6 @@ add-bash-env-parameter (from the taxilian remote)
 ### From origin:
 
 fix/rfc2119-question-tool
-fix/forked-session-titles (not yet merged upstream, but hopefully soon)
 fix/persist-sidebar
 fix/autocompletion-filtered-order
 fix/modal-menus-filtered-order
