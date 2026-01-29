@@ -305,57 +305,13 @@ github-copilot/claude-opus-4.5
 
 -- 
 
-### Last:
+serve like this
 
-fix/allow-model-cycle-favorites-keybinds
-feat/configurable-message-limit-wip
-feat/continue-command
-feat/dynamic-console-toggle-text
-feat/experimental-dont-cache-markdown
-feat/glob-permissions
-feat/interjections
-feat/jsonc-user-themes
-feat/markdown-frontmatter-interpolation
-feat/permission-spinner
-feat/persist-sidebar
-feat/shell-advice
-feat/skip-models-fetch-setting-take-6
+```opencode serve --hostname 127.0.0.1 --port 4096 --mdns true```
 
--- 
+then in desktop app make 127.0.0.1:4096 default server
 
-### Current:
+for attaching tui use command like this
+```opencode attach http://127.0.0.1:4096 --dir .```
 
-fix/allow-model-cycle-favorites-keybinds
-feat/configurable-message-limit-wip
-feat/continue-command
-feat/experimental-dont-cache-markdown
-feat/glob-permissions
-feat/interjections
-feat/jsonc-user-themes
-feat/permission-spinner
-feat/persist-sidebar
-feat/shell-advice
-feat/tui-permission-indicator-with-sidebar-indicator
-
---- 
-
-### Next:
-
-fix/display-recents-consistency
-feat/permission-indicator-in-sidebar
-feat/configurable-message-limit-wip
-feat/continue-command
-feat/experimental-dont-cache-markdown
-feat/glob-permissions
-feat/interjections
-feat/jsonc-user-themes
-feat/permission-spinner
-feat/shell-advice
-feat/configurable-recent-models-limit
-feat/retain-prompt-when-forking
-feat/fork-slash-command
-feat/fork-slash-command-with-auto-insert
-obsolete/feat/persist-sidebar
-feat/persist-mcp-group-folding-state
-feat/global-compaction-threshold
-,
+this way you can use single server instance with multiple projects sessions in different folders
