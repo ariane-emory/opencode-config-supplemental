@@ -1,3 +1,7 @@
+For Aiden, about dot file issue: https://canary.discord.com/channels/1391832426048651334/1400520061072052396/1466398653701689351
+
+---
+
 Kimi convo: 
 https://canary.discord.com/channels/1391832426048651334/1391832428024430645/1466205070713684091
 
