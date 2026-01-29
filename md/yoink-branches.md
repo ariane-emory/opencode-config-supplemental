@@ -5,6 +5,7 @@ add-bash-env-parameter (from the taxilian remote)
 
 ### From origin:
 
+fix/edit-tool-description
 fix/rfc2119-question-tool
 fix/persist-sidebar
 fix/autocompletion-filtered-order
