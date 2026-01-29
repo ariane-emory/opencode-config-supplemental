@@ -18,6 +18,8 @@
     "optional": "OPTIONAL",
     "never": "NEVER",
     "always": "ALWAYS",
+    "must never" : "MUST NEVER",
+    "must always": "MUST ALWAYS",
   }
 }
 
