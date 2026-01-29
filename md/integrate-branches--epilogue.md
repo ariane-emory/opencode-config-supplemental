@@ -91,7 +91,7 @@ export const VERSION = typeof OPENCODE_VERSION === "string" ? OPENCODE_VERSION :
 
 (Replace `YYYY-MM-DD-HH-MM` with the actual branch timestamp, e.g., `2025-12-17-01-17`)
 
-**CRITICAL**: The version MUST match the 'YYYY-MM-DD-HH-MM' format, and must not contain the string 'opencode' or a version number like '0.0.0'. The VERSION constant MUST NOT be set dynamically! It m MUST NOT be treated as a 'fallback', it must be strictly hardcoded to this value in all cases (whether using 'bun dev' or running a compiled binary). This requires strictly hardcoding the value in  packages/opencode/script/build.ts: the VERSION MUST NOT be dynamically constructed! Remember, we will NEVER build binaries from this integration branch, the hardcoded version string MUST display correctly when it is launched using `bun dev`!
+**CRITICAL**: The version MUST match the 'YYYY-MM-DD-HH-MM' format, and must not contain the string 'opencode' or a version number like '0.0.0'. The displayed version MUST NEVER be computed dynamically! The datetime string MUST NOT be treated as a 'fallback value', it MUST be strictly hardcoded to this value in all possible situations(whether using 'bun dev' or running a compiled binary). This requires strictly hardcoding the value in  packages/opencode/script/build.ts: the VERSION MUST NOT be dynamically constructed! Remember, we will NEVER build binaries from this integration branch, the hardcoded version string MUST ALWAYS display correctly when it is launched using `bun dev`!
 
 The version MUST NOT ever be computed dynamically!
 
