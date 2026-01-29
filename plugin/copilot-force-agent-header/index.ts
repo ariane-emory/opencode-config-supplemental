@@ -192,9 +192,16 @@ const CopilotForceAgentHeader: Plugin = async ({ client }) => {
                         }
                     } catch { }
 
+                    // Check if x-initiator was already set by another hook (e.g., built-in's chat.headers for subagent sessions)
+                    const existingInitiator = (init?.headers as Record<string, string>)?.["x-initiator"]
+
                     // Determine X-Initiator value
                     let initiator: string
-                    if (isAgentCall) {
+                    if (existingInitiator) {
+                        // Respect header already set by built-in chat.headers (subagent sessions)
+                        initiator = existingInitiator
+                        log(`[FETCH] Respecting existing x-initiator from chat.headers: ${initiator}`)
+                    } else if (isAgentCall) {
                         // Non-first message: always use "agent"
                         initiator = "agent"
                         log('[FETCH] Non-first message detected, using: agent')
