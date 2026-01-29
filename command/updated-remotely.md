@@ -2,4 +2,4 @@
 description: Branch updated remotely.
 agent: build
 ---
-!`cat ~/oc/md/updated-remotely--body.md`
+!`opencode expand ~/oc/md/updated-remotely--body.md $1`
