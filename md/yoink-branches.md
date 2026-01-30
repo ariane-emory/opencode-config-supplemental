@@ -35,6 +35,7 @@ feat/keybindable-commands
 feat/gignit--markdown-renderer
 feat/pschiel--timeline-tokens
 feat/configurable-snapshot-lifespan
+feat/configurable-new-plan-mode
 feat/sinister-quotes
 
 #### And finally, finish up with this branch:
