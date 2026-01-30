@@ -24,4 +24,6 @@ Group the plan's steps into "phases". After completing each phase, the code MUST
 
 Don't push your changes yet, let's start by just fixing it locally.
 
+Do not create any PRs, I'd like to test it out locally myself before doing that.
+
 Once you've come up with your plan, submit it to me for approval.

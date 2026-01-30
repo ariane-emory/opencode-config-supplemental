@@ -20,4 +20,6 @@ Think the changes required to resolve the issue through thoroughly and break the
 
 Make the minimal change required to solve the issue. Do not make any unnecessary changes unrelated to the changes that are required to resolve the isue.
 
+Do not create any PRs, I'd like to test it out locally myself before doing that.
+
 Once you have come up with three options, evaluate their pros and cons and present the options to me to give me an opportunity to choose between them, along withyour comments on the relative merits of each option. Present these options as a numbered list.
