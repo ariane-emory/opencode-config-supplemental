@@ -1,4 +1,4 @@
-For Aiden, about dot file issue: https://canary.discord.com/channels/1391832426048651334/1400520061072052396/1466398653701689351
+For Aiden, about dot file issue https://canary.discord.com/channels/1391832426048651334/1400520061072052396/1466398653701689351
 
 ---
 
@@ -324,3 +324,24 @@ for attaching tui use command like this
 ```opencode attach http://127.0.0.1:4096 --dir .```
 
 this way you can use single server instance with multiple projects sessions in different folders
+
+---
+
+
+`opencode --continue --fork--session` Start the TUI, continuing and forking (duplicating) the last session 
+`opencode -cf` Same as previous, but using terse syntax for both switched
+`opencode run --continue --fork-session "tell me a better joke" Run one prompt, continuing and forking (duplicating) the last session 
+`opencode run --continue --fork-session "tell me a better joke" Same as previous, but using terse syntax for the --continue switch 
+
+
+`opencode --continue --fork--session` 
+Start the TUI, continuing and forking (duplicating) the last session
+
+`opencode -cf`
+Same as previous, but using terse syntax for both switched
+
+`opencode run --continue --fork-session "tell me a better joke"` 
+Run one prompt, continuing and forking (duplicating) the last session 
+
+`opencode run --fork-session "tell me a better joke"` 
+Same as previous, but using terse syntax for the --continue switch
