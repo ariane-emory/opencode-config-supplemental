@@ -26,6 +26,7 @@ feat/elapsed-timer
 feat/opencode-expand
 feat/sidebar-no-auto-setting
 feat/set-session-title
+feat/get-session-title
 feat/session-timeline-repeat
 feat/automatic-list-continuation
 feat/continue-command

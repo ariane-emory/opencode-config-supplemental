@@ -1,5 +1,5 @@
-Set the title of the current session by prefixing the name of the branch onto the front. 
+Set the title of the current session by prefixing the name of the branch at its beginning. 
 
-So, for example, if the branch is named 'feat/foo' and the session is currently named 'bar baz quux', the new session title should be 'feat/foo bar baz quux'.
+So, for example, if the branch is currently named "foo bar baz" and the current branch is named "feat/quux", its new title should be "feat/quux foo bar baz".
 
 In addition, bookmark the current session. 
