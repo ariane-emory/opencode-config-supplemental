@@ -1,3 +1,24 @@
+This branch implements a resolution to the following github issue:
+
+gh issue view 11137 
+gh issue view 11137 --comments
+
+You can see a dummy PR for it here:
+
+gh pr view 147 --repo ariane-emory/opencode
+gh pr view 147 --repo ariane-emory/opencode --comments
+
+Assess the changes that this PR makes in order to implement this new ---fork-session feature. 
+
+1. Do they seem appropriate? 
+2. Is there any way they could be simplified or made cleaner without changing the behaviour? 
+3. Do you have any other recommendations? 
+
+
+It would be preferable not to increase the total length of the changes. 
+
+---
+
 For Aiden, about dot file issue https://canary.discord.com/channels/1391832426048651334/1400520061072052396/1466398653701689351
 
 ---
