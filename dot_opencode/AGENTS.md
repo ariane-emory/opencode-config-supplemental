@@ -1,0 +1,1 @@
+supplemental/dot_opencode/AGENTS.md
