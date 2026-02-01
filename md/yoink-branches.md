@@ -6,11 +6,11 @@ add-bash-env-parameter (from the taxilian remote)
 ### From origin:
 
 fix/remove-dot-true
-fix/edit-tool-description
 fix/rfc2119-question-tool
 fix/persist-sidebar
 fix/autocompletion-filtered-order
 fix/modal-menus-filtered-order
+feat/edit-tool-description
 feat/opeoginni--display-message-tps
 feat/kv-diff-style-clean (not yet merged upstream, but hopefully soon)
 feat/global-compaction-threshold
