@@ -275,6 +275,11 @@ export const TerminalBell: Plugin = async ({
   directory,
   worktree,
 }) => {
+  // Early exit on non-macOS platforms (afplay is macOS-only)
+  if (process.platform !== 'darwin') {
+    return {};
+  }
+
   // Track the last status for each session to detect busy→idle transitions
   const sessionStatus = new Map<string, "idle" | "busy" | "retry">();
 
