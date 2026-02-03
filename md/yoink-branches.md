@@ -35,12 +35,11 @@ feat/session-bookmarks
 fix/dialog-datetime-alignment (for best results, merge this one after feat/session-bookmarks)
 feat/keybindable-commands
 feat/gignit--markdown-renderer
-feat/pschiel--timeline-tokens
 feat/configurable-snapshot-lifespan
 feat/configurable-new-plan-mode
 feat/fork-session-take-2
 feat/config-imports
-feat/fork-session-take-2
+feat/fork-session-take
 feat/canceled-prompts-in-history
 feat/sinister-quotes
 

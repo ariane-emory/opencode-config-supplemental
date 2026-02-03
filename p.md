@@ -1,3 +1,9 @@
+Its suposted to be at http://localhost:18789/chat or smth like that
+
+http://localhost:18789/chat?session=agent%3Amain%3Amain 
+
+---
+
 This branch implements a resolution to the following github issue:
 
 gh issue view 11137 
