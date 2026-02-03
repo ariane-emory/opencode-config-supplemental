@@ -39,7 +39,6 @@ feat/configurable-snapshot-lifespan
 feat/configurable-new-plan-mode
 feat/fork-session-take-2
 feat/config-imports
-feat/fork-session-take
 feat/canceled-prompts-in-history
 feat/sinister-quotes
 
