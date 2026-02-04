@@ -7,5 +7,5 @@
   // "lite" | "tool"
   "mode": "tool",
   // Change the thinking keyword if you like
-  "prefix": "Think step-by-step: "
+  "prefix": "Think it through step-by-step in English: "
 }

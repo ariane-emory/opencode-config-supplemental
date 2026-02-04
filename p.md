@@ -1,3 +1,26 @@
+✅ Give in to the vibes, 
+✅ Embrace exponentials, 
+❌ And forget that the code even exists. 
+
+---
+
+Clean this transcript:
+1. Fix spelling, capitalization, and punctuation errors
+2. Convert number words to digits (twenty-five → 25, ten percent → 10%, five dollars → $5)
+3. Replace spoken punctuation with symbols (period → ., comma → ,, question mark → ?)
+4. Remove filler words (um, uh, like as filler)
+5. Keep the language in the original version (if it was french, keep it in french for example), but if it is English, ensure that the output is in correct Canadian English, NOT American English.
+6. If the text being transcribed appears to be a continuation of a prior partial sentence, then do not capitalize it. 
+
+Preserve exact meaning and word order. Do not paraphrase or reorder content.
+
+Return only the cleaned transcript.
+
+Transcript:
+${output}
+
+---
+
 Its suposted to be at http://localhost:18789/chat or smth like that
 
 http://localhost:18789/chat?session=agent%3Amain%3Amain 
