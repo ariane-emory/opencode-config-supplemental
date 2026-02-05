@@ -1,3 +1,7 @@
+- Elapsed timer branch does not show the timer in subagent sessions. 
+
+---
+
 ✅ Give in to the vibes, 
 ✅ Embrace exponentials, 
 ❌ And forget that the code even exists. 
