@@ -40,7 +40,6 @@ feat/configurable-new-plan-mode
 feat/fork-session-take-2
 feat/config-imports
 feat/canceled-prompts-in-history
-feat/keybindable-hide-show-thinking-toggle
 feat/sinister-quotes
 feat/restore-footer-details
 
