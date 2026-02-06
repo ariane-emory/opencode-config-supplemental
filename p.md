@@ -1,3 +1,12 @@
+Hey, I can see that you're currently connected from your phone, so I will limit myself to asking about PRs that are either extremely simple or that we have already discussed in extensive detail and that you had previously deemed ready for landing, and will lead anything more intricate waiting for when you're at an actual computer. So, thoghts on these two?
+
+A very simple six-word long fix to what appears to have been a finger slip on Dax's part that lost our beloved footer line:
+https://github.com/anomalyco/opencode/pull/12245
+The `--fork` switch that we'd discussed in detail, and that you'd said was likely good to land:
+https://github.com/anomalyco/opencode/pull/11340 
+
+---
+
 - Elapsed timer branch does not show the timer in subagent sessions. 
 
 ---
