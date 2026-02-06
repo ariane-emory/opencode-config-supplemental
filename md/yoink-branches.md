@@ -41,7 +41,6 @@ feat/fork-session-take-2
 feat/config-imports
 feat/canceled-prompts-in-history
 feat/sinister-quotes
-feat/restore-footer-details
 
 #### And finally, finish up with this branch:
 

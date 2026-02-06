@@ -1,4 +1,4 @@
-Hey, I can see that you're currently connected from your phone, so for the moment I will limit myself to asking about PRs that are either extremely simple or that we have already discussed in extensive detail and that you had previously deemed likely ready for landing, and will lead anything more intricate waiting for when you're at an actual computer. So, what are your current thoughts on these two?
+Hey, I can see that you're currently connected from your phone, so for the moment I will limit myself to asking about PRs that are either extremely simple or that we have already discussed in extensive detail together and that you had previously deemed likely ready for landing, and will lead anything more intricate waiting for when you're at an actual computer. So, what are your current thoughts on these two?
 
 A very simple six-word long fix to what appears to have been a finger slip on Dax's part that lost our beloved footer line:
 https://github.com/anomalyco/opencode/pull/12245
