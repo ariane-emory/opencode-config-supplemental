@@ -1,6 +1,6 @@
 ### From foreign remotes:
 
-#feature/markdown-renderer (from the gignit remote)
+feature/markdown-renderer (from the gignit remote)
 readline-additions (from the aspiers remote)
 add-bash-env-parameter (from the taxilian remote)
 
@@ -35,7 +35,7 @@ feat/continue-command
 feat/session-bookmarks
 fix/dialog-datetime-alignment (for best results, merge this one after feat/session-bookmarks)
 feat/keybindable-commands
-feat/gignit--markdown-renderer
+#feat/gignit--markdown-renderer (made obsolete by feature/markdown-renderer (from the gignit remote), merge that branch instead!
 feat/configurable-snapshot-lifespan
 feat/configurable-new-plan-mode
 feat/config-imports
