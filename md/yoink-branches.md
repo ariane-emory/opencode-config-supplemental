@@ -37,7 +37,6 @@ feat/keybindable-commands
 feat/gignit--markdown-renderer
 feat/configurable-snapshot-lifespan
 feat/configurable-new-plan-mode
-feat/fork-session-take-2
 feat/config-imports
 feat/canceled-prompts-in-history
 feat/sinister-quotes
