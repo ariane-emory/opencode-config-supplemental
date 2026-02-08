@@ -4,7 +4,7 @@ agent: build
 
 ---
 
-The instructions I just gave you came from a Markdown file located at
+Part of the instructions I just gave you came from a Markdown file located at
 ~/.config/opencode/md/$ARGUMENTS.md. You encountered some difficulties or made some mistakes while following these instructions that gave us some trouble achieving our goal.
 
 Using what you have learned during our session today, can you think of ways that these instructions could be improved to help you avoid making the same mistakes and encountering the same problems next time we perform this procedure?
