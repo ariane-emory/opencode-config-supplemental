@@ -1,9 +1,3 @@
-### From foreign remotes:
-
-feature/markdown-renderer (from the gignit remote)
-readline-additions (from the aspiers remote)
-add-bash-env-parameter (from the taxilian remote)
-
 ### From origin:
 
 fix/remove-dot-true
@@ -41,6 +35,12 @@ feat/configurable-new-plan-mode
 feat/config-imports
 feat/canceled-prompts-in-history
 feat/sinister-quotes
+
+### Then, from foreign remotes:
+
+feature/markdown-renderer (from the gignit remote)
+readline-additions (from the aspiers remote)
+add-bash-env-parameter (from the taxilian remote)
 
 #### And finally, finish up with this branch:
 
