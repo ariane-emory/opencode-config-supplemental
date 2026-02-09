@@ -23,13 +23,6 @@ import { spawn } from "child_process";
 import { accessSync, constants, writeFileSync, unlinkSync, existsSync } from "fs";
 import { resolve, normalize } from "path";
 
-// Basic settings
-const configPath = getConfigPath();
-const semaphoreFile = normalize(resolve(configPath, "prompt-enhancer", "prompt-enhancer-semaphore"),);
-const semaphorePresentSound = [normalize(resolve(configPath, "audio", "riff.aiff")), 0.25,];
-const noSemaphorePresentSound = [normalize(resolve(configPath, "audio", "riff2.aiff")), 0.25,];
-const permissionPromptSound = [normalize(resolve(configPath, "audio", "riff3.aiff")), 0.25,];
-
 // Audio queue and coordination system
 interface SoundRequest {
   filePath: string;
@@ -102,6 +95,12 @@ function validateFileAccess(filePath: string): {
     };
   }
 }
+
+const configPath = getConfigPath();
+const semaphoreFile = normalize(resolve(configPath, "prompt-enhancer", "prompt-enhancer-semaphore"),);
+const semaphorePresentSound = [normalize(resolve(configPath, "audio", "riff.aiff")), 0.4,];
+const noSemaphorePresentSound = [normalize(resolve(configPath, "audio", "riff2.aiff")), 0.4,];
+const permissionPromptSound = [normalize(resolve(configPath, "audio", "riff3.aiff")), 0.4,];
 
 // Lock file path for cross-instance coordination
 const audioLockFile = normalize(resolve(getConfigPath(), ".audio-lock"));
@@ -276,6 +275,11 @@ export const TerminalBell: Plugin = async ({
   directory,
   worktree,
 }) => {
+  // Early exit on non-macOS platforms (afplay is macOS-only)
+  if (process.platform !== 'darwin') {
+    return {};
+  }
+
   // Track the last status for each session to detect busy→idle transitions
   const sessionStatus = new Map<string, "idle" | "busy" | "retry">();
 
