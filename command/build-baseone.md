@@ -1,5 +1,4 @@
 ---
-model: zai-coding-plan/glm-4.7
 agent: build
 ---
 !`cat ~/.config/opencode/md/latest-integration.md`
