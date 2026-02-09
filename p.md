@@ -1,3 +1,9 @@
+Hey, just thought you check in on the status of a couple of poll requests if you have the time. Have you had a chance to think about this one for retaining canceled prompts in the prompt history? I recall that you had said you weren't sure about the command palette toggle item and that you might prefer to instead just enable it at all times. Let me know if you've come to a final conclusion about that aspect, and I will be happy to adjust it if needed. 
+https://github.com/anomalyco/opencode/pull/11710
+
+This one, for allowing a snapshot retention time to be set as a number of days, has also been working very well for me for a couple of weeks to keep my snapshot folder to a manageable size: https://github.com/anomalyco/opencode/pull/12856
+
+---
 Hey, I can see that you're currently connected from your phone, so for the moment I will limit myself to asking about PRs that are either extremely simple or that we have already discussed in extensive detail together and that you had previously deemed likely ready for landing, and will lead anything more intricate waiting for when you're at an actual computer. So, what are your current thoughts on these two?
 
 A very simple six-word long fix to what appears to have been a finger slip on Dax's part that lost our beloved footer line:
