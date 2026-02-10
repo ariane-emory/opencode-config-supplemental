@@ -1,3 +1,53 @@
+n seemed like the best way to avoid breaking existing configs. The other obvious possibility seemed to be to always require it to be a number and default it to 7 (instead of defaulting it to true), but that would obviously be a breaking change which would clearly not be desirable. 
+Nerio (Filip)
+
+ — 1:55 AM
+For union stuff you can do some kind of zod transform - config won't break but the code will be cleaner
+
+snapshot: z
+  .union([
+    z.boolean(),
+    z.number().int().nonnegative(),
+  ])
+  .transform((val) => {
+    if (typeof val === "number") {
+      return val > 0;
+    }
+    return val;
+  })
+  .optional()
+
+
+edit:
+
+i guess you want to transform to number 
+
+so it would be like 
+
+snapshot: z
+  .union([
+    z.boolean(),
+    z.number().int().nonnegative(),
+  ])
+  .transform((val) => {
+    if (typeof val === "boolean") {
+      return val ? 7 : 0;
+    }
+    return val;
+  })
+  .optional(),
+
+schema.parse({ snapshot: true })   // { snapshot: 7 }
+schema.parse({ snapshot: false })  // { snapshot: 0 }
+schema.parse({ snapshot: 3 })      // { snapshot: 3 }
+schema.parse({})                   // { snapshot: undefined }
+ 
+oh wait, nevermind - you want to completely change so it takes in days as vlaue
+i guess then just transform to 0
+to number
+if false
+
+---
 Hey, just thought you check in on the status of a couple of poll requests if you have the time. Have you had a chance to think about this one for retaining canceled prompts in the prompt history? I recall that you had said you weren't sure about the command palette toggle item and that you might prefer to instead just enable it at all times. Let me know if you've come to a final conclusion about that aspect, and I will be happy to adjust it if needed. 
 https://github.com/anomalyco/opencode/pull/11710
 
@@ -160,7 +210,7 @@ uh"kimi-k2.5": {
  ---
  
  
-This one is not mine, but it reallys something special: a coherent album that maintains a consistent mood (but with the degree of variation you would want over the course of an album), a cohesive story from start-to-end, lyrics rife with foreshadowing and callbacks between tracks that you wouldn't ever notice unless you listened to the whole thing multiple, adept employment of rhetorical devices like paradox and antanaclasis and really makes you feel something. This guy must have really put a lot of work into the writing to set up all the (sometimes obvious, sometimes subtle) connections between the different songs, I must have listened to it at least twenty times already: https://suno.com/playlist/ad12b999-2112-4a4e-b558-3f1ea0c0c331
+This one is also not mine, but it reallys something special, probably one of the best things I've found on Suno: a coherent album that maintains a consistent mood (but with the degree of variation you would want over the course of an album), a cohesive story from start-to-end, lyrics rife with foreshadowing and callbacks between tracks that you wouldn't ever notice unless you listened to the whole thing multiple, adept employment of rhetorical devices like paradox and antanaclasis and really makes you feel something. This guy must have really put a lot of work into the writing to set up all the (sometimes obvious, sometimes subtle) connections between the different songs, I must have listened to it at least twenty times already: https://suno.com/playlist/ad12b999-2112-4a4e-b558-3f1ea0c0c331
 
 ---
 
