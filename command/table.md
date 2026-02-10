@@ -5,8 +5,11 @@ agent: plan
 
 We need to test out the Markdown rendering. 
 
-Just print this Markdown table back at me:
+You **MUST NOT** perform any exploration!
 
+Just print this Markdown back at me:
+
+**A Markdown table:** *with some italic text after the title*
 |-----|-----|
 | One | Two |
 |-----|-----|
