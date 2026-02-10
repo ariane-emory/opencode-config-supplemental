@@ -41,6 +41,7 @@ feat/sinister-quotes
 feature/markdown-renderer (from the gignit remote)
 readline-additions (from the aspiers remote)
 add-bash-env-parameter (from the taxilian remote)
+feat/thinking-indicator-hidden
 
 #### And finally, finish up with this branch:
 
