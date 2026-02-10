@@ -10,43 +10,14 @@ Intercepts GitHub Copilot API requests and modifies the `X-Initiator` header beh
 
 ## Setup
 
-**1. Set environment variable**
-
-Add to `~/.bashrc` or `~/.zshrc`:
-
-```bash
-export OPENCODE_DISABLE_DEFAULT_PLUGINS=1
-```
-
-Then reload: `source ~/.bashrc`
-
-**2. Install dependencies**
+**1. Install dependencies**
 
 ```bash
 cd ~/.config/opencode/plugin/copilot-force-agent-header/
 bun install
 ```
 
-**3. Enable plugins**
-
-Add to `~/.config/opencode/opencode.json`:
-
-```json
-{
-  "plugin": [
-    "opencode-copilot-auth@0.0.8",
-    "opencode-anthropic-auth@0.0.4",
-    "./plugin/copilot-force-agent-header"
-  ]
-}
-```
-
-**Note:** With `OPENCODE_DISABLE_DEFAULT_PLUGINS=1`, you must explicitly list:
-- `opencode-copilot-auth@0.0.8` - **Required** for this plugin (GitHub Copilot token management)
-- `opencode-anthropic-auth@0.0.4` - Optional, only if using Anthropic models directly (not through GitHub Copilot)
-- This plugin must come **after** the auth plugins
-
-**4. Restart OpenCode**
+**2. Restart OpenCode**
 
 ## How It Works
 
