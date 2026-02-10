@@ -1,3 +1,7 @@
+https://canary.discord.com/channels/1391832426048651334/1400520061072052396/1470508804360634550
+
+---
+
 n seemed like the best way to avoid breaking existing configs. The other obvious possibility seemed to be to always require it to be a number and default it to 7 (instead of defaulting it to true), but that would obviously be a breaking change which would clearly not be desirable. 
 Nerio (Filip)
 
