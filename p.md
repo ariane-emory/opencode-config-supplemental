@@ -159,7 +159,8 @@ uh"kimi-k2.5": {
  
  ---
  
-This one is a really something special: a coherent album that maintains a consistent mood (but with the degree of variation you would want over the course of an album), a cohesive story from start-to-end, lyrics rife with foreshadowing and callbacks between tracks that you couldn't ever notice unless you listened to it all more than once, adept employment of rhetorical devices like paradox and antanaclasis and really makes you feel something. You have truly created something incredible here.
+ 
+This one is not mine, but it reallys something special: a coherent album that maintains a consistent mood (but with the degree of variation you would want over the course of an album), a cohesive story from start-to-end, lyrics rife with foreshadowing and callbacks between tracks that you wouldn't ever notice unless you listened to the whole thing multiple, adept employment of rhetorical devices like paradox and antanaclasis and really makes you feel something. This guy must have really put a lot of work into the writing to set up all the (sometimes obvious, sometimes subtle) connections between the different songs, I must have listened to it at least twenty times already: https://suno.com/playlist/ad12b999-2112-4a4e-b558-3f1ea0c0c331
 
 ---
 
