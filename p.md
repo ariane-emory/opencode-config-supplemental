@@ -1,3 +1,7 @@
+@aidenc9727 Hey, just wanted to check in again real quick on this one... did you want me to remove the toggle and just have this behaviour on all the time? Let me know when you find the time to glance at it, thanks so much ;) https://github.com/anomalyco/opencode/pull/11710
+
+---
+
 https://canary.discord.com/channels/1391832426048651334/1400520061072052396/1470508804360634550
 
 ---
