@@ -2,6 +2,7 @@
 
 fix/remove-dot-true
 fix/rfc2119-question-tool
+fix/restore-footer
 fix/persist-sidebar
 fix/autocompletion-filtered-order
 fix/modal-menus-filtered-order
