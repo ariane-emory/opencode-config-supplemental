@@ -6,19 +6,24 @@ I want to be able to run the exact same version that runs when I do 'bun dev' fr
 
 The system has TWO completely separate opencode repositories. This installation task uses **EXCLUSIVELY** the opencode-deploy repository:
 
-| Repository | Path | Alias | Purpose | **USE IN THIS TASK?** |
-|------------|------|-------|---------|----------------------|
-| **opencode-deploy** | `/Volumes/K/Code/go/opencode-deploy` | `~/osd` | Contains integration branches for deployment | ✅ **YES - THIS IS THE ONLY ONE WE USE** |
-| **opencode** | `/Volumes/K/Code/go/opencode` | `~/os` | Main development repository (different branch) | ❌ **NO - DO NOT USE THIS AT ALL** |
+| Repository          | Path                                 | Alias   | Purpose                                        | **USE IN THIS TASK?**                    |
+|---------------------|--------------------------------------|---------|------------------------------------------------|------------------------------------------|
+| **opencode-deploy** | `/Volumes/K/Code/go/opencode-deploy` | `~/osd` | Contains integration branches for deployment   | ✅ **YES - THIS IS THE ONLY ONE WE USE** |
+| **opencode**        | `/Volumes/K/Code/go/opencode1`       | `~/os1` | Development repository (different branch) | ❌ **NO - DO NOT USE THIS AT ALL**       |
+| **opencode**        | `/Volumes/K/Code/go/opencode`2       | `~/os2` | Development repository (different branch) | ❌ **NO - DO NOT USE THIS AT ALL**       |
+| **opencode**        | `/Volumes/K/Code/go/opencode`3       | `~/os`3 | Development repository (different branch) | ❌ **NO - DO NOT USE THIS AT ALL**       |
+| **opencode**        | `/Volumes/K/Code/go/opencode`4       | `~/os`4 | Development repository (different branch) | ❌ **NO - DO NOT USE THIS AT ALL**       |
+| **opencode**        | `/Volumes/K/Code/go/opencode`5       | `~/os`5 | Development repository (different branch) | ❌ **NO - DO NOT USE THIS AT ALL**       |
+| **opencode**        | `/Volumes/K/Code/go/opencode`6       | `~/o6s` | Development repository (different branch) | ❌ **NO - DO NOT USE THIS AT ALL**       |
 
-**You are working in `/Volumes/K/Code/go/opencode-deploy/` (or `~/osd`). The `/Volumes/K/Code/go/opencode/` (or `~/os`) directory is COMPLETELY UNRELATED to this installation and must not be referenced, consulted, or used in any way.**
+**You are working in `/Volumes/K/Code/go/opencode-deploy/` (or `~/osd`). The other directories are COMPLETELY UNRELATED to this installation and must not be referenced, consulted, or used in any way.**
 
 **Before proceeding**:
 
 1. **Verify you are in the correct repository**: Run `pwd` - you should see `/Volumes/K/Code/go/opencode-deploy` or a path containing `opencode-deploy`
 2. **Verify the git remote**: Run `git remote -v` - it should point to the origin repository (ariane-emory/opencode), NOT the upstream repository (sst/opencode).
 3. **Check which branch you're on**: `git branch --show-current` - find the latest integration branch (has date/time in name)
-4. **Confirm you're NOT in ~/os**: Run `pwd` and verify it does NOT show a path containing just `opencode` without `-deploy`
+4. **Confirm you're NOT in one of the other directories**: Run `pwd` and verify it does NOT show a path containing just `opencode` without `-deploy`
 5. All file paths in the wrapper script must be derived from `/Volumes/K/Code/go/opencode-deploy/` using dynamic path resolution
 
 ## Implementation Steps:

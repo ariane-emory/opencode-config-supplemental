@@ -1,4 +1,8 @@
-@aidenc9727 Hey, just wanted to check in again real quick on this one... did you want me to remove the toggle and just have this behaviour on all the time? Let me know when you find the time to glance at it, thanks so much ;) https://github.com/anomalyco/opencode/pull/11710
+MODEL="zai-coding-plan/glm-4.6" OPENCODE_CONFIG_CONTENT='{"$schema":"https://opencode.ai/config.json","theme":"{file:/tmp/test-secret.txt}", "model":"{env:MODEL}"}' bun dev
+
+---
+
+@aidenc9727 Hey, just wanted quickly to check in again real quick on this one... did you want me to remove the toggle and just have this behaviour on all the time? Let me know when you find the time to glance at it, thanks so much ;) https://github.com/anomalyco/opencode/pull/11710jjj
 
 ---
 
