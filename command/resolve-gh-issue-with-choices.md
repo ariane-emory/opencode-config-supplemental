@@ -24,4 +24,4 @@ You MUST come up with three different plans for how this issue could be resolved
 
 Do not create any PRs, I'd like to test it out locally myself before doing that.
 
-Once I have chosen which of the three plans I would like to implement, proceed with doing the work in a new branch based off of the doubt branch named $2.
+Once I have chosen which of the three plans I would like to implement, proceed with doing the work in a new branch based off of the dev branch named $2.

@@ -24,4 +24,4 @@ Group the plan's steps into "phases". After completing each phase, the code MUST
 
 Once you've come up with your plan, submit it to me for approval.
 
-Once I have approved the plan, proceed with doing the work in a new branch based off of the doubt branch named $2.
+Once I have approved the plan, proceed with doing the work in a new branch based off of the dev branch named $2.
