@@ -6,20 +6,22 @@ agent: plan
 
 Let's try to come up with a plan for how to implement a resolution for this Github issue in the sst/opencode repository: 
 
-gh issue view $ARGUMENTS;
+gh issue view $1;
 
 Take note of any coments on the issue, the discussion may include valuable insights on how to best resolve the issue:
 
-gh issue view $ARGUMENTS --comments;
+gh issue view $1 --comments;
 
 IMPORTANT: Pay special attention to any comments from your user, ariane-emory, she often has good ideas!
 
-Your job is to come up with three different plans for how this issue could be resolved.
+Think the changes required to resolve the issue through thoroughly and break the changes down into small steps in order to produce THREE detailed, step-by-step plans for resolving the issue. 
 
-Think the changes required to resolve the issue through thoroughly and break the changes down into small steps in order to produce a detailed, step-by-step plan for resolving the issue. 
+Each plan SHOULD make the minimal changes required to solve the issue. Do not make any unnecessary changes unrelated to the changes that are required to resolve the isue.
 
-Make the minimal change required to solve the issue. Do not make any unnecessary changes unrelated to the changes that are required to resolve the isue.
+Once you have come up with three options, evaluate their pros and cons and present the options to me to give me an opportunity to choose between them, along withyour comments on the relative merits of each option. Present these options as a numbered list.
+
+You MUST come up with three different plans for how this issue could be resolved and you MUST present these options to me to choose from.
 
 Do not create any PRs, I'd like to test it out locally myself before doing that.
 
-Once you have come up with three options, evaluate their pros and cons and present the options to me to give me an opportunity to choose between them, along withyour comments on the relative merits of each option. Present these options as a numbered list.
+Once I have chosen which of the three plans I would like to implement, proceed with doing the work in a new branch based off of the doubt branch named $2.
