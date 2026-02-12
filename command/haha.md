@@ -5,5 +5,3 @@ agent: plan
 
 Tell me a joke.
 
-${3:}
-
