@@ -6,11 +6,11 @@ agent: plan
 
 Let's try to come up with a plan for how to implement a resolution for this Github issue in the sst/opencode repository: 
 
-gh issue view $ARGUMENTS;
+gh issue view $1;
 
 Take note of any coments on the issue, the discussion may include valuable insights on how to best resolve the issue:
 
-gh issue view $ARGUMENTS --comments;
+gh issue view $1 --comments;
 
 IMPORTANT: Pay special attention to any comments from your user, ariane-emory, she often has good ideas!
 
@@ -22,8 +22,10 @@ Think carefully about whether the changes necessitate re-generating the TypeScri
 
 Group the plan's steps into "phases". After completing each phase, the code MUST build correctly and all tests (except the enterprise tests, you can ignore those) MUST pass. 
 
-Don't push your changes yet, let's start by just fixing it locally.
-
-Do not create any PRs, I'd like to test it out locally myself before doing that.
-
 Once you've come up with your plan, submit it to me for approval.
+
+Once I have approved the plan, proceed with doing the work in a new branch based off of the dev branch named $2.
+
+When you are done, you MUST not push your changes yet, let's start by just fixing it locally.
+
+${3:}

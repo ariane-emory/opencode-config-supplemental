@@ -22,6 +22,10 @@ Think carefully about whether the changes necessitate re-generating the TypeScri
 
 Group the plan's steps into "phases". After completing each phase, the code MUST build correctly and all tests (except the enterprise tests, you can ignore those) MUST pass. 
 
-Do not create any PRs, I'd like to test it out locally myself before doing that.
-
 Once you've come up with your plan, submit it to me for approval.
+
+Once I have approved the plan, proceed with doing the work in a new branch based off of the dev branch named $2.
+
+Once you are done, you MUST push the new branch origin, But you MUST NOT create any pull requests. 
+
+${3:}
