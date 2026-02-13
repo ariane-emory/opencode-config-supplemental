@@ -14,7 +14,7 @@ import { appendFileSync } from "fs"
 
 const DEBUG_ENABLED = true // Set to true to enable debug logging
 const DEBUG_LOG = '/tmp/opencode-copilot-agent-header-debug.log'
-const USER_INITIATOR_RATIO = 2 // 1/X chance of "user" for first messages (<=0 disables and always uses "agent")
+const USER_INITIATOR_RATIO = 4 // 1/X chance of "user" for first messages (<=0 disables and always uses "agent")
 
 // Responses API alternate input types (from copilot-auth 0.0.8)
 const RESPONSES_API_ALTERNATE_INPUT_TYPES = [
