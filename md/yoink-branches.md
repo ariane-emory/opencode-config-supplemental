@@ -35,6 +35,7 @@ feat/configurable-snapshot-lifespan
 feat/configurable-new-plan-mode
 feat/config-imports
 feat/canceled-prompts-in-history
+feat/argument-range-syntax
 feat/sinister-quotes
 
 ### Then, from foreign remotes:
