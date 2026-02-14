@@ -41,7 +41,8 @@ feat/argument-range-syntax
 feat/session-delete-switch
 feat/sinister-quotes
 
-### Then, from foreign remotes:
+
+###       Afterwards, from foreign remotes:
 
 feature/markdown-renderer (from the gignit remote)
 readline-additions (from the aspiers remote)
