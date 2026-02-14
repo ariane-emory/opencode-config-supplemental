@@ -6,15 +6,15 @@ I want to be able to run the exact same version that runs when I do 'bun dev' fr
 
 The system has TWO completely separate opencode repositories. This installation task uses **EXCLUSIVELY** the opencode-deploy repository:
 
-| Repository          | Path                                 | Alias   | Purpose                                        | **USE IN THIS TASK?**                    |
-|---------------------|--------------------------------------|---------|------------------------------------------------|------------------------------------------|
-| **opencode-deploy** | `/Volumes/K/Code/go/opencode-deploy` | `~/osd` | Contains integration branches for deployment   | ✅ **YES - THIS IS THE ONLY ONE WE USE** |
-| **opencode**        | `/Volumes/K/Code/go/opencode1`       | `~/os1` | Development repository (different branch) | ❌ **NO - DO NOT USE THIS AT ALL**       |
-| **opencode**        | `/Volumes/K/Code/go/opencode`2       | `~/os2` | Development repository (different branch) | ❌ **NO - DO NOT USE THIS AT ALL**       |
-| **opencode**        | `/Volumes/K/Code/go/opencode`3       | `~/os`3 | Development repository (different branch) | ❌ **NO - DO NOT USE THIS AT ALL**       |
-| **opencode**        | `/Volumes/K/Code/go/opencode`4       | `~/os`4 | Development repository (different branch) | ❌ **NO - DO NOT USE THIS AT ALL**       |
-| **opencode**        | `/Volumes/K/Code/go/opencode`5       | `~/os`5 | Development repository (different branch) | ❌ **NO - DO NOT USE THIS AT ALL**       |
-| **opencode**        | `/Volumes/K/Code/go/opencode`6       | `~/o6s` | Development repository (different branch) | ❌ **NO - DO NOT USE THIS AT ALL**       |
+| Repository          | Path                                 | Alias   | Purpose                                      | **USE IN THIS TASK?**                    |
+|---------------------|--------------------------------------|---------|----------------------------------------------|------------------------------------------|
+| **opencode-deploy** | `/Volumes/K/Code/go/opencode-deploy` | `~/osd` | Contains integration branches for deployment | ✅ **YES - THIS IS THE ONLY ONE WE USE** |
+| **opencode**        | `/Volumes/K/Code/go/opencode1`       | `~/os1` | Development repository (different branch)    | ❌ **NO - DO NOT USE THIS AT ALL**       |
+| **opencode**        | `/Volumes/K/Code/go/opencode2`       | `~/os2` | Development repository (different branch)    | ❌ **NO - DO NOT USE THIS AT ALL**       |
+| **opencode**        | `/Volumes/K/Code/go/opencode3`       | `~/os3` | Development repository (different branch)    | ❌ **NO - DO NOT USE THIS AT ALL**       |
+| **opencode**        | `/Volumes/K/Code/go/opencode4`       | `~/os4` | Development repository (different branch)    | ❌ **NO - DO NOT USE THIS AT ALL**       |
+| **opencode**        | `/Volumes/K/Code/go/opencode5`       | `~/os5` | Development repository (different branch)    | ❌ **NO - DO NOT USE THIS AT ALL**       |
+| **opencode**        | `/Volumes/K/Code/go/opencode6`       | `~/os6` | Development repository (different branch)    | ❌ **NO - DO NOT USE THIS AT ALL**       |
 
 **You are working in `/Volumes/K/Code/go/opencode-deploy/` (or `~/osd`). The other directories are COMPLETELY UNRELATED to this installation and must not be referenced, consulted, or used in any way.**
 
