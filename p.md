@@ -1,3 +1,10 @@
+@aidenc9727 Hey, hope your weekend is going well so far! There is a version of my OPENCODE_CONFIG_CONTENT PR here that avoids creating a file if the $schema is missing: https://github.com/anomalyco/opencode/pull/13484
+
+There is also a wonderfully simple `opencode session delete` command feature here that a user had requested in a GH issue. It does what it says on the tin, and I have confirmed that it retains full  compatibility with the new SQLite backend and that it has not been affected by that change: https://github.com/anomalyco/opencode/pull/13571
+
+Do let me know if you get the chance to take a glance at either of these, thanks very much!
+
+---
 MODEL="zai-coding-plan/glm-4.6" OPENCODE_CONFIG_CONTENT='{"$schema":"https://opencode.ai/config.json","theme":"{file:/tmp/test-secret.txt}", "model":"{env:MODEL}"}' bun dev
 
 ---
