@@ -37,7 +37,7 @@ feat/configurable-new-plan-mode
 feat/config-imports
 feat/canceled-prompts-in-history
 feat/argument-range-syntax
-fjat/sinister-quotes
+feat/sinister-quotes
 
 ### Then, from foreign remotes:
 
