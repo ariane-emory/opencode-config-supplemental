@@ -1,4 +1,4 @@
-- process the branches from foreign remotes first, then 'fix' branches before moving on to the others (feat/patch branches).
+- process the branches that I listed in the order that I listed them.
 - all of the remotes these branches are on should already be configured, you MUST NOT add new remotes.
 
 IMPORTANT: Create a MERGED-BRANCHES.md document in the project's root directory in which to record which branches were merged to produce the new integration branch. Include a Markdown table displaying which branches were merged in this document and a merge log detailing the merges that were performed. Make sure that you include the specific commit hash the merged branch was at when it was merged. Add this file to git.
