@@ -32,4 +32,6 @@ git merge feat/branch-name --no-ff -m "Merge feat/branch-name"
 
 Do NOT switch away from the integration branch during the merge process.
 
+You MUST push the integration branch to origin after merging each branch into it!
+
 These are the branches we need to merge into the new integration branch:
