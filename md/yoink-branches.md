@@ -6,7 +6,8 @@ fix/restore-footer
 fix/persist-sidebar
 fix/autocompletion-filtered-order
 fix/modal-menus-filtered-order
-fix/config-content-file-write
+fix/config-conteet-file-write
+fix/bad-plugin-errors
 feat/edit-tool-description
 feat/opeoginni--display-message-tps
 feat/kv-diff-style-clean (not yet merged upstream, but hopefully soon)
@@ -37,6 +38,7 @@ feat/configurable-new-plan-mode
 feat/config-imports
 feat/canceled-prompts-in-history
 feat/argument-range-syntax
+feat/session-delete-switch
 feat/sinister-quotes
 
 ### Then, from foreign remotes:
