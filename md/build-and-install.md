@@ -2,6 +2,9 @@
 1. Build the opencode package with `bun run build --single` from packages/opencode/
 2. The built binary will be at either `dist/opencode-darwin-arm64/bin/baseone` `dist/opencode-linux-arm64/bin/baseone` (depending on your platform)
 
+**BACKUP**: Backup old binary (if it exists):
+- If there is an existing binary at `~/.local/bin/baseone`, move it to `~/.local/bin/baseone.bak` (any existing file at this path may be deleted)
+
 **INSTALLATION**: Install the binary globally as 'baseone' (NOT 'base-one'):
 - Copy the binary to `~/.local/bin/baseone`
 - Ensure it's executable: `chmod +x ~/.local/bin/baseone`
