@@ -97,6 +97,33 @@ The version MUST NOT ever be computed dynamically!
 
 This ensures the TUI sidebar shows which integration branch is running when using the development wrapper script. Commit this change along with the other finishing touches.
 
+### Fix SemVer Validation for Non-SemVer Version Strings
+
+The `YYYY-MM-DD-HH-MM` format is not a valid SemVer string. The codebase has a function `isOutdated()` in `packages/opencode/src/bun/registry.ts` that uses Bun's `semver.order()` which will throw an error for invalid SemVer strings.
+
+**You MUST modify `packages/opencode/src/bun/registry.ts`** to wrap the semver operations in a try-catch block:
+
+```typescript
+export async function isOutdated(pkg: string, cachedVersion: string, cwd?: string): Promise<boolean> {
+  const latestVersion = await info(pkg, "version", cwd)
+  if (!latestVersion) {
+    log.warn("Failed to resolve latest version, using cached", { pkg, cachedVersion })
+    return false
+  }
+
+  try {
+    const isRange = /[\s^~*xX<>|=]/.test(cachedVersion)
+    if (isRange) return !semver.satisfies(latestVersion, cachedVersion)
+    return semver.order(cachedVersion, latestVersion) === -1
+  } catch {
+    log.warn("Invalid semver format, assuming not outdated", { pkg, cachedVersion })
+    return false
+  }
+}
+```
+
+This ensures that custom version strings like `"2026-02-15-13-46"` won't cause the application to crash with an "Invalid SemVer" error.
+
 ## Troubleshooting Remote Tracking Issues
 
 **Problem**: `git push` tries to push to upstream instead of origin with error:
