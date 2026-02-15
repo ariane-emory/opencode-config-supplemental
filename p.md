@@ -1,3 +1,33 @@
+Okay,  great job so far, it's mostly working as intended, but I have noticed one small difference from the behaviour of the GitHub Markdown editor. 
+
+Imagine that I currently have the following input (with the asterisk indicating the position of the cursor):
+
+```
+1. red*
+2. blue
+```
+
+
+And then I hit shift+enter.. In GitHub's editor, that results in this text. 
+
+```
+1. red
+2. *
+3 blue
+```
+
+In the current version of the automatic list completion feature here, that is instead producing this text:
+
+```
+1. red
+2. *
+2 blue
+```
+
+Can we solve this, and make the behaviour identical to GitHub's editor in this case? 
+
+---
+
 @aidenc9727 Hey, hope your weekend is going well so far! There is a version of my OPENCODE_CONFIG_CONTENT PR here that avoids creating a file if the $schema is missing: https://github.com/anomalyco/opencode/pull/13484
 
 There is also a wonderfully simple `opencode session delete` command feature here that a user had requested in a GH issue. It does what it says on the tin, and I have confirmed that it retains full  compatibility with the new SQLite backend and that it has not been affected by that change: https://github.com/anomalyco/opencode/pull/13571
