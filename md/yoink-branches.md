@@ -6,7 +6,7 @@ fix/restore-footer
 fix/persist-sidebar
 fix/autocompletion-filtered-order
 fix/modal-menus-filtered-order
-fix/config-conteet-file-write
+fix/config-content-file-write
 fix/bad-plugin-errors
 feat/edit-tool-description
 feat/opeoginni--display-message-tps
