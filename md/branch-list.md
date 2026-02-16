@@ -13,7 +13,7 @@
 - feat/opeoginni--display-message-tps
 - feat/kv-diff-style-clean (not yet merged upstream, but hopefully soon)
 - feat/global-compaction-threshold
-- feat/configurable-message-limit-wip
+- feat/configurable-message-and-session-limit
 - feat/experimental-dont-cache-markdown
 - feat/interjections
 - feat/jsonc-user-themes
