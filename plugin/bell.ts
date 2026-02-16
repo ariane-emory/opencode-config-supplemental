@@ -45,8 +45,9 @@ async function isPrimaryAgentSession(sessionID: string, client: any): Promise<bo
   
   try {
     // Query session details using the client
-    // SDK v2 returns { data: SessionInfo, error: ... } wrapper
-    const { data: session } = await client.session.get(sessionID);
+    // SDK v1: use { path: { id: sessionID } } and returns { data: session }
+    const response = await client.session.get({ path: { id: sessionID } });
+    const session = response.data;
     
     if (debugMode) {
       process.stderr.write(`TerminalBell: [DEBUG] Session ${sessionID} response: ${JSON.stringify(session, null, 2)}\n`);
