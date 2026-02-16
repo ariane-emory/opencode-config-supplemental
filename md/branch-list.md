@@ -8,6 +8,7 @@
 - fix/modal-menus-filtered-order
 - fix/config-content-file-write
 - fix/bad-plugin-errors
+- fix/config-package-json-pollution (MUST be included in integration branches to prevent package.json pollution with non-SemVer versions)
 - feat/edit-tool-description
 - feat/opeoginni--display-message-tps
 - feat/kv-diff-style-clean (not yet merged upstream, but hopefully soon)
@@ -41,15 +42,14 @@
 - feat/session-delete-switch
 - feat/sinister-quotes
 
-
-###       Afterwards, from foreign remotes:
+###  Afterwards, from foreign remotes:
 
 - feature/markdown-renderer (from the gignit remote)
 - readline-additions (from the aspiers remote)
 - add-bash-env-parameter (from the taxilian remote)
 - feat/thinking-indicator-hidden
 
-#### And finally, finish up with this branch:
+### And finally, finish up with this branch:
 
 - feat/base-one-rebrand
 
