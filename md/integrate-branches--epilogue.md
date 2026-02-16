@@ -1,22 +1,22 @@
-- process the branches that I listed in the order that I listed them.
-- all of the remotes these branches are on should already be configured, you MUST NOT add new remotes.
+- you **MUST** process the branches that I listed in the order that I listed them.
+- all of the remotes these branches are on should already be configured, you **MUST NOT** add new remotes.
 
 IMPORTANT: Create a MERGED-BRANCHES.md document in the project's root directory in which to record which branches were merged to produce the new integration branch. Include a Markdown table displaying which branches were merged in this document and a merge log detailing the merges that were performed. Make sure that you include the specific commit hash the merged branch was at when it was merged. Add this file to git.
 
-Use your task todo list tools to keep track of which steps in the procedure you have completed and which branches remain for you to merge. You MUST include every branch in your todo list to help make sure that you don't forget any.
+Use your task todo list tools to keep track of which steps in the procedure you have completed and which branches remain for you to merge. You **MUST** include every branch in your todo list to help make sure that you don't forget any.
 
-**CRITICAL**: You MUST NOT try to process branches in batches or in parallel, it usually doesn't work out right: you MUST process the branches individually, one at a time.
+**CRITICAL**: You **MUST NOT** try to process branches in batches or in parallel, it usually doesn't work out right: you **MUST** process the branches individually, one at a time.
 
 **CRITICAL - NEVER REBASE THE INTEGRATION BRANCH**: Do NOT use `git pull --rebase` or `git rebase` on the integration branch. Rebasing will clobber merge commits and lose changes from previously merged branches. If there are conflicts with the remote integration branch, use `git pull --no-rebase` or `git push --force` since this is a single-use integration branch for testing purposes.
 
-**CRITICAL BRANCH HYGIENE**: Throughout this entire process, you MUST remain on the integration branch. DO NOT switch to `dev` or any other branch until the very end when performing the post-integration verification. All merges, commits, and pushes should happen while on the integration branch. The `dev` branch should NEVER receive any of the integration commits.
+**CRITICAL BRANCH HYGIENE**: Throughout this entire process, you **MUST** remain on the integration branch. DO NOT switch to `dev` or any other branch until the very end when performing the post-integration verification. All merges, commits, and pushes should happen while on the integration branch. The `dev` branch should NEVER receive any of the integration commits.
 
 For each of these branches, you SHOULD:
 
 - Merge the branch while staying on the integration branch: `git merge branch-name --no-ff`
-- Try your very best to carefully resolve any conflicts that occur. When resolving conflicts, think them through carefully and thoroughly. When multiple branches modify the same file, make sure to incorporate changes from BOTH sides - don't just pick one side. Make sure not to let content from dev clobber content from the fix/feature branches that we're trying to merge in! Pay special attention for coments labelled with '**CRITICAL**', these are used to indicate specific changes that MUST NOT be clobbered!
+- Try your very best to carefully resolve any conflicts that occur. When resolving conflicts, think them through carefully and thoroughly. When multiple branches modify the same file, make sure to incorporate changes from BOTH sides - don't just pick one side. Make sure not to let content from dev clobber content from the fix/feature branches that we're trying to merge in! Pay special attention for coments labelled with '**CRITICAL**', these are used to indicate specific changes that **MUST NOT** be clobbered!
 
-- **CRITICAL VERIFICATION**: After each merge, you MUST verify that key changes from the branch are actually present in the integration branch. Check for specific functions, types, or code patterns that the branch was supposed to introduce. A merge that reports "Already up to date" may indicate the changes were NOT actually merged.
+- **CRITICAL VERIFICATION**: After each merge, you **MUST** verify that key changes from the branch are actually present in the integration branch. Check for specific functions, types, or code patterns that the branch was supposed to introduce. A merge that reports "Already up to date" may indicate the changes were NOT actually merged.
 - Record the result of handling this branch in MERGED-BRANCHES.md.
 - Remember to update your todo list.
 
@@ -24,19 +24,19 @@ Since you may need to read files to resolve conflicts, you must always use the R
 
 If a git lock file gets in your way, you SHOULD just delete it and keep working on merging.
 
-Any tests in the project (including 'bun turbo typecheck') MUST pass after merging each branch into the new integration branch.
+Any tests in the project (including 'bun turbo typecheck') **MUST** pass after merging each branch into the new integration branch.
 
-For each of the feature branches, if you are able to merge in the changes into the integration branch and successfully resolve any conflicts and the tests all pass afterwards, you MUST push the changes to the integration branch on origin on git before proceeding on to the next feature branch.
+For each of the feature branches, if you are able to merge in the changes into the integration branch and successfully resolve any conflicts and the tests all pass afterwards, you **MUST** push the changes to the integration branch on origin on git before proceeding on to the next feature branch.
 
-There is a 'test' pre-pushhook in this repository, so it is possible a push may fail with an error message. If this occurs, you MUST attempt fix the error and try again until the test passes. If, after trying your best, you still cannot fix the error, you may use `git push --no-verify` to bypass the hook.
+There is a 'test' pre-pushhook in this repository, so it is possible a push may fail with an error message. If this occurs, you **MUST** attempt fix the error and try again until the test passes. If, after trying your best, you still cannot fix the error, you may use `git push --no-verify` to bypass the hook.
 
-**CRITICAL**: You must proceed until you have merged all of these branches!  Only if you've tried everything you can think of to resolve a conflict without success and are nonetheless unable to resolve the conflict or the tests do not pass afterwards, do not push the changes to git, in this case you MUST stop and ask me to step in and help you out instead. Only do this is you've tried everything you can think of! Otherwise, proceed until ALL branches have been merged.
+**CRITICAL**: You must proceed until you have merged all of these branches!  Only if you've tried everything you can think of to resolve a conflict without success and are nonetheless unable to resolve the conflict or the tests do not pass afterwards, do not push the changes to git, in this case you **MUST** stop and ask me to step in and help you out instead. Only do this is you've tried everything you can think of! Otherwise, proceed until ALL branches have been merged.
 
 Ultrathink! 
 
 ## Verifying Merge Results
 
-After each merge, you MUST verify the merge was successful by checking that the branch's key changes are present. Do NOT rely solely on git's merge output - "Already up to date" or a fast-forward merge may indicate the changes were NOT properly integrated.
+After each merge, you **MUST** verify the merge was successful by checking that the branch's key changes are present. Do NOT rely solely on git's merge output - "Already up to date" or a fast-forward merge may indicate the changes were NOT properly integrated.
 
 **Verification procedure for each branch:**
 1. Before merging, check the PR diff or branch diff to identify key changes (new functions, types, file modifications)
@@ -58,7 +58,7 @@ grep -rn "NewTypeName" packages/
 **Common merge pitfalls to watch for:**
 - "Already up to date" - The branch may have already been merged, or you may be merging a stale local branch
 - Fast-forward merges when there should be changes - Use `--no-ff` flag and verify changes
-- Conflicts that silently drop one side - Always review conflict resolutions carefully
+- Conflicts that silently drop one side - **ALWAYS** review conflict resolutions carefully
 - Multiple branches modifying the same file - Later merges may need to incorporate changes from BOTH the integration branch AND the feature branch
 - **REBASING THE INTEGRATION BRANCH** - This is the most dangerous pitfall! Never rebase an integration branch as it will destroy merge commits and lose changes
 
@@ -91,9 +91,9 @@ export const VERSION = typeof OPENCODE_VERSION === "string" ? OPENCODE_VERSION :
 
 (Replace `YYYY-MM-DD-HH-MM` with the actual branch timestamp, e.g., `2025-12-17-01-17`)
 
-**CRITICAL**: The version MUST match the 'YYYY-MM-DD-HH-MM' format, and must not contain the string 'opencode' or a version number like '0.0.0'. The displayed version MUST NEVER be computed dynamically! The datetime string MUST NOT be treated as a 'fallback value', it MUST be strictly hardcoded to this value in all possible situations(whether using 'bun dev' or running a compiled binary). This requires strictly hardcoding the value in  packages/opencode/script/build.ts: the VERSION MUST NOT be dynamically constructed! Remember, we will NEVER build binaries from this integration branch, the hardcoded version string MUST ALWAYS display correctly when it is launched using `bun dev`!
+**CRITICAL**: The version **MUST** match the 'YYYY-MM-DD-HH-MM' format, and must not contain the string 'opencode' or a version number like '0.0.0'. The displayed version **MUST NEVER** be computed dynamically! The datetime string **MUST NOT** be treated as a 'fallback value', it **MUST** be strictly hardcoded to this value in all possible situations(whether using 'bun dev' or running a compiled binary). This requires strictly hardcoding the value in  packages/opencode/script/build.ts: the VERSION **MUST NOT** be dynamically constructed! Remember, we will **NEVER** build binaries from this integration branch, the hardcoded version string **MUST ALWAYS** display correctly when it is launched using `bun dev`!
 
-The version MUST NOT ever be computed dynamically!
+The version **MUST NOT** ever be computed dynamically!
 
 This ensures the TUI sidebar shows which integration branch is running when using the development wrapper script. Commit this change along with the other finishing touches.
 
@@ -101,7 +101,7 @@ This ensures the TUI sidebar shows which integration branch is running when usin
 
 The `YYYY-MM-DD-HH-MM` format is not a valid SemVer string. The codebase has a function `isOutdated()` in `packages/opencode/src/bun/registry.ts` that uses Bun's `semver.order()` which will throw an error for invalid SemVer strings.
 
-**You MUST modify `packages/opencode/src/bun/registry.ts`** to wrap the semver operations in a try-catch block:
+**You **MUST** modify `packages/opencode/src/bun/registry.ts`** to wrap the semver operations in a try-catch block:
 
 ```typescript
 export async function isOutdated(pkg: string, cachedVersion: string, cwd?: string): Promise<boolean> {
@@ -128,7 +128,7 @@ This ensures that custom version strings like `"2026-02-15-13-46"` won't cause t
 
 When CHANNEL is NOT "local", the `installDependencies()` function in `packages/opencode/src/config/config.ts` writes the VERSION string to `.opencode/package.json`. Since `YYYY-MM-DD-HH-MM` is not a valid npm version, this pollutes the config and breaks both the integration build AND the original opencode installation.
 
-**You MUST also set CHANNEL to "local"** in `packages/opencode/script/build.ts`:
+**You **MUST** also set CHANNEL to "local"** in `packages/opencode/script/build.ts`:
 
 ```typescript
 // Change these lines:
@@ -137,7 +137,7 @@ OPENCODE_CHANNEL: `'${Script.channel}'`,
 OPENCODE_CHANNEL: `'local'`,
 ```
 
-Also update the epilogue instructions to ALWAYS include this step, and cleanup any polluted files after building:
+Also update the epilogue instructions to **ALWAYS** include this step, and cleanup any polluted files after building:
 
 ```bash
 rm -f ./.opencode/package.json
@@ -173,11 +173,11 @@ git config --list | grep branch.integration
 ```fish
 # Verify dev still matches origin/dev exactly (without switching to it)
 git log origin/dev..dev --oneline
-# MUST show nothing (empty output)
+# **MUST** show nothing (empty output)
 # If this shows commits, something went wrong - dev should never move during integration
 ```
 
-**Why this matters**: The integration process should NEVER touch `dev`. All work happens on the integration branch. If `dev` has moved forward, it means the integration commits were accidentally committed to the wrong branch.
+**Why this matters**: The integration process should **NEVER** touch `dev`. All work happens on the integration branch. If `dev` has moved forward, it means the integration commits were accidentally committed to the wrong branch.
 
 **What to do if dev has moved forward (this indicates an error occurred)**:
 This should not happen if the instructions were followed correctly. If it does happen:
@@ -194,7 +194,7 @@ This should not happen if the instructions were followed correctly. If it does h
 - [ ] Verified: `dev` branch still matches `origin/dev` (hasn't moved forward)
 - [ ] Currently on the integration branch with clean working tree 
 
-**IMPORTANT**: You MUST complete the ENTIRE plan and merge ALL of the requested branches into the new integration branch!
+**IMPORTANT**: You **MUST** complete the **ENTIRE** plan and merge ALL of the requested branches into the new integration branch!
 
 **CRITICAL**: Don't forget the instructions above about hardcoding the value of VERSION!
 
