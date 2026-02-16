@@ -1,3 +1,9 @@
+bun dev expand ~/oc/md/expand-test.md foo bar baz corge quux grault
+
+---
+@aidenc9727 I just took a second look at your comment on the `opencode session delete` command... upon rereading the comment, I'm now a bit confused, is `console.error` not the correct command kto print to STDERR when we're not in the TUI and are dying at the command line?
+
+---
 Okay,  great job so far, it's mostly working as intended, but I have noticed one small difference from the behaviour of the GitHub Markdown editor. 
 
 Imagine that I currently have the following input (with the asterisk indicating the position of the cursor):
