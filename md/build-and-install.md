@@ -3,7 +3,7 @@
 2. The built binary will be at either `dist/opencode-darwin-arm64/bin/baseone` `dist/opencode-linux-arm64/bin/baseone` (depending on your platform)
 
 **BACKUP**: Backup old binary (if it exists):
-- If there is an existing binary at `~/.local/bin/baseone`, move it to a timestamped backup at a path like `~/.local/bin/baseone-bak.YYYY-MM-DD-HH-mm-ss` (substituting in it's file ceation timestamp apprropriately).
+- If there is an existing binary at `~/.local/bin/baseone`, move it to a timestamped backup at a path like `~/.local/bin/baseone.bak.YYYY-MM-DD-HH-mm-ss` (substituting in it's file ceation timestamp apprropriately).
 
 **INSTALLATION**: Install the binary globally as 'baseone' (NOT 'base-one'):
 - Copy the binary to `~/.local/bin/baseone`
