@@ -7,4 +7,4 @@ new_session: true
 !`cat ~/.config/opencode/md/hard-sync-all-remotes.md`
 
 Make sure that these branches from remotes are available locally:
-!`cat ~/.config/opencode/md/yoink-branches.md`
+!`cat ~/.config/opencode/md/branch-list.md`

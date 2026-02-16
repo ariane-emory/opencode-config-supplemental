@@ -124,6 +124,27 @@ export async function isOutdated(pkg: string, cachedVersion: string, cwd?: strin
 
 This ensures that custom version strings like `"2026-02-15-13-46"` won't cause the application to crash with an "Invalid SemVer" error.
 
+### Prevent Package.json Pollution
+
+When CHANNEL is NOT "local", the `installDependencies()` function in `packages/opencode/src/config/config.ts` writes the VERSION string to `.opencode/package.json`. Since `YYYY-MM-DD-HH-MM` is not a valid npm version, this pollutes the config and breaks both the integration build AND the original opencode installation.
+
+**You MUST also set CHANNEL to "local"** in `packages/opencode/script/build.ts`:
+
+```typescript
+// Change these lines:
+OPENCODE_CHANNEL: `'${Script.channel}'`,
+// To:
+OPENCODE_CHANNEL: `'local'`,
+```
+
+Also update the epilogue instructions to ALWAYS include this step, and cleanup any polluted files after building:
+
+```bash
+rm -f ./.opencode/package.json
+rm -f ~/.config/opencode/package.json
+rm -f ~/.config/opencode/bun.lock
+```
+
 ## Troubleshooting Remote Tracking Issues
 
 **Problem**: `git push` tries to push to upstream instead of origin with error:
