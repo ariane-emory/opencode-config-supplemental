@@ -4,6 +4,6 @@ agent: plan
 
 ---
 !`baseone expand ~/.config/opencode/md/resolve-gh-issue--prologue.md ariane-emory/opencode $1`
-Make the minimal change required to solve the issue. 
+You **SHOULD** make the minimal changes required to solve the issue. 
 
 !`baseone expand ~/.config/opencode/md/resolve-gh-issue--epilogue.md $ARGUMENTS`
