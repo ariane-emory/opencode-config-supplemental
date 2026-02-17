@@ -76,7 +76,8 @@ Modify the configuration file at ./.opencode/opencode.jsonc to include this prop
 }
 ```
 
-**NOTE**: This is a personal theme that exists in my own configuration, so don't worry that it isn't contained in the repo itself.
+
+**NOTE**: Note that the theme property just at `theme`, **NOT** `tui.theme`! This is a personal theme that exists in my own configuration, so don't worry that it isn't contained in the repo itself.
 
 ## Set Integration Branch Version
 
