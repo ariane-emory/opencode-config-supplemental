@@ -6,8 +6,8 @@ agent: plan
 
 Let's investigate this Github issue: 
 
-gh issue view $ARGUMENTS;
-gh issue view $ARGUMENTS --comments;
+gh --repo anomalyco/opencode issue view $ARGUMENTS;
+gh --repo anomalyco/opencode issue view $ARGUMENTS --comments;
 
 Take note of any coments on the issue, the discussion may include valuable insights on possible causes of the issue.
 

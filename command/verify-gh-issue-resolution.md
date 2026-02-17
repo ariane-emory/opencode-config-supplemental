@@ -6,8 +6,8 @@ agent: plan
 
 This branch is meant to implement a resolution to this GH issue: 
 
-gh issue view $ARGUMENTS;
-gh issue view $ARGUMENTS --comments;
+gh --repo anomalyco/opencode issue view $ARGUMENTS;
+gh --repo anomalyco/opencode issue view $ARGUMENTS --comments;
 
 First, analyze the changes in this branch relative to the upstream/dev branch:
 

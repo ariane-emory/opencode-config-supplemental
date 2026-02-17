@@ -3,5 +3,5 @@ description: Commmit for GH issue with message using GLM.
 agent: build
 model: zai-coding-plan/glm-4.6
 ---
-Refresh your memory about what we changed recently by reviewing both the original Github issue: gh issue view $ARGUMENTS
+Refresh your memory about what we changed recently by reviewing both the original Github issue: gh --repo anomalyco/opencode issue view $ARGUMENTS
 !`cat ~/.config/opencode/md/commit-and-push-for-gh-issue--epilogue.md` 

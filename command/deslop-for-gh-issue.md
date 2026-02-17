@@ -6,7 +6,7 @@ agent: build
 
 This branch is meant to resolve this GH issue: 
 
-gh issue view $ARGUMENTS;
-gh issue view $ARGUMENTS --comments;
+gh --repo anomalyco/opencode issue view $ARGUMENTS;
+gh --repo anomalyco/opencode issue view $ARGUMENTS --comments;
 
 !`cat ~/.config/opencode/md/deslop-for-gh-issue--epilogue.md`
