@@ -41,6 +41,7 @@
 - feat/configurable-new-plan-mode
 - feat/config-imports
 - feat/canceled-prompts-in-history
+- feat/no-disabled-lsps-in-sidebar
 - feat/sinister-quotes
 
 ###  Afterwards, from foreign remotes:
