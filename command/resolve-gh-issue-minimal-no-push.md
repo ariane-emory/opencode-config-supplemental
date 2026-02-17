@@ -6,11 +6,11 @@ agent: plan
 
 Let's try to come up with a plan for how to implement a resolution for this Github issue in the sst/opencode repository: 
 
-gh issue view $1;
+gh --repo anomalyco/opencode issue view $1;
 
 Take note of any coments on the issue, the discussion may include valuable insights on how to best resolve the issue:
 
-gh issue view $1 --comments;
+gh --repo anomalyco/opencode issue view $1 --comments;
 
 IMPORTANT: Pay special attention to any comments from your user, ariane-emory, she often has good ideas!
 
