@@ -5,7 +5,7 @@
 **BINARY PATH**: We will be installing the binary at this path:
 `~/.local/bin/baseone.YYYY-MM-DD-HH-mm-ss` (substituting in the timestamp from this integration branch's name)
 
-**BACKUP IF NEEDED**: If a file already exists at the binary path, use `mv` to add the suffix `.bak` end of its name. If an older backup fail with this name exists, it may be deleted. 
+**BACKUP IF NEEDED**: If a file already exists at the binary path, use `mv` to add the suffix `.bak` end of its name. If an older backup file with this name exists, it may be deleted. 
 
 **INSTALLATION**: You **MUST** perfrm these steps to install the binary globally:
 - Copy the binary to `~/.local/bin/baseone.YYYY-MM-DD-HH-mm-ss` (substituting in the timestamp from this integration branch's name).
