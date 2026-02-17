@@ -12,6 +12,7 @@
 - refactor/shared-substitute
 - feat/argument-range-syntax
 - feat/opencode-expand
+- merged/feat/session-delete-switch
 - feat/edit-tool-description
 - feat/opeoginni--display-message-tps
 - feat/kv-diff-style-clean (not yet merged upstream, but hopefully soon)
@@ -40,7 +41,6 @@
 - feat/configurable-new-plan-mode
 - feat/config-imports
 - feat/canceled-prompts-in-history
-- feat/session-delete-switch
 - feat/sinister-quotes
 
 ###  Afterwards, from foreign remotes:
