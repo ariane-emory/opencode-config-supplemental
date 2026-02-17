@@ -9,7 +9,6 @@
 - fix/config-content-file-write
 - fix/bad-plugin-errors
 - fix/config-package-json-pollution (MUST be included in integration branches to prevent package.json pollution with non-SemVer versions)
-- fix/move-selection-with-deletion-marked-take-1
 - refactor/shared-substitute
 - feat/argument-range-syntax
 - feat/opencode-expand
@@ -37,7 +36,6 @@
 - feat/session-bookmarks
 - fix/dialog-datetime-alignment (for best results, merge this one after feat/session-bookmarks)
 - feat/keybindable-commands
-- #feat/gignit--markdown-renderer (made obsolete by feature/markdown-renderer (from the gignit remote), merge that branch instead!
 - feat/configurable-snapshot-lifespan
 - feat/configurable-new-plan-mode
 - feat/config-imports
