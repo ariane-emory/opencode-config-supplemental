@@ -3,7 +3,9 @@
 
 IMPORTANT: Create a MERGED-BRANCHES.md document in the project's root directory in which to record which branches were merged to produce the new integration branch. Include a Markdown table displaying which branches were merged in this document and a merge log detailing the merges that were performed. Make sure that you include the specific commit hash the merged branch was at when it was merged. Add this file to git.
 
-Use your task todo list tools to keep track of which steps in the procedure you have completed and which branches remain for you to merge. You **MUST** include every branch in your todo list to help make sure that you don't forget any.
+Use your task todo list tools to keep track of which steps in the procedure you have completed and which branches remain for you to merge. 
+
+**CRITICAL**: You **MUST** include every branch in your todo list to help make sure that you don't forget any.
 
 **CRITICAL**: You **MUST NOT** try to process branches in batches or in parallel, it usually doesn't work out right: you **MUST** process the branches individually, one at a time.
 
