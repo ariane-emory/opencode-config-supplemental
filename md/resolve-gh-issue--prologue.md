@@ -2,7 +2,7 @@ You **MUST** come up with a plan for how to implement a resolution for this Gith
 
 gh --repo $1 issue view $2;
 
-Take note of any coments on the issue, the discussion may include valuable insights on how to best resolve the issue:
+You **SHOULD** take note of any coments on the issue, the discussion may include valuable insights on how to best resolve the issue:
 
 gh --repo $1 issue view $2 --comments;
 
