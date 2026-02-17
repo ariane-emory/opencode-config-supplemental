@@ -2,7 +2,7 @@
 description: Integrate feature branches.
 agent: build
 new_session: true
-model: zai-coding-plan/glm-4.7
+model: opencode/glm-5-free
 ---
 !`cat ~/.config/opencode/md/integrate-branches--prologue.md`
 integration/!`date +%Y-%m-%d-%H-%M`

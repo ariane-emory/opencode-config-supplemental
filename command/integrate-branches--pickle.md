@@ -1,5 +1,5 @@
 ---
-;description: Integrate feature branches with Pickle.
+description: Integrate feature branches.
 agent: build
 new_session: true
 model: opencode/big-pickle

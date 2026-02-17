@@ -1,5 +1,5 @@
 ---
-description: Integrate feature branches with GLM.
+description: Integrate feature branches.
 agent: build
 new_session: true
 model: zai-coding-plan/glm-5

@@ -1,5 +1,5 @@
 ---
-description: Integrate feature branches with GH Copilot Opus.
+description: Integrate feature branches.
 agent: build
 new_session: true
 model: github-copilot/claude-sonnet-4.5
