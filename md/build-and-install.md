@@ -5,7 +5,7 @@
 **COMMIT AND PUSH**: You **MUST** Ensure that the built binary has been commited and pushed to this integration branch on origin. 
 
 **BACKUP**: You **MUST** backup the old installed binary (if it exists):
-- If there is an existing binary at `~/.local/bin/baseone`, move it to a timestamped backup at a path like `~/.local/bin/baseone.bak.YYYY-MM-DD-HH-mm-ss` (substituting in it's file ceation timestamp apprropriately).
+- If there is an existing binary at `~/.local/bin/baseone`, move it to a timestamped backup at a path like `~/.local/bin/baseone.bak.YYYY-MM-DD-HH-mm-ss` (substituting in the timestamp from this integration branch's name).
 
 **INSTALLATION**: You **MUST** install the binary globally as 'baseone' (NOT 'base-one'):
 - Copy the binary to `~/.local/bin/baseone`
