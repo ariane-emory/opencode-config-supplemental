@@ -1,6 +1,5 @@
 ### From origin:
 
-- refactor/shared-substitute
 - fix/remove-dot-true
 - fix/rfc2119-question-tool
 - fix/restore-footer
@@ -10,6 +9,9 @@
 - fix/config-content-file-write
 - fix/bad-plugin-errors
 - fix/config-package-json-pollution (MUST be included in integration branches to prevent package.json pollution with non-SemVer versions)
+- refactor/shared-substitute
+- feat/argument-range-syntax
+- feat/opencode-expand
 - feat/edit-tool-description
 - feat/opeoginni--display-message-tps
 - feat/kv-diff-style-clean (not yet merged upstream, but hopefully soon)
@@ -24,7 +26,6 @@
 - feat/persistant-sidebar-overlay-behaviour
 - feat/shell-advice
 - feat/elapsed-timer
-- feat/opencode-expand
 - feat/sidebar-no-auto-setting
 - feat/set-session-title
 - feat/get-session-title
@@ -39,7 +40,6 @@
 - feat/configurable-new-plan-mode
 - feat/config-imports
 - feat/canceled-prompts-in-history
-- feat/argument-range-syntax
 - feat/session-delete-switch
 - feat/sinister-quotes
 
