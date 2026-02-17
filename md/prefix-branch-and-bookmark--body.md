@@ -4,4 +4,4 @@ So, for example, if the branch is currently named "foo bar baz" and the current 
 
 In addition, bookmark the current session. 
 
-You can use the `get_current_session_title`, `set_current_session_title` and `bookmak_current_session` tools to do this.
+You can use the `get_current_session_title`, `set_current_session_title` and `bookmark_current_session` tools to do this.
