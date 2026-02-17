@@ -1,3 +1,7 @@
+3c85cf4
+
+----
+
 bun dev expand ~/oc/md/expand-test.md foo bar baz corge quux grault
 
 ---
