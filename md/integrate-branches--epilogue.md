@@ -190,7 +190,7 @@ This should not happen if the instructions were followed correctly. If it does h
    - Move those commits to the integration branch if they're missing there
 
 **Final checklist**:
-- [ ] All requested branches have been merged into the integration branch
+- [ ] All requested branches have been merged into the integration branch: review `~/ocs/md/branch-list.md` to make sure you merged every branch!
 - [ ] Integration branch has been pushed to origin
 - [ ] MERGED-BRANCHES.md including Markdown table is complete and committed
 - [ ] Tests pass on the integration branch
