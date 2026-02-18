@@ -159,28 +159,35 @@ function releaseAudioLock(): void {
   }
 }
 
+function isAfplayRunning(): boolean {
+  try {
+    const result = require('child_process').spawnSync('pgrep', ['-x', 'afplay'], { 
+      encoding: 'utf8',
+      timeout: 1000 
+    });
+    return result.status === 0;
+  } catch {
+    return false;
+  }
+}
+
 async function waitForLockAndPlay(filePath: string, volume: number): Promise<void> {
   const debugMode = process.env.OPENCODE_DEBUG_BELL === 'true';
   
   return new Promise((resolve) => {
     const tryPlay = () => {
-      if (acquireAudioLock()) {
+      if (isAfplayRunning()) {
         if (debugMode) {
-          process.stderr.write(`TerminalBell: [DEBUG] Acquired audio lock, playing ${filePath}\n`);
+          process.stderr.write(`TerminalBell: [DEBUG] afplay already running, waiting...\n`);
         }
-        
-        // We have the lock, play the sound
-        playSoundInternal(filePath, volume, () => {
-          releaseAudioLock();
-          if (debugMode) {
-            process.stderr.write(`TerminalBell: [DEBUG] Released audio lock\n`);
-          }
-          resolve();
-        });
-      } else {
-        // Lock not available, wait and try again
-        setTimeout(tryPlay, 50); // Check every 50ms
+        setTimeout(tryPlay, 50);
+        return;
       }
+      
+      if (debugMode) {
+        process.stderr.write(`TerminalBell: [DEBUG] Playing ${filePath}\n`);
+      }
+      playSoundInternal(filePath, volume, resolve);
     };
     
     tryPlay();
