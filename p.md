@@ -1,3 +1,7 @@
+Something about the selection logic with lastSessionId that comes from the feat/session-bookmarks branch has broken. When reopening the session_list after beginning a new session (for example, with the /new command), the initially selected session in the dialog is meant to be the session that was previously active, but it is instead the most rese 
+
+---
+
 3c85cf4
 
 ----
