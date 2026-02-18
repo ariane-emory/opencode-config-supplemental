@@ -1,3 +1,16 @@
+### What does this PR do?
+
+Fix viewport jumping when navigating in session list after marking for deletion
+    
+The scroll calculation in moveTo() was happening synchronously before
+the re-render from setToDelete(undefined) completed its layout pass.
+Wrapping the scroll logic in setTimeout ensures positions are updated.
+
+### How did you verify your code works?
+
+Manual A/B testing, `bun typecheck`, `bun test`.
+
+---
 DELETE FROM part WHERE session_id NOT IN (SELECT id FROM session); SELECT changes();
 
 ---
