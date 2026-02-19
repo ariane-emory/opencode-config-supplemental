@@ -25,7 +25,7 @@
     "shan't": "**SHALL NOT**",
     "shall": "**SHALL**",
     "should not": "**SHOULD NOT**",
-    "shouldn't": "**SHOULD NOT**",
+    // "shouldn't": "**SHOULD NOT**",
     "should": "**SHOULD**",
   }
 }
