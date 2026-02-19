@@ -4,7 +4,10 @@ First, check out the dev branch and run the tests to see what pre-existing error
 
 Then, check out the $1 branch, merge the local dev branch into it and resolve any conflicts. You can take my word that both of these branches already exist, so you don't have to waste time checking if they do before you start.
 
-Use the `set_current_session_title` tool to give the session a title saying that you are merging dev into the branch in question, such as "Merging dev into $1". Do **NOT** bookmark this session!
+Use the `set_current_session_title` tool to give the session a title maching this format:
+`Merging dev into... | $branchName` (substituting $branchName with the actual name of the target branch)
+
+Do **NOT** bookmark this session!
 
 **CRITICAL**: Make sure that you first discard any uncommited local changes before merging the dev branch in, it would a catastrophic failure if any unrelated local changes were accidentally commited/pushed into our target branch! You MUST NOT stash any pre-existing local changes, you MUST discard them!
 
