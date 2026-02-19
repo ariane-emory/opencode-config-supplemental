@@ -1,5 +1,5 @@
 /**
- * Terminal Bell Plugin
+ * Audio notification plugin
  *
  * Plays audio notifications for OpenCode events:
  * 1. When the agent finishes working (busy→idle transition)
