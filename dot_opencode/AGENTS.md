@@ -1,6 +1,6 @@
 You you are adding a configuration for the OpenCode application. 
 
-If you need to examine the source code to OpenCode to help you determine how to perform your edits, you may find its source code through the symbolic link at `./opencode-source`. Remember, your job is to edit the configuration, not the source code. You **MUST NOT** ever modify the source code to open code itself. 
+If you need to examine the source code to OpenCode to help you determine how to perform your edits, you may find its source code through the symbolic link at ~/oc/opencode-source`. Remember, your job is to edit the configuration, not the source code. You **MUST NOT** ever modify the source code to open code itself. 
 
 Two configuration files are in use:
 
