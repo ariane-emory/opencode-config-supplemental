@@ -28,6 +28,7 @@ const semaphoreFile = normalize(resolve(configPath, "prompt-enhancer", "prompt-e
 const semaphorePresentSound = [normalize(resolve(configPath, "audio", "riff.aiff")), 0.3,];
 const noSemaphorePresentSound = [normalize(resolve(configPath, "audio", "riff2.aiff")), 0.3,];
 const permissionPromptSound = [normalize(resolve(configPath, "audio", "riff3.aiff")), 0.3,];
+const questionAskedSound = permissionPromptSound; // Same sound for now, can be customized later
 
 // Audio queue and coordination system
 interface SoundRequest {
@@ -346,6 +347,20 @@ export const TerminalBell: Plugin = async ({
         if (isPrimary) {
           const [soundFile, soundVolume] = permissionPromptSound;
           playSound(soundFile, soundVolume);
+        }
+      }
+
+      // Play sound when a question is asked by a tool (e.g., plan_exit)
+      // This alerts the user that their input is required for mode switching
+      if (event.type === "question.asked") {
+        // Only play sound for questions from tool calls, not regular questions
+        if (event.properties.tool) {
+          // Only play sound for primary agents, not subagents
+          const isPrimary = await isPrimaryAgentSession(event.properties.sessionID, client);
+          if (isPrimary) {
+            const [soundFile, soundVolume] = questionAskedSound;
+            playSound(soundFile, soundVolume);
+          }
         }
       }
     },
