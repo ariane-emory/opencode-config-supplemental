@@ -17,4 +17,4 @@ Using what you have learned during our session today, can you think of ways that
 
 Remember that we're using the fish shell, NOT bash, when writing commands.
 
-If you can think of any improvements to the instructions that would be helpful in he future, please edit the instruction files to include them.
+If you can think of any improvements to the instructions that would be helpful in he future, you **SHOULS** update the instruction files to include them to avoid these same issues recurring.
