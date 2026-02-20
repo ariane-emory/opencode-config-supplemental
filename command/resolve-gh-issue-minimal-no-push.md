@@ -28,4 +28,4 @@ Once I have approved the plan, proceed with doing the work in a new branch based
 
 When you are done, you MUST not push your changes yet, let's start by just fixing it locally.
 
-${3:}
+${3..}

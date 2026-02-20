@@ -28,4 +28,4 @@ Once I have approved the plan, proceed with doing the work in a new branch based
 
 Once you are done, you MUST push the new branch origin, But you MUST NOT create any pull requests. 
 
-${3:}
+${3..}
