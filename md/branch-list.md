@@ -8,7 +8,8 @@
 - fix/modal-menus-filtered-order
 - fix/bad-plugin-errors
 - fix/config-package-json-pollution (MUST be included in integration branches to prevent package.json pollution with non-SemVer versions)
--fix/session-list-viewport-jumping
+- fix/session-list-viewport-jumping
+- fix/merging-multiple-configs
 - refactor/shared-substitute
 - feat/argument-range-syntax
 - feat/opencode-expand
