@@ -7,6 +7,8 @@ Then, check out the $1 branch, merge the local dev branch into it and resolve an
 Use the `set_current_session_title` tool to give the session a title maching this format:
 `Merging dev into:|$branchName` (substituting $branchName with the actual name of the target branch)
 
+**CRITICAL**: Do **NOT** forget the pipe character shown in the title format!
+
 Do **NOT** bookmark this session!
 
 **CRITICAL**: Make sure that you first discard any uncommited local changes before merging the dev branch in, it would a catastrophic failure if any unrelated local changes were accidentally commited/pushed into our target branch! You MUST NOT stash any pre-existing local changes, you MUST discard them!
