@@ -353,13 +353,11 @@ export const TerminalBell: Plugin = async ({
       // Play sound when any question is asked
       // This alerts the user that their input is required, even if the question
       // appears in a different tab or window
+      // Note: Subagents cannot use the question tool (denied by default), so we
+      // don't need to check isPrimaryAgentSession here
       if (event.type === "question.asked") {
-        // Only play sound for primary agents, not subagents
-        const isPrimary = await isPrimaryAgentSession(event.properties.sessionID, client);
-        if (isPrimary) {
-          const [soundFile, soundVolume] = questionAskedSound;
-          playSound(soundFile, soundVolume);
-        }
+        const [soundFile, soundVolume] = questionAskedSound;
+        playSound(soundFile, soundVolume);
       }
     },
   };
