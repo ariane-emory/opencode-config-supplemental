@@ -4,7 +4,7 @@ GOAL: Synchronize local repository to match remote repositories exactly. This is
 
 **CRITICAL FISH SHELL SYNTAX NOTE**: All fish shell code blocks in this document MUST be executed as multi-line code with proper indentation. DO NOT convert to single-line semicolon-separated commands, as this will cause "'end' outside of a block" errors. Fish shell requires proper line breaks for block structures (if/for/while/end).
 
-RULES:
+**RULES:**
 1. All branches on origin must be made available locally
 2. All branches that exist locally must be brought up to date with their remote counterparts (may include branches manually checked-out from remotes other than origin)
 3. NEVER modify remote repositories - this is a READ-ONLY synchronization operation
@@ -163,7 +163,7 @@ for branch in (cat /tmp/local_branches.txt)
 end
 ```
 
-PHASE 2: Synchronize local branches to match their remote counterparts (RECEIVE-ONLY)
+**PHASE 2: Synchronize local branches to match their remote counterparts (RECEIVE-ONLY)**
 
 **CRITICAL FISH SHELL SYNTAX WARNING**: The following code MUST be executed as multi-line fish shell code. DO NOT convert to single-line semicolon-separated commands, as this will cause "'end' outside of a block" errors.
 
@@ -189,7 +189,7 @@ for branch in (cat /tmp/local_branches.txt)
 end
 ```
 
-VERIFICATION STEPS (CRITICAL):
+**VERIFICATION STEPS (CRITICAL):**
 
 ```fish
 # After creating missing branches, verify all branches exist
@@ -209,7 +209,7 @@ if test (cat /tmp/upstream_branches.txt | wc -l) -ne (git branch | sed 's|^[* ] 
 end
 ```
 
-FINAL VERIFICATION (CRITICAL):
+**FINAL VERIFICATION (CRITICAL):**
 
 ```fish
 echo "=== FINAL VERIFICATION ==="
@@ -251,21 +251,21 @@ end
 echo "=== SYNC COMPLETE ==="
 ```
 
-ERROR HANDLING GUIDELINES:
+**ERROR HANDLING GUIDELINES:**
 
 - **Git lock files**: Automatically remove `.git/index.lock` if encountered
 - **Branch creation failures**: Continue with other branches, report failures at end
 - **Checkout failures**: Attempt to create branch first, then checkout again
 - **CRITICAL**: No push operations should occur during this RECEIVE-ONLY synchronization
 
-IMPORTANT NOTES:
+**IMPORTANT NOTES:**
 
 - No local changes are important. If any conflict occurs you MUST always resolve it in favor of the remote branch
 - This is a RECEIVE-ONLY synchronization operation. The goal is to make local branches match their remote counterparts exactly
 - NEVER push changes to remotes during this operation
 - Branches manually checked out from other remotes (terakael, franlol, etc.) are preserved if they don't exist on origin
 
-COMMON PITFALLS TO AVOID:
+**COMMON PITFALLS TO AVOID:**
 
 - **CRITICAL**: NEVER use `git push --delete` or any command that modifies remote repositories
 - **CRITICAL**: NEVER push changes to remotes during this operation - this is RECEIVE-ONLY
@@ -280,7 +280,7 @@ COMMON PITFALLS TO AVOID:
 - Don't use hardcoded paths or branch names - always use variables
 - **CRITICAL**: When deleting local branches, switch off the current branch first if it's being deleted
 
-LESSONS LEARNED:
+**LESSONS LEARNED:**
 
 - **CRITICAL BUG**: Local branches can be named with remote prefixes (e.g., `franlol/subagents-in-the-sidebar`). When checking for remote counterparts, do NOT construct `$remote/$branch` blindly - this creates invalid paths like `franlol/franlol/subagents-in-the-sidebar`. Instead, check if the branch name already matches a remote tracking branch directly by comparing against `git branch -r` output.
 - **CRITICAL**: Fish shell variables do NOT persist between separate command invocations in this environment. Always save important values to temp files (e.g., `/tmp/original_branch.txt`) so they can be retrieved in later steps.
