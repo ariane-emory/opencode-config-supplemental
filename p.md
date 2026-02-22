@@ -3,11 +3,6 @@ OMO Discord:
 https://discord.gg/PUwSMR9XNk
 
 ---
-TODO: 
-- full datetimes in timeline/fork dialogues
-- sidebar clock
-
----
 https://canary.discord.com/channels/1391832426048651334/1400520061072052396/1474081187080175799
 
 ---
