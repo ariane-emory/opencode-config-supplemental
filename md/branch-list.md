@@ -54,6 +54,7 @@
 ###  Afterwards, from foreign remotes:
 
 - feature/markdown-renderer (from the gignit remote)
+- feature/compaction-model (from the gignit remote)
 - readline-additions (from the aspiers remote)
 - add-bash-env-parameter (from the taxilian remote)
 - feat/thinking-indicator-hidden (from the rcdailey remote)
