@@ -49,13 +49,13 @@
 - feat/taller-dialogs
 - feat/full-datetimes 
 - feat/add-arianes-themes
+- feat/aspiers--readline-additions
 - feat/sinister-quotes (the placeholders used MUST be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!)
 
 ###  Afterwards, from foreign remotes:
 
 - feature/markdown-renderer (from the gignit remote)
 - feature/compaction-model (from the gignit remote)
-- readline-additions (from the aspiers remote)
 - add-bash-env-parameter (from the taxilian remote)
 - feat/thinking-indicator-hidden (from the rcdailey remote)
 - session-new-prompt-handoff (from the AksharP5 remote)
