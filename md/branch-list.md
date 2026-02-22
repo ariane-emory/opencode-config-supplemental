@@ -19,7 +19,6 @@
 - feat/global-compaction-threshold
 - feat/configurable-message-and-session-limit
 - feat/experimental-dont-cache-markdown
-- feat/interjections
 - feat/jsonc-user-themes
 - feat/permission-indicator-in-sidebar
 - feat/permission-spinner
@@ -30,7 +29,6 @@
 - feat/sidebar-no-auto-setting
 - feat/set-session-title
 - feat/get-session-title
-- feat/session-timeline-repeat
 - feat/automatic-list-continuation
 - feat/continue-command
 - feat/session-bookmarks
