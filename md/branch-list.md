@@ -10,6 +10,7 @@
 - fix/config-package-json-pollution (MUST be included in integration branches to prevent package.json pollution with non-SemVer versions)
 - fix/session-list-viewport-jumping
 - fix/merging-multiple-configs
+- fix/dialog-datetime-alignment (for best results, merge this one after feat/session-bookmarks)
 - refactor/shared-substitute
 - feat/argument-range-syntax
 - feat/opencode-expand
@@ -32,7 +33,6 @@
 - feat/automatic-list-continuation
 - feat/continue-command
 - feat/session-bookmarks
-- fix/dialog-datetime-alignment (for best results, merge this one after feat/session-bookmarks)
 - feat/keybindable-commands
 - feat/configurable-snapshot-lifespan
 - feat/configurable-new-plan-mode
