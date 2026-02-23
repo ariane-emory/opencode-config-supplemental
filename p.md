@@ -1,3 +1,9 @@
+TODO:
+
+- simple arguments as default arguments
+
+---
+
 https://github.com/anomalyco/opencode/pull/11684
 
 --- 
