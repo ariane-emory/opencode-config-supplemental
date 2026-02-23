@@ -4,7 +4,7 @@ Group the plan's steps into "phases". After completing each phase, the code **MU
 
 Once you've come up with your plan, submit it to me for approval.
 
-Once I have approved the plan, you **MUST** proceed with doing the work in a new branch based off of the dev branch named $2.
+Once I have approved the plan, you **MUST** proceed with doing the work in a new branch based off of the $3 branch named $2.
 
 You **SHOULD** use the `set_current_session_title` tool to give the session a name consisting of the string "Issues:|" followed by the name of the new branch followed by the title of the issue.
 
