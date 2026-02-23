@@ -1,5 +1,8 @@
-OMO Discord:
-: 
+DD Discord
+https://discord.com/invite/j4zQ8UaQw2
+
+---
+OMO Discord: 
 https://discord.gg/PUwSMR9XNk
 
 ---
