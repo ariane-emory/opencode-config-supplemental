@@ -8,4 +8,6 @@ If any merge conflicts occur, you **MUST** do your best to resolve them.
 
 **CRITICAL**: You **MUST** not fast forward merges. Do not rebase or cherry-pick. If conflicts occur, you **SHOULD** think them through thoroughly and carefully resolve them by hand to ensure that important changes from the branch are not lost and that pre-existing features in the current branch are not accidentally clobbered.
 
+If there is a `./MERGED-BRANCHES.md` file present in the project, you **SHOULD** update it to properly reflect the newly merged branch's status.
+
 **FINALLY**, after completing the merge, you **MUST** push your changes to origin.
