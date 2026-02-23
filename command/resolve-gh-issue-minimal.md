@@ -4,4 +4,4 @@ agent: plan
 
 ---
 !`baseone expand ~/.config/opencode/md/resolve-gh-issue--prologue.md anomalyco/opencode $1`
-!`baseone expand ~/.config/opencode/md/resolve-gh-issue--epilogue.md $ARGUMENTS`
+!`baseone expand ~/.config/opencode/md/resolve-gh-issue--epilogue.md dev ${2..}`

@@ -24,7 +24,7 @@ You MUST come up with three different plans for how this issue could be resolved
 
 Once you've come up with your plan, submit it to me for approval.
 
-Once I have approved the plan, proceed with doing the work in a new branch based off of the dev branch named $2.
+Once I have approved the plan, proceed with doing the work in a new branch based off of the $1 branch named $2.
 
 Once you are done, you MUST push the new branch origin, But you MUST NOT create any pull requests. 
 

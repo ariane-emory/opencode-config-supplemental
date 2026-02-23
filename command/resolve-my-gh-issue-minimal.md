@@ -7,4 +7,4 @@ agent: plan
 
 You **SHOULD** make the minimal changes required to solve the issue. 
 
-!`baseone expand ~/.config/opencode/md/resolve-gh-issue--epilogue.md $ARGUMENTS`
+ !`baseone expand ~/.config/opencode/md/resolve-gh-issue--epilogue.md ${2..}`
