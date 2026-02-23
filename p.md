@@ -1,3 +1,6 @@
+https://github.com/anomalyco/opencode/pull/11684
+
+--- 
 DD Discord
 https://discord.com/invite/j4zQ8UaQw2
 
