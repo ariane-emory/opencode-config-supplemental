@@ -13,6 +13,7 @@
 - fix/dialog-datetime-alignment (for best results, merge this one after feat/session-bookmarks)
 - refactor/shared-substitute
 - feat/argument-range-syntax
+- feat/default-arguments
 - feat/opencode-expand
 - feat/edit-tool-description
 - feat/opeoginni--display-message-tps
@@ -49,7 +50,6 @@
 - feat/add-arianes-themes
 - feat/aspiers--readline-additions
 - feat/sidebar-clock
-- feat/default-arguments
 - feat/sinister-quotes (the placeholders used MUST be the 
 SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!)
 
