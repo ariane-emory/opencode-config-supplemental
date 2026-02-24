@@ -52,6 +52,7 @@
 - feat/aspiers--readline-additions
 - feat/sidebar-clock
 - feat/ignored-commands
+- feat/improve-bash-tool-git-advice
 - feat/sinister-quotes (the placeholders used MUST be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!)
 
 ###  Afterwards, from foreign remotes:
