@@ -12,6 +12,7 @@
 - fix/merging-multiple-configs
 - fix/dialog-datetime-alignment (for best results, merge this one after feat/session-bookmarks)
 - refactor/shared-substitute
+- feat/session-id-in-status
 - feat/argument-range-syntax
 - feat/default-arguments
 - feat/opencode-expand
