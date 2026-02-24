@@ -4,6 +4,11 @@ agent: build
 new_session: true
 model: kimi-for-coding/k2p5
 ---
+!`cat ~/.config/opencode/md/hard-sync-all-remotes.md`
+
+Make sure that these branches from remotes are available locally:
+!`cat ~/.config/opencode/md/branch-list.md`
+
 !`cat ~/.config/opencode/md/integrate-branches--prologue.md`
 integration/!`date +%Y-%m-%d-%H-%M`
 !`cat ~/.config/opencode/md/integrate-branches--body.md`

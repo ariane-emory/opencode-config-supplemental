@@ -1,3 +1,14 @@
+Note that we are now working in a different directory. 
+
+This is an integration branch. Which was produced by merging many feature branches into the dev branch, including the feat/ignored-commands that you were just working on... however, the ignored property doesn't seem to be working: the 'ignored' command is still being processed by the model.
+
+I tried testing it in this test command, which is also testing some extensions to the syntax for arguments and custom slash commands: /Users/katherinemasseau/.config/opencode/supplemental/command/arg-test.md
+
+Why isn't the ignored property working? Did something get damaged during the emerging process that produced this integration branch? Or is something wrong with our original feature branch? 
+
+Please try to diagnose the cause and figure out why it isn't working in this test command. 
+
+----
 TODO:
 
 - simple arguments as default arguments
