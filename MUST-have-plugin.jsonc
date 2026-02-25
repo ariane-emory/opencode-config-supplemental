@@ -15,6 +15,7 @@
     "must": "**MUST**",
     "never": "**NEVER**",
     "not recommended": "**NOT RECOMMENDED**",
+    "nothing": "**NOTHING**",
     // "not": "**NOT**",
     "optional": "**OPTIONAL**",
     "ought": "**SHOULD**",
