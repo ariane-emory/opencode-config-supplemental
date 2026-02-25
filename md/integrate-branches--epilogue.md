@@ -11,22 +11,22 @@ Use your task todo list tools to keep track of which steps in the procedure you 
 
 **CRITICAL**: You **MUST NOT** try to process branches in batches or in parallel, it usually doesn't work out right: you **MUST** process the branches individually, one at a time.
 
-**CRITICAL - NEVER REBASE THE INTEGRATION BRANCH**: Do NOT use `git pull --rebase` or `git rebase` on the integration branch. Rebasing will clobber merge commits and lose changes from previously merged branches. If there are conflicts with the remote integration branch, use `git pull --no-rebase` or `git push --force` since this is a single-use integration branch for testing purposes.
+**CRITICAL - NEVER REBASE THE INTEGRATION BRANCH**: Do **NOT** use `git pull --rebase` or `git rebase` on the integration branch. Rebasing will clobber merge commits and lose changes from previously merged branches. If there are conflicts with the remote integration branch, use `git pull --no-rebase` or `git push --force` since this is a single-use integration branch for testing purposes.
 
-**CRITICAL BRANCH HYGIENE**: Throughout this entire process, you **MUST** remain on the integration branch. DO NOT switch to `dev` or any other branch until the very end when performing the post-integration verification. All merges, commits, and pushes should happen while on the integration branch. The `dev` branch should NEVER receive any of the integration commits.
+**CRITICAL BRANCH HYGIENE**: Throughout this entire process, you **MUST** remain on the integration branch. **DO NOT** switch to `dev` or any other branch until the very end when performing the post-integration verification. All merges, commits, and pushes should happen while on the integration branch. The `dev` branch should NEVER receive any of the integration commits.
 
-For each of these branches, you SHOULD:
+For each of these branches, you **SHOULD**:
 
 - Merge the branch while staying on the integration branch: `git merge branch-name --no-ff`
-- Try your very best to carefully resolve any conflicts that occur. When resolving conflicts, think them through carefully and thoroughly. When multiple branches modify the same file, make sure to incorporate changes from BOTH sides - don't just pick one side. Make sure not to let content from dev clobber content from the fix/feature branches that we're trying to merge in! Pay special attention for coments labelled with '**CRITICAL**', these are used to indicate specific changes that **MUST NOT** be clobbered!
+- Try your very best to carefully resolve any conflicts that occur. When resolving conflicts, think them through carefully and thoroughly. When multiple branches modify the same file, make sure to incorporate changes from **BOTH** sides - don't just pick one side. Make sure not to let content from dev clobber content from the fix/feature branches that we're trying to merge in! Pay special attention for coments labelled with '**CRITICAL**', these are used to indicate specific changes that **MUST NOT** be clobbered!
 
-- **CRITICAL VERIFICATION**: After each merge, you **MUST** verify that key changes from the branch are actually present in the integration branch. Check for specific functions, types, or code patterns that the branch was supposed to introduce. A merge that reports "Already up to date" may indicate the changes were NOT actually merged.
+- **CRITICAL VERIFICATION**: After each merge, you **MUST** verify that key changes from the branch are actually present in the integration branch. Check for specific functions, types, or code patterns that the branch was supposed to introduce. A merge that reports "Already up to date" may indicate the changes were **NOT** actually merged.
 - Record the result of handling this branch in MERGED-BRANCHES.md.
 - Remember to update your todo list.
 
 Since you may need to read files to resolve conflicts, you must always use the Read tool on files prior to using the Edit tool on them to avoid errors.
 
-If a git lock file gets in your way, you SHOULD just delete it and keep working on merging.
+If a git lock file gets in your way, you **SHOULD** just delete it and keep working on merging.
 
 Any tests in the project (including 'bun turbo typecheck') **MUST** pass after merging each branch into the new integration branch.
 
@@ -40,7 +40,7 @@ Ultrathink!
 
 ## Verifying Merge Results
 
-After each merge, you **MUST** verify the merge was successful by checking that the branch's key changes are present. Do NOT rely solely on git's merge output - "Already up to date" or a fast-forward merge may indicate the changes were NOT properly integrated.
+After each merge, you **MUST** verify the merge was successful by checking that the branch's key changes are present. Do **NOT** rely solely on git's merge output - "Already up to date" or a fast-forward merge may indicate the changes were **NOT** properly integrated.
 
 **Verification procedure for each branch:**
 1. Before merging, check the PR diff or branch diff to identify key changes (new functions, types, file modifications)
@@ -63,7 +63,7 @@ grep -rn "NewTypeName" packages/
 - "Already up to date" - The branch may have already been merged, or you may be merging a stale local branch
 - Fast-forward merges when there should be changes - Use `--no-ff` flag and verify changes
 - Conflicts that silently drop one side - **ALWAYS** review conflict resolutions carefully
-- Multiple branches modifying the same file - Later merges may need to incorporate changes from BOTH the integration branch AND the feature branch
+- Multiple branches modifying the same file - Later merges may need to incorporate changes from BOTH the integration branch **AND** the feature branch
 - **REBASING THE INTEGRATION BRANCH** - This is the most dangerous pitfall! Never rebase an integration branch as it will destroy merge commits and lose changes
 
 ## Finishing touches
@@ -131,7 +131,7 @@ This ensures that custom version strings like `"2026-02-15-13-46"` won't cause t
 
 ### Prevent Package.json Pollution
 
-When CHANNEL is NOT "local", the `installDependencies()` function in `packages/opencode/src/config/config.ts` writes the VERSION string to `.opencode/package.json`. Since `YYYY-MM-DD-HH-MM` is not a valid npm version, this pollutes the config and breaks both the integration build AND the original opencode installation.
+When CHANNEL is **NOT** "local", the `installDependencies()` function in `packages/opencode/src/config/config.ts` writes the VERSION string to `.opencode/package.json`. Since `YYYY-MM-DD-HH-MM` is not a valid npm version, this pollutes the config and breaks both the integration build **AND** the original opencode installation.
 
 **You **MUST** also set CHANNEL to "local"** in `packages/opencode/script/build.ts`:
 
