@@ -1,23 +1,23 @@
-GOAL: Synchronize local repository to match remote repositories exactly. This is a RECEIVE-ONLY operation that fetches changes from remotes and updates local branches accordingly. This is typically used in fork workflows where upstream is the source of truth.
+GOAL: Synchronize local repository to match remote repositories exactly. This is a **RECEIVE-ONLY** operation that fetches changes from remotes and updates local branches accordingly. This is typically used in fork workflows where upstream is the source of truth.
 
 **FIRST**: Use the `set_current_session_title` tool to name the session "Syncronizing branches with remotes".
 
-**CRITICAL FISH SHELL SYNTAX NOTE**: All fish shell code blocks in this document MUST be executed as multi-line code with proper indentation. DO NOT convert to single-line semicolon-separated commands, as this will cause "'end' outside of a block" errors. Fish shell requires proper line breaks for block structures (if/for/while/end).
+**CRITICAL FISH SHELL SYNTAX NOTE**: All fish shell code blocks in this document MUST be executed as multi-line code with proper indentation. **DO NOT** convert to single-line semicolon-separated commands, as this will cause "'end' outside of a block" errors. Fish shell requires proper line breaks for block structures (if/for/while/end).
 
 **RULES:**
 1. All branches on origin must be made available locally
 2. All branches that exist locally must be brought up to date with their remote counterparts (may include branches manually checked-out from remotes other than origin)
-3. NEVER modify remote repositories - this is a READ-ONLY synchronization operation
+3. **NEVER** modify remote repositories - this is a **READ-ONLY** synchronization operation
 
-**IMPORTANT**: You MUST delete any orphaned local branches!
+**IMPORTANT**: You **MUST** delete any orphaned local branches!
 
-**CRITICAL PRINCIPLE**: Remote repositories are ALWAYS the single source of truth. Only delete branches that truly have no remote counterpart anywhere.
+**CRITICAL PRINCIPLE**: Remote repositories are **ALWAYS** the single source of truth. Only delete branches that truly have no remote counterpart anywhere.
 
-**CRITICAL**: You MUST NOT merge local changes with upstream changes! We want the local state to exactly match remote state, any local changes MUST ALWAYS be discarded in favour of the upstream state. DO NOT MERGE!
+**CRITICAL**: You **MUST NOT** merge local changes with upstream changes! We want the local state to exactly match remote state, any local changes **MUST ALWAYS** be discarded in favour of the upstream state. **DO NOT MERGE**!
 
-**ABSOLUTE PROHIBITION**: NEVER use any `git push` command or any other command that modifies remote repositories. This operation is RECEIVE-ONLY.
+**ABSOLUTE PROHIBITION**: **NEVER** use any `git push` command or any other command that modifies remote repositories. This operation is **RECEIVE-ONLY**.
 
-**IMPORTANT**: Fish shell variables do NOT persist between separate command invocations. You MUST save the original branch name to a temp file so it can be retrieved later, OR remember it yourself and use it explicitly in the final step.
+**IMPORTANT**: Fish shell variables do **NOT** persist between separate command invocations. You **MUST** save the original branch name to a temp file so it can be retrieved later, OR remember it yourself and use it explicitly in the final step.
 
 ```fish
 set original_branch (git branch --show-current)
@@ -25,17 +25,17 @@ echo "Original branch: $original_branch"
 echo "$original_branch" > /tmp/original_branch.txt
 ```
 
-Then, you MUST fetch every remote to make sure they're up to date:
+Then, you **MUST** fetch every remote to make sure they're up to date:
 
 ```fish
 git fetch --all --prune
 ```
 
-**CRITICAL CLEANUP STEP**: First, clean up any branches that have NO remote counterpart anywhere. Some local branches might come from remotes other than origin, these should be kept if they still exist on their originating remote!
+**CRITICAL CLEANUP STEP**: First, clean up any branches that have **NO** remote counterpart anywhere. Some local branches might come from remotes other than origin, these should be kept if they still exist on their originating remote!
 
-**FISH SHELL SYNTAX WARNING**: Execute as multi-line code, NOT as single-line semicolon-separated commands.
+**FISH SHELL SYNTAX WARNING**: Execute as multi-line code, **NOT** as single-line semicolon-separated commands.
 
-**CRITICAL BUG TO AVOID**: Local branches can be named with a remote prefix (e.g., `franlol/subagents-in-the-sidebar`). When checking if these have a remote counterpart, do NOT blindly construct `$remote/$branch` as this creates invalid paths like `franlol/franlol/subagents-in-the-sidebar`. Instead, check if the branch name starts with a remote prefix and handle it specially, OR use `git branch -r` output directly to find matches.
+**CRITICAL BUG TO AVOID**: Local branches can be named with a remote prefix (e.g., `franlol/subagents-in-the-sidebar`). When checking if these have a remote counterpart, do **NOT** blindly construct `$remote/$branch` as this creates invalid paths like `franlol/franlol/subagents-in-the-sidebar`. Instead, check if the branch name starts with a remote prefix and handle it specially, **OR** use `git branch -r` output directly to find matches.
 
 ```fish
 # Get list of ALL remote tracking branches (full names like "origin/dev", "franlol/subagents-in-the-sidebar")
@@ -94,8 +94,7 @@ echo "Cleanup complete. Remaining local branches:"
 git branch
 ```
 
-**ENHANCED VERIFICATION STEP**: After cleanup, create fresh lists for each remote:
-
+**ENHANCED VERIFICATION STEP**: After cleanup, create fresh lists for each remote:;
 ```fish
 # Get fresh list of origin branches only (NOTE: proper spacing for git branch -r output)
 git branch -r | grep '  origin/' | grep -v HEAD | sed 's|^  origin/||' | sort > /tmp/origin_branches.txt
@@ -129,7 +128,7 @@ end
 
 PHASE 1: Create missing origin branches and sync all existing local branches
 
-**FISH SHELL SYNTAX WARNING**: Execute as multi-line code, NOT as single-line semicolon-separated commands.
+**FISH SHELL SYNTAX WARNING**: Execute as multi-line code, **NOT** as single-line semicolon-separated commands.
 
 ```fish
 # 1. ONLY create branches that exist on origin but NOT locally (origin is source of truth for what should exist)
@@ -165,7 +164,7 @@ end
 
 **PHASE 2: Synchronize local branches to match their remote counterparts (RECEIVE-ONLY)**
 
-**CRITICAL FISH SHELL SYNTAX WARNING**: The following code MUST be executed as multi-line fish shell code. DO NOT convert to single-line semicolon-separated commands, as this will cause "'end' outside of a block" errors.
+**CRITICAL FISH SHELL SYNTAX WARNING**: The following code **MUST** be executed as multi-line fish shell code. **DO NOT** convert to single-line semicolon-separated commands, as this will cause "'end' outside of a block" errors.
 
 ```fish
 # CRITICAL: Only update local branches to match their remote counterparts
@@ -210,7 +209,6 @@ end
 ```
 
 **FINAL VERIFICATION (CRITICAL):**
-
 ```fish
 echo "=== FINAL VERIFICATION ==="
 
@@ -256,25 +254,25 @@ echo "=== SYNC COMPLETE ==="
 - **Git lock files**: Automatically remove `.git/index.lock` if encountered
 - **Branch creation failures**: Continue with other branches, report failures at end
 - **Checkout failures**: Attempt to create branch first, then checkout again
-- **CRITICAL**: No push operations should occur during this RECEIVE-ONLY synchronization
+- **CRITICAL**: No push operations should occur during this **RECEIVE-ONLY** synchronization
 
 **IMPORTANT NOTES:**
 
-- No local changes are important. If any conflict occurs you MUST always resolve it in favor of the remote branch
-- This is a RECEIVE-ONLY synchronization operation. The goal is to make local branches match their remote counterparts exactly
-- NEVER push changes to remotes during this operation
+- No local changes are important. If any conflict occurs you **MUST** always resolve it in favor of the remote branch
+- This is a **RECEIVE-ONLY** synchronization operation. The goal is to make local branches match their remote counterparts exactly
+- **NEVER** push changes to remotes during this operation
 - Branches manually checked out from other remotes (terakael, franlol, etc.) are preserved if they don't exist on origin
 
 **COMMON PITFALLS TO AVOID:**
 
-- **CRITICAL**: NEVER use `git push --delete` or any command that modifies remote repositories
-- **CRITICAL**: NEVER push changes to remotes during this operation - this is RECEIVE-ONLY
+- **CRITICAL**: **NEVER** use `git push --delete` or any command that modifies remote repositories
+- **CRITICAL**: **NEVER** push changes to remotes during this operation - this is **RECEIVE-ONLY**
 - **CRITICAL**: Don't mix branches from different remotes - always filter by specific remote (origin/ vs upstream/)
 - **CRITICAL**: Use fish-compatible sed syntax: `sed 's|^[* ] ||'` instead of `sed 's/^[* ] //'`
 - **CRITICAL**: `git branch -r` output has leading spaces - use `grep '  origin/'` not `grep '^origin/'`
 - **CRITICAL**: Always verify branch existence before attempting operations: `git rev-parse --verify "$branch"`
 - **CRITICAL**: Handle ambiguous branch names - use explicit remote/branch format like `git checkout --track origin/dev`
-- **CRITICAL**: Clean up orphaned branches from previous failed syncs BEFORE starting new sync
+- **CRITICAL**: Clean up orphaned branches from previous failed syncs **BEFORE** starting new sync
 - Don't assume `git fetch --all` makes branches available locally - remote tracking branches don't automatically create local branches
 - **CRITICAL**: Handle git lock files that can prevent operations
 - Don't use hardcoded paths or branch names - always use variables
@@ -282,12 +280,12 @@ echo "=== SYNC COMPLETE ==="
 
 **LESSONS LEARNED:**
 
-- **CRITICAL BUG**: Local branches can be named with remote prefixes (e.g., `franlol/subagents-in-the-sidebar`). When checking for remote counterparts, do NOT construct `$remote/$branch` blindly - this creates invalid paths like `franlol/franlol/subagents-in-the-sidebar`. Instead, check if the branch name already matches a remote tracking branch directly by comparing against `git branch -r` output.
-- **CRITICAL**: Fish shell variables do NOT persist between separate command invocations in this environment. Always save important values to temp files (e.g., `/tmp/original_branch.txt`) so they can be retrieved in later steps.
+- **CRITICAL BUG**: Local branches can be named with remote prefixes (e.g., `franlol/subagents-in-the-sidebar`). When checking for remote counterparts, do **NOT** construct `$remote/$branch` blindly - this creates invalid paths like `franlol/franlol/subagents-in-the-sidebar`. Instead, check if the branch name already matches a remote tracking branch directly by comparing against `git branch -r` output.
+- **CRITICAL**: Fish shell variables do **NOT** persist between separate command invocations in this environment. Always save important values to temp files (e.g., `/tmp/original_branch.txt`) so they can be retrieved in later steps.
 - **NEVER assume what constitutes "garbage branches"** - user's fork (origin) is the source of truth for what should exist locally
 - **CRITICAL**: Only delete LOCAL branches that have NO remote counterpart ANYWHERE, not just branches that don't exist on origin
-- **CRITICAL**: NEVER modify remote repositories during synchronization - this is RECEIVE-ONLY
-- Remote tracking branches (remotes/origin/branch) are NOT the same as local branches
+- **CRITICAL**: **NEVER** modify remote repositories during synchronization - this is RECEIVE-ONLY
+- Remote tracking branches (remotes/origin/branch) are **NOT** the same as local branches
 - Always create missing local branches BEFORE attempting to checkout or reset them  
 - Use `git checkout -b <branch> origin/<branch>` to create local branches from remote tracking branches
 - Fish shell has different sed syntax requirements than bash
@@ -297,19 +295,19 @@ echo "=== SYNC COMPLETE ==="
 - **CRITICAL**: Always clean up orphaned branches from previous failed syncs BEFORE starting new sync
 - Multiple remotes can have branches with same names (like `dev`), causing ambiguity - use explicit remote/branch format
 - `git branch -r` output has leading spaces that must be accounted for in grep patterns
-- **CRITICAL**: NEVER create ALL upstream branches locally - this creates branches that don't belong on origin
+- **CRITICAL**: **NEVER** create ALL upstream branches locally - this creates branches that don't belong on origin
 - When sync fails partway through, it can leave a mess of mixed branches from different remotes that needs manual cleanup
 - **CRITICAL**: Cannot delete the current branch - must switch to another branch first
-- **BIGGEST LESSON**: Remote repositories are ALWAYS the single source of truth. Local branches without remote counterparts are garbage.
-- **CATASTROPHIC LESSON**: NEVER use `git push --delete` under any circumstances during synchronization
+- **BIGGEST LESSON**: Remote repositories are **ALWAYS** the single source of truth. Local branches without remote counterparts are garbage.
+- **CATASTROPHIC LESSON**: **NEVER** use `git push --delete` under any circumstances during synchronization
 
 Use your todo list tools to keep track of your progress.
 
-**FINAL CRITICAL REMINDER**: The goal is to make local branches match their remote counterparts exactly, NOT to create all upstream branches locally. Only branches that exist on remotes should ever exist locally. 
+**FINAL CRITICAL REMINDER**: The goal is to make local branches match their remote counterparts exactly, **NOT** to create all upstream branches locally. Only branches that exist on remotes should ever exist locally. 
 
-**ABSOLUTE RULE**: Remote repositories are ALWAYS the single source of truth. If a branch doesn't exist on any remote, it's garbage and should be deleted locally.
+**ABSOLUTE RULE**: Remote repositories are **ALWAYS** the single source of truth. If a branch doesn't exist on any remote, it's garbage and should be deleted locally.
 
-**ABSOLUTE PROHIBITION**: NEVER use `git push --delete` or any command that modifies remote repositories. This operation is RECEIVE-ONLY.
+**ABSOLUTE PROHIBITION**: **NEVER** use `git push --delete` or any command that modifies remote repositories. This operation is **RECEIVE-ONLY**.
 
 **REMEMBER**: No branch should have any local changes once you are done! Any local changes should have been discarded in order to match the remote state!
 
