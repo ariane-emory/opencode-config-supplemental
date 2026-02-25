@@ -30,8 +30,8 @@ git merge feat/branch-name --no-ff -m "Merge feat/branch-name"
 
 **CRITICAL**: You **SHOULD** merge only from local copies of the branches, you **MUST NOT** pull or fetch unless you are explicitly instructed to do so by the user.
 
-Do NOT switch away from the integration branch during the merge process.
+Do **NOT** switch away from the integration branch during the merge process.
 
-You **MUST** push the integration branch to origin after merging **EACH** branch into it!
+**CRITICAL**: You **MUST** push the integration branch to origin after merging **EACH** branch into it!
 
 These are the branches we need to merge into the new integration branch:
