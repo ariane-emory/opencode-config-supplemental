@@ -1,3 +1,8 @@
+2026-02-25-14-07 (sketch)
+2026-02-24-20-19 (50/50)
+2026-02-24-04-43 (golden)
+
+---
 Note that we are now working in a different directory. 
 
 This is an integration branch. Which was produced by merging many feature branches into the dev branch, including the feat/ignored-commands that you were just working on... however, the ignored property doesn't seem to be working: the 'ignored' command is still being processed by the model.
