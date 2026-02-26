@@ -1,7 +1,7 @@
 ---
 description: Plan to resolve a GH issue (minimal). 
 agent: plan
-ignored: true
+ignored: false
 ---
 !`baseone expand ~/.config/opencode/md/resolve-gh-issue--prologue.md ariane-emory/opencode $1`
 
