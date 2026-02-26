@@ -1,3 +1,16 @@
+While building an integration branch that mixes this dev branch with a whole bunch of my own features, I ran into some difficulties and discovered that they have to do with some new behaviour in this current state of dev where it tries to migrate certain settings to a new tui.json file. 
+
+I need to understand a bit more about the how this migration process works, especially in the scenario where there are both and opencode.json and an opencode.jsonc file in the same ~/.config/opencode directory. 
+Another question is how this process will work when the `tui` group in the configuration file(s) containt new, unknown keys from my custom feature branches, instead of simply the known, recognized keys that exist in dev. 
+
+Another question is how this process will work when the `tui` group in the configuration file(s) contains new, unknown keys from my custom feature branches, instead of simply the known, recognized keys that exist in dev. 
+
+Investigate and explain how this process works in this scenario.  
+
+foo
+
+---
+
 https://gutenberg.ca/ebooks/smithcordwainer-fromgustiblesplanet/smithcordwainer-fromgustiblesplanet-00-h.html
 
 ---
