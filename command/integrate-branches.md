@@ -3,8 +3,4 @@ description: Integrate feature branches.
 agent: build
 new_session: true
 ---
-!`cat ~/.config/opencode/md/integrate-branches--prologue.md`
-integration/!`date +%Y-%m-%d-%H-%M`
-!`cat ~/.config/opencode/md/integrate-branches--body.md`
-!`cat ~/.config/opencode/md/branch-list.md`
-!`cat ~/.config/opencode/md/integrate-branches--epilogue.md`
+!`baseone expand ~/.config/opencode/md/integrate-branches--in-toto.md`
