@@ -1,3 +1,6 @@
+https://gutenberg.ca/ebooks/smithcordwainer-fromgustiblesplanet/smithcordwainer-fromgustiblesplanet-00-h.html
+
+---
 2026-02-25-18-28 (promising)
 
 2026-02-25-14-07 (sketch)
