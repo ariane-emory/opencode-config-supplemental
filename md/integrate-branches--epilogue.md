@@ -63,7 +63,7 @@ grep -rn "NewTypeName" packages/
 - "Already up to date" - The branch may have already been merged, or you may be merging a stale local branch
 - Fast-forward merges when there should be changes - Use `--no-ff` flag and verify changes
 - Conflicts that silently drop one side - **ALWAYS** review conflict resolutions carefully
-- Multiple branches modifying the same file - Later merges may need to incorporate changes from BOTH the integration branch **AND** the feature branch
+- Multiple branches modifying the same file - Later merges may need to incorporate changes from **BOTH** the integration branch **AND** the feature branch
 - **REBASING THE INTEGRATION BRANCH** - This is the most dangerous pitfall! Never rebase an integration branch as it will destroy merge commits and lose changes
 
 ## Finishing touches
@@ -200,7 +200,7 @@ This should not happen if the instructions were followed correctly. If it does h
 - [ ] Verified: `dev` branch still matches `origin/dev` (hasn't moved forward)
 - [ ] Currently on the integration branch with clean working tree 
 
-**IMPORTANT**: You **MUST** complete the **ENTIRE** plan and merge ALL of the requested branches into the new integration branch!
+**IMPORTANT**: You **MUST** complete the **ENTIRE** plan and merge **ALL** of the requested branches into the new integration branch!
 
 **CRITICAL**: Don't forget the instructions above about hardcoding the value of VERSION!
 
