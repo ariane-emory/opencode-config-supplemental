@@ -13,4 +13,3 @@ You **MUST** think the changes required to resolve the issue through thoroughly 
 You **MUST** use the `set_current_session_title` tool to give the session a title following the format `issues|Resolving issue #$ISSUE_NUMBER: $ISSUE_TITLE`, substituting in the issue's number and title as appropriates, for example "issues|Resolving issue #1234: Add a foobar feature".
 
 You **MUST NOT** make any unnecessary changes unrelated to the changes that are required to resolve the isue.
-
