@@ -1,5 +1,6 @@
 ### From origin:
 
+- split-config-fixed
 - fix/remove-dot-true
 - fix/rfc2119-question-tool
 - fix/restore-footer
@@ -55,7 +56,6 @@
 - feat/improve-bash-tool-git-advice
 - feat/alphabetical-message-modal
 - feat/sinister-quotes (the placeholders used MUST be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!)
-- split-config-fixed
 
 ###  Afterwards, from foreign remotes:
 
