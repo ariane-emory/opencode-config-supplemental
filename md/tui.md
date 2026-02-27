@@ -4,4 +4,4 @@ To avoid this problem, lets move the `tui.$1` setting to `experimental.$1`. Find
 
 We **SHOULD** focus on making sure that the feature work with the setting stored at `experimental .$1`, we **MUST NOT** worry about fixing pre-existing type errors in def. 
 
-When you have finished making your changes, commit and push the changes to origin with an appropriate commit message (using `--no-verify` if needed).
+When you have finished making your changes, you **MUST** commit and push the changes to origin with an appropriate commit message (using `--no-verify` if needed) - you **MUST NOT** leave any unstaged changes that have not been pushed to origin in the directory!
