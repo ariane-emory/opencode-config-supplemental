@@ -1,4 +1,6 @@
-Okay, now we are going into investigation. A reason change in the upstream dev that this integration branch was based upon, where are somesettings are migrated to a new tui.json file, has introduced problems for many of my custom features and seemingly for some default ones as well. Look at these files in ~/.config/opencode:
+Okay, now we are going into investigation mode: we are not editing files right now, we are just trying to diagnose problems and determine their causes. 
+
+A recentchange in the upstream dev that this integration branch was based upon, where are somesettings are migrated to a new tui.json file, has introduced problems for many of my custom features and seemingly for some default ones as well. Look at these files in ~/.config/opencode:
 
 opencode.json
 opencode.jsonc
@@ -9,7 +11,7 @@ Let's take these problems one at a time.
 
 All my key bindings are now in the tui.json file, but none of them, both the standard ones and the new ones enabled by the feat/keybindable-commands that we merged, are working. 
 
-We need to figure out why and diagnose whether problems during the something happened during a merge or whether one of the original feature branches needs to be updated to accommodate this change. Please diagnose the issue. 
+We need to figure out why and diagnose whether the problem happened during a merge or whether one of the original feature branches needs to be updated to accommodate this change. Please diagnose the issue. 
 
 ---
 While building an integration branch that mixes this dev branch with a whole bunch of my own features, I ran into some difficulties and discovered that they have to do with some new behaviour in this current state of dev where it tries to migrate certain settings to a new tui.json file. 
