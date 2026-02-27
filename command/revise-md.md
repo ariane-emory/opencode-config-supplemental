@@ -1,7 +1,6 @@
 ---
 description: Revise instruction MD file.
 agent: build
-
 ---
 
 Part of the instructions I just gave you came from a Markdown file located at
