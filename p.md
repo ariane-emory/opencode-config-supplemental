@@ -1,4 +1,4 @@
-Okay, now we are going into investigation mode: we are not editing files right now, we are just trying to diagnose problems and determine their causes. 
+Okay, now we are going into full-on investigation mode: we are not editing files right now, we are just trying to diagnose problems and determine their root causes. 
 
 A recentchange in the upstream dev that this integration branch was based upon, where are somesettings are migrated to a new tui.json file, has introduced problems for many of my custom features and seemingly for some default ones as well. Look at these files in ~/.config/opencode:
 
