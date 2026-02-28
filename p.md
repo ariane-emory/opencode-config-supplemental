@@ -1,4 +1,10 @@
-Never put salt in your eyes!A
+WarClaude https://x.com/pleometric/status/2026754178484167128
+
+---
+Antigravity ban https://github.com/google-gemini/gemini-cli/discussions/20632
+
+----
+Never put salt in your eyes!
 https://www.youtube.com/watch?v=JbegaT5CDfM&t=1s
 
 ---
