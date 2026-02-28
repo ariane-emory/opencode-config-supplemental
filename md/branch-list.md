@@ -1,6 +1,7 @@
 ### From origin:
 
 - split-config-fixes
+- fix/system-prompt-directories
 - fix/remove-dot-true
 - fix/rfc2119-question-tool
 - fix/restore-footer
