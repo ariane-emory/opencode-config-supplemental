@@ -64,7 +64,7 @@
 - feature/compaction-model (from the gignit remote)
 - add-bash-env-parameter (from the taxilian remote)
 - feat/thinking-indicator-hidden (from the rcdailey remote)
-- session-new-prompt-handoff (from the AksharP5 remote)
+- fix/session-new-prompt-handoff (from the AksharP5 remote)
 
 ### And finally, finish up with this branch:
 
