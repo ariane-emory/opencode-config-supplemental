@@ -1,6 +1,6 @@
 ### From origin:
 
-- split-config-fixed
+- split-config-fixes
 - fix/remove-dot-true
 - fix/rfc2119-question-tool
 - fix/restore-footer

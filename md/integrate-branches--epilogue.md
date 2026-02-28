@@ -72,8 +72,10 @@ Modify the configuration file at ./.opencode/opencode.jsonc to include this prop
 
 ```jsonc
 {
-  "theme": "matrix-transparent",
-  // remainder of content left as-is.
+  "tui": {
+    "theme": "matrix-transparent",
+    // remainder of content left as-is.
+  }
 }
 ```
 
