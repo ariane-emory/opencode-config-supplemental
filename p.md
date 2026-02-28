@@ -1,4 +1,4 @@
-Never put salt in your eyes!
+Never put salt in your eyes!A
 https://www.youtube.com/watch?v=JbegaT5CDfM&t=1s
 
 ---
@@ -284,6 +284,7 @@ For Aiden, about dot file issue https://canary.discord.com/channels/139183242604
 ---
 
 Kimi convo: 
+https://canary.discord.com/channels/1391832426048651334/1391832428024430645/1466205070713684091
 https://canary.discord.com/channels/1391832426048651334/1391832428024430645/1466205070713684091
 
 ---

@@ -25,9 +25,9 @@ import { resolve, normalize } from "path";
 
 const configPath = getConfigPath();
 const semaphoreFile = normalize(resolve(configPath, "prompt-enhancer", "prompt-enhancer-semaphore"),);
-const semaphorePresentSound = [normalize(resolve(configPath, "audio", "riff.aiff")), 0.3,];
-const noSemaphorePresentSound = [normalize(resolve(configPath, "audio", "riff2.aiff")), 0.3,];
-const permissionPromptSound = [normalize(resolve(configPath, "audio", "riff3.aiff")), 0.3,];
+const semaphorePresentSound = [normalize(resolve(configPath, "audio", "riff.aiff")), 0.6,];
+const noSemaphorePresentSound = [normalize(resolve(configPath, "audio", "riff2.aiff")), 0.6,];
+const permissionPromptSound = [normalize(resolve(configPath, "audio", "riff3.aiff")), 0.6,];
 const questionAskedSound = permissionPromptSound; // Same sound for now, can be customized later
 
 // Audio queue and coordination system
