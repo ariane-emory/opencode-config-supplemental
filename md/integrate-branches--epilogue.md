@@ -68,20 +68,6 @@ grep -rn "NewTypeName" packages/
 
 ## Finishing touches
 
-Modify the configuration file at ./.opencode/opencode.jsonc to include this property to set my preferred theme:
-
-```jsonc
-{
-  "tui": {
-    "theme": "matrix-transparent",
-    // remainder of content left as-is.
-  }
-}
-```
-
-
-**NOTE**: This is a personal theme that exists in my own configuration, so don't worry that it isn't contained in the repo itself.
-
 ## Set Integration Branch Version
 
 Update the VERSION constant in `packages/opencode/src/installation/index.ts` to display the integration branch name instead of "local". Find this line:
