@@ -6,14 +6,14 @@
 - fix/rfc2119-question-tool
 - fix/restore-footer
 - fix/persist-sidebar
-- fix/autocompletion-filtered-order
+-ofix/autocompletion-filtered-order
 - fix/modal-menus-filtered-order
 #fix/bad-plugin-errors
-- fix/config-package-json-pollution (MUST be included in integration branches to prevent package.json pollution with non-SemVer versions)
+- fix/config-package-json-pollution (**MUST** be included in integration branches to prevent package.json pollution with non-SemVer versions)
 - fix/session-list-viewport-jumping
 - fix/merging-multiple-configs
 - refactor/shared-substitute
-- feat/command-palette-consistecy (NOTE to prevent recurence of a past mistake: this branch is meant to MOVE several items from the Session category to the System category in the command palette. You MUST NOT duplicate them into both categories when resolving merge conflicts!) 
+- feat/command-palette-consistecy (NOTE to prevent recurence of a past mistake: this branch is meant to MOVE several items from the Session category to the System category in the command palette. You **MUST NOT** duplicate them into both categories when resolving merge conflicts!) 
 - feat/session-id-in-status
 - feat/argument-range-syntax
 - feat/default-arguments
@@ -56,7 +56,7 @@
 - feat/ignored-commands
 - feat/improve-bash-tool-git-advice
 - feat/alphabetical-message-modal
-- feat/sinister-quotes (the placeholders used MUST be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!)
+- feat/sinister-quotes (the placeholders used **MUST** be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, **NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!**)
 
 ###  Afterwards, from foreign remotes:
 
@@ -70,4 +70,4 @@
 
 - feat/base-one-rebrand
 
-**NOTE**: Any lines beginning with a `#` caractter are comments and you **MUST** ignore any such branches!
+**NOTE**: Any lines beginning with a `#` caractter are comments and you ****MUST**** ignore any such branches!
