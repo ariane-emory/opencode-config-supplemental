@@ -6,7 +6,7 @@
 - fix/rfc2119-question-tool
 - fix/restore-footer
 - fix/persist-sidebar
--ofix/autocompletion-filtered-order
+- fix/autocompletion-filtered-order
 - fix/modal-menus-filtered-order
 #fix/bad-plugin-errors
 - fix/config-package-json-pollution (**MUST** be included in integration branches to prevent package.json pollution with non-SemVer versions)
