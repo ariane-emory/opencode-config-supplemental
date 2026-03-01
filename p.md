@@ -1,3 +1,60 @@
+Invalid API parameter, please check the documentation.Request 203943 input tokens exceeds the model's maximum context length 202752
+
+---
+
+Read the contents of this exact URL and concoct a Suno prompt pair for a song based on it: 
+ 
+---
+ 
+ WarClaude https://x.com/pleometric/status/2026754178484167128
+
+---
+Antigravity ban https://github.com/google-gemini/gemini-cli/discussions/20632
+
+----
+Never put salt in your eyes!
+https://www.youtube.com/watch?v=JbegaT5CDfM&t=1s
+
+---
+Okay, now we are going into full-on investigation mode: we are not editing files right now, we are just trying to diagnose problems and determine their root causes. 
+
+A recentchange in the upstream dev that this integration branch was based upon, where are somesettings are migrated to a new tui.json file, has introduced problems for many of my custom features and seemingly for some default ones as well. Look at these files in ~/.config/opencode:
+
+opencode.json
+opencode.jsonc
+opencode.jsonc.tui-migration.bak
+tui.json
+
+Let's take these problems one at a time. 
+
+All my key bindings are now in the tui.json file, but none of them, both the standard ones and the new ones enabled by the feat/keybindable-commands that we merged, are working. 
+
+We need to figure out why and diagnose whether the problem happened during a merge or whether one of the original feature branches needs to be updated to accommodate this change. Please diagnose the issue. 
+
+---
+While building an integration branch that mixes this dev branch with a whole bunch of my own features, I ran into some difficulties and discovered that they have to do with some new behaviour in this current state of dev where it tries to migrate certain settings to a new tui.json file. 
+
+I need to understand a bit more about the how this migration process works, especially in the scenario where there are both and opencode.json and an opencode.jsonc file in the same ~/.config/opencode directory. 
+Another question is how this process will work when the `tui` group in the configuration file(s) containt new, unknown keys from my custom feature branches, instead of simply the known, recognized keys that exist in dev. 
+
+Another question is how this process will work when the `tui` group in the configuration file(s) contains new, unknown keys from my custom feature branches, instead of simply the known, recognized keys that exist in dev. 
+
+Investigate and explain how this process works in this scenario.  
+
+foo
+
+---
+
+https://gutenberg.ca/ebooks/smithcordwainer-fromgustiblesplanet/smithcordwainer-fromgustiblesplanet-00-h.html
+
+---
+2026-02-25-18-28 (promising)
+
+2026-02-25-14-07 (sketch)
+2026-02-24-20-19 (50/50, weird thinking)
+2026-02-24-04-43 (golden)
+
+---
 Note that we are now working in a different directory. 
 
 This is an integration branch. Which was produced by merging many feature branches into the dev branch, including the feat/ignored-commands that you were just working on... however, the ignored property doesn't seem to be working: the 'ignored' command is still being processed by the model.
@@ -242,6 +299,9 @@ For Aiden, about dot file issue https://canary.discord.com/channels/139183242604
 
 Kimi convo: 
 https://canary.discord.com/channels/1391832426048651334/1391832428024430645/1466205070713684091
+
+Bot: https://www.kimi.com/kimiplus/sale
+Convo: https://www.kimi.com/share/19c01fd9-d3b2-874b-8000-00006b475768
 
 ---
 
