@@ -1,4 +1,4 @@
- Read the contents of this exact URL and concoct a Suno prompt pair for a song based on it:
+Read the contents of this exact URL and concoct a Suno prompt pair for a song based on it: 
  
 ---
  
