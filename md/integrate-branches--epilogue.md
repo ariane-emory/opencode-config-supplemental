@@ -18,7 +18,7 @@ Use your task todo list tools to keep track of which steps in the procedure you 
 For each of these branches, you **SHOULD**:
 
 - Merge the branch while staying on the integration branch: `git merge branch-name --no-ff`
-- Try your very best to carefully resolve any conflicts that occur. When resolving conflicts, think them through carefully and thoroughly. When multiple branches modify the same file, make sure to incorporate changes from **BOTH** sides - don't just pick one side. Make sure not to let content from dev clobber content from the fix/feature branches that we're trying to merge in! Pay special attention for coments labelled with '**CRITICAL**', these are used to indicate specific changes that **MUST NOT** be clobbered!
+- Try your very best to carefully resolve any conflicts that occur. When resolving conflicts, think them through carefully and thoroughly. When multiple branches modify the same file, make sure to incorporate changes from **BOTH** sides - don't just pick one side. You **SHOULD NOT** allow content from dev clobber content from the fix/feature branches that we're trying to merge in, in most cases the changes from the feature/fix branch **SHOULD** be favoured! Pay special attention for coments labelled with '**CRITICAL**' or '**AGENTS**' these are used to indicate specific changes that **MUST NOT** be clobbered!
 
 - **CRITICAL VERIFICATION**: After each merge, you **MUST** verify that key changes from the branch are actually present in the integration branch. Check for specific functions, types, or code patterns that the branch was supposed to introduce. A merge that reports "Already up to date" may indicate the changes were **NOT** actually merged.
 - Record the result of handling this branch in MERGED-BRANCHES.md.
