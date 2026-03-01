@@ -13,6 +13,7 @@
 - fix/session-list-viewport-jumping
 - fix/merging-multiple-configs
 - refactor/shared-substitute
+- feat/command-palette-consistecy
 - feat/session-id-in-status
 - feat/argument-range-syntax
 - feat/default-arguments
@@ -42,7 +43,6 @@
 - feat/configurable-new-plan-mode
 - feat/config-imports
 - feat/canceled-prompts-in-history
-- feat/command-palette-consistecy
 - feat/no-disabled-lsps-in-sidebar
 - feat/agent-timestamps
 - feat/rewind-modal-option
