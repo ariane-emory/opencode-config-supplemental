@@ -31,7 +31,7 @@
 - feat/persistant-sidebar-overlay-behaviour
 - feat/shell-advice
 - feat/elapsed-timer
-- feat/sidebar-no-auto-setting
+#feat/sidebar-no-auto-setting
 - feat/set-session-title
 - feat/get-session-title
 - feat/automatic-list-continuation
