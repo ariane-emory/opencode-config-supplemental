@@ -13,7 +13,7 @@
 - fix/session-list-viewport-jumping
 - fix/merging-multiple-configs
 - refactor/shared-substitute
-- feat/command-palette-consistecy
+- feat/command-palette-consistecy (NOTE to prevent recurence of a past mistake: this branch is meant to MOVE several items from the Session category to the System category in the command palette. You MUST NOT duplicate them into both categories when resolving merge conflicts!) 
 - feat/session-id-in-status
 - feat/argument-range-syntax
 - feat/default-arguments
