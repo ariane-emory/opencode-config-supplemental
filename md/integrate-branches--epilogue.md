@@ -68,17 +68,17 @@ grep -rn "NewTypeName" packages/
 
 ## Finishing touches
 
-Modify the configuration file at ./.opencode/opencode.jsonc to include this property to set my preferred theme:
+Modify the configuration file at `./.opencode/tui.json` to include this property to set my preferred t heme:
 
-```jsonc
+```
 {
+  "$schema": "https://opencode.ai/tui.json",
   "theme": "matrix-transparent",
   // remainder of content left as-is.
 }
 ```
 
-
-**NOTE**: Note that the theme property just at `theme`, **NOT** `tui.theme`! This is a personal theme that exists in my own configuration, so don't worry that it isn't contained in the repo itself.
+**NOTE**: Note that the theme property just at `theme`, **NOT** `tui.theme`!
 
 ## Set Integration Branch Version
 
