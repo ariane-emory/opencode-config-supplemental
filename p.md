@@ -1,4 +1,8 @@
-WarClaude https://x.com/pleometric/status/2026754178484167128
+ Read the contents of this exact URL and concoct a Suno prompt pair for a song based on it:
+ 
+---
+ 
+ WarClaude https://x.com/pleometric/status/2026754178484167128
 
 ---
 Antigravity ban https://github.com/google-gemini/gemini-cli/discussions/20632
