@@ -1,3 +1,7 @@
+FunnyHat:
+Yeah for future reference you have to go to https://github.com/organizations/<org>/settings/copilot/models and enable each model manually
+
+---
 Invalid API parameter, please check the documentation.Request 203943 input tokens exceeds the model's maximum context length 202752
 
 ---
