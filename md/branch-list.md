@@ -60,8 +60,9 @@
 
 ###  Afterwards, from foreign remotes:
 
-- feature/markdown-renderer (from the gignit remote)
-- feature/compaction-model (from the gignit remote)
+- feas/markdown-renderer (from the gignit remote)
+- feat/compaction-model (from the gignit remote)
+- feat/enhanced-compaction-prompt (from the gignit remote)
 - add-bash-env-parameter (from the taxilian remote)
 - feat/thinking-indicator-hidden (from the rcdailey remote)
 - fix/session-new-prompt-handoff (from the AksharP5 remote)
