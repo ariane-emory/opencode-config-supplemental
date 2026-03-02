@@ -18,7 +18,7 @@ Use your task todo list tools to keep track of which steps in the procedure you 
 For each of these branches, you **SHOULD**:
 
 - Merge the branch while staying on the integration branch: `git merge branch-name --no-ff`
-- Try your very best to carefully resolve any conflicts that occur. When resolving conflicts, think them through carefully and thoroughly. When multiple branches modify the same file, make sure to incorporate changes from **BOTH** sides - don't just pick one side. You **SHOULD NOT** allow content from dev clobber content from the fix/feature branches that we're trying to merge in, in most cases the changes from the feature/fix branch **SHOULD** be favoured! Pay special attention for coments labelled with '**CRITICAL**' or '**AGENTS**' these are used to indicate specific changes that **MUST NOT** be clobbered!
+- Try your very best to carefully resolve any conflicts that occur. When resolving conflicts, think them through carefully and thoroughly. When multiple branches modify the same file, make sure to incorporate changes from **BOTH** sides - don't just pick one side. Make sure not to let content from dev clobber content from the fix/feature branches that we're trying to merge in! Pay special attention for coments labelled with '**CRITICAL**', these are used to indicate specific changes that **MUST NOT** be clobbered!
 
 - **CRITICAL VERIFICATION**: After each merge, you **MUST** verify that key changes from the branch are actually present in the integration branch. Check for specific functions, types, or code patterns that the branch was supposed to introduce. A merge that reports "Already up to date" may indicate the changes were **NOT** actually merged.
 - Record the result of handling this branch in MERGED-BRANCHES.md.
@@ -63,10 +63,22 @@ grep -rn "NewTypeName" packages/
 - "Already up to date" - The branch may have already been merged, or you may be merging a stale local branch
 - Fast-forward merges when there should be changes - Use `--no-ff` flag and verify changes
 - Conflicts that silently drop one side - **ALWAYS** review conflict resolutions carefully
-- Multiple branches modifying the same file - Later merges may need to incorporate changes from **BOTH** the integration branch **AND** the feature branch
+- Multiple branches modifying the same file - Later merges may need to incorporate changes from BOTH the integration branch **AND** the feature branch
 - **REBASING THE INTEGRATION BRANCH** - This is the most dangerous pitfall! Never rebase an integration branch as it will destroy merge commits and lose changes
 
 ## Finishing touches
+
+Modify the configuration file at `./.opencode/tui.json` to include this property to set my preferred theme:
+
+```
+{
+  "$schema": "https://opencode.ai/tui.json",
+  "theme": "matrix-transparent",
+  // remainder of content left as-is.
+}
+```
+
+**NOTE**: Note that the theme property just at `theme`, **NOT** `tui.theme`!
 
 ## Set Integration Branch Version
 
@@ -188,7 +200,7 @@ This should not happen if the instructions were followed correctly. If it does h
 - [ ] Verified: `dev` branch still matches `origin/dev` (hasn't moved forward)
 - [ ] Currently on the integration branch with clean working tree 
 
-**IMPORTANT**: You **MUST** complete the **ENTIRE** plan and merge **ALL** of the requested branches into the new integration branch!
+**IMPORTANT**: You **MUST** complete the **ENTIRE** plan and merge ALL of the requested branches into the new integration branch!
 
 **CRITICAL**: Don't forget the instructions above about hardcoding the value of VERSION!
 
