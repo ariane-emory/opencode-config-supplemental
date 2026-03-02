@@ -73,7 +73,7 @@ Modify the configuration file at `./.opencode/tui.json` to include this property
 ```
 {
   "$schema": "https://opencode.ai/tui.json",
-  "theme": "matrix-transparent",
+  "theme": "matrix--transparent",
   // remainder of content left as-is.
 }
 ```
