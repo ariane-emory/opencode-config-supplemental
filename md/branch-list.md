@@ -61,7 +61,7 @@
 
 ###  Afterwards, from foreign remotes:
 
-- feas/markdown-renderer (from the gignit remote)
+- feat/markdown-renderer (from the gignit remote)
 - feat/compaction-model (from the gignit remote)
 - feat/enhanced-compaction-prompt (from the gignit remote)
 - add-bash-env-parameter (from the taxilian remote)

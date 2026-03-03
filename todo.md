@@ -1,4 +1,4 @@
 ### TODO:
 
-- wider dialog in taller-dialogue
-- missing non-trans themes
+- wider dialog in taller-dialogue?
+- align diff counts?
