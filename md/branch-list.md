@@ -58,6 +58,7 @@
 - feat/improve-bash-tool-git-advice
 - feat/alphabetical-message-modal
 - feat/sidebar-header-accent-colors
+- feat/toggle-sidebar-scrollbar
 - feat/sinister-quotes (the placeholders used **MUST** be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, **NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!**)
 
 ###  Afterwards, from foreign remotes:
