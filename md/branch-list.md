@@ -12,6 +12,7 @@
 - fix/config-package-json-pollution (**MUST** be included in integration branches to prevent package.json pollution with non-SemVer versions)
 - fix/session-list-viewport-jumping
 - fix/merging-multiple-configs
+- fix/markdown-codeblock-theme-property
 - refactor/shared-substitute
 - feat/command-palette-consistecy (NOTE to prevent recurence of a past mistake: this branch is meant to **MOVE** several items from the Session category to the System category in the command palette. You **MUST NOT** duplicate them into both categories when resolving merge conflicts!) 
 - feat/session-id-in-status
