@@ -1,8 +1,9 @@
+Actually, I think I've had an idea: maybe we could add a new "sessionTitle" colour property that controls the colour of the title in the sidebar and the header, and have it fall back to "text" colour property if the theme does not contain the new "sessionTitle" colour property. That way, the behaviour of existing peas could be left unchanged while allowing the colour of the title to be controlled independently if desired. 
+
+---
 Okay, now we're switching over into what I'm going to call "investigation mode": I don't yet have a specific change that I would like made, I would instead like to investigate an issue that I have noticed with some of the finer details the `baseone expand` command that was added in the feat/opencode-expand branch.
 
 When I run this command in the shell this is the output:
-
-
 
 ----
 
