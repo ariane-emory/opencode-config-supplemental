@@ -1,4 +1,7 @@
-Okay, now we're switching over into what I'm going to call "investigation mode": I don't yet have a specific change that I would like made, I would instead like to investigate an issue that I have noticed with some of the finer details selection behaviour in the session list and try to figure out what the cause is, and whether any of the many feature/fix branches we have merged play any part in the observed behaviour, so that we can eventually make plans to solve it in the future. 
+Okay, now we're switching over into what I'm going to call "investigation mode": I don't yet have a specific change that I would like made, I would instead like to investigate an issue that I have noticed with some of the finer details the `baseone expand` command that was added in the feat/opencode-expand branch.
+
+When I run this command in the shell this is the output:
+
 
 
 ----
