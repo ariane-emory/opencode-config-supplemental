@@ -3,7 +3,7 @@
 - split-config-fixes
 - fix/system-prompt-directories
 - fix/remove-dot-true
-- fix/rfc2119-question-tool,n,nar
+- fix/rfc2119-question-tool
 - fix/restore-footer
 - fix/persist-sidebar
 - fix/autocompletion-filtered-order
