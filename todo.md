@@ -1,7 +1,7 @@
 ### TODO:
 
 - wider dialog in taller-dialogue?
-- actually make use of the distinct style colour feature. kj
+- actually make use of the distinct title style colour feature.
 
 ---
 Great, thank you! Anyhow, let's go back to the topic that we'd begun discussing before I noticed this problem... I think it might be nice to be ableto set a different colour than just the regular text colour for tool output in general in thems, just to be alble to make the tool output stand out from the other text a bit more if desired, lets call it oolOutput if that name is available.
