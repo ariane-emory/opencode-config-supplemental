@@ -17,3 +17,5 @@
 - You **MUST** run `which baseone` to verify it's using ~/.local/bin/baseone
 - You **MUST** run `baseone --version` to confirm the correct version is installed
 - If an old version is still being used, You **SHOULD** check your PATH and remove conflicting binaries
+
+**CRITICAL**: If you had to make any changes to the integration branch in order to get it to build and install correctly, you **MUST** be  push those changes to origin when you are done. 
