@@ -1,4 +1,4 @@
 ### TODO:
 
 - wider dialog in taller-dialogue?
-- align diff counts?
+- actually make use of the distinct style colour feature. 
