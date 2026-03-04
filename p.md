@@ -1,3 +1,8 @@
+Okay, now we're switching over into what I'm going to call "investigation mode": I don't yet have a specific change that I would like made, I would instead like to investigate an issue that I have noticed with some of the finer details selection behaviour in the session list and try to figure out what the cause is, and whether any of the many feature/fix branches we have merged play any part in the observed behaviour, so that we can eventually make plans to solve it in the future. 
+
+
+----
+
 FunnyHat:
 Yeah for future reference you have to go to https://github.com/organizations/<org>/settings/copilot/models and enable each model manually
 
@@ -61,9 +66,9 @@ https://gutenberg.ca/ebooks/smithcordwainer-fromgustiblesplanet/smithcordwainer-
 ---
 Note that we are now working in a different directory. 
 
-This is an integration branch. Which was produced by merging many feature branches into the dev branch, including the feat/ignored-commands that you were just working on... however, the ignored property doesn't seem to be working: the 'ignored' command is still being processed by the model.
+This is an integration branch which was produced by merging many feature branches into the dev branch, including the feat/ignored-commands that you were just working on... however, the ignored property doesn't seem to be working: the 'ignored' command is still being processed by the model.
 
-I tried testing it in this test command, which is also testing some extensions to the syntax for arguments and custom slash commands: /Users/katherinemasseau/.config/opencode/supplemental/command/arg-test.md
+I tried testing it in this test command, which is also testing some extensions to the syntax for arguments and custom slash commands: /Users/ariane/.config/opencode/supplemental/command/arg-test.md
 
 Why isn't the ignored property working? Did something get damaged during the emerging process that produced this integration branch? Or is something wrong with our original feature branch? 
 
