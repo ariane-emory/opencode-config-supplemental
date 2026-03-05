@@ -50,7 +50,6 @@
 - feat/session-grouping
 - feat/alphabetize-command-palette-groups
 - feat/taller-dialogs
-- feat/full-datetimes 
 - feat/add-arianes-themes
 - feat/aspiers--readline-additions
 - feat/sidebar-clock
