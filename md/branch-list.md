@@ -8,7 +8,6 @@
 - fix/persist-sidebar
 - fix/autocompletion-filtered-order
 - fix/modal-menus-filtered-order
-#fix/bad-plugin-errors
 - fix/config-package-json-pollution (**MUST** be included in integration branches to prevent package.json pollution with non-SemVer versions)
 - fix/session-list-viewport-jumping
 - fix/merging-multiple-configs
@@ -32,7 +31,6 @@
 - feat/persistant-sidebar-overlay-behaviour
 - feat/shell-advice
 - feat/elapsed-timer
-#feat/sidebar-no-auto-setting
 - feat/set-session-title
 - feat/get-session-title
 - feat/automatic-list-continuation
