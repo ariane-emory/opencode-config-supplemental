@@ -6,7 +6,6 @@
 - fix/system-prompt-directories
 - fix/remove-dot-true
 - fix/rfc2119-question-tool
-- fix/restore-footer
 - fix/persist-sidebar
 - fix/autocompletion-filtered-order
 - fix/modal-menus-filtered-order
@@ -64,6 +63,7 @@
 - feat/distinct-title-colour
 - feat/tool-output-colour
 - feat/sinister-quotes (the placeholders used **MUST** be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, **NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!**)
+- fix/restore-footer
 
 ###  Afterwards, from foreign remotes:
 
