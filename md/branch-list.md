@@ -9,19 +9,19 @@
 - fix/persist-sidebar
 - fix/autocompletion-filtered-order
 - fix/modal-menus-filtered-order
-- fix/config-package-json-pollution (**MUST** be included in integration branches to prevent package.json pollution with non-SemVer versions)
+- fix/config-package-json-pollution (**MERGE ADVICE:** This branch **MUST** be included in integration branches to prevent package.json pollution with non-SemVer versions)
 - fix/session-list-viewport-jumping
 - fix/merging-multiple-configs
 - fix/markdown-codeblock-theme-property
 - refactor/shared-substitute
-- feat/command-palette-consistecy (NOTE to prevent recurence of a past mistake: this branch is meant to **MOVE** several items from the Session category to the System category in the command palette. You **MUST NOT** duplicate them into both categories when resolving merge conflicts!) 
+- feat/command-palette-consistecy (**MERGE ADVICE:** to prevent recurence of a past mistake: this branch is meant to **MOVE** several items from the Session category to the System category in the command palette. You **MUST NOT** duplicate them into both categories when resolving merge conflicts!) 
 - feat/session-id-in-status
 - feat/argument-range-syntax
 - feat/default-arguments
 - feat/opencode-expand
 - feat/edit-tool-description
 - feat/opeoginni--display-message-tps
-- feat/kv-diff-style-clean (not yet merged upstream, but hopefully soon)
+- feat/kv-diff-style-clean
 - feat/global-compaction-threshold
 - feat/configurable-message-and-session-limit
 - feat/experimental-dont-cache-markdown
@@ -37,7 +37,7 @@
 - feat/automatic-list-continuation
 - feat/continue-command
 - feat/session-bookmarks
-- fix/dialog-datetime-alignment (for best results, merge this one immediately after feat/session-bookmarks)
+- fix/dialog-datetime-alignment (**MERGE ADVICE:** for best results, merge this one immediately after feat/session-bookmarks. This feature **MUST** not be clobbered; if there is a conflict, it **MUST** be combined with the other feature with /which it is conflicting!)
 - feat/keybindable-commands
 - feat/configurable-snapshot-lifespan--frozen
 - feat/configurable-new-plan-mode
@@ -62,8 +62,8 @@
 - feat/sidebar-header-accent-colours
 - feat/distinct-title-colour
 - feat/tool-output-colour
-- feat/sinister-quotes (the placeholders used **MUST** be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, **NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!**)
-- fix/restore-footer
+- feat/sinister-quotes (**MERGE ADVICE:the placeholders used **MUST** be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, **NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!**)
+- fix/restore-footer (**MERGE ADVICE:** As its name suggests, this feature restores the footer it was removed in a previous version; it must not be allowed to be clobbered by other branches when merging!)
 
 ###  Afterwards, from foreign remotes:
 
