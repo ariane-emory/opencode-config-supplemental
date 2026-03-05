@@ -94,16 +94,16 @@ After each merge, you **MUST** verify the merge was successful by checking that 
 **Verification procedure for each branch:**
 1. Before merging, check the PR diff or branch diff to identify key changes (new functions, types, file modifications)
 2. After merging, grep for those specific changes in the integration branch
-3. If key changes are missing, re-merge using `git merge origin/branch-name --no-ff`
+3. If key changes are missing, re-merge using `git merge branch-name --no-ff`
 
 **Example verification:**
 ```fish
-# Before merge: identify what the branch adds
-gh pr diff 36 --repo owner/repo
+# Before merge: identify what the branch adds by examining the branch directly
+git show branch-name:path/to/file.ts
 # or
-git diff origin/dev...origin/feat/my-feature --stat
+git diff dev...branch-name --stat
 
-# After merge: verify the changes exist
+# After merge: verify the changes exist in integration branch
 grep -rn "newFunctionName" packages/
 grep -rn "NewTypeName" packages/
 ```
