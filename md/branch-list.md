@@ -6,12 +6,11 @@
 ### From origin:
 
 - feat/base-one-rebrand
-- feat/sinister-quotes (**MERGE ADVICE:the placeholders used **MUST** be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, **NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!**)
+- feat/sinister-quotes (**MERGE ADVICE**: the placeholders used **MUST** be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, **NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!**)
 -
 ### From foreign remotes:
 
 - feat/markdown-renderer (from the gignit remote)
-- add-bash-env-parameter (from the taxilian remote)
 - feat/thinking-indicator-hidden (from the rcdailey remote)
 - fix/session-new-prompt-handoff (from the AksharP5 remote)
 
