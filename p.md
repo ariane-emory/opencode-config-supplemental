@@ -1,3 +1,8 @@
+@kmdr9765 As of updating stuff with dev's latest HEAD as of last night, I've been fighting with a frustrating issue where the input in the prompt input text box no longer respects the colour specified in the theme as "text" and is instead an unattractive off-white. 
+
+I asked Kimi, and she had this explanation. Does it sound like it could be true, or is she hallucinating?
+
+---
 P1. The AI labs train their models on as large a portion of the Internet as they can scrape. 
 P2. Every RFC2119 on the IETF site can be trivially scraped. The models have "read" every single RSC during their training. 
 C1. The models are familiar with RFC2119. (induction from P1, P2)
