@@ -1,3 +1,5 @@
+**NOTE FOR AI AGENTS**: This file contains 68 branches to merge. Verify the count with: `grep "^\- " branch-list.md | wc -l`. Each branch MUST be on its own line. If branches appear concatenated (e.g., "feat/branch1- feat/branch2"), split them into separate lines.
+
 ### From the upstream remote:
 - split-config-fixes (you MUST use only the local copy of this branch, you MUST NOT pull new versions from the upstream remote!)
 
@@ -23,7 +25,8 @@
 - feat/keybindable-commands
 - feat/opencode-expand
 - feat/automatic-list-continuation
-- feat/continue-command- feat/configurable-snapshot-lifespan
+- feat/continue-command
+- feat/configurable-snapshot-lifespan
 - feat/configurable-new-plan-mode
 - feat/config-imports
 - feat/canceled-prompts-in-history

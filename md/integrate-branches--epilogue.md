@@ -2,7 +2,46 @@
 - you **MUST** process the branches that I listed in the order that I listed them.
 - all of the remotes these branches are on should already be configured, you **MUST NOT** add new remotes.
 
+### Pre-Integration Verification
+
+Before starting, verify the branch list format to avoid common errors:
+
+```fish
+# Check for concatenated branches (multiple branch names on one line)
+grep "\- feat/" ~/.config/opencode/supplemental/md/branch-list.md | grep "feat/.*feat/"
+# If this outputs anything, branches are concatenated and must be split into separate lines
+
+# Count total branches (should match expected count)
+grep "^\- " ~/.config/opencode/supplemental/md/branch-list.md | wc -l
+```
+
+**CRITICAL**: Each branch **MUST** be on its own line starting with `- `. If you see multiple branch names on one line (e.g., "feat/branch1- feat/branch2"), split them into separate lines before proceeding.
+
 **IMPORTANT**: You **MUST** create a MERGED-BRANCHES.md document in the project's root directory in which to record which branches were merged to produce the new integration branch. You **MUST** include a Markdown table displaying which branches were merged in this document and a merge log detailing the merges that were performed. Make sure that you include the specific commit hash the merged branch was at when it was merged. Add this file to git.
+
+#### MERGED-BRANCHES.md Required Format
+
+The document **MUST** contain a Markdown table (NOT a bullet list). Use this exact format:
+
+```markdown
+| # | Branch Name | Remote | Commit Hash | Description |
+|---|-------------|--------|-------------|-------------|
+| 1 | split-config-fixes | upstream | abc1234 | Description... |
+| 2 | feat/branch-name | origin | def5678 | Description... |
+```
+
+**NOT** this format:
+```markdown
+- split-config-fixes
+- feat/branch-name
+```
+
+The table **MUST** include:
+- Sequential numbering (#)
+- Full branch name
+- Remote source (upstream, origin, gignit, etc.)
+- Short commit hash (7-8 characters) from when the branch was merged
+- Brief description of the branch's purpose
 
 Use your task todo list tools to keep track of which steps in the procedure you have completed and which branches remain for you to merge. 
 
@@ -150,6 +189,24 @@ export const VERSION = typeof OPENCODE_VERSION === "string" ? OPENCODE_VERSION :
 
 The version **MUST NOT** ever be computed dynamically!
 
+**EXPLICIT EXAMPLES**:
+
+✅ **CORRECT** - Hard-coded literal string:
+```typescript
+export const VERSION = typeof OPENCODE_VERSION === "string" ? OPENCODE_VERSION : "2026-03-06-01-51"
+```
+
+❌ **WRONG** - Dynamic detection (MUST NOT DO THIS):
+```typescript
+// NEVER do this - dynamic detection is forbidden
+export const VERSION = typeof OPENCODE_VERSION === "string" ? OPENCODE_VERSION : detectBranchTimestamp()
+
+// NEVER do this - fallback to "local" is forbidden on integration branches
+export const VERSION = typeof OPENCODE_VERSION === "string" ? OPENCODE_VERSION : "local"
+```
+
+The string `"2026-03-06-01-51"` (or whatever the actual timestamp is) **MUST** appear as a literal in the source code. It **MUST NOT** be constructed, computed, or detected at runtime.
+
 This ensures the TUI sidebar shows which integration branch is running when using the development wrapper script. Commit this change along with the other finishing touches.
 
 ### Fix SemVer Validation for Non-SemVer Version Strings
@@ -232,6 +289,33 @@ This should not happen if the instructions were followed correctly. If it does h
 2. The user will need to decide whether to:
    - Reset `dev` back to `origin/dev` (losing those commits from `dev`)
    - Move those commits to the integration branch if they're missing there
+
+### Final Verification Commands
+
+Run these commands to verify the integration is complete and correct:
+
+```fish
+# 1. Verify MERGED-BRANCHES.md has proper Markdown table format
+grep "^| # |" MERGED-BRANCHES.md
+# **MUST** output: | # | Branch Name | Remote | Commit Hash | Description |
+
+# 2. Verify version is hard-coded literal (not dynamic)
+grep "export const VERSION" packages/opencode/src/installation/index.ts
+# **MUST** show: "YYYY-MM-DD-HH-MM" as a literal string in quotes
+# **MUST NOT** show: function calls, variables, or "local"
+
+# 3. Verify all branches were counted correctly
+grep "^\- " ~/.config/opencode/supplemental/md/branch-list.md | wc -l
+# Count should match the number of branches you were asked to merge
+
+# 4. Verify no concatenated branches were missed
+grep "\- feat/" ~/.config/opencode/supplemental/md/branch-list.md | grep "feat/.*feat/"
+# **MUST** output nothing (empty). If it outputs anything, branches were concatenated.
+
+# 5. Verify dev branch wasn't touched
+git log origin/dev..dev --oneline
+# **MUST** show nothing (empty output)
+```
 
 **Final checklist**:
 - [ ] All requested branches have been merged into the integration branch: review `~/ocs/md/branch-list.md` to make sure you merged every branch!
