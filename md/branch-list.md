@@ -3,6 +3,32 @@
 
 ### From origin:
 
+- feat/base-one-rebrand
+- feat/sinister-quotes (**MERGE ADVICE:the placeholders used **MUST** be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, **NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!**)
+-
+### From foreign remotes:
+
+- feat/markdown-renderer (from the gignit remote)
+- feat/compaction-model (from the gignit remote)
+- feat/enhanced-compaction-prompt (from the gignit remote)
+- add-bash-env-parameter (from the taxilian remote)
+- feat/thinking-indicator-hidden (from the rcdailey remote)
+- fix/session-new-prompt-handoff (from the AksharP5 remote)
+
+### More from origin:
+
+- feat/session-grouping
+- feat/session-bookmarks
+- fix/dialog-datetime-alignment (**MERGE ADVICE:** for best results, merge this one immediately after feat/session-bookmarks. This feature **MUST** not be clobbered; if there is a conflict, it **MUST** be combined with the other feature with /which it is conflicting!)
+- feat/keybindable-commands
+- feat/opencode-expand
+- feat/automatic-list-continuation
+- feat/continue-command- feat/configurable-snapshot-lifespan
+- feat/configurable-new-plan-mode
+- feat/config-imports
+- feat/canceled-prompts-in-history
+-  feat/permission-spinner
+- feat/permission-indicator-in-sidebar
 - fix/system-prompt-directories
 - fix/remove-dot-true
 - fix/rfc2119-question-tool
@@ -25,21 +51,12 @@
 - feat/configurable-message-and-session-limit
 - feat/experimental-dont-cache-markdown
 - feat/jsonc-user-themes
-- feat/permission-indicator-in-sidebar
-- feat/permission-spinner
 - feat/persist-sidebar-group-folding-states
 - feat/persistant-sidebar-overlay-behaviour
 - feat/shell-advice
 - feat/elapsed-timer
 - feat/set-session-title
 - feat/get-session-title
-- feat/automatic-list-continuation
-- feat/continue-command
-- fix/dialog-datetime-alignment (**MERGE ADVICE:** for best results, merge this one immediately after feat/session-bookmarks. This feature **MUST** not be clobbered; if there is a conflict, it **MUST** be combined with the other feature with /which it is conflicting!)
-- feat/configurable-snapshot-lifespan
-- feat/configurable-new-plan-mode
-- feat/config-imports
-- feat/canceled-prompts-in-history
 - feat/no-disabled-lsps-in-sidebar
 - feat/agent-timestamps
 - feat/rewind-modal-option
@@ -55,27 +72,9 @@
 - feat/clickable-sidebar-mcps
 - feat/clickable-dialogue-mcps
 - feat/ignored-commands
-- feat/keybindable-commands
-- feat/opencode-expand
-- feat/session-bookmarks
-- feat/session-grouping
 - feat/sidebar-header-accent-colours
 - feat/distinct-title-colour
 - feat/tool-output-colour
 - fix/restore-footer (**MERGE ADVICE:** As its name suggests, this feature restores the footer it was removed in a previous version; it must not be allowed to be clobbered by other branches when merging!)
-- feat/sinister-quotes (**MERGE ADVICE:the placeholders used **MUST** be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, **NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!**)
-
-###  Afterwards, from foreign remotes:
-
-- feat/markdown-renderer (from the gignit remote)
-- feat/compaction-model (from the gignit remote)
-- feat/enhanced-compaction-prompt (from the gignit remote)
-- add-bash-env-parameter (from the taxilian remote)
-- feat/thinking-indicator-hidden (from the rcdailey remote)
-- fix/session-new-prompt-handoff (from the AksharP5 remote)
-
-### And finally, finish up with this branch:
-
-- feat/base-one-rebrand
 
 **NOTE**: Any lines beginning with a `#` caractter are comments and you ****MUST**** ignore any such branches!
