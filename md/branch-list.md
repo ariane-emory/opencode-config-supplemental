@@ -18,7 +18,6 @@
 - feat/session-id-in-status
 - feat/argument-range-syntax
 - feat/default-arguments
-- feat/opencode-expand
 - feat/edit-tool-description
 - feat/opeoginni--display-message-tps
 - feat/kv-diff-style-clean
@@ -36,9 +35,7 @@
 - feat/get-session-title
 - feat/automatic-list-continuation
 - feat/continue-command
-- feat/session-bookmarks
 - fix/dialog-datetime-alignment (**MERGE ADVICE:** for best results, merge this one immediately after feat/session-bookmarks. This feature **MUST** not be clobbered; if there is a conflict, it **MUST** be combined with the other feature with /which it is conflicting!)
-- feat/keybindable-commands
 - feat/configurable-snapshot-lifespan
 - feat/configurable-new-plan-mode
 - feat/config-imports
@@ -46,24 +43,27 @@
 - feat/no-disabled-lsps-in-sidebar
 - feat/agent-timestamps
 - feat/rewind-modal-option
-- feat/session-grouping
 - feat/alphabetize-command-palette-groups
 - feat/taller-dialogs
 - feat/add-arianes-themes
 - feat/aspiers--readline-additions
 - feat/sidebar-clock
-- feat/ignored-commands
 - feat/improve-bash-tool-git-advice
 - feat/alphabetical-message-modal
 - feat/toggle-sidebar-scrollbar
 - feat/full-datetimes-in-fork-and-timeline-dialogues
 - feat/clickable-sidebar-mcps
 - feat/clickable-dialogue-mcps
+- feat/ignored-commands
+- feat/keybindable-commands
+- feat/opencode-expand
+- feat/session-bookmarks
+- feat/session-grouping
 - feat/sidebar-header-accent-colours
 - feat/distinct-title-colour
 - feat/tool-output-colour
-- feat/sinister-quotes (**MERGE ADVICE:the placeholders used **MUST** be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, **NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!**)
 - fix/restore-footer (**MERGE ADVICE:** As its name suggests, this feature restores the footer it was removed in a previous version; it must not be allowed to be clobbered by other branches when merging!)
+- feat/sinister-quotes (**MERGE ADVICE:the placeholders used **MUST** be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, **NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!**)
 
 ###  Afterwards, from foreign remotes:
 
