@@ -1,8 +1,12 @@
 ### Task: Merge the latest changes from the dev branch into the $1 branch:
 
-First, check out the dev branch and run the tests to see what pre-existing errors exist. If the dev branch contains pre-existing errors, you MUST preserve them when you merge it into the $1 branch.
+First, check out the dev branch and run the tests to see what pre-existing errors exist. If the dev branch contains pre-existing errors, you **MUST** preserve them when you merge it into the $1 branch.
 
-Then, check out the $1 branch, merge the local dev branch into it and resolve any conflicts. You can take my word that both of these branches already exist, so you don't have to waste time checking if they do before you start.
+Then, check out the $1 branch, merge the local dev branch into it and resolve any conflicts. 
+
+**CRITICAL:** You **MUST** use only the locally available copies of the branch and the dev branch. You **MUST NOT** ever pull changes from remote branches!
+
+You can take my word that both of these branches already exist locally, so you don't have to waste time checking if they do before you start.
 
 Use the `set_current_session_title` tool to give the session a title maching this format:
 `merging dev into|$branchName` (substituting $branchName with the actual name of the target branch)

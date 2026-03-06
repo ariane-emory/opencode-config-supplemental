@@ -1,4 +1,8 @@
-GOAL: Synchronize local repository to match remote repositories exactly. This is a **RECEIVE-ONLY** operation that fetches changes from remotes and updates local branches accordingly. This is typically used in fork workflows where upstream is the source of truth.
+**GOAL**: Synchronize the branhes in the local repository to match their remote remote repositories exactly. 
+
+This is a **RECEIVE-ONLY** operation that fetches changes from remotes and updates the local branches accordingly. This is typically used in fork workflows where origin is the source of truth.
+
+You **MUST NOT** ever consider the `upstream/dev` branch! The only relevant `dev` branch is `origin/dev`!
 
 **FIRST**: Use the `set_current_session_title` tool to name the session "Syncronizing branches with remotes".
 
