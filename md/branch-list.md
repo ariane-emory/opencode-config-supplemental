@@ -39,7 +39,7 @@
 - feat/session-bookmarks
 - fix/dialog-datetime-alignment (**MERGE ADVICE:** for best results, merge this one immediately after feat/session-bookmarks. This feature **MUST** not be clobbered; if there is a conflict, it **MUST** be combined with the other feature with /which it is conflicting!)
 - feat/keybindable-commands
-- feat/configurable-snapshot-lifespan--frozen
+- feat/configurable-snapshot-lifespan
 - feat/configurable-new-plan-mode
 - feat/config-imports
 - feat/canceled-prompts-in-history
