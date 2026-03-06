@@ -1,5 +1,5 @@
 P1. The AI labs train their models on as large a portion of the Internet as they can scrape. 
-P2. Every RFC2119 on the IETF site can be trivially scraped. The models have read every single RSC during their training. 
+P2. Every RFC2119 on the IETF site can be trivially scraped. The models have "read" every single RSC during their training. 
 C1. The models are familiar with RFC2119. (induction from P1, P2)
 P3. There are many, many examples of RFC2119 being used both in other RFCs in easily scrapable parts of the Intenet.
 C2. Models have seen very many exampled of how RFC2119 is used, ergo they understand the special significance of these magic words. (induction from C1, P3)
