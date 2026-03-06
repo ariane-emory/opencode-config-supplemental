@@ -7,6 +7,8 @@ agent: build
 The instructions I just gave you came from a custom command for opencode located at
 ~/.config/opencode/command/$1.md. You encountered some difficulties or made some mistakes while following these instructions that gave us some trouble achieving our goal.
 
+${2..}
+
 Using what you have learned during our session today, can you think of ways that these instructions could be improved to help you avoid making the same mistakes  and encountering the same problems next time we perform this procedure?
 
 Remember that we're using the fish shell, NOT bash, when writing commands.
