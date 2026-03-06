@@ -1,3 +1,11 @@
+P1. The AI labs train their models on as large a portion of the Internet as they can scrape. 
+P2. Every RFC2119 on the IETF site can be trivially scraped. The models have read every single RSC during their training. 
+C1. The models are familiar with RFC2119. (induction from P1, P2)
+P3. There are many, many examples of RFC2119 being used both in other RFCs in easily scrapable parts of the Intenet.
+C2. Models have seen very many exampled of how RFC2119 is used, ergo they understand the special significance of these magic words. (induction from C1, P3)
+
+---
+
 Actually, I think I've had an idea: maybe we could add a new "sessionTitle" colour property that controls the colour of the title in the sidebar and the header, and have it fall back to "text" colour property if the theme does not contain the new "sessionTitle" colour property. That way, the behaviour of existing peas could be left unchanged while allowing the colour of the title to be controlled independently if desired. 
 
 ---
