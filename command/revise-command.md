@@ -1,7 +1,6 @@
 ---
-description: Revise instructions.
+description: Revise command.
 agent: build
-
 ---
 
 The instructions I just gave you came from a custom command for opencode located at
