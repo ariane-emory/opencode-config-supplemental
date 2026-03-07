@@ -2,6 +2,7 @@ You **MUST** set the title of the current session to "integrations|" followed by
 
 **CRITICAL**: After creating the integration branch, you **MUST** configure it to track origin (not upstream) to prevent push issues:
 
+
 ```fish
 # Replace BRANCH-NAME with the actual integration branch name
 set BRANCH_NAME integration/(date +%Y-%m-%d-%H-%M)
@@ -13,6 +14,7 @@ This prevents git from trying to push to upstream when integration branches don'
 
 **VERIFICATION STEP**: After creating and configuring the integration branch, verify the configuration:
 
+
 ```fish
 git config --list | grep branch.integration/
 # Should show: 
@@ -23,6 +25,8 @@ git config --list | grep branch.integration/
 **CRITICAL**: You **MUST NOT** use git cherry-pick, that always destroys the very feature/fix we're trying to merge.
 
 **CRITICAL - MERGE STRATEGY**: Stay on the integration branch and merge each feature branch into it:
+
+
 ```fish
 # CRITICAL: Verify the branch exists locally before merging
 git branch --list feat/branch-name
@@ -33,6 +37,8 @@ git merge feat/branch-name --no-ff -m "Merge feat/branch-name"
 ```
 
 **BRANCH EXISTENCE CHECK**: Before each merge, verify the branch exists:
+
+
 ```fish
 # Check if branch exists (run this for each branch before merging)
 if not git show-ref --quiet refs/heads/feat/branch-name
@@ -60,6 +66,7 @@ These are the branches we need to merge into the new integration branch:
 **CRITICAL**: Before merging ANY branches, you MUST create MERGED-BRANCHES.md as a living checklist:
 
 **First, determine the branch count dynamically:**
+
 ```fish
 set BRANCH_COUNT (grep "^- " ~/.config/opencode/md/branch-list.md | wc -l)
 echo "Creating checklist for $BRANCH_COUNT branches"
@@ -95,6 +102,7 @@ echo "Creating checklist for $BRANCH_COUNT branches"
 - **CRITICAL**: Do NOT mark any as ☑ yet - you're creating this BEFORE merging
 
 **VERIFICATION**: After creating, run:
+
 ```fish
 # Count unchecked branches - MUST equal branch-list count
 grep "^| ☐ |" MERGED-BRANCHES.md | wc -l
@@ -104,6 +112,7 @@ grep "^- " ~/.config/opencode/md/branch-list.md | wc -l
 ```
 
 **Commit the initial MERGED-BRANCHES.md:**
+
 ```fish
 git add MERGED-BRANCHES.md
 git commit -m "Initial MERGED-BRANCHES.md checklist"
