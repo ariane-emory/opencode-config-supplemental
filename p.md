@@ -1,3 +1,20 @@
+I think that something might be wrong with the either the feat/argument-range-syntax branch or the feat/default-arguments branch. I'm not sure if this is a problem with one of the original feature branches or something that got messed up during the merge. 
+
+I tried running this command: /Users/katherinemasseau/.config/opencode/supplemental/command/arg-test.md
+
+I did `/arg-test foo bar baz quux` and got this output:
+
+```
+All arguments: foo bar baz quux
+Default arg test: bar baz quux,  baz quux
+```
+
+That's clearly not correct on the second line! Since a third argument was prezent, it should have been returned - just "baz" - but instead it looks like it returned "baz quux" for some reason. It almost looks like the "swallowing" behaviour had existed in dev that both of these feature branches were meant to eliminate as part of their features has crept back in or something!
+
+We need to figure out whether a problem is in one of the original feature branches or whether the problem happened later on and figure out how we're going to fix that. 
+
+----
+
 @kmdr9765 As of updating stuff with dev's latest HEAD as of last night, I've been fighting with a frustrating issue where the input in the prompt input text box no longer respects the colour specified in the theme as "text" and is instead an unattractive off-white. 
 
 I asked Kimi, and she had this explanation. Does it sound like it could be true, or is she hallucinating?
