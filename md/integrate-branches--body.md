@@ -111,3 +111,54 @@ git push
 ```
 
 **DO NOT proceed to merging until the checklist is created and committed!**
+
+### Step 1b: Create Todo List for Progress Tracking
+
+**CRITICAL**: Immediately after creating MERGED-BRANCHES.md, you MUST create individual todo list items for EVERY branch:
+
+```fish
+# Get the branch count
+set BRANCH_COUNT (grep "^- " ~/.config/opencode/md/branch-list.md | wc -l)
+echo "Creating $BRANCH_COUNT todo items..."
+```
+
+Use the todowrite tool to create individual todo items for each branch. This allows the user to monitor progress. Each todo should:
+- Include the branch name and remote
+- Mark branches with known conflicts as "in_progress" or include a note
+- Be updated to "completed" immediately after successful merge AND push
+
+**WHY THIS MATTERS**: The todo list provides real-time visibility into progress. Without it, the user cannot easily see which branches remain to be merged.
+
+**DO NOT start merging branches until the todo list is created!**
+
+### Step 1c: Branch Verification Checklist
+
+Before starting merges, run these verification commands:
+
+```fish
+# Verify all branches exist locally
+echo "Verifying all branches exist..."
+for branch in (grep "^- " ~/.config/opencode/md/branch-list.md | sed 's/^- //')
+    if not git branch --list $branch | grep -q $branch
+        echo "ERROR: Branch $branch does not exist locally!"
+        echo "You MUST fetch all branches before starting."
+        exit 1
+    end
+end
+echo "All branches verified!"
+```
+
+**CRITICAL**: If any branch is missing, STOP and ask the user for guidance. Do NOT proceed with incomplete branches.
+
+### Step 1d: Pre-Merge Setup Verification
+
+Before merging the first branch, verify:
+
+1. **Session title is set** to "integrations|integration/YYYY-MM-DD-HH-MM"
+2. **Integration branch is created** from dev with tracking to origin
+3. **MERGED-BRANCHES.md exists** with all branches listed
+4. **Todo list is created** with individual items for each branch
+5. **All branches verified** to exist locally
+6. **Typecheck passes** on the integration branch baseline
+
+**DO NOT proceed if any of these are not complete!**

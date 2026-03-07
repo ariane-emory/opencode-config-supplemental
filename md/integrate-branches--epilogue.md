@@ -79,7 +79,27 @@ The table **MUST** include:
 
 This persistent checklist ensures no branches are skipped and survives session restarts.
 
-**CRITICAL**: You **MUST NOT** try to process branches in batches or in parallel, it usually doesn't work out right: you **MUST** process the branches individually, one at a time.
+**CRITICAL - NEVER BATCH MERGE**: You **MUST NOT** try to process branches in batches or in parallel. While it may seem efficient, batch merging causes serious problems:
+
+- **Merge conflicts compound**: When multiple branches modify the same files, batch merging creates overlapping conflicts that are much harder to resolve correctly
+- **Lost work**: If a batch merge fails partway through, you may lose track of which branches were actually merged
+- **Typecheck failures**: Batch merging multiple branches makes it impossible to determine which branch introduced a type error
+- **Incomplete merges**: The `MERGE_HEAD` variable gets overwritten, making it impossible to see what each branch contributed
+
+**YOU MUST**: Process branches individually, one at a time, in the exact order listed in branch-list.md.
+
+**CORRECT WORKFLOW**:
+```fish
+# For EACH branch:
+git merge feat/branch-name --no-ff -m "Merge feat/branch-name"
+# If conflicts: resolve them completely
+bun turbo typecheck
+# Update MERGED-BRANCHES.md with commit hash
+git add -A && git commit -m "Update MERGED-BRANCHES.md: checked off branch-name"
+git push
+# Update todo list to mark branch as completed
+# THEN and ONLY THEN move to the next branch
+```
 
 **CRITICAL - NEVER REBASE THE INTEGRATION BRANCH**: Do **NOT** use `git pull --rebase` or `git rebase` on the integration branch. Rebasing will clobber merge commits and lose changes from previously merged branches. If there are conflicts with the remote integration branch, use `git pull --no-rebase` or `git push --force` since this is a single-use integration branch for testing purposes.
 
@@ -130,7 +150,28 @@ grep -n "functionFromIntegration" path/to/conflicting/file
 grep -n "functionFromFeature" path/to/conflicting/file
 ```
 
-**Step 4: If unsure, preserve more rather than less**
+**Step 4: Run typecheck (MANDATORY - NO EXCEPTIONS)**
+After EVERY merge (even clean merges without conflicts), you MUST run typecheck:
+
+```fish
+bun turbo typecheck
+```
+
+**WHY THIS IS CRITICAL**:
+- Type errors may not show up in git merge output
+- Conflicts can introduce subtle type mismatches even when resolved
+- Multiple branches modifying the same types can create incompatible combinations
+
+**IF TYPECHECK FAILS**:
+1. Do NOT proceed to the next branch
+2. Fix the type errors first
+3. Commit the fixes
+4. Re-run typecheck until it passes
+5. Only then update MERGED-BRANCHES.md and push
+
+**NEVER skip typecheck after a merge, even if the merge was "clean"!**
+
+**Step 5: If unsure, preserve more rather than less**
 When in doubt, keep both versions and add a TODO comment. It's easier to clean up later than to recover lost functionality.
 
 - **CRITICAL VERIFICATION**: After each merge, you **MUST** verify that key changes from the branch are actually present in the integration branch. Check for specific functions, types, or code patterns that the branch was supposed to introduce. A merge that reports "Already up to date" may indicate the changes were **NOT** actually merged.
@@ -140,6 +181,7 @@ When in doubt, keep both versions and add a TODO comment. It's easier to clean u
 2. Key functionality from the feature branch is now present (the merge succeeded)
 3. Run `git log --oneline -5` to confirm the merge commit exists
 4. Run the application or tests to ensure the merged code actually works together
+5. **Run `bun turbo typecheck` and verify it passes**
 - Record the result of handling this branch in MERGED-BRANCHES.md.
 - Update MERGED-BRANCHES.md immediately (see update instructions below).
 
@@ -147,7 +189,7 @@ Since you may need to read files to resolve conflicts, you must always use the R
 
 If a git lock file gets in your way, you **SHOULD** just delete it and keep working on merging.
 
-Any tests in the project (including 'bun turbo typecheck') **MUST** pass after merging each branch into the new integration branch.
+**MANDATORY TYPECHECK AFTER EACH MERGE**: The typecheck command `bun turbo typecheck` **MUST** pass after merging **EACH** branch before you push or proceed to the next branch. This is non-negotiable - even if a merge appears clean, type errors can be introduced.
 
 For each of the feature branches, if you are able to merge in the changes into the integration branch and successfully resolve any conflicts and the tests all pass afterwards, you **MUST** push the changes to the integration branch on origin on git before proceeding on to the next feature branch.
 
@@ -182,7 +224,11 @@ git commit -m "Update MERGED-BRANCHES.md: checked off [branch-name]"
 git push
 ```
 
-**WHY THIS MATTERS**: If you don't update immediately, you may lose track of which branches are done! The ☐ to ☑ progression is your primary tracking mechanism.
+5. **Update the todo list** to mark the branch as completed:
+   - Use the todowrite tool to mark the branch's todo item as "completed"
+   - This provides real-time visibility for the user
+
+**WHY THIS MATTERS**: If you don't update immediately, you may lose track of which branches are done! The ☐ to ☑ progression is your primary tracking mechanism. The todo list provides immediate visual feedback to the user about progress.
 
 **CRITICAL: PROGRESS TRACKING**: After merging EACH branch, announce your progress using the dynamic count:
 ```fish
