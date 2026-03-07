@@ -1,6 +1,6 @@
 - you **MUST NOT** include/merge any branches not on this list
 - you **MUST** process the branches that I listed in the order that I listed them.
-- all of the remotes these branches are on should already be configured, you **MUST NOT** add new remotes.
+- all of the remotes these branches are on should already be configured, you **MUST NOT** ever add new remotes.
 
 ### Pre-Integration Verification
 
