@@ -4,15 +4,34 @@
 
 ### Pre-Integration Verification
 
+**MANDATORY: Before starting, you MUST count the branches and record the expected total:**
+
+```fish
+# Count branches in branch-list.md
+grep "^- " ~/.config/opencode/md/branch-list.md | wc -l
+# Record this number - you MUST merge exactly this many branches!
+```
+
+**CRITICAL**: Before starting, you MUST determine the total branch count dynamically:
+
+```fish
+# Count branches dynamically - DO NOT hardcode this number
+set BRANCH_COUNT (grep "^- " ~/.config/opencode/md/branch-list.md | wc -l)
+echo "Total branches to merge: $BRANCH_COUNT"
+```
+
+**MANDATORY**: Record this number. You MUST merge exactly $BRANCH_COUNT branches. If at any point your progress shows a different total, you have a bug in your counting.
+
 Before starting, verify the branch list format to avoid common errors:
 
 ```fish
 # Check for concatenated branches (multiple branch names on one line)
-grep "\- feat/" ~/.config/opencode/supplemental/md/branch-list.md | grep "feat/.*feat/"
+grep "\- feat/" ~/.config/opencode/md/branch-list.md | grep "feat/.*feat/"
 # If this outputs anything, branches are concatenated and must be split into separate lines
 
-# Count total branches (should match expected count)
-grep "^\- " ~/.config/opencode/supplemental/md/branch-list.md | wc -l
+# Count total branches dynamically
+grep "^\- " ~/.config/opencode/md/branch-list.md | wc -l
+# Record this number - you will need it for MERGED-BRANCHES.md
 ```
 
 **CRITICAL**: Each branch **MUST** be on its own line starting with `- `. If you see multiple branch names on one line (e.g., "feat/branch1- feat/branch2"), split them into separate lines before proceeding.
@@ -21,13 +40,15 @@ grep "^\- " ~/.config/opencode/supplemental/md/branch-list.md | wc -l
 
 #### MERGED-BRANCHES.md Required Format
 
-The document **MUST** contain a Markdown table (NOT a bullet list). Use this exact format:
+The document **MUST** contain a Markdown table (NOT a bullet list) with checkboxes for tracking. Use this exact format:
 
 ```markdown
-| # | Branch Name | Remote | Commit Hash | Description |
-|---|-------------|--------|-------------|-------------|
-| 1 | split-config-fixes | upstream | abc1234 | Description... |
-| 2 | feat/branch-name | origin | def5678 | Description... |
+| Status | # | Branch Name | Remote | Commit Hash | Description |
+|--------|---|-------------|--------|-------------|-------------|
+| ☐ | 1 | split-config-fixes | upstream | TBD | MUST use only local copy, do NOT pull from upstream |
+| ☐ | 2 | feat/base-one-rebrand | origin | TBD | |
+| ☐ | 3 | feat/sinister-quotes | origin | TBD | Placeholders MUST be SINISTER_PLACEHOLDERS array |
+| ... | ... | ... | ... | ... | ... |
 ```
 
 **NOT** this format:
@@ -37,16 +58,26 @@ The document **MUST** contain a Markdown table (NOT a bullet list). Use this exa
 ```
 
 The table **MUST** include:
+- **Status column**: Use ☐ for unchecked, ☑ for checked
 - Sequential numbering (#)
 - Full branch name
 - Remote source (upstream, origin, gignit, etc.)
-- Short commit hash (7-8 characters) from when the branch was merged
-- Brief description of the branch's purpose
+- Commit Hash: Start as "TBD", update after each merge
+- Merge Advice: Copy relevant advice from branch-list.md
 
-Use your task todo list tools to keep track of which steps in the procedure you have completed and which branches remain for you to merge. 
+**CRITICAL**: Create ALL rows with ☐ status before merging any branches. The checklist serves as your source of truth for what remains to be done.
 
-**CRITICAL**: You **MUST** include every branch in your todo list to help make me monitor your progress. You **MUST NEVER** combine multiple branches into a single todo, each branch **MUST
-** have it's own individual todo list item!
+**CRITICAL - MERGED-BRANCHES.md AS CHECKLIST**: MERGED-BRANCHES.md is your PRIMARY tracking mechanism. Before merging ANY branches:
+
+1. Create MERGED-BRANCHES.md with ALL branches listed as ☐ (unchecked)
+2. Copy merge advice from branch-list.md into the Description column
+3. After each merge, immediately update the file:
+   - Change ☐ to ☑ 
+   - Replace "TBD" with the actual commit hash
+   - Add brief merge notes if there were conflicts
+4. Commit and push MERGED-BRANCHES.md after EACH update
+
+This persistent checklist ensures no branches are skipped and survives session restarts.
 
 **CRITICAL**: You **MUST NOT** try to process branches in batches or in parallel, it usually doesn't work out right: you **MUST** process the branches individually, one at a time.
 
@@ -110,7 +141,7 @@ When in doubt, keep both versions and add a TODO comment. It's easier to clean u
 3. Run `git log --oneline -5` to confirm the merge commit exists
 4. Run the application or tests to ensure the merged code actually works together
 - Record the result of handling this branch in MERGED-BRANCHES.md.
-- Remember to update your todo list.
+- Update MERGED-BRANCHES.md immediately (see update instructions below).
 
 Since you may need to read files to resolve conflicts, you must always use the Read tool on files prior to using the Edit tool on them to avoid errors.
 
@@ -122,7 +153,47 @@ For each of the feature branches, if you are able to merge in the changes into t
 
 There is a 'test' pre-pushhook in this repository, so it is possible a push may fail with an error message. If this occurs, you **MUST** attempt fix the error and try again until the test passes. If, after trying your best, you still cannot fix the error, you may use `git push --no-verify` to bypass the hook.
 
-**CRITICAL**: You must proceed until you have merged all of these branches!  Only if you've tried everything you can think of to resolve a conflict without success and are nonetheless unable to resolve the conflict or the tests do not pass afterwards, do not push the changes to git, in this case you **MUST** stop and ask me to step in and help you out instead. Only do this is you've tried everything you can think of! Otherwise, proceed until ALL branches have been merged.
+### Step 2: Update MERGED-BRANCHES.md After Each Merge
+
+**CRITICAL**: IMMEDIATELY after successfully merging a branch (and before moving to the next), you MUST:
+
+1. Get the commit hash:
+```fish
+git log --oneline -1 | awk '{print $1}'
+```
+
+2. Update MERGED-BRANCHES.md:
+   - Find the row for the branch you just merged
+   - Change ☐ to ☑ in the Status column
+   - Replace "TBD" with the actual commit hash
+   - Add brief merge notes in Description if there were conflicts
+
+3. **MANDATORY**: Run this verification after each update:
+```fish
+# Count remaining unchecked branches
+grep "^| ☐ |" MERGED-BRANCHES.md | wc -l
+echo "Remaining branches to merge: [count]"
+```
+
+4. Commit and push the updated MERGED-BRANCHES.md:
+```fish
+git add MERGED-BRANCHES.md
+git commit -m "Update MERGED-BRANCHES.md: checked off [branch-name]"
+git push
+```
+
+**WHY THIS MATTERS**: If you don't update immediately, you may lose track of which branches are done! The ☐ to ☑ progression is your primary tracking mechanism.
+
+**CRITICAL: PROGRESS TRACKING**: After merging EACH branch, announce your progress using the dynamic count:
+```fish
+set MERGED_COUNT (grep "^| ☑ |" MERGED-BRANCHES.md | wc -l)
+set TOTAL_COUNT (grep "^| ☐ |" MERGED-BRANCHES.md | wc -l)
+set TOTAL_COUNT (math $TOTAL_COUNT + $MERGED_COUNT)
+echo "Merged $MERGED_COUNT of $TOTAL_COUNT branches: [branch-name]"
+```
+This helps verify no branches are being skipped!
+
+**CRITICAL**: You must proceed until you have merged ALL branches! Only if you've tried everything you can think of to resolve a conflict without success and are nonetheless unable to resolve the conflict or the tests do not pass afterwards, do not push the changes to git, in this case you **MUST** stop and ask me to step in and help you out instead. Only do this is you've tried everything you can think of! Otherwise, proceed until MERGED-BRANCHES.md shows ZERO unchecked branches (grep "^| ☐ |" returns 0).
 
 Ultrathink! 
 
@@ -290,6 +361,28 @@ This should not happen if the instructions were followed correctly. If it does h
    - Reset `dev` back to `origin/dev` (losing those commits from `dev`)
    - Move those commits to the integration branch if they're missing there
 
+### Verify All Branches Merged
+
+**CRITICAL FINAL CHECK**: Before proceeding to finishing touches, ensure all branches are checked off:
+
+```fish
+# Count unchecked branches - MUST be 0
+grep "^| ☐ |" MERGED-BRANCHES.md | wc -l
+```
+
+If this outputs anything other than 0, you have NOT completed all merges! Go back and merge the remaining branches.
+
+**Also verify:**
+```fish
+# Count checked branches
+grep "^| ☑ |" MERGED-BRANCHES.md | wc -l
+# This should equal: grep "^- " ~/.config/opencode/md/branch-list.md | wc -l
+
+# If they don't match, investigate which branches are missing
+```
+
+**DO NOT proceed to finishing touches until all branches are ☑ checked!**
+
 ### Final Verification Commands
 
 Run these commands to verify the integration is complete and correct:
@@ -304,12 +397,16 @@ grep "export const VERSION" packages/opencode/src/installation/index.ts
 # **MUST** show: "YYYY-MM-DD-HH-MM" as a literal string in quotes
 # **MUST NOT** show: function calls, variables, or "local"
 
-# 3. Verify all branches were counted correctly
-grep "^\- " ~/.config/opencode/supplemental/md/branch-list.md | wc -l
-# Count should match the number of branches you were asked to merge
+# 3. Verify all branches were merged (unchecked count should be 0)
+grep "^| ☐ |" MERGED-BRANCHES.md | wc -l
+# **MUST** output: 0 (all branches checked off)
+
+# Also verify count matches branch-list.md
+grep "^| ☑ |" MERGED-BRANCHES.md | wc -l
+# This should equal: grep "^- " ~/.config/opencode/md/branch-list.md | wc -l
 
 # 4. Verify no concatenated branches were missed
-grep "\- feat/" ~/.config/opencode/supplemental/md/branch-list.md | grep "feat/.*feat/"
+grep "\- feat/" ~/.config/opencode/md/branch-list.md | grep "feat/.*feat/"
 # **MUST** output nothing (empty). If it outputs anything, branches were concatenated.
 
 # 5. Verify dev branch wasn't touched
@@ -318,7 +415,7 @@ git log origin/dev..dev --oneline
 ```
 
 **Final checklist**:
-- [ ] All requested branches have been merged into the integration branch: review `~/ocs/md/branch-list.md` to make sure you merged every branch!
+- [ ] All branches from branch-list.md have been merged: `grep "^| ☐ |" MERGED-BRANCHES.md | wc -l` **MUST** output 0
 - [ ] Integration branch has been pushed to origin
 - [ ] MERGED-BRANCHES.md including Markdown table is complete and committed
 - [ ] Tests pass on the integration branch
