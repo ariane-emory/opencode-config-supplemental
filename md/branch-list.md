@@ -1,7 +1,5 @@
-**NOTE FOR AI AGENTS**: This file contains 68 branches to merge. Verify the count with: `grep "^\- " branch-list.md | wc -l`. Each branch MUST be on its own line. If branches appear concatenated (e.g., "feat/branch1- feat/branch2"), split them into separate lines.
-
 ### From the upstream remote:
-- split-config-fixes (you MUST use only the local copy of this branch, you MUST NOT pull new versions from the upstream remote!)
+- split-config-fixes (you **MUST** use only the local copy of this branch, you **MUST NOT** pull new versions from the upstream remote!)
 
 ### From origin:
 
