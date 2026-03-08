@@ -377,11 +377,11 @@ There is a 'test' pre-pushhook in this repository, so it is possible a push may 
 
 ### Step 2: Update MERGED-BRANCHES.md After Each Merge
 
-**CRITICAL**: IMMEDIATELY after successfully merging a branch (and before moving to the next), you MUST:
+**CRITICAL**: **IMMEDIATELY** after successfully merging a branch (and before moving to the next), you **MUST**:
 
-1. Get the commit hash (From the start of this command's output):
+1. Get the commit hash:
 ```fish
-git log --oneline -1'
+git log --oneline -1 | cut -d' ' -f1
 ```
 
 2. Update MERGED-BRANCHES.md:
