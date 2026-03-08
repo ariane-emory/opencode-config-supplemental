@@ -47,7 +47,7 @@ Invalid API parameter, please check the documentation.Request 203943 input token
 
 ---
 
-Read the contents of this exact URL and concoct a Suno prompt pair for a song based on it: 
+Read the contents of this exact URL and concoct a Suno lyric/style prompt pair for a song based on it: 
  
 ---
  
