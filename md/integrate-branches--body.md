@@ -1,7 +1,14 @@
+## Instructions
+
+We need to merge several feature branches into a new integration branch for testing.
+
+The directory that you're in now is used only for assembling single-use integration branches for testing purposes, any local changes that you find here are unimportant and **MUST** be discarded.
+
+Using the dev branch as the starting point, you **MUST** start a new integration branch with explicit tracking to origin to avoid upstream tracking issues. You **MUST** start a new branch, do not try to start from any prior integration branch! Name this new branch: integration/$1
+
 You **MUST** set the title of the current session to "integrations|" followed by the name of the integration branch (for example "integrations|integraton/1970-01-01-12-34").
 
 **CRITICAL**: After creating the integration branch, you **MUST** configure it to track origin (not upstream) to prevent push issues:
-
 
 ```fish
 # Replace BRANCH-NAME with the actual integration branch name
@@ -14,7 +21,6 @@ This prevents git from trying to push to upstream when integration branches don'
 
 **VERIFICATION STEP**: After creating and configuring the integration branch, verify the configuration:
 
-
 ```fish
 git config --list | grep branch.integration/
 # Should show: 
@@ -26,7 +32,6 @@ git config --list | grep branch.integration/
 
 **CRITICAL - MERGE STRATEGY**: Stay on the integration branch and merge each feature branch into it:
 
-
 ```fish
 # CRITICAL: Verify the branch exists locally before merging
 git branch --list feat/branch-name
@@ -37,7 +42,6 @@ git merge feat/branch-name --no-ff -m "Merge feat/branch-name"
 ```
 
 **BRANCH EXISTENCE CHECK**: Before each merge, verify the branch exists:
-
 
 ```fish
 # Check if branch exists (run this for each branch before merging)
@@ -375,9 +379,9 @@ There is a 'test' pre-pushhook in this repository, so it is possible a push may 
 
 **CRITICAL**: IMMEDIATELY after successfully merging a branch (and before moving to the next), you MUST:
 
-1. Get the commit hash:
+1. Get the commit hash (From the start of this command's output):
 ```fish
-git log --oneline -1 | awk '{print $1}'
+git log --oneline -1'
 ```
 
 2. Update MERGED-BRANCHES.md:
