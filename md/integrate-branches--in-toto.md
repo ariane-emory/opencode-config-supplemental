@@ -12,6 +12,7 @@ You **MUST** set the title of the current session to "integrations|" followed by
 
 **CRITICAL**: After creating the integration branch, you **MUST** configure it to track origin (not upstream) to prevent push issues:
 
+
 ```fish
 # Replace BRANCH-NAME with the actual integration branch name
 set BRANCH_NAME integration/(date +%Y-%m-%d-%H-%M)
