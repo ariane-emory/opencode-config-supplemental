@@ -1,3 +1,25 @@
+1. Asymmetric Cursor Requirements
+The navigation requires your cursor to be at specific positions:
+- history_previous: only works when cursor is at position 0 (start of text)  
+- history_next: only works when cursor is at the end of the text
+2. Double-Press Behavior
+If you're not at the required cursor position:
+1. First press: moves cursor to required position only
+2. Second press: actually navigates history
+3. The Root Cause
+When you use history_previous, the application resets your cursor to position 0. Then when you try to use history_next, your cursor is no longer at the end, so you need to press alt+n twice:
+1. First press: moves cursor to end
+2. Second press: navigates to next history item
+Workaround
+To make history_next work, either:
+- Press alt+n twice in succession
+- Or first move your cursor to the end of the line manually, then press
+
+---
+Models deleting branches.  https://canary.discord.com/channels/1391832426048651334/1391832428024430645/1463239369283600496
+
+---
+
 2026-03-06-15-57
 
 ---
@@ -33,7 +55,7 @@ P3. There are many, many examples of RFC2119 being used both in other RFCs in ea
 C2. Models have seen very many examples of how RFC2119 is used, ergo they understand the special significance of these magic words. (induction from C1, P3)
 P4. Models learn to understand what they understand from the examples that they are fed during training. 
 C3. Models really do understand the keywords defined in RFC2119. (induction from C2, P4)
-
+uuuu
 ---
 
 Actually, I think I've had an idea: maybe we could add a new "sessionTitle" colour property that controls the colour of the title in the sidebar and the header, and have it fall back to "text" colour property if the theme does not contain the new "sessionTitle" colour property. That way, the behaviour of existing peas could be left unchanged while allowing the colour of the title to be controlled independently if desired. 

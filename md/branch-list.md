@@ -27,6 +27,7 @@
 - feat/canceled-prompts-in-history
 - feat/permission-spinner
 - feat/permission-indicator-in-sidebar
+- fix/history-navigation-key-commands
 - fix/no-split-database
 - fix/system-prompt-directories
 - fix/remove-dot-true
