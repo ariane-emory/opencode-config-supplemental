@@ -639,4 +639,6 @@ Make sure that you commit and push all your changes when you are done.
 
 **REMEMBER**: You **MUST** base the integration branch off of the local dev branch, and you **MUST** push the integration branch after every single branch that you merge. 
 
+**CRITICAL**:  You MUST NOT make use of subagents to perform any of this work, subagents are **ABSOLUTELY FORBIDDEN**!
+
 **DON'T BE LAZY!** You **MUST NOT** stop until you have completed the **ENTIRE** task and merged **ALL** of the requested branches!
