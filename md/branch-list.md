@@ -5,7 +5,7 @@
 
 - feat/base-one-rebrand
 - feat/sinister-quotes (**MERGE ADVICE**: the placeholders used **MUST** be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, **NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!**)
--
+
 ### From foreign remotes:
 
 - feat/markdown-renderer (from the gignit remote)
@@ -18,9 +18,6 @@
 - feat/session-bookmarks
 - fix/dialog-datetime-alignment (**MERGE ADVICE:** for best results, merge this one immediately after feat/session-bookmarks. This feature **MUST** not be clobbered; if there is a conflict, it **MUST** be combined with the other feature with which it is conflicting!)
 - feat/keybindable-commands
-- feat/opencode-expand
-- feat/argument-range-syntax
-- feat/default-arguments (**MERGE ADVICE:** When merging this branch, make sure that you don't accidentally reintroduce the swallowing behaviour that the feat/argument-range-syntax branch was meant to eliminate.)
 - feat/automatic-list-continuation
 - feat/continue-command
 - feat/configurable-snapshot-lifespan
@@ -29,11 +26,11 @@
 - feat/canceled-prompts-in-history
 - feat/permission-spinner
 - feat/permission-indicator-in-sidebar
+- feat/opencode-expand
+- feat/argument-range-syntax
+- feat/default-arguments (**MERGE ADVICE:** When merging this branch, make sure that you don't accidentally reintroduce the swallowing behaviour that the feat/argument-range-syntax branch was meant to eliminate.)
+- fix/preserve-quotes-in-arguments
 - fix/history-navigation-key-commands
-- fix/no-split-database
-- fix/system-prompt-directories
-- fix/remove-dot-true
-- fix/rfc2119-question-tool
 - fix/autocompletion-filtered-order
 - fix/modal-menus-filtered-order
 - fix/config-package-json-pollution (**MERGE ADVICE:** This branch **MUST** be included in integration branches to prevent package.json pollution with non-SemVer versions)
@@ -54,7 +51,8 @@
 - feat/persist-sidebar-group-folding-states
 - feat/persistant-sidebar-overlay-behaviour
 - feat/shell-advice
-- feat/elapsed-timer
+- feat/renaming-doesnt-close-session-list
+- feat/session-child-toggle-key
 - feat/set-session-title
 - feat/get-session-title
 - feat/no-disabled-lsps-in-sidebar
@@ -72,12 +70,15 @@
 - feat/clickable-sidebar-mcps
 - feat/clickable-dialogue-mcps
 - feat/ignored-commands
+- fix/no-split-database
+- feat/elapsed-timer
+- fix/system-prompt-directories
+- fix/remove-dot-true
+- fix/rfc2119-question-tool
 - feat/sidebar-header-accent-colours
 - feat/distinct-title-colour
 - feat/tool-output-colour
 - feat/improve-experimental-plan-mode-prompt
-- feat/renaming-doesnt-close-session-list
-- feat/session-child-toggle-key
-- fix/restore-footer (MERGE ADVICE:** As its name suggests, this feature restores the footer it was removed in a previous version; it must not be allowed to be clobbered by other branches when merging!)
+- fix/restore-footer (**MERGE ADVICE:** As its name suggests, this feature restores the footer it was removed in a previous version; it must not be allowed to be clobbered by other branches when merging!)
 
 **NOTE**: Any lines beginning with a `#` caracter are comments and you ****MUST**** ignore any such branches!
