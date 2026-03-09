@@ -41,7 +41,7 @@
 - feat/command-palette-consistecy (**MERGE ADVICE:** to prevent recurence of a past mistake: this branch is meant to **MOVE** several items from the Session category to the System category in the command palette. You **MUST NOT** duplicate them into both categories when resolving merge conflicts! Additionally, if fix/persist-sidebar was merged previously, be sue to properly move the new logic for the sidebar that it added: no return to "auto" after leaving, et cetera) 
 - refactor/shared-substitute
 - feat/argument-range-syntax
-- feat/default-arguments
+- feat/default-arguments (**MERGE ADVICE:** When merging this branch, make sure that you don't accidentally reintroduce the swallowing behaviour that the feat/argument-range-syntax branch was meant to eliminate.)
 - feat/session-id-in-status
 - feat/edit-tool-description
 - feat/opeoginni--display-message-tps
@@ -76,6 +76,6 @@
 - feat/tool-output-colour
 - feat/improve-experimental-plan-mode-prompt
 - feat/renaming-doesnt-close-session-list
-- fix/restore-footer (**MERGE ADVICE:** As its name suggests, this feature restores the footer it was removed in a previous version; it must not be allowed to be clobbered by other branches when merging!)
+- fix/restore-footer (MERGE ADVICE:** As its name suggests, this feature restores the footer it was removed in a previous version; it must not be allowed to be clobbered by other branches when merging!)
 
 **NOTE**: Any lines beginning with a `#` caracter are comments and you ****MUST**** ignore any such branches!
