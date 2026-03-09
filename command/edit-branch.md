@@ -1,8 +1,8 @@
 ---
+description: Edit an existing branch and then return. 
 agent: plan
+ignored: true
 ---
-Take note of which branch we are currently in. 
-
-!`baseone expand ~/ocs/md/edit-branch-body change $ARGUMENTS`
-
-After you've finished, return to the branch on which we'd started. 
+!`baseone expand ~/ocs/md/note-branch.md`
+!`baseone expand ~/ocs/md/edit-branch--body.md change "$ARGUMENTS"`
+!`baseone expand ~/ocs/md/noted-branch-return.md`
