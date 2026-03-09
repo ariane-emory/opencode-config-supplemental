@@ -49,7 +49,9 @@ Do **NOT** switch away from the integration branch during the merge process.
 
 **CRITICAL**: You **MUST** push the integration branch to origin after merging **EACH** branch into it!
 
-These are the branches we need to merge into the new integration branch:
+### The branches that you MUST merge
+
+These are the branches you **MUST** merge into the new integration branch:
 
 !`baseone expand ~/.config/opencode/md/branch-list.md`
 
@@ -60,7 +62,7 @@ These are the branches we need to merge into the new integration branch:
 **Create the file with this exact format:**
 
 ```markdown
-# Integration Branch: integration/YYYY-MM-DD-HH-MM
+m# Integration Branch: integration/YYYY-MM-DD-HH-MM
 
 ## Merge Checklist
 
@@ -104,11 +106,11 @@ git commit -m "Initial MERGED-BRANCHES.md checklist"
 git push
 ```
 
-**DO NOT proceed to merging until the checklist is created and committed!**
+**You MUST NOT proceed to merging until the checklist is created and committed!**
 
 ### Step 1b: Create Todo List for Progress Tracking
 
-**CRITICAL**: Immediately after creating MERGED-BRANCHES.md, you MUST create individual todo list items for EVERY branch:
+**CRITICAL**: Immediately after creating MERGED-BRANCHES.md, you **MUST** create individual todo list items for **EVERY** branch:
 
 ```fish
 # Get the branch count
@@ -117,6 +119,7 @@ echo "Creating $BRANCH_COUNT todo items..."
 ```
 
 Use the todowrite tool to create individual todo items for each branch. This allows the user to monitor progress. Each todo should:
+
 - Include the branch name and remote
 - Mark branches with known conflicts as "in_progress" or include a note
 - Be updated to "completed" immediately after successful merge AND push
@@ -426,7 +429,7 @@ grep -rn "NewTypeName" packages/
 **Common merge pitfalls to watch for:**
 - "Already up to date" - The branch may have already been merged, or you may be merging a stale local branch
 - Fast-forward merges when there should be changes - Use `--no-ff` flag and verify changes
-- **Choosing one side in conflicts** - The most common error! You **MUST NOT NEVER** just pick `--ours` or `--theirs`! **YOU MUST LAWAYS** manually combine both sides' functionality
+- **Choosing one side in conflicts** - The most common error! You **MUST NOT NEVER** just pick `--ours` or `--theirs`! **YOU MUST LAWAYS** manually combine both sides' functionality! The `--ours` and `--theirs` switches are **ABOLUTELY FORBIDDEN** and **MUST NOT** ever be used!
 - Conflicts that silently drop one side - **ALWAYS** review conflict resolutions carefully, especially for overlapping changes
 - Multiple branches modifying the same file - Later merges may need to incorporate changes from **BOTH** the integration branch **AND** the feature branch
 - **REBASING THE INTEGRATION BRANCH** - This is the most dangerous pitfall! Never rebase an integration branch as it will destroy merge commits and lose changes
@@ -472,7 +475,7 @@ The version **MUST NOT** ever be computed dynamically!
 export const VERSION = typeof OPENCODE_VERSION === "string" ? OPENCODE_VERSION : "2026-03-06-01-51"
 ```
 
-❌ **WRONG** - Dynamic detection (MUST NOT DO THIS):
+❌ **WRONG** - Dynamic detection (**MUST NOT DO THIS!**):
 ```typescript
 // NEVER do this - dynamic detection is forbidden
 export const VERSION = typeof OPENCODE_VERSION === "string" ? OPENCODE_VERSION : detectBranchTimestamp()
@@ -635,5 +638,3 @@ git log origin/dev..dev --oneline
 Make sure that you commit and push all your changes when you are done. 
 
 **REMEMBER**: You **MUST** base the integration branch off of the local dev branch, and you **MUST** push the integration branch after every single branch that you merge. 
-
-!`grep "^- " ~/.config/opencode/md/branch-list.md | wc -l`
