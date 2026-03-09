@@ -29,7 +29,7 @@ I asked Kimi, and she had this explanation. Does it sound like it could be true,
 P1. The AI labs train their models on as large a portion of the Internet as they can scrape. 
 P2. Every RFCon the IETF site can be trivially scraped. The models have "read" every single RFC during their training. 
 C1. The models are familiar with RFC2119. (induction from P1, P2)
-P3. There are many, many examples of RFC2119 being used both in other RFCs in easily scrapable parts of the Intenet.
+P3. There are many, many examples of RFC2119 being used both in other RFCs in easily scrapable parts of the Internet.
 C2. Models have seen very many examples of how RFC2119 is used, ergo they understand the special significance of these magic words. (induction from C1, P3)
 P4. Models learn to understand what they understand from the examples that they are fed during training. 
 C3. Models really do understand the keywords defined in RFC2119. (induction from C2, P4)

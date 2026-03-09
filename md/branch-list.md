@@ -16,7 +16,7 @@
 
 - feat/session-grouping
 - feat/session-bookmarks
-- fix/dialog-datetime-alignment (**MERGE ADVICE:** for best results, merge this one immediately after feat/session-bookmarks. This feature **MUST** not be clobbered; if there is a conflict, it **MUST** be combined with the other feature with /which it is conflicting!)
+- fix/dialog-datetime-alignment (**MERGE ADVICE:** for best results, merge this one immediately after feat/session-bookmarks. This feature **MUST** not be clobbered; if there is a conflict, it **MUST** be combined with the other feature with which it is conflicting!)
 - feat/keybindable-commands
 - feat/opencode-expand
 - feat/automatic-list-continuation
