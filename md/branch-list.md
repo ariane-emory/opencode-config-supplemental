@@ -31,18 +31,18 @@
 - fix/system-prompt-directories
 - fix/remove-dot-true
 - fix/rfc2119-question-tool
-- fix/persist-sidebar
 - fix/autocompletion-filtered-order
 - fix/modal-menus-filtered-order
 - fix/config-package-json-pollution (**MERGE ADVICE:** This branch **MUST** be included in integration branches to prevent package.json pollution with non-SemVer versions)
 - fix/session-list-viewport-jumping
 - fix/merging-multiple-configs
 - fix/markdown-codeblock-theme-property
+- fix/persist-sidebar
+- feat/command-palette-consistecy (**MERGE ADVICE:** to prevent recurence of a past mistake: this branch is meant to **MOVE** several items from the Session category to the System category in the command palette. You **MUST NOT** duplicate them into both categories when resolving merge conflicts! Additionally, if fix/persist-sidebar was merged previously, be sue to properly move the new logic for the sidebar that it added: no return to "auto" after leaving, et cetera) 
 - refactor/shared-substitute
-- feat/command-palette-consistecy (**MERGE ADVICE:** to prevent recurence of a past mistake: this branch is meant to **MOVE** several items from the Session category to the System category in the command palette. You **MUST NOT** duplicate them into both categories when resolving merge conflicts!) 
-- feat/session-id-in-status
 - feat/argument-range-syntax
 - feat/default-arguments
+- feat/session-id-in-status
 - feat/edit-tool-description
 - feat/opeoginni--display-message-tps
 - feat/kv-diff-style-clean
