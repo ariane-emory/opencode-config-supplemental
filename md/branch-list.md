@@ -19,6 +19,8 @@
 - fix/dialog-datetime-alignment (**MERGE ADVICE:** for best results, merge this one immediately after feat/session-bookmarks. This feature **MUST** not be clobbered; if there is a conflict, it **MUST** be combined with the other feature with which it is conflicting!)
 - feat/keybindable-commands
 - feat/opencode-expand
+- feat/argument-range-syntax
+- feat/default-arguments (**MERGE ADVICE:** When merging this branch, make sure that you don't accidentally reintroduce the swallowing behaviour that the feat/argument-range-syntax branch was meant to eliminate.)
 - feat/automatic-list-continuation
 - feat/continue-command
 - feat/configurable-snapshot-lifespan
@@ -41,8 +43,6 @@
 - fix/persist-sidebar
 - feat/command-palette-consistecy (**MERGE ADVICE:** to prevent recurence of a past mistake: this branch is meant to **MOVE** several items from the Session category to the System category in the command palette. You **MUST NOT** duplicate them into both categories when resolving merge conflicts! Additionally, if fix/persist-sidebar was merged previously, be sue to properly move the new logic for the sidebar that it added: no return to "auto" after leaving, et cetera) 
 - refactor/shared-substitute
-- feat/argument-range-syntax
-- feat/default-arguments (**MERGE ADVICE:** When merging this branch, make sure that you don't accidentally reintroduce the swallowing behaviour that the feat/argument-range-syntax branch was meant to eliminate.)
 - feat/session-id-in-status
 - feat/edit-tool-description
 - feat/opeoginni--display-message-tps
