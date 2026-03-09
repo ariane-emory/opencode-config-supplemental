@@ -51,16 +51,11 @@ Do **NOT** switch away from the integration branch during the merge process.
 
 These are the branches we need to merge into the new integration branch:
 
+!`baseone expand ~/.config/opencode/md/branch-list.md`
+
 ### Step 1: Create MERGED-BRANCHES.md Checklist
 
-**CRITICAL**: Before merging ANY branches, you MUST create MERGED-BRANCHES.md as a living checklist:
-
-**First, determine the branch count dynamically:**
-
-```fish
-set BRANCH_COUNT (grep "^- " ~/.config/opencode/md/branch-list.md | wc -l)
-echo "Creating checklist for $BRANCH_COUNT branches"
-```
+**CRITICAL**: Before merging **ANY** branches, you **MUST** create MERGED-BRANCHES.md as a living checklist:
 
 **Create the file with this exact format:**
 
@@ -84,7 +79,7 @@ echo "Creating checklist for $BRANCH_COUNT branches"
 ```
 
 **REQUIREMENTS:**
-- Copy ALL branches from branch-list.md into the checklist
+- Copy **ALL** branches from branch-list.md into the checklist
 - Include merge advice from branch-list.md in the "Description" column
 - Use ☐ for unchecked (starts as this for ALL branches)
 - Commit Hash starts as "TBD", updated after each merge
@@ -161,8 +156,6 @@ Before merging the first branch, verify:
 6. **Typecheck passes** on the integration branch baseline
 
 **DO NOT proceed if any of these are not complete!**
-
-!`baseone expand ~/.config/opencode/md/branch-list.md`
 
 - you **MUST NOT** include/merge any branches not on this list
 - you **MUST** process the branches that I listed in the order that I listed them.
@@ -642,3 +635,5 @@ git log origin/dev..dev --oneline
 Make sure that you commit and push all your changes when you are done. 
 
 **REMEMBER**: You **MUST** base the integration branch off of the local dev branch, and you **MUST** push the integration branch after every single branch that you merge. 
+
+!`grep "^- " ~/.config/opencode/md/branch-list.md | wc -l`

@@ -1,3 +1,6 @@
+!`grep "^- " ~/.config/opencode/md/branch-list.md | wc -l`
+
+---
 I think that something might be wrong with the either the feat/argument-range-syntax branch or the feat/default-arguments branch. I'm not sure if this is a problem with one of the original feature branches or something that got messed up during the merge. 
 
 I tried running this command: /Users/katherinemasseau/.config/opencode/supplemental/command/arg-test.md
