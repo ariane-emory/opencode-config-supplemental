@@ -1,4 +1,4 @@
-Let's go over to the $2 branch for a moment, I'd like to change something over there. 
+Let's go over to the $2 branch for a moment, I'd like to $1 something over there. 
 
 ${3..}
 
