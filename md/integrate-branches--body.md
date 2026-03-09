@@ -623,7 +623,7 @@ git log origin/dev..dev --oneline
 ```
 
 **Final checklist**:
-- [ ] All branches from branch-list.md have been merged: `grep "^| ☐ |" MERGED-BRANCHES.md | wc -l` **MUST** output 0
+- [ ] **ALL** branches from branch-list.md have been merged: `grep "^| ☐ |" MERGED-BRANCHES.md | wc -l` **MUST** output 0
 - [ ] Integration branch has been pushed to origin
 - [ ] MERGED-BRANCHES.md including Markdown table is complete and committed
 - [ ] Tests pass on the integration branch
@@ -638,3 +638,5 @@ git log origin/dev..dev --oneline
 Make sure that you commit and push all your changes when you are done. 
 
 **REMEMBER**: You **MUST** base the integration branch off of the local dev branch, and you **MUST** push the integration branch after every single branch that you merge. 
+
+**DON'T BE LAZY!** You **MUST NOT** stop until you have completed the **ENTIRE** task and merged **ALL** of the requested branches!
