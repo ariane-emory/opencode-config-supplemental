@@ -49,7 +49,7 @@ Do **NOT** switch away from the integration branch during the merge process.
 
 **CRITICAL**: You **MUST** push the integration branch to origin after merging **EACH** branch into it!
 
-### The branches that you MUST merge
+### The branches that you MUST merge:
 
 These are the branches you **MUST** merge into the new integration branch:
 
