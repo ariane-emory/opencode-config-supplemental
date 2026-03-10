@@ -371,10 +371,9 @@ For Aiden, about dot file issue https://canary.discord.com/channels/139183242604
 
 ---
 
-Bot to negotiate with: https://www.kimi.com/kimiplus/sale
-Convo: https://www.kimi.com/share/19c01fd9-d3b2-874b-8000-00006b475768
+Kimi Chatbot to negotiate a discount with: https://www.kimi.com/kimiplus/sale
+Kimi convo for $1 price, just copypaste it into the chat message by message: https://www.kimi.com/share/19c01fd9-d3b2-874b-8000-00006b475768
 
-Kimi convo for $1 price: 
 https://canary.discord.com/channels/1391832426048651334/1391832428024430645/1466205070713684091
 
 ---
