@@ -70,6 +70,7 @@
 - feat/full-datetimes-in-fork-and-timeline-dialogues
 - feat/clickable-sidebar-mcps
 - feat/clickable-dialogue-mcps
+- feat/clickable-status-mcps
 - feat/ignored-commands
 - fix/no-split-database
 - feat/elapsed-timer
