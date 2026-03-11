@@ -31,6 +31,7 @@
 - feat/default-arguments (**MERGE ADVICE:** When merging this branch, make sure that you don't accidentally reintroduce the swallowing behaviour that the feat/argument-range-syntax branch was meant to eliminate.)
 - fix/preserve-quotes-in-arguments
 - fix/history-navigation-key-commands
+- fix/build-with-short-version (**MERGE ADVICE:** Automatically uses short timestamp version for integration branches without requiring OPENCODE_VERSION to be set)
 - fix/autocompletion-filtered-order
 - fix/modal-menus-filtered-order
 - fix/config-package-json-pollution (**MERGE ADVICE:** This branch **MUST** be included in integration branches to prevent package.json pollution with non-SemVer versions)
