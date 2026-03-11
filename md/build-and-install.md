@@ -1,7 +1,6 @@
 **BUILD STEPS**:
-1. You **MUST** set `OPENCODE_VERSION` to the timestamp from this integration branch's name (e.g., `2026-02-17-17-11`) when building, otherwise the version will display as `0.0.0-integration/...-YYYYMMDDHHMM` instead of just the timestamp.
-2. Build from packages/opencode/ with: `OPENCODE_VERSION="YYYY-MM-DD-HH-mm" bun run build --single`
-3. The built binary will be at either `dist/opencode-darwin-arm64/bin/baseone` or `dist/opencode-linux-arm64/bin/baseone` (depending on your platform)
+1. Build from packages/opencode/ with: `bun run build --single`
+2. The built binary will be at either `dist/opencode-darwin-arm64/bin/baseone` or `dist/opencode-linux-arm64/bin/baseone` (depending on your platform)
 
 **BINARY PATH**: We will be installing the binary at this path:
 `~/.local/bin/baseone.YYYY-MM-DD-HH-mm-ss` (substituting in the timestamp from this integration branch's name)
