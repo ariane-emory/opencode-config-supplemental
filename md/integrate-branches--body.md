@@ -6,17 +6,17 @@ We need to merge several feature branches into a new integration branch for test
 
 The directory that you're in now is used only for assembling single-use integration branches for testing purposes, any local changes that you find here are unimportant and **MUST** be discarded.
 
-Using the dev branch as the starting point, you **MUST** start a new integration branch with explicit tracking to origin to avoid upstream tracking issues. You **MUST** start a new branch, do not try to start from any prior integration branch! Name this new branch: $1
+Using the dev branch as the starting point, you **MUST** start a new integration branch with explicit tracking to origin to avoid upstream tracking issues. You **MUST** start a new branch, do not try to start from any prior integration branch! Name this new branch: integration/$1
 
-You **MUST** set the title of the current session to "integrations|$1" ("integrations|" followed by the name of the integration branch).
+You **MUST** set the title of the current session to "integrations|integration/$1" ("integrations|" followed by the name of the integration branch).
 
 **CRITICAL**: After creating the integration branch, you **MUST** configure it to track origin (not upstream) to prevent push issues:
 
 ```fish
 # Replace BRANCH-NAME with the actual integration branch name
 set BRANCH_NAME integration/(date +%Y-%m-%d-%H-%M)
-git config branch.$1.remote origin
-git config --unset branch.$1.merge
+git config branch.integration/$1.remote origin
+git config --unset branch.integration/$1.merge
 ```
 
 This prevents git from trying to push to upstream when integration branches don't exist there.
@@ -26,7 +26,7 @@ This prevents git from trying to push to upstream when integration branches don'
 ```fish
 git config --list | grep branch.integration/
 # Should show: 
-# branch.$1.remote=origin
+# branch.integration/$1.remote=origin
 # Should NOT show any .merge configuration
 ```
 
@@ -519,7 +519,7 @@ This ensures that custom version strings like `"2026-02-15-13-46"` won't cause t
 
 When CHANNEL is **NOT** "local", the `installDependencies()` function in `packages/opencode/src/config/config.ts` writes the VERSION string to `.opencode/package.json`. Since `YYYY-MM-DD-HH-MM` is not a valid npm version, this pollutes the config and breaks both the integration build **AND** the original opencode installation.
 
-You **MUST** also set CHANNEL to "local"** in `packages/opencode/script/build.ts`:
+You **MUST** also set CHANNEL to "local" in `packages/opencode/script/build.ts`:
 
 ```typescript
 // Change these lines:

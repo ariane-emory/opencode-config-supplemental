@@ -1,1 +1,1 @@
-!`baseone expand ~/.config/opencode/md/integrate-branches--body.md integration/$(date +%Y-%m-%d-%H-%M)`
+!`baseone expand ~/.config/opencode/md/integrate-branches--body.md $(date +%Y-%m-%d-%H-%M)`
