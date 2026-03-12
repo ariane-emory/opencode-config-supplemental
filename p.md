@@ -1,3 +1,31 @@
+Set up this MCP server in my opencode.json file: https://github.com/brave/brave-search-mcp-server
+Note that the sample configurations that they give are for clawed code, so you will need to reformat them for OpenCode. 
+My API key can be found in ~/api.org, but use one of the features that lets us avoid placing the API key directly into opencode.json
+
+---
+1. foo
+2. bar
+3. baz
+4. corge
+5. quux
+6. grault
+7. foo
+8. bar
+9. baz
+10. corge
+11. quux
+12. grault
+13. foo
+14. bar
+15. baz
+16. corge
+17. quux
+18. grault
+19. foo
+20. bar
+21. baz
+
+---
 1. Asymmetric Cursor Requirements
 The navigation requires your cursor to be at specific positions:
 - history_previous: only works when cursor is at position 0 (start of text)  

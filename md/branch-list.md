@@ -82,6 +82,7 @@
 - feat/distinct-title-colour
 - feat/tool-output-colour
 - feat/improve-experimental-plan-mode-prompt
+- fix/input-enter-keybindings
 - fix/restore-footer (**MERGE ADVICE:** As its name suggests, this feature restores the footer it was removed in a previous version; it must not be allowed to be clobbered by other branches when merging!)
 
 **NOTE**: Any lines beginning with a `#` caracter are comments and you ****MUST**** ignore any such branches!
