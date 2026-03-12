@@ -19,4 +19,4 @@
 
 **CRITICAL**: If you had to make any changes to the integration branch in order to get it to build and install correctly, you **MUST** push those changes to origin when you are done. 
 
-**NOTE**: The insulation process may result in changes to the  packages/opencode/package.json file. To keep things tidy, yu **SHOULD** make sure to revert any changes to this file when you are done. 
+**NOTE**: The installation process may result in changes to the  packages/opencode/package.json file. To keep things tidy, yu **SHOULD** make sure to revert any changes to this file when you are done. 
