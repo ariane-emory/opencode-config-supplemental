@@ -68,6 +68,7 @@
 - feat/alphabetical-message-modal
 - feat/toggle-sidebar-scrollbar
 - feat/full-datetimes-in-fork-and-timeline-dialogues
+- feat/configurable-maximum-prompt-input-size
 - feat/clickable-sidebar-mcps
 - feat/clickable-dialogue-mcps
 - feat/clickable-status-mcps

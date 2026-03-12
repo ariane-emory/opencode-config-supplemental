@@ -76,8 +76,8 @@ Invalid API parameter, please check the documentation.Request 203943 input token
 
 ---
 
-Read the contents of this exact URL and concoct a Suno lyric/style prompt pair for a song based on it: 
- 
+Alright, great work so far. Let's try this out next... read the contents of this exact URL and concoct a Suno lyric/style prompt pair for a song based on it: 
+  
 ---
  
  WarClaude https://x.com/pleometric/status/2026754178484167128
