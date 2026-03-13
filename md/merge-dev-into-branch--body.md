@@ -25,7 +25,7 @@ Make sure that no new test failures were introduced by the merge: you may disreg
 
 If a pre-push hook is failing due to pre-existing errors, you SHOULD use the --no-verify flag on the push to make the push succeed.
 
-**CRITICAL**: Do not fast forward merges. Do not rebase or cherry-pick. If conflicts occur, think them through thoroughly and carefully resolve them by hand to ensure that important changes from the current branch are not lost.
+**CRITICAL**: Do not fast forward merges. Do not rebase or cherry-pick. If conflicts occur, think them through thoroughly and carefully resolve them by hand to ensure that important changes from the current branch are not lost. You **MUST NOT** break the feature/fix that the $1 branch is meant to implement!
 
 **IMPORTANT**: If you are able to merge in the changes and successfully resolve any conflicts and the tests all pass afterwards (excluding any pre-existing errors from the dev branch, which MUST be preserved), you MUST push the changes to git.
 
