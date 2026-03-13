@@ -1,4 +1,8 @@
-Set up this MCP server in my opencode.json file: https://github.com/brave/brave-search-mcp-server
+ messageID: MessageID.make(""),
+ 
+----
+ 
+ Set up this MCP server in my opencode.json file: https://github.com/brave/brave-search-mcp-server
 Note that the sample configurations that they give are for clawed code, so you will need to reformat them for OpenCode. 
 My API key can be found in ~/api.org, but use one of the features that lets us avoid placing the API key directly into opencode.json
 
