@@ -1,5 +1,5 @@
 ### From the upstream remote:
-- split-config-fixes (Note that you **MUST** use only the local copy of this branch, you **MUST NOT** pull new versions from the upstream remote!)
+- split-config-fixes (**MERGE ADVICE**: Note that you **MUST** use only the local copy of this branch when merging, you **MUST NOT** pull new versions from the upstream remote!)
 
 ### From origin:
 
