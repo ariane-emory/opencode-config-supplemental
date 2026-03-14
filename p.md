@@ -1,4 +1,8 @@
- messageID: MessageID.make(""),
+Moonshot's Kimi For Coding sub plans for their Kimi models. Truly, she is finger lickin' good. https://tenor.com/view/kfc-finger-lickin-good-kentucky-fried-chicken-fast-food-gif-8678282266239493385
+
+---
+
+messageID: MessageID.make(""),
  
 ----
  
