@@ -73,6 +73,7 @@
 - feat/clickable-dialogue-mcps
 - feat/clickable-status-mcps
 - feat/ignored-commands
+- feat/dialogue-background-overlay-setting
 - fix/no-split-database
 - feat/elapsed-timer
 - fix/system-prompt-directories
