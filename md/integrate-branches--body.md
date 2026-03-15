@@ -198,7 +198,7 @@ grep "^\- " ~/.config/opencode/md/branch-list.md | wc -l
 
 **CRITICAL**: Each branch **MUST** be on its own line starting with `- `. If you see multiple branch names on one line (e.g., "feat/branch1- feat/branch2"), split them into separate lines before proceeding.
 
-**IMPORTANT**: You **MUST** create a MERGED-BRANCHES.md document in the project's root directory in which to record which branches were merged to produce the new integration branch. You **MUST** include a Markdown table displaying which branches were merged in this document and a merge log detailing the merges that were performed. Make sure that you include the specific commit hash the merged branch was at when it was merged. Add this file to git.
+**IMPORTANT**: You **MUST** create a MERGED-BRANCHES.md document in the project's root directory in which to record which branches were merged to produce the new integration branch. You **MUST** include a Markdown table displaying which branches were merged in this document and a merge log detailing the merges that were performed. Make sure that you include the specific commit hash the merged branch was at when it was merged. Add this file to git. As you proceed, include notes in this MERGED-BRANCHES.md file detailing any conflict resolutions that were required during the merging process. 
 
 #### MERGED-BRANCHES.md Required Format
 
