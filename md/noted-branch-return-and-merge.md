@@ -1,1 +1,1 @@
-After you've finished and pushed the changes on that branch to origin, return to the branch on which we'd started and then merge the changes you'd just pushed on the $1 branch back into it.
+After you've finished and pushed the changes on the $1 branch to origin, return to the branch on which we'd started and then merge the changes you'd just pushed on the $1 branch back into it.
