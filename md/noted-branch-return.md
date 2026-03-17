@@ -1,1 +1,1 @@
-After you've finished, return to the branch on which we'd started. 
+After you've finished and pushed the new $1 branch to origin, return to the branch on which we'd started. 

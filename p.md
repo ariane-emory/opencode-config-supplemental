@@ -193,7 +193,7 @@ https://discord.com/invite/j4zQ8UaQw2
 
 ---
 OMO Discord: 
-https://discord.gg/PUwSMR9XNk
+They live over here: https://discord.gg/PUwSMR9XNk
 
 ---
 https://canary.discord.com/channels/1391832426048651334/1400520061072052396/1474081187080175799
