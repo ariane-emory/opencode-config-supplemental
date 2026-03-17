@@ -87,5 +87,6 @@
 - fix/escape-from-status
 - fix/restore-footer (**MERGE ADVICE:** As its name suggests, this feature restores the footer it was removed in a previous version; it must not be allowed to be clobbered by other branches when merging!)
 - feat/kimi-with-claude-system-prompt
+- feat/remove-canned-jokes
 
 **NOTE**: Any lines beginning with a `#` caracter are comments and you ****MUST**** ignore any such branches!
