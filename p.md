@@ -1,7 +1,14 @@
+Was hoping to see CI pass before undrafting, but it looks like the failing E2E/unit tests are affecting every other recent PR, so presumably they are just flaky CIs. 
+
+--- 
+Arxiv `AGENTS.md` paper: https://arxiv.org/abs/2602.11988
+
+---
+
 Moonshot's Kimi For Coding sub plans for their Kimi models. Truly, she is finger lickin' good. https://tenor.com/view/kfc-finger-lickin-good-kentucky-fried-chicken-fast-food-gif-8678282266239493385
 
 ---
-It is truly is finger lickin' good. https://tenor.com/view/kfc-finger-lickin-good-kentucky-fried-chicken-fast-food-gif-8678282266239493385
+KFC is truly is finger lickin' good. https://tenor.com/view/kfc-finger-lickin-good-kentucky-fried-chicken-fast-food-gif-8678282266239493385
 
 ---
 
