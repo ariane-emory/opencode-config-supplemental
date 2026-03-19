@@ -1,5 +1,5 @@
 ---
-description: Create and implement a new feature branch. 
+description: Create and implement a new feature branch and then merge it back. 
 agent: plan
 ignored: false
 ---
