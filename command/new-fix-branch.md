@@ -1,5 +1,5 @@
 ---
-description: Create and implement a new fix branch.
+description: Create and implement a new fix branch. 
 agent: plan
 ignored: true
 ---

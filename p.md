@@ -1,4 +1,4 @@
-Was hoping to see CI pass before undrafting, but it looks like the failing E2E/unit tests are affecting every other recent PR, so presumably they are just flaky CIs. 
+Okay, it sounds like the current behaviour is basically correct. I'm a little confused about something. I had thought that one of those four branches that I had listed as being possibly involved was supposed to remove this grouping based on quotes within the slash command system. I had thought that `/command "foo bar baz" would be treated as three arguments, "foo, bar, and baz... Am I mistaken? Was hoping to see CI pass before undrafting, but it looks like the failing E2E/unit tests are affecting every other recent PR, so presumably they are just flaky CIs. 
 
 --- 
 Arxiv `AGENTS.md` paper: https://arxiv.org/abs/2602.11988
