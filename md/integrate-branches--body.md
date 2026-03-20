@@ -643,6 +643,6 @@ Make sure that you commit and push all your changes when you are done.
 
 **REMEMBER**: **Choosing one side in conflicts** - The most common error! You **MUST NOT EVER** just pick `--ours` or `--theirs`! **YOU MUST LAWAYS** manually combine both sides' functionality! The `--ours` and `--theirs` switches are **ABOLUTELY FORBIDDEN** and **MUST NOT** ever be used! You **MUST NEVER** just take one side's version!
 
-**CRITICAL**: Remember, you **MUST NOT EVER** pull/fetch/merge any content from origin! You **MUST** use **ONLY** the locally available copies of the branches!
+**CRITICAL**: Remember, you **MUST NOT EVER** pull/fetch/merge any content from origin! You **MUST** use **ONLY** the locally available copies of the branches! You **MUST** push the integration branch to origin after every merge!
 
 **DON'T BE LAZY**! You **MUST NOT** stop until you have completed the **ENTIRE** task and merged **ALL** of the requested branches!
