@@ -429,7 +429,7 @@ grep -rn "NewTypeName" packages/
 **Common merge pitfalls to watch for:**
 - "Already up to date" - The branch may have already been merged, or you may be merging a stale local branch
 - Fast-forward merges when there should be changes - Use `--no-ff` flag and verify changes
-- **Choosing one side in conflicts** - The most common error! You **MUST NOT NEVER** just pick `--ours` or `--theirs`! **YOU MUST LAWAYS** manually combine both sides' functionality! The `--ours` and `--theirs` switches are **ABOLUTELY FORBIDDEN** and **MUST NOT** ever be used! You **MUST NEVER** just take one side's version!
+- **Choosing one side in conflicts** - The most common error! You **MUST NOT EVER** just pick `--ours` or `--theirs`! **YOU MUST LAWAYS** manually combine both sides' functionality! The `--ours` and `--theirs` switches are **ABOLUTELY FORBIDDEN** and **MUST NOT** ever be used! You **MUST NEVER** just take one side's version!
 - Conflicts that silently drop one side - **ALWAYS** review conflict resolutions carefully, especially for overlapping changes
 - Multiple branches modifying the same file - Later merges may need to incorporate changes from **BOTH** the integration branch **AND** the feature branch
 - **REBASING THE INTEGRATION BRANCH** - This is the most dangerous pitfall! Never rebase an integration branch as it will destroy merge commits and lose changes
