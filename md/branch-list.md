@@ -77,7 +77,6 @@
 - fix/no-split-database
 - feat/elapsed-timer
 - fix/system-prompt-directories
-- fix/remove-dot-true
 - fix/rfc2119-question-tool
 - feat/sidebar-header-accent-colours
 - feat/distinct-title-colour

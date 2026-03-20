@@ -1,3 +1,8 @@
+1: stomps, chuggy guitar, flutes near end
+2: 
+
+----
+
 Okay, it sounds like the current behaviour is basically correct. I'm a little confused about something. I had thought that one of those four branches that I had listed as being possibly involved was supposed to remove this grouping based on quotes within the slash command system. I had thought that `/command "foo bar baz" would be treated as three arguments, "foo, bar, and baz... Am I mistaken? 
 
 ---
