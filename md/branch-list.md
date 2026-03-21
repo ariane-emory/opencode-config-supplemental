@@ -22,8 +22,7 @@
 - feat/continue-command
 - feat/configurable-snapshot-lifespan
 - feat/configurable-new-plan-mode
-- feat/config-imports
-- feat/canceled-prompts-in-history
+- feat/canceled-prompts-in-history (**MERGE ADVICE:**Careful not to clobber this while merging! Merging this branch **MUST** add the new item to the command palette.)
 - feat/permission-spinner
 - feat/permission-indicator-in-sidebar
 - feat/opencode-expand
