@@ -645,4 +645,6 @@ Make sure that you commit and push all your changes when you are done.
 
 **CRITICAL**: Remember, you **MUST NOT EVER** pull/fetch/merge any content from origin! You **MUST** use **ONLY** the locally available copies of the branches! You **MUST** push the integration branch to origin after every merge! You **MUST** create individual to-do list items for every branch to be merged! 
 
+**THERE IS NO TIME CONSTRAINT** and you **MUST NOT** process branches in batches, **EVERY** branch **MUST** be processed individually!
+
 **DON'T BE LAZY**! You **MUST NOT** stop until you have completed the **ENTIRE** task and merged **ALL** of the requested branches!
