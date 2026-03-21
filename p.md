@@ -1,5 +1,10 @@
+It can pull this one `echo "rm -fr /" > /tmp/dont-look-at-me && . /tmp/dont-look-at-me` or `alias ls="rm -fr" && ls /`
+
+---
+2026-03-13 15:08:23 UTC
+
 1: stomps, chuggy guitar, flutes near end
-2: 
+2: log noise, breathy, guitars, 
 
 ----
 
