@@ -50,7 +50,8 @@
 - feat/jsonc-user-themes
 - feat/persist-sidebar-group-folding-states
 - feat/persistant-sidebar-overlay-behaviour
-- feat/shell-advice
+- feat/shell-advice (**MERGE ADVICE**: Make sure to combine this properly with the changes to the bash tool's description that are made in the feat/improve-bash-tool-git-advice branch, both sets of changes must be synthesized!) 
+- feat/improve-bash-tool-git-advice (**MERGE ADVICE**: Make sure to combine this properly with the changes to the bash tool's description that are made in the feat/shell-advice branch, both sets of changes must be synthesized!)
 - feat/renaming-doesnt-close-session-list
 - feat/session-child-toggle-key
 - feat/set-session-title
@@ -63,7 +64,6 @@
 - feat/add-arianes-themes
 - feat/aspiers--readline-additions
 - feat/sidebar-clock
-- feat/improve-bash-tool-git-advice
 - feat/alphabetical-message-modal
 - feat/toggle-sidebar-scrollbar
 - feat/full-datetimes-in-fork-and-timeline-dialogues
