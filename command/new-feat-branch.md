@@ -1,7 +1,7 @@
 ---
 description: Create and implement a new feature branch. 
 agent: plan
-ignored: true
+ignored: false
 ---
 !`baseone expand ~/ocs/md/note-branch.md`
 !`baseone expand ~/ocs/md/create-new-branch.md feat/$1`
