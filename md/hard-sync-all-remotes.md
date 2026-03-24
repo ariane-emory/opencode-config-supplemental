@@ -1,4 +1,4 @@
-**GOAL**: Synchronize the branhes in the local repository to match their remote remote repositories exactly. 
+)**GOAL**: Synchronize the branhes in the local repository to match their remote remote repositories exactly. 
 
 This is a **RECEIVE-ONLY** operation that fetches changes from remotes and updates the local branches accordingly. This is typically used in fork workflows where origin is the source of truth.
 
@@ -281,6 +281,8 @@ echo "=== SYNC COMPLETE ==="
 - **CRITICAL**: Handle git lock files that can prevent operations
 - Don't use hardcoded paths or branch names - always use variables
 - **CRITICAL**: When deleting local branches, switch off the current branch first if it's being deleted
+
+!`baseone expand ~/oc/md/no-tmp.md`
 
 **LESSONS LEARNED:**
 

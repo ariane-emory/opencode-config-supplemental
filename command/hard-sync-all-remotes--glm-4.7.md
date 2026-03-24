@@ -4,7 +4,7 @@ agent: build
 model: zai-coding-plan/glm-4.7
 new_session: true
 ---
-!`cat ~/.config/opencode/md/hard-sync-all-remotes.md`
+!`baseone expand ~/.config/opencode/md/hard-sync-all-remotes.md`
 
 Make sure that these branches from remotes are available locally:
-!`cat ~/.config/opencode/md/branch-list.md`
+!`baseone expand ~/.config/opencode/md/branch-list.md`
