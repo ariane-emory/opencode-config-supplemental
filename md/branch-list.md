@@ -64,6 +64,7 @@
 - feat/toggle-sidebar-scrollbar
 - feat/full-datetimes-in-fork-and-timeline-dialogues
 - feat/configurable-maximum-prompt-input-size
+- fix/always-allow-folding-sidebar-mcps
 - feat/clickable-sidebar-mcps
 - feat/clickable-dialogue-mcps
 - feat/clickable-status-mcps
@@ -82,6 +83,5 @@
 - fix/restore-footer (**MERGE ADVICE:** As its name suggests, this feature restores the footer it was removed in a previous version; it must not be allowed to be clobbered by other branches when merging!)
 - feat/kimi-with-claude-system-prompt
 - feat/remove-canned-jokes
-- fix/always-allow-folding-sidebar-mcps
 
 **NOTE**: Any lines beginning with a `#` character are comments and you **MUST** ignore any such branches!
