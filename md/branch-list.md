@@ -83,4 +83,4 @@
 - feat/kimi-with-claude-system-prompt
 - feat/remove-canned-jokes
 
-**NOTE**: Any lines beginning with a `#` caracter are comments and you **MUST** ignore any such branches!
+**NOTE**: Any lines beginning with a `#` character are comments and you **MUST** ignore any such branches!
