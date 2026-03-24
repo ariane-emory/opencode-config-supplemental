@@ -42,7 +42,7 @@
 - feat/kv-diff-style-clean
 - feat/global-compaction-threshold
 - feat/configurable-message-and-session-limit (**MERGE ADVICE:** Don't forget that both the `experimental._message__limit` and `experimental.session_list_limit` settings should accept either positive integers or the string value "none"!) 
-- feat/experimental-dont-cache-markdown
+- feat/experimental-dont-cache-command-markdown
 - feat/jsonc-user-themes
 - feat/persist-sidebar-group-folding-states (**MERGE ADVICE**: Be sure not to let this feature get clobbered by subsequent merges!)
 - feat/persistant-sidebar-overlay-behaviour
