@@ -1,3 +1,7 @@
+Nothing changes in the `kv.json` file when I fold or unfold groups in the sidebar. This makes me think that the feat/persist-sidebar-group-folding-states branch was not properly merged. 
+
+----
+
 It can pull this one `echo "rm -fr /" > /tmp/dont-look-at-me && . /tmp/dont-look-at-me` or `alias ls="rm -fr" && ls /`
 
 ---
@@ -136,7 +140,7 @@ Invalid API parameter, please check the documentation.Request 203943 input token
 
 ---
 
-Alright, great work so far. Let's try this one out next... read the contents of this exact URL and concoct a Suno lyric/style prompt pair for a song based on it: 
++Alright, great work so far. Let's try this one out next... read the contents of this exact URL and concoct a Suno lyric/style prompt pair for a song based on it: 
   
 ---
  
