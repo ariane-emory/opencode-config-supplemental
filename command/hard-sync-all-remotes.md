@@ -7,3 +7,4 @@ new_session: true
 
 Make sure that these branches from remotes are available locally:
 !`baseone expand ~/.config/opencode/md/branch-list.md`
+(you **MUST** ignore any branches not in this list!)

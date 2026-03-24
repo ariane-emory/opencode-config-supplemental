@@ -1,4 +1,4 @@
-)**GOAL**: Synchronize the branhes in the local repository to match their remote remote repositories exactly. 
+**GOAL**: Synchronize the branhes in the local repository to match their remote remote repositories exactly. 
 
 This is a **RECEIVE-ONLY** operation that fetches changes from remotes and updates the local branches accordingly. This is typically used in fork workflows where origin is the source of truth.
 
