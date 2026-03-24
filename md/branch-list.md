@@ -7,7 +7,6 @@
 
 - feat/markdown-renderer (from the gignit remote)
 - feat/thinking-indicator-hidden (from the rcdailey remote)
-- fix/session-new-prompt-handoff (from the AksharP5 remote)
 
 ### More from origin:
 
