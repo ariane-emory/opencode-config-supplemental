@@ -1,0 +1,1 @@
+**WARNING**: You **SHOULD** be very careful about using the `/tmp` directory to store any temporary information! Other agents may be working at the same time as you are, and so it is possible that they could write to similarly named files  in `/tmp` that you have used, which could lead to confusion if you mistook their notes for your own.
