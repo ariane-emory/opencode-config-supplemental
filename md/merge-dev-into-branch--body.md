@@ -21,6 +21,8 @@ If a git lock file gets in your way, just delete it and keep working on merging.
 
 Make sure that no new test failures were introduced by the merge: you may disregard any pre-existing test failures in the dev branch, but we don't want to add any new test failures relative to dev. If tests fail due to a timeout (in either branch), try waiting a moment and rerunning them, it mayjust mean that that test is a bit flaky.
 
+**NOTE**: If you get an error about a bun version mismatch, you may need to first install the correct version of bun! 
+
 **REMEMBER**: The global Opencode configuration is most likely NOT configured to be compatible with the branch on which you are working!
 
 If a pre-push hook is failing due to pre-existing errors, you SHOULD use the --no-verify flag on the push to make the push succeed.
