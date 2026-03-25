@@ -1,13 +1,12 @@
 ---
 description: Investigate/confirm a GH issue. 
 agent: plan
-
 ---
 
 Let's investigate this Github issue: 
 
-gh --repo anomalyco/opencode issue view $ARGUMENTS;
-gh --repo anomalyco/opencode issue view $ARGUMENTS --comments;
+gh --repo anomalyco/opencode issue view $1;
+gh --repo anomalyco/opencode issue view $1 --comments;
 
 Take note of any coments on the issue, the discussion may include valuable insights on possible causes of the issue.
 
