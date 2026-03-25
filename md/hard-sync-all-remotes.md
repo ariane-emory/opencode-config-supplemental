@@ -4,7 +4,7 @@ This is a **RECEIVE-ONLY** operation that fetches changes from remotes and updat
 
 You **MUST NOT** ever consider the `upstream/dev` branch! The only relevant `dev` branch is `origin/dev`!
 
-**FIRST**: Use the `set_current_session_title` tool to name the session "Syncronizing branches with remotes".
+**FIRST**: Use the `set_current_session_title` tool to name the session "sync|Syncronizing branches with remotes".
 
 **CRITICAL FISH SHELL SYNTAX NOTE**: All fish shell code blocks in this document MUST be executed as multi-line code with proper indentation. **DO NOT** convert to single-line semicolon-separated commands, as this will cause "'end' outside of a block" errors. Fish shell requires proper line breaks for block structures (if/for/while/end).
 
