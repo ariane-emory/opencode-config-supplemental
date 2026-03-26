@@ -1,7 +1,7 @@
 ---
 description: Sync all remotes to match upstream (source of truth) using GLM.
 agent: build
-model: llm-proxy/cli_gemini-3-flash
+model: llm-proxy/cli-gemini-3-flash
 new_session: true
 ---
 !`baseone expand ~/.config/opencode/md/hard-sync-all-remotes.md`
