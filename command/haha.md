@@ -1,5 +1,6 @@
 ---
 description: Tell me a joke.
+agent: build
 ---
 
 You **MUST** tell me a joke. 
