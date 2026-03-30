@@ -4,7 +4,9 @@ body 2: $2
 body 3: $3
 body 4: $4
 
-You **MUST** come up with a plan for how to implement a resolution for this Github issue in the $1 repository: .
+First, you **MUST** run the tests in the ${4:dev} branch to observe any preexisting failures. You **SHOULD** remember these for later in this procedure. 
+
+You **MUST** come up with a plan for how to implement a resolution for this Github issue in the $1 repository:
 
 gh --repo $1 issue view $2;
 
