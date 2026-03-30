@@ -1,3 +1,8 @@
+I am trying to make some improvements to a command that makes features from these branches: feat/default-arguments, feat/argument-range-syntax and feat/opencode-expand. 
+The command is here: /Users/katherinemasseau/.config/opencode/supplemental/command/resolve-gh-issue.md
+And I'm invoking it like this. 
+
+---
 /new-fix-branch-and-merge no-variants-modal "Get rid of that silly variants modal and just use the default."
 
 ---
