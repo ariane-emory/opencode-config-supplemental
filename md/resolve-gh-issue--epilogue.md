@@ -6,8 +6,6 @@ Once you've come up with your plan, submit it to me for approval.
 
 Once I have approved the plan, you **MUST** proceed with doing the work in a new branch based off of the ${2:dev} branch named $1.
 
-You **SHOULD** use the `set_current_session_title` tool to give the session a name consisting of the string "issues|" followed by the name of the new branch followed by the number and title of the issue.
-
 Once you are done, you **MUST** push the new branch to origin, But you **MUST** NOT create any pull requests.
 
 ${4..}
