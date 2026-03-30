@@ -6,4 +6,4 @@ in-toto 4: "$4"
 in-toto 5: "$5"
 in-toto 6: "$6"
 
-!`baseone expand ~/.config/opencode/md/resolve-gh-issue--body.md ${1..3} ${4:dev} ${5..}`
+!`baseone expand ~/.config/opencode/md/resolve-gh-issue--body.md ${1..3} ${4:dev} "${5..}"`
