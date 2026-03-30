@@ -1,9 +1,5 @@
 ---
 description: Plan to resolve a GH issue (minimal). 
-agent: plan
+agent: : 
 ---
-!`baseone expand ~/.config/opencode/md/resolve-gh-issue--prologue.md anomalyco/opencode $1`
-
-You **SHOULD** make the minimal changes required to solve the issue. 
-
-!`baseone expand ~/.config/opencode/md/resolve-gh-issue--epilogue.md ${2..}`
+!`baseone expand ~/.config/opencode/md/resolve-gh-issue--in-toto.md anomalyco/opencode $ARGUMENTS`
