@@ -1,4 +1,4 @@
-Your user's Github username is ariane-emory. 
+Your user's GitHub username is ariane-emory. 
 
 You MUST NOT ever add superfluous whitespace-only lines. 
 
