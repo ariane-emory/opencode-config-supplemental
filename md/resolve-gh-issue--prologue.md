@@ -1,3 +1,9 @@
+prelude all: $ARGUMENTS
+prelude 1: $1
+prelude 2: $2
+prelude 3: $3
+prelude 4: $4
+
 You **MUST** come up with a plan for how to implement a resolution for this Github issue in the $1 repository: .
 
 gh --repo $1 issue view $2;
