@@ -1,10 +1,4 @@
-body all: $ARGUMENTS
-body 1: $1
-body 2: $2
-body 3: $3
-body 4: $4
-
-First, you **MUST** run the tests in the ${4:dev} branch to observe any preexisting failures. You **SHOULD** remember these for later in this procedure. 
+First, you **MUST** run the tests in the $4 branch to observe any preexisting failures. You **SHOULD** remember these for later in this procedure. 
 
 You **MUST** come up with a plan for how to implement a resolution for this Github issue in the $1 repository:
 
@@ -24,10 +18,10 @@ You **MUST NOT** make any unnecessary changes unrelated to the changes that are 
 
 Think carefully about whether the changes necessitate re-generating the TypeScript SDK, and if so be sure to include this step in your plan. 
 
-Group the plan's steps into "phases". After completing each phase, the code **MUST** build correctly and all tests (except for any pre-evisting errors that already existed on the the ${4:dev} branch and any enterprise tests, you can ignore those) **MUST** pass. 
+Group the plan's steps into "phases". After completing each phase, the code **MUST** build correctly and all tests **MUST** pass (excluding any pre-evisting errors that already existed on the the $4 branch and any enterprise tests, you can disregard those failures). 
 
 Once you've come up with your plan, submit it to me for approval.
 
-Once I have approved the plan, you **MUST** proceed with doing the work in a new branch based off of the ${4:dev} branch named $3.
+Once I have approved the plan, you **MUST** proceed with doing the work in a new branch based off of the $4 branch named $3.
 
 Once you are done, you **MUST** push the new branch to origin, But you **MUST NOT** create any pull requests.
