@@ -1,3 +1,11 @@
+body all: "${..}"
+body 1: "$1"
+body 2: "$2"
+body 3: "$3"
+body 4: "$4"
+body 5: "$5"
+body 6: "$6"
+
 First, you **MUST** run the tests in the $4 branch to observe any preexisting failures. You **SHOULD** remember these for later in this procedure. 
 
 You **MUST** come up with a plan for how to implement a resolution for this Github issue in the $1 repository:
