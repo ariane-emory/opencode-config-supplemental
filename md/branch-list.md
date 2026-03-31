@@ -18,7 +18,7 @@
 - feat/continue-command
 - feat/configurable-snapshot-lifespan
 - feat/configurable-new-plan-mode
-- feat/enable-exa-setting
+- feat/enable-exaj-setting
 - feat/canceled-prompts-in-history (**MERGE ADVICE:**Careful not to clobber this while merging! Merging this branch **MUST** add the new item to the command palette.)
 - feat/permission-spinner
 - feat/permission-indicator-in-sidebar
@@ -82,7 +82,6 @@
 - fix/input-enter-keybindings
 - fix/escape-from-status
 - fix/restore-footer (**MERGE ADVICE:** As its name suggests, this feature restores the footer it was removed in a previous version; it must not be allowed to be clobbered by other branches when merging!)
-- feat/kimi-with-claude-system-prompt
 - feat/remove-canned-jokes
 - fix/session-list-delete-selection
 
