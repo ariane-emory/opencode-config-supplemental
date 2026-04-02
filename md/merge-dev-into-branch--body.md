@@ -6,7 +6,7 @@ Then, check out the $1 branch, merge the local dev branch into it and resolve an
 
 **CRITICAL:** You **MUST** use only the locally available copies of the branch and the dev branch. You **MUST NOT** ever pull changes from remote branches!
 
-You can take my word that both of these branches already exist locally, so you don't have to waste time checking if they do before you start.
+You **SHOULD** take my word that both of these branches already exist locally, so you don't have to waste time checking if they do before you start.
 
 Use the `set_current_session_title` tool to give the session a title maching this format:
 `merging dev into|$branchName` (substituting $branchName with the actual name of the target branch)
