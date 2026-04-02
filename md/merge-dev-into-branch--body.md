@@ -35,7 +35,7 @@ If you are not able to resolve any conflicts or the tests do not pass afterwards
 
 **CRITICAL**: You **MUST NOT** correct pre-existing errors from dev! You **MUST** only correct new errors introduced by the merge, pre-existing errors **MUST** be preserved exactly. CORRECTING PRE-EXISTING ERRORS FROM THE DEV BRANCH WOULD BE A CATASTROPHIC FAILURE THAT **MUST** BE AVOIDED AT ALL COSTS!
 
-**CRITICAL**: You MUST NOT do anything that could close any active pull requests!
+**CRITICAL**: You **MUST NOT** do anything that could close any active pull requests!
 
 **CRITICAL**: I AM FUCKING SERIOUS DUDE, YOU **MUST NOT** TRY FIX PRE-EXISTING ERRORS FROM dev! **ONLY** TRY TO FIX NEW ERRORS INTRODUCED BY THE MERGE!
 
