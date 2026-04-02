@@ -23,17 +23,17 @@ Make sure that no new test failures were introduced by the merge: you may disreg
 
 **NOTE**: If you get an error about a bun version mismatch, you may need to first install the correct version of bun! 
 
-**REMEMBER**: The global Opencode configuration is most likely NOT configured to be compatible with the branch on which you are working!
+**REMEMBER**: The global Opencode configuration is most likely **NOT** configured to be compatible with the branch on which you are working!
 
-If a pre-push hook is failing due to pre-existing errors, you SHOULD use the --no-verify flag on the push to make the push succeed.
+If a pre-push hook is failing due to pre-existing errors, you **SHOULD** use the --no-verify flag on the push to make the push succeed.
 
 **CRITICAL**: Do not fast forward merges. Do not rebase or cherry-pick. If conflicts occur, think them through thoroughly and carefully resolve them by hand to ensure that important changes from the current branch are not lost. The $1 branch is a tightly-scoped branch that implements a single featur and/or fix, and so you **MUST NOT** break the feature/fix that the $1 branch is meant to implement! You **MUST NOT** use the `--ours` or `--theirs` switches!
 
-**IMPORTANT**: If you are able to merge in the changes and successfully resolve any conflicts and the tests all pass afterwards (excluding any pre-existing errors from the dev branch, which MUST be preserved), you MUST push the changes to git.
+**IMPORTANT**: If you are able to merge in the changes and successfully resolve any conflicts and the tests all pass afterwards (excluding any pre-existing errors from the dev branch, which **MUST** be preserved), you **MUST** push the changes to git.
 
-If you are not able to resolve any conflicts or the tests do not pass afterwards, you MUST NOT push the changes to git and you MUST ask me to step in and help you out instead. If any conflics did occur but you were able to resolve them, report on how the conflics were resolved.
+If you are not able to resolve any conflicts or the tests do not pass afterwards, you **MUST NOT** push the changes to git and you **MUST** ask me to step in and help you out instead. If any conflics did occur but you were able to resolve them, report on how the conflics were resolved.
 
-**CRITICAL**: You MUST NOT correct pre-existing errors from dev! You **MUST** only correct new errors introduced by the merge, pre-existing errors **MUST** be preserved exactly. CORRECTING PRE-EXISTING ERRORS FROM THE DEV BRANCH WOULD BE A CATASTROPHIC FAILURE!
+**CRITICAL**: You **MUST NOT** correct pre-existing errors from dev! You **MUST** only correct new errors introduced by the merge, pre-existing errors **MUST** be preserved exactly. CORRECTING PRE-EXISTING ERRORS FROM THE DEV BRANCH WOULD BE A CATASTROPHIC FAILURE!
 
 **CRITICAL**: You MUST NOT do anything that could close any active pull requests!
 
