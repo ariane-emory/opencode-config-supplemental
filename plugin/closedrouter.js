@@ -47,6 +47,7 @@ var ClosedRouterPlugin = async () => {
     config: async (config) => {
       config.provider ??= {};
       config.provider[PROVIDER_ID] ??= {};
+      config.provider[PROVIDER_ID].npm = "@ai-sdk/openai";
       config.provider[PROVIDER_ID].api = API_BASE;
       config.provider[PROVIDER_ID].options ??= {};
       const key = readStoredKey();
@@ -104,7 +105,7 @@ var ClosedRouterPlugin = async () => {
             {
               type: "text",
               key: "apiKey",
-              message: "ClosedRouter API key (from `bun run bootstrap`)",
+              message: "ClosedRouter API key",
               placeholder: "cr-...",
               validate: (value) => value.trim().length === 0 ? "API key must not be empty" : undefined
             }
