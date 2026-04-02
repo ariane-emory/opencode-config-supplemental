@@ -15,7 +15,7 @@ Use the `set_current_session_title` tool to give the session a title maching thi
 
 Do **NOT** bookmark this session!
 
-**CRITICAL**: Make sure that you first discard any uncommited local changes before merging the dev branch in, it would a catastrophic failure if any unrelated local changes were accidentally commited/pushed into our target branch! You MUST NOT stash any pre-existing local changes, you MUST discard them!
+**CRITICAL**: Make sure that you first discard any uncommited local changes before merging the dev branch in, it would a catastrophic failure if any unrelated local changes were accidentally commited/pushed into our target branch! You **MUST NOT** stash any pre-existing local changes, you **MUST** discard them!
 
 If a git lock file gets in your way, just delete it and keep working on merging.
 
