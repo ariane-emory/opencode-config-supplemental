@@ -37,6 +37,6 @@ If you are not able to resolve any conflicts or the tests do not pass afterwards
 
 **CRITICAL**: You MUST NOT do anything that could close any active pull requests!
 
-**CRITICAL**: I AM FUCKING SERIOUS DUDE, YOU **MUST** NOT TRY FIX PRE-EXISTING ERRORS FROM dev! **ONLY** TRY TO FIX NEW ERRORS INTRODUCED BY THE MERGE!
+**CRITICAL**: I AM FUCKING SERIOUS DUDE, YOU **MUST NOT** TRY FIX PRE-EXISTING ERRORS FROM dev! **ONLY** TRY TO FIX NEW ERRORS INTRODUCED BY THE MERGE!
 
 **CRITICAL**: You **MUST NOT** ever kill bun processes! There may be other active bun processes doing work at the same time as you are that cannot be easily restarted if you kill them! In addition, you **MUST NOT** ever modify the user's global OpenCode configuration file located at ~/.config/opencode/opencode.json, to do so would destroy critical data!
