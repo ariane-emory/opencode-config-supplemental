@@ -40,7 +40,6 @@
 - feat/persistant-sidebar-overlay-behaviour
 - refactor/shared-substitute
 - feat/session-id-in-status
-- feat/edit-tool-description
 - feat/opeoginni--display-message-tps
 - feat/kv-diff-style-clean
 - feat/global-compaction-threshold
@@ -49,6 +48,7 @@
 - feat/jsonc-user-themes
 - feat/shell-advice (**MERGE ADVICE**: Make sure to combine this properly with the changes to the bash tool's description that are made in the feat/improve-bash-tool-git-advice branch, both sets of changes must be synthesized!) 
 - feat/improve-bash-tool-git-advice (**MERGE ADVICE**: Make sure to combine this properly with the changes to the bash tool's description that are made in the feat/shell-advice branch, both sets of changes must be synthesized!)
+- feat/edit-tool-description
 - feat/renaming-doesnt-close-session-list
 - feat/session-child-toggle-key
 - feat/set-session-title
