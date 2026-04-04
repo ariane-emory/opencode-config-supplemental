@@ -434,20 +434,6 @@ grep -rn "NewTypeName" packages/
 - Multiple branches modifying the same file - Later merges may need to incorporate changes from **BOTH** the integration branch **AND** the feature branch
 - **REBASING THE INTEGRATION BRANCH** - This is the most dangerous pitfall! Never rebase an integration branch as it will destroy merge commits and lose changes
 
-## Finishing touches
-
-Modify the configuration file at `./.opencode/tui.json` to include this property to set my preferred theme:
-
-```
-{
-  "$schema": "https://opencode.ai/tui.json",
-  "theme": "matrix--transparent",
-  // remainder of content left as-is.
-}
-```
-
-**NOTE**: Note that the theme property just at `theme`, **NOT** `tui.theme`!
-
 ## Set Integration Branch Version
 
 Update the VERSION constant in `packages/opencode/src/installation/index.ts` to display the integration branch name instead of "local". Find this line:
