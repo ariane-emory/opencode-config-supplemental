@@ -1,3 +1,7 @@
+Is the command /thinking obsolete/removed? I can't see it in TUI, but it is documented in the docs https://opencode.ai/docs/en/tui/#thinking
+
+-----
+
 I am trying to make some improvements to a command that makes features from these branches: feat/default-arguments, feat/argument-range-syntax and feat/opencode-expand. 
 The command is here: /Users/katherinemasseau/.config/opencode/supplemental/command/resolve-gh-issue.md
 And I'm invoking it like this. 

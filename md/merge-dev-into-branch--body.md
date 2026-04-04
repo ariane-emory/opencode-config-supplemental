@@ -1,6 +1,10 @@
 ### Task: Merge the latest changes from the dev branch into the $1 branch:
 
-First, check out the dev branch and run the tests to see what pre-existing errors exist. If the dev branch contains pre-existing errors, you **MUST** preserve them when you merge it into the $1 branch.
+First, check out the dev branch,
+
+Next, run `bun install`.
+
+Then run the tests to see what pre-existing errors exist. If the dev branch contains pre-existing errors, you **MUST** preserve them when you merge it into the $1 branch.
 
 Then, check out the $1 branch, merge the local dev branch into it and resolve any conflicts. 
 
@@ -19,7 +23,7 @@ Do **NOT** bookmark this session!
 
 If a git lock file gets in your way, just delete it and keep working on merging.
 
-Make sure that no new test failures were introduced by the merge: you may disregard any pre-existing test failures in the dev branch, but we don't want to add any new test failures relative to dev. If tests fail due to a timeout (in either branch), try waiting a moment and rerunning them, it mayjust mean that that test is a bit flaky.
+You may need to run `bun install` again after performing the merge. .Make sure that no new test failures were introduced by the merge: you may disregard any pre-existing test failures in the dev branch, but we don't want to add any new test failures relative to dev. If tests fail due to a timeout (in either branch), try waiting a moment and rerunning them, it may just mean that that test is a bit flaky.
 
 **NOTE**: If you get an error about a bun version mismatch, you may need to first install the correct version of bun! 
 
@@ -40,3 +44,7 @@ If you are not able to resolve any conflicts or the tests do not pass afterwards
 **CRITICAL**: I AM FUCKING SERIOUS DUDE, YOU **MUST NOT** TRY FIX PRE-EXISTING ERRORS FROM dev! **ONLY** TRY TO FIX NEW ERRORS INTRODUCED BY THE MERGE!
 
 **CRITICAL**: You **MUST NOT** ever kill bun processes! There may be other active bun processes doing work at the same time as you are that cannot be easily restarted if you kill them! In addition, you **MUST NOT** ever modify the user's global OpenCode configuration file located at ~/.config/opencode/opencode.json, to do so would destroy critical data!
+
+There is no particular time constraint here, so don't rush, take the time that you need to do the job properly. 
+
+**CRITICAL**: You **MUST NOT** forget to push the merged branch to origin once you have finished. 
