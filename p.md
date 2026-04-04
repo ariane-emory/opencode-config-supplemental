@@ -99,8 +99,6 @@ Models deleting branches.  https://canary.discord.com/channels/13918324260486513
 ---
 I think that something might be wrong with the either the feat/argument-range-syntax branch or the feat/default-arguments branch. I'm not sure if this is a problem with one of the original feature branches or something that got messed up during the merge. 
 
-I tried running this command: /Users/katherinemasseau/.config/opencode/supplemental/command/arg-test.md
-
 I did `/arg-test foo bar baz quux` and got this output:
 
 ```
