@@ -1,6 +1,6 @@
 ### From origin:
 
-- feat/base-one-rebrand (**MERGE ADVICE:** the program **MUST** continue to properly load configurations (and other content) from`~/.config/opencode` if if exists! `~/.config/baseone` should be preferred **IF** it exists, but that directory **MUST NEVER** be created by the program!)
+- feat/base-one-rebrand (**MERGE ADVICE:** the program **MUST** continue to properly load configurations (and other content) from`~/.config/opencode` if if exists! `~/.config/baseone` should be preferred **IF** it exists, but that directory **MUST NEVER** be created by the program! The user must explicitly create the new `baseone` directory themself if they want it to be used!)
 - feat/sinister-quotes (**MERGE ADVICE:** the placeholders used **MUST** be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, **NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!**)
 
 ### From foreign remotes:
