@@ -302,6 +302,21 @@ diff -u /tmp/ours.txt /tmp/theirs.txt
 - Add the feature branch's new functionality
 - Ensure the result compiles and makes logical sense
 
+**CRITICAL - DO NOT RESURRECT DEAD CODE**: When resolving conflicts, you **MUST NOT** drag obsolete code forward from older ancestry if the branch HEADs have already converged on a newer structure. This kind of merge necromancy is forbidden.
+
+- Prefer the architecture and implementation style present at the **HEADs of the branches being merged**, not superseded code from earlier history
+- If a newer system replaces an older one, you **MUST NOT** keep both unless the branch HEADs clearly show that coexistence is intentional
+- "Keep both sides" means preserving both **current behaviors**, **NOT** reviving dead implementations that one or both branch HEADs have already moved away from
+- If your merged result contains both an old implementation and its newer replacement, assume that is a likely merge error and resolve in favor of the structure actually used at branch HEAD
+- Before finalizing a conflict resolution, compare the merged file to the file at each branch HEAD and ask: "Does this reflect the current intent of the branch tips, or did I accidentally drag old code forward from the merge base/older ancestry?"
+
+**Examples of forbidden merge necromancy**:
+- Reintroducing old hardcoded rendering after branch HEADs have already migrated to a slot/plugin structure
+- Keeping both legacy and replacement config-loading systems after branch HEADs have standardized on one
+- Reviving obsolete parser/helper implementations after branch HEADs have consolidated on a newer shared helper
+
+When in doubt, align the merge result with the **effective intent of the branch HEADs**, not with old code that merely existed somewhere in the file's history.
+
 **Step 3: Verify your resolution**
 ```fish
 # Check what you resolved:
