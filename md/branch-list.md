@@ -86,5 +86,4 @@
 - fix/session-list-delete-selection
 - feat/allow-variant_list-keybinding
 - feat/kimi-with-claude-system-prompt
-
-**NOTE**: Any lines beginning with a `#` character are comments and you **MUST** ignore any such branches!
+- fix/less-bottom-padding
