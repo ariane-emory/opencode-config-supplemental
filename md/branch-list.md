@@ -73,7 +73,6 @@
 - feat/dialogue-background-overlay-setting
 - fix/no-split-database
 - feat/elapsed-timer
-- fix/system-prompt-directories
 - fix/rfc2119-question-tool
 - feat/sidebar-header-accent-colours
 - feat/distinct-title-colour (**MERGE ADVICE:** Make sure that this change in the title's colouring is made compatible with the reformatting in grouped session titles that comes from the feat/session-grouping branch, **BOTH** the distinct colour for the titles **AND** the formatting of grouped sessions' titles)
