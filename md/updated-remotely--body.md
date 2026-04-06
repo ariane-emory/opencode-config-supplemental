@@ -10,4 +10,4 @@ If any merge conflicts occur, you **MUST** do your best to resolve them.
 
 If there is a `./MERGED-BRANCHES.md` file present in the project, you **SHOULD** update it to properly reflect the newly merged branch's status.
 
-**FINALLY**, after completing the merge, you **MUST** push your changes to origin.
+**FINALLY**, after completing the merge, you **MUST** push your changes to origin. You **MUST NOT** forget to push any changes that were made to `MERRGED_BRANCHES.md`!
