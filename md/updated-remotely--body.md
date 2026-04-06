@@ -1,4 +1,6 @@
-**YOUR MISSION:** The ${..} branch has been updated remotely, please fetch/pull the latest version of this branch from its remote and merge it into this branch.
+${2..}
+
+**YOUR MISSION:** The $1 branch has been updated remotely, please fetch/pull the latest version of this branch from its remote and merge it into this branch.
 
 **FIRST**, you **MUST** make sure there aren't any uncommitted or untracked changes in the local directory. If there are, you **MUST** discard them to avoid the possibility of cross contaminaction.
 
