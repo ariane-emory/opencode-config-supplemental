@@ -87,3 +87,4 @@
 - feat/allow-variant_list-keybinding
 - feat/kimi-with-claude-system-prompt
 - fix/less-bottom-padding
+- fix/no-footer-context-when-sidebar
