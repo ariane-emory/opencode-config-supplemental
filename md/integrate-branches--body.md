@@ -118,7 +118,7 @@ set BRANCH_COUNT (grep "^- " ~/.config/opencode/md/branch-list.md | wc -l)
 echo "Creating $BRANCH_COUNT todo items..."
 ```
 
-You **MUST** use the todowrite tool to create **INDIVIDUAL** numbered todo items for each branch. This allows the user to monitor progress. Each todo should:
+You **MUST** use the todowrite tool to create **INDIVIDUAL**, **NUMBERED** todo items for each branch. This allows the user to monitor progress. Each todo should:
 
 - Include the branch name and remote
 - Mark branches with known conflicts as "in_progress" or include a note
