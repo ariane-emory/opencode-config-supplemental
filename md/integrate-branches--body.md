@@ -348,9 +348,6 @@ bun turbo typecheck
 
 **NEVER skip typecheck after a merge, even if the merge was "clean"!**
 
-**Step 5: If unsure, preserve more rather than less**
-When in doubt, keep both versions and add a TODO comment. It's easier to clean up later than to recover lost functionality.
-
 - **CRITICAL VERIFICATION**: After each merge, you **MUST** verify that key changes from the branch are actually present in the integration branch. Check for specific functions, types, or code patterns that the branch was supposed to introduce. A merge that reports "Already up to date" may indicate the changes were **NOT** actually merged.
 
 **CONFLICT RESOLUTION VERIFICATION**: If a merge had conflicts, you **MUST** additionally verify:
@@ -451,13 +448,13 @@ grep -rn "NewTypeName" packages/
 
 ## Set Integration Branch Version
 
-Update the VERSION constant in `packages/opencode/src/installation/index.ts` to display the integration branch name instead of "local". Find this line:
+You **MUST** update the VERSION constant in `packages/opencode/src/installation/index.ts` to display the integration branch name instead of "local". Find this line:
 
 ```typescript
 export const VERSION = typeof OPENCODE_VERSION === "string" ? OPENCODE_VERSION : "local"
 ```
 
-And change `"local"` to the integration branch date:
+And **MUST** change `"local"` to the integration branch date:
 
 ```typescript
 export const VERSION = typeof OPENCODE_VERSION === "string" ? OPENCODE_VERSION : "YYYY-MM-DD-HH-MM"
@@ -488,6 +485,8 @@ export const VERSION = typeof OPENCODE_VERSION === "string" ? OPENCODE_VERSION :
 The string `"2026-03-06-01-51"` (or whatever the actual timestamp is) **MUST** appear as a literal in the source code. It **MUST NOT** be constructed, computed, or detected at runtime.
 
 This ensures the TUI sidebar shows which integration branch is running when using the development wrapper script. Commit this change along with the other finishing touches.
+
+You **MUST** add an item for this task to your todo list to make sure that you **do not forget** to perform this step!
 
 ### Fix SemVer Validation for Non-SemVer Version Strings
 
