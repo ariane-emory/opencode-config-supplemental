@@ -122,7 +122,7 @@ You **MUST** use the todowrite tool to create **INDIVIDUAL**, **NUMBERED** todo 
 
 - Include the branch name and remote
 - Mark branches with known conflicts as "in_progress" or include a note
-- Be updated to "completed" immediately after successful merge AND push
+- Be updated to "completed" immediately after successful merge **AND** push to origin
 
 **WHY THIS MATTERS**: The todo list provides real-time visibility into progress. Without it, the user cannot easily see which branches remain to be merged.
 
