@@ -1,5 +1,3 @@
-${2..}
-
 **YOUR MISSION:** The $1 branch has been updated remotely, please fetch/pull the latest version of this branch from its remote and merge it into this branch.
 
 **FIRST**, you **MUST** make sure there aren't any uncommitted or untracked changes in the local directory. If there are, you **MUST** discard them to avoid the possibility of cross contaminaction.
@@ -7,6 +5,8 @@ ${2..}
 **THEN**, you **MUST** fetch/pull the latest version of $1 from its remote and merge it into this branch,
 
 If any merge conflicts occur, you **MUST** do your best to resolve them.
+
+${2..}
 
 **CRITICAL**: You **MUST** not fast forward merges. Do not rebase or cherry-pick. If conflicts occur, you **SHOULD** think them through thoroughly and carefully resolve them by hand to ensure that important changes from the branch are not lost and that pre-existing features in the current branch are not accidentally clobbered.
 
