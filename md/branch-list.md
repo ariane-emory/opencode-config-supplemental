@@ -1,4 +1,4 @@
-### From origin:
+### from origin:
 
 - feat/base-one-rebrand
 - feat/sinister-quotes (**MERGE ADVICE:** the placeholders used **MUST** be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, **NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!**)
@@ -83,7 +83,7 @@
 - fix/restore-footer (**MERGE ADVICE:** As its name suggests, this feature restores the footer it was removed in a previous version; it must not be allowed to be clobbered by other branches when merging!)
 - feat/remove-canned-jokes
 - fix/session-list-delete-selection
-- feat/allow-variant_list-keybinding
 - feat/kimi-with-claude-system-prompt
 - fix/less-bottom-padding
 - fix/no-footer-context-when-sidebar
+
