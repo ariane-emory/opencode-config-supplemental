@@ -19,7 +19,7 @@
 - feat/configurable-snapshot-lifespan
 - feat/configurable-new-plan-mode
 - feat/enable-exa-setting
-- feat/canceled-prompts-in-history (**MERGE ADVICE:**Careful not to clobber this while merging! Merging this branch **MUST** add the new item to the command palette.)
+- withhold/feat/canceled-prompts-in-history (**MERGE ADVICE:**Careful not to clobber this while merging! Merging this branch **MUST** add the new item to the command palette.)
 - feat/permission-spinner
 - feat/opencode-expand
 - feat/argument-range-syntax
