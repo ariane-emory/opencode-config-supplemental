@@ -1,6 +1,6 @@
 ---
 agent: build
-model: closedrpiter/gpt-5.4
+model: closedrouter/gpt-5.4
 ---
 ${1..}
 !`cat ~/.config/opencode/md/local-integration.md`
