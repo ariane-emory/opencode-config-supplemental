@@ -9,6 +9,6 @@ You **MUST** update your todo list so that it is up to date **IMMEDIATELY** and 
 
 Remember that branches **MUST** be given **INDIVIDUAL**, **NUMBERED** todo list entries and **MUST** be merged individually, **NEVER** in batches! Any conflicts **MUST** be carefully resolved by hand, **NEVER** by just taking `--ours` or `--theirs`!
 
-Carry on, you **MUST** complete the **ENTIRE** task.!
-
 !`cat ~/oc/md/remember-must-merge-every-branch.md`
+
+Carry on, you **MUST** complete the **ENTIRE** task.!
