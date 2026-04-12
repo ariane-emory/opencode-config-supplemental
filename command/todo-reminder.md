@@ -11,4 +11,4 @@ Remember that branches **MUST** be given **INDIVIDUAL**, **NUMBERED** todo list 
 
 !`cat ~/oc/md/remember-must-merge-every-branch.md`
 
-Carry on, you **MUST** complete the **ENTIRE** task.!
+You **MUST** carry on and complete the **ENTIRE** task!
