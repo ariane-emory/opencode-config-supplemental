@@ -64,7 +64,6 @@
 - feat/toggle-sidebar-scrollbar
 - feat/full-datetimes-in-fork-and-timeline-dialogues
 - feat/configurable-maximum-prompt-input-size
-- fix/always-allow-folding-sidebar-mcps
 - feat/clickable-sidebar-mcps
 - feat/clickable-dialogue-mcps
 - feat/clickable-status-mcps
@@ -83,6 +82,7 @@
 - feat/remove-canned-jokes
 - fix/session-list-delete-selection
 - feat/kimi-with-claude-system-prompt
-- fix/less-bottom-padding
+- fix/less-bottom-paddingT
 - fix/no-footer-context-when-sidebar
 
+(you **MUST** ignore any branches whose names begin with `archived/`, `obsolete/` or `failed/`!)
