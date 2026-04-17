@@ -35,7 +35,6 @@
 - fix/markdown-codeblock-theme-property
 - fix/persist-sidebar (**MERGE ADVICE:** This branch is meant not only to make the sidebar display state persistent across bestarts if the progran but also  to remove the normal behaviour where the sidebar is hidden when the terminal is not wide enough! There **MUST NOT** be a way to return to the auto state after transitioning to the "show" or "hide" state. This change in the sidebar behaviour **MUST NOT** be clobbered while merging!)
 - feat/persist-sidebar-group-folding-states (**MERGE ADVICE**: Be sure not to let this feature get clobbered by subsequent merges!)
-- feat/permission-indicator-in-sidebar
 - feat/command-palette-consistency (**MERGE ADVICE:** to prevent recurence of a past mistake: this branch is meant to **MOVE** several items from the Session category to the System category in the command palette. You **MUST NOT** duplicate them into both categories when resolving merge conflicts! Additionally, if fix/persist-sidebar was merged previously, be sue to properly move the new logic for the sidebar that it added: no return to "auto" after leaving, et cetera) 
 - feat/persistant-sidebar-overlay-behaviour
 - refactor/shared-substitute
