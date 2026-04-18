@@ -1,6 +1,6 @@
 ---
 agent: plan
-ignored: true
+ignored: false
 ---
 There is a problem with the feature/fix from the $1 branch. 
 
