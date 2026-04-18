@@ -38,7 +38,6 @@
 - feat/command-palette-consistency (**MERGE ADVICE:** to prevent recurence of a past mistake: this branch is meant to **MOVE** several items from the Session category to the System category in the command palette. You **MUST NOT** duplicate them into both categories when resolving merge conflicts! Additionally, if fix/persist-sidebar was merged previously, be sue to properly move the new logic for the sidebar that it added: no return to "auto" after leaving, et cetera) 
 - feat/persistant-sidebar-overlay-behaviour
 - refactor/shared-substitute
-- feat/session-id-in-status
 - feat/opeoginni--display-message-tps
 - feat/kv-diff-style-clean
 - feat/global-compaction-threshold
