@@ -44,7 +44,7 @@
 - feat/configurable-message-and-session-limit (**MERGE ADVICE:** Don't forget that both the `experimental._message__limit` and `experimental.session_list_limit` settings should accept either positive integers or the string value "none"!) 
 - feat/experimental-dont-cache-command-markdown
 - feat/jsonc-user-themes
-- feat/shell-advice (**MERGE ADVICE**: Make sure to combine this properly with the changes to the bash tool's description that are made in the feat/improve-bash-tool-git-advice branch, both sets of changes must be synthesized!) 
+- feat/shell-advice (**MERGE ADVICE**: Make sure to combine this properly with the changes to the bash tool's description that are made in the feat/improve-bash-tool-git-advice branch, both sets of changes must be synthesized! **NO** shells must be blacklisted!)
 - feat/improve-bash-tool-git-advice (**MERGE ADVICE**: Make sure to combine this properly with the changes to the bash tool's description that are made in the feat/shell-advice branch, both sets of changes must be synthesized!)
 - feat/edit-tool-description
 - feat/renaming-doesnt-close-session-list
