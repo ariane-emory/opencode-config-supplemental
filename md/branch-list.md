@@ -81,7 +81,9 @@
 - feat/remove-canned-jokes
 - fix/session-list-delete-selection
 - feat/kimi-with-claude-system-prompt
-- fix/less-bottom-paddingT
+- fix/less-bottom-padding
 - fix/no-footer-context-when-sidebar
+- fix/session-timestamp-regression
+- fix/prompt-input-retention
 
 (you **MUST** ignore any branches whose names begin with `archived/`, `obsolete/` or `failed/`!)
