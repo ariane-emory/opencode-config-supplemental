@@ -51,7 +51,7 @@
 - feat/session-child-toggle-key
 - feat/set-session-title
 - feat/get-session-title
-- feat/no-disabled-lsps-in-sidebar
+- feat/no-disabled-lsps-in-sidebar (**MERGE ADVICE**: Remember, the whole purpose of this branch is to cause the LSPs to not be displayed in the sidebar at all when the LSPs have been disabled in the configuration. Make sure that you don't clobber this while merging!)
 - feat/agent-timestamps
 - feat/rewind-modal-option
 - feat/alphabetize-command-palette-groups
