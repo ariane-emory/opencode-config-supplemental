@@ -13,7 +13,7 @@ Then, check out the $1 branch, merge the local ${2:dev} branch into it and resol
 You **SHOULD** take my word that both of these branches already exist locally, so you don't have to waste time checking if they do before you start.
 
 Use the `set_current_session_title` tool to give the session a title maching this format:
-`merging ${2:dev}|merging dev into $branchName` (substituting $branchName with the actual name of the target branch)
+`merging ${2:dev}|merging ${2:dev} into $branchName` (substituting $branchName with the actual name of the target branch)
 
 **CRITICAL**: Do **NOT** forget the pipe character shown in the title format!
 
