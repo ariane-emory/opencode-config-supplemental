@@ -1,7 +1,7 @@
 ---
 description: Minimize changes for a GH issue.
 agent: build
-model: kimi-for-coding/k2p6
+model: kimi-for-coding/k2p5
 ---
 
 This branch is meant to resolve this GH issue: 

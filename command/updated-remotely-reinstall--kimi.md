@@ -1,6 +1,6 @@
 ---
 agent: build
-model: kimi-for-coding/k2p6
+model: kimi-for-coding/k2p5
 ---
 !`baseone expand ~/oc/md/updated-remotely--body.md ${..}`
 
