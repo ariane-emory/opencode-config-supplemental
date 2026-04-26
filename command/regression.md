@@ -2,7 +2,7 @@
 agent: plan
 ignored: false
 ---
-There is a problem with the feature/fix from the $1 branch. 
+Great, now on to the next item on the agenda: there is a problem with the feature/fix from the $1 branch. 
 
 $2
 
