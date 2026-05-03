@@ -28,9 +28,9 @@ Think carefully about whether the changes necessitate re-generating the TypeScri
 
 Group the plan's steps into "phases". After completing each phase, the code **MUST** build correctly and all tests **MUST** pass (excluding any pre-evisting errors that already existed on the the $4 branch and any enterprise tests, you can disregard those failures). 
 
-Once you've come up with your plan, use the `plan_exit` tool to switch to build mode to begin implementation,
+You **MUST** plan to do the work in a new branch based off of the $4 branch named $3.
 
-Once I have approved the plan, you **MUST** proceed with doing the work in a new branch based off of the $4 branch named $3.
+Once you've come up with your plan, use the `plan_exit` tool to switch to build mode to begin implementatio
 
 Once you are done, you **MUST** push the new branch to origin, But you **MUST NOT** create any pull requests.
 
