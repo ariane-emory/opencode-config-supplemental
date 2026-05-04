@@ -39,7 +39,7 @@ You may need to run `bun install` again after performing the merge. .Make sure t
 
 **CRITICAL:** You **MUST** use only the locally available copies of the branch and the ${2:dev} branch. You **MUST NOT** ever pull changes from remote branches!
 
-f a pre-push hook is failing due to pre-existing errors, you **SHOULD** use the --no-verify flag on the push to make the push succeed.
+If a pre-push hook is failing due to pre-existing errors, you **SHOULD** use the --no-verify flag on the push to make the push succeed.
 
 **CRITICAL**: Do not fast forward merges. Do not rebase or cherry-pick. If conflicts occur, think them through thoroughly and carefully resolve them by hand to ensure that important changes from the current branch are not lost. The $1 branch is a tightly-scoped branch that implements a single featur and/or fix, and so you **MUST NOT** break the feature/fix that the $1 branch is meant to implement! You **MUST NOT** use the `--ours` or `--theirs` switches! When resolving conflicts you **MUST** be sure to pay special attention to any agent-directed defensive comments that begin with strings like `// AGENTS: ` or `// **CRITICAL** `since these are often used to guide agent behaviour during merging.
 
