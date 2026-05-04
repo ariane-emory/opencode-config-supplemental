@@ -48,3 +48,5 @@ If you are not able to resolve any conflicts or the tests do not pass afterwards
 There is no particular time constraint here, so don't rush, take the time that you need to do the job properly. 
 
 **CRITICAL**: You **MUST NOT** forget to push the merged branch to origin once you have finished. 
+
+${3..}
