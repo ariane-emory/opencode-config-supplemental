@@ -6,7 +6,7 @@ Next, run `bun install`.
 
 Then run the tests to see what pre-existing errors exist. If the ${2:dev} branch contains pre-existing errors, you **MUST** preserve them when you merge it into the $1 branch.
 
-Then, check out the $1 branch, merge the local ${2:dev} branch into it and resolve any conflicts. 
+Then, check out the $1 branch, merge the local ${2:dev} branch into it and resolve any conflicts. The ${2:dev} branch is likely to have been merged into the $1 branch many times previously using earlier versions of the ${2:dev} branch! 
 
 **CRITICAL:** You **MUST** use only the locally available copies of the branch and the ${2:dev} branch. You **MUST NOT** ever pull changes from remote branches!
 
