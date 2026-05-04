@@ -12,10 +12,10 @@ Then, check out the $1 branch, merge the local ${2:dev} branch into it and resol
 
 You **SHOULD** take my word that both of these branches already exist locally, so you don't have to waste time checking if they do before you start.
 
-Use the `set_current_session_title` tool to give the session a title maching this format:
+You **MUST** use the `set_current_session_title` tool to give the session a title maching this format:
 `merging ${2:dev}|Merging ${2:dev} into $1` 
 
-You **MUST** follow this format exactly! 
+**CRITICAL**: You **MUST** follow this format exactly! The part prior to the \pipe character is **CRUCIAL** for our other tools to function proparly!
 
 **CRITICAL**: Do **NOT** forget the pipe character shown in the title format!
 
