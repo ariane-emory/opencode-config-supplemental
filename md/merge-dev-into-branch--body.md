@@ -1,6 +1,10 @@
-### Task: Merge the latest changes from the ${2:dev} branch into the $1 branch:
+## Task: Merge the latest changes from the ${2:dev} branch into the $1 branch:
+
+### Preparation:
 
 First, check out the ${2:dev} branch,
+
+You **SHOULD** take my word that both of these branches already exist locally, so you don't have to waste time checking if they do before you start.
 
 Next, run `bun install`.
 
@@ -8,9 +12,11 @@ Then run the tests to see what pre-existing errors exist. If the ${2:dev} branch
 
 Then, check out the $1 branch, merge the local ${2:dev} branch into it and resolve any conflicts. The ${2:dev} branch is likely to have been merged into the $1 branch many times previously using earlier versions of the ${2:dev} branch! 
 
-**CRITICAL:** You **MUST** use only the locally available copies of the branch and the ${2:dev} branch. You **MUST NOT** ever pull changes from remote branches!
+**CRITICAL**: Make sure that you first discard any uncommited local changes before merging the ${2:dev} branch in, it would a catastrophic failure if any unrelated local changes were accidentally commited/pushed into our target branch! You **MUST NOT** stash any pre-existing local changes, you **MUST** discard them!
 
-You **SHOULD** take my word that both of these branches already exist locally, so you don't have to waste time checking if they do before you start.
+If a git lock file gets in your way, just delete it and keep working on merging.
+
+### CRITICAL: Setting the session's title:
 
 You **MUST** use the `set_current_session_title` tool to give the session a title maching this format:
 `merging ${2:dev}|Merging ${2:dev} into $1` 
@@ -21,9 +27,7 @@ You **MUST** use the `set_current_session_title` tool to give the session a titl
 
 Do **NOT** bookmark this session!
 
-**CRITICAL**: Make sure that you first discard any uncommited local changes before merging the ${2:dev} branch in, it would a catastrophic failure if any unrelated local changes were accidentally commited/pushed into our target branch! You **MUST NOT** stash any pre-existing local changes, you **MUST** discard them!
-
-If a git lock file gets in your way, just delete it and keep working on merging.
+### Notes:
 
 You may need to run `bun install` again after performing the merge. .Make sure that no new test failures were introduced by the merge: you may disregard any pre-existing test failures in the ${2:dev} branch, but we don't want to add any new test failures relative to ${2:dev}. If tests fail due to a timeout (in either branch), try waiting a moment and rerunning them, it may just mean that that test is a bit flaky.
 
@@ -31,7 +35,11 @@ You may need to run `bun install` again after performing the merge. .Make sure t
 
 **REMEMBER**: The global Opencode configuration is most likely **NOT** configured to be compatible with the branch on which you are working!
 
-If a pre-push hook is failing due to pre-existing errors, you **SHOULD** use the --no-verify flag on the push to make the push succeed.
+### Merge procedure rules:
+
+**CRITICAL:** You **MUST** use only the locally available copies of the branch and the ${2:dev} branch. You **MUST NOT** ever pull changes from remote branches!
+
+f a pre-push hook is failing due to pre-existing errors, you **SHOULD** use the --no-verify flag on the push to make the push succeed.
 
 **CRITICAL**: Do not fast forward merges. Do not rebase or cherry-pick. If conflicts occur, think them through thoroughly and carefully resolve them by hand to ensure that important changes from the current branch are not lost. The $1 branch is a tightly-scoped branch that implements a single featur and/or fix, and so you **MUST NOT** break the feature/fix that the $1 branch is meant to implement! You **MUST NOT** use the `--ours` or `--theirs` switches! When resolving conflicts you **MUST** be sure to pay special attention to any agent-directed defensive comments that begin with strings like `// AGENTS: ` or `// **CRITICAL** `since these are often used to guide agent behaviour during merging.
 
