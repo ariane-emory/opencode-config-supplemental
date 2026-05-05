@@ -2,14 +2,8 @@
 
 - feat/base-one-rebrand
 - feat/sinister-quotes (**MERGE ADVICE:** the placeholders used **MUST** be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, **NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!**)
-
-### From foreign remotes:
-
-- feat/markdown-renderer (from the gignit remote)
-- feat/thinking-indicator-hidden (from the rcdailey remote)
-
-### More from origin:
-
+- feat/gignit--markdown-renderer
+- feat/rcdailey--thinking-indicator-hidden
 - feat/session-grouping
 - feat/session-bookmarks
 - fix/dialog-datetime-alignment (**MERGE ADVICE:** for best results, merge this one immediately after feat/session-bookmarks. This feature **MUST** not be clobbered; if there is a conflict, it **MUST** be combined with the other feature with which it is conflicting!)
