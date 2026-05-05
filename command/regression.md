@@ -1,10 +1,10 @@
 ---
 agent: plan
-ignored: false
+ignored: true
 ---
-Great, now on to the next item on the agenda: there is a problem with the feature/fix from the $1 branch. 
+Great, now on to the next item on the agenda: there is a problem with the feature or fix from the $1 branch. 
 
-$2
+${2..}
 
 As per usual, we **SHOULD** examine the branches involved and determine whether this is a regression that occurred during the merging process or whether there was a problem with the original feature/fix branch so that we can make a plan and fix it in the appropriate location.
 

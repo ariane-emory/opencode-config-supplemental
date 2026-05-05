@@ -84,6 +84,5 @@
 - fix/less-bottom-padding
 - fix/no-footer-context-when-sidebar
 - fix/session-timestamp-regression
-- fix/prompt-input-retention
 
 (you **MUST** ignore any branches whose names begin with `archived/`, `obsolete/` or `failed/`!)
