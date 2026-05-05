@@ -2,19 +2,19 @@
 
 ### Preparation:
 
-First, check out the ${2:dev} branch,
+First, you **MUST.** check out the ${2:dev} branch.
 
 You **SHOULD** take my word that both of these branches already exist locally, so you don't have to waste time checking if they do before you start.
 
-Next, run `bun install`.
+Next, you **MUST** run `bun install`.
 
-Then run the tests to see what pre-existing errors exist. If the ${2:dev} branch contains pre-existing errors, you **MUST** preserve them when you merge it into the $1 branch.
+Then, you **MUST** run the tests to see what pre-existing errors exist. If the ${2:dev} branch contains pre-existing errors, you **MUST** preserve them when you merge it into the $1 branch.
 
-Then, check out the $1 branch, merge the local ${2:dev} branch into it and resolve any conflicts. The ${2:dev} branch is likely to have been merged into the $1 branch many times previously using earlier versions of the ${2:dev} branch! 
+Then, you **MUST** check out the $1 branch, merge the local ${2:dev} branch into it and resolve any conflicts. The ${2:dev} branch is likely to have been merged into the $1 branch many times previously using earlier versions of the ${2:dev} branch! 
 
 **CRITICAL**: Make sure that you first discard any uncommited local changes before merging the ${2:dev} branch in, it would a catastrophic failure if any unrelated local changes were accidentally commited/pushed into our target branch! You **MUST NOT** stash any pre-existing local changes, you **MUST** discard them!
 
-If a git lock file gets in your way, just delete it and keep working on merging.
+If a git lock file gets in your way, you **SHOULD** delete it and keep working on merging.
 
 ### CRITICAL: Setting the session's title:
 
