@@ -12,7 +12,7 @@ Then, you **MUST** run the tests to see what pre-existing errors exist. If the $
 
 Then, you **MUST** check out the $1 branch, merge the local ${2:dev} branch into it and resolve any conflicts. The ${2:dev} branch is likely to have been merged into the $1 branch many times previously using earlier versions of the ${2:dev} branch! 
 
-**CRITICAL**: Make sure that you first discard any uncommited local changes before merging the ${2:dev} branch in, it would a catastrophic failure if any unrelated local changes were accidentally commited/pushed into our target branch! You **MUST NOT** stash any pre-existing local changes, you **MUST** discard them!
+**CRITICAL**: You **MUST** make sure that you first discard any uncommited local changes before merging the ${2:dev} branch in, it would a catastrophic failure if any unrelated local changes were accidentally commited/pushed into our target branch! You **MUST NOT** stash any pre-existing local changes, you **MUST** discard them!
 
 If a git lock file gets in your way, you **SHOULD** delete it and keep working on merging.
 
@@ -21,11 +21,11 @@ If a git lock file gets in your way, you **SHOULD** delete it and keep working o
 You **MUST** use the `set_current_session_title` tool to give the session a title maching this format:
 `merging ${2:dev}|Merging ${2:dev} into $1` 
 
-**CRITICAL**: You **MUST** follow this format exactly! The part prior to the \pipe character is **CRUCIAL** for our other tools to function proparly!
+**CRITICAL**: You **MUST** follow this format exactly! The prefixed part prior prior to the \pipe character is **CRUCIAL** for our other tools to function proparly, If you do not properly add this prefix to the session title, then **NONE** of this work can be used, and the task is a total failure!
 
 **CRITICAL**: Do **NOT** forget the pipe character shown in the title format!
 
-Do **NOT** bookmark this session!
+You **MUST NOT** bookmark this session!
 
 ### Notes:
 
