@@ -16,6 +16,7 @@
 - feat/canceled-prompts-in-history (**MERGE ADVICE:**Careful not to clobber this while merging! Merging this branch **MUST** add the new item to the command palette.)
 - feat/permission-spinner
 - feat/opencode-expand
+- refactor/shared-substitute
 - feat/argument-range-syntax
 - feat/default-arguments (**MERGE ADVICE:** When merging this branch, make sure that you don't accidentally reintroduce the swallowing behaviour that the feat/argument-range-syntax branch was meant to eliminate.)
 - fix/history-navigation-key-commands
@@ -30,7 +31,6 @@
 - feat/persist-sidebar-group-folding-states (**MERGE ADVICE**: Be sure not to let this feature get clobbered by subsequent merges!)
 - feat/command-palette-consistency (**MERGE ADVICE:** to prevent recurence of a past mistake: this branch is meant to **MOVE** several items from the Session category to the System category in the command palette. You **MUST NOT** duplicate them into both categories when resolving merge conflicts! Additionally, if fix/persist-sidebar was merged previously, be sue to properly move the new logic for the sidebar that it added: no return to "auto" after leaving, et cetera) 
 - feat/persistant-sidebar-overlay-behaviour
-- refactor/shared-substitute
 - feat/opeoginni--display-message-tps
 - feat/kv-diff-style-clean
 - feat/global-compaction-threshold
