@@ -11,3 +11,5 @@ You **MUST ALWAYS** remember to commit and push your changes to origin **IMMEDIA
 You **SHOULD** prefer the `rg` command to the `grep` command.
 
 You **MUST NOT** ever read or write files in the `/tmp` directory. 
+
+You **MUST NOT** ever make use of git worktrees!
