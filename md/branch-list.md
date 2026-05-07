@@ -44,6 +44,7 @@
 - feat/set-session-title
 - feat/get-session-title
 - feat/no-disabled-lsps-in-sidebar (**MERGE ADVICE**: Remember, the whole purpose of this branch is to cause the LSPs to not be displayed in the sidebar at all when the LSPs have been disabled in the configuration. Make sure that you don't clobber this while merging!)
+- fix/inline-datetime-no-padding 
 - feat/agent-timestamps
 - feat/rewind-modal-option
 - feat/alphabetize-command-palette-groups
@@ -76,6 +77,5 @@
 - fix/no-footer-context-when-sidebar
 - fix/session-timestamp-regression
 - feat/persistent-session-id-in-sidebar-toggle
-- fix/inline-datetime-no-padding 
 
-(you **MUST** ignore any branches whose names begin with `archived/`, `obsolete/` or `failed/`!)
+(you **MUST** ignore any branches whose names begin with `archived`/`obsolete`/ or `failed/`!)
