@@ -1,7 +1,8 @@
-- feat/base-one-rebrand
-- feat/sinister-quotes (**MERGE ADVICE:** the placeholders used **MUST** be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, **NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!**)
 - feat/gignit--markdown-renderer
 - feat/rcdailey--thinking-indicator-hidden
+- feat/aspiers--readline-additions
+- feat/base-one-rebrand
+- feat/sinister-quotes (**MERGE ADVICE:** the placeholders used **MUST** be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, **NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!**)
 - feat/session-grouping
 - feat/session-bookmarks
 - fix/dialog-datetime-alignment (**MERGE ADVICE:** for best results, merge this one immediately after feat/session-bookmarks. This feature **MUST** not be clobbered; if there is a conflict, it **MUST** be combined with the other feature with which it is conflicting!)
@@ -48,7 +49,6 @@
 - feat/alphabetize-command-palette-groups
 - feat/taller-dialogs
 - feat/add-arianes-themes
-- feat/aspiers--readline-additions
 - feat/sidebar-clock
 - feat/alphabetical-message-modal
 - feat/toggle-sidebar-scrollbar
