@@ -1,7 +1,7 @@
 - feat/gignit--markdown-renderer
 - feat/rcdailey--thinking-indicator-hidden
 - feat/aspiers--readline-additions
-- feat/base-one-rebrand
+- feat/base-one-rebrand (**MERGE ADVICE:** remember that, amongst it's many other changes, this branch is meant to **REMOVE** the animation effects on the art on the startup screen, and that you **MUST NOT** do anything that could mess with the background colouring of the art that is displayed after exiting the program!) 
 - feat/sinister-quotes (**MERGE ADVICE:** the placeholders used **MUST** be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, **NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!**)
 - feat/session-grouping
 - feat/session-bookmarks
