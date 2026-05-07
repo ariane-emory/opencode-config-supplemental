@@ -76,5 +76,6 @@
 - fix/no-footer-context-when-sidebar
 - fix/session-timestamp-regression
 - feat/persistent-session-id-in-sidebar-toggle
+- fix/inline-datetime-no-padding 
 
 (you **MUST** ignore any branches whose names begin with `archived/`, `obsolete/` or `failed/`!)
