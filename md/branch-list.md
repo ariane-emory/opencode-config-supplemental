@@ -1,5 +1,3 @@
-### from origin:
-
 - feat/base-one-rebrand
 - feat/sinister-quotes (**MERGE ADVICE:** the placeholders used **MUST** be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, **NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!**)
 - feat/gignit--markdown-renderer
