@@ -44,8 +44,8 @@
 - feat/set-session-title
 - feat/get-session-title
 - feat/no-disabled-lsps-in-sidebar (**MERGE ADVICE**: Remember, the whole purpose of this branch is to cause the LSPs to not be displayed in the sidebar at all when the LSPs have been disabled in the configuration. Make sure that you don't clobber this while merging!)
-- fix/inline-datetime-no-padding 
-- feat/agent-timestamps
+- fix/inline-datetime-no-padding (**MERGE ADVICE:** This branch adds `datetimeCompact()` and `todayTimeOrDateTimeCompact()` to `packages/opencode/src/util/locale.ts`. It **MUST** be merged before `feat/agent-timestamps` so that the compact datetime functions are available for inline timestamps.)
+- feat/agent-timestamps (**MERGE ADVICE:** This branch adds inline timestamps to agent messages. It **MUST** use `Locale.todayTimeOrDateTimeCompact()` instead of `Locale.todayTimeOrDateTime()` for inline timestamps to avoid space-padding on single-digit days (e.g., "5/ 6/2026"). The compact variant is defined in `packages/opencode/src/util/locale.ts` and must be available before this branch is merged.)
 - feat/rewind-modal-option
 - feat/alphabetize-command-palette-groups
 - feat/taller-dialogs
