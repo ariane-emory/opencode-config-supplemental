@@ -12,4 +12,4 @@ ${2..}
 
 If there is a `./MERGED-BRANCHES.md` file present in the project, you **SHOULD** update it to properly reflect the newly merged branch's status.
 
-**FINALLY**, after completing the merge, you **MUST** push your changes to origin. You **MUST NOT** forget to push any changes that were made to `MERRGED_BRANCHES.md`!
+**FINALLY**, after completing the merge, you **MUST** push your changes to origin. You **MUST NOT** forget to push any changes that were made to `MERGED_BRANCHES.md`!
