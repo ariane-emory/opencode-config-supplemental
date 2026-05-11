@@ -8,7 +8,7 @@ You **SHOULD** take my word that both of these branches already exist locally, s
 
 Next, you **MUST** run `bun install`.
 
-Then, you **MUST** run the tests to see what pre-existing errors exist. If the dev branch contains pre-existing errors, you **MUST** preserve them when you merge it into the $1 branch (if you just ran these same tests on the dev branch recently, you **MAY** skip re-running them and use the results that you saw a moment ago).
+Then, you **MUST** run the tests to see what pre-existing errors exist. If the dev branch contains pre-existing errors, you **MUST** preserve them when you merge it into the $1 branch. If you just ran these same tests on the dev branch recently, you **SHOULD** skip re-running them and reuse the results that you saw a moment ago the last time that you ran them.
 
 Then, you **MUST** check out the $1 branch, merge the local dev branch into it and resolve any conflicts. The dev branch is likely to have been merged into the $1 branch many times previously using earlier versions of the dev branch! 
 
