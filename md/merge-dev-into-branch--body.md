@@ -2,13 +2,13 @@
 
 ### Preparation:
 
-First, you **MUST.** check out the ${2:dev} branch.
+First, you **MUST** check out the ${2:dev} branch.
 
 You **SHOULD** take my word that both of these branches already exist locally, so you don't have to waste time checking if they do before you start.
 
 Next, you **MUST** run `bun install`.
 
-Then, you **MUST** run the tests to see what pre-existing errors exist. If the ${2:dev} branch contains pre-existing errors, you **MUST** preserve them when you merge it into the $1 branch.
+Then, you **MUST** run the tests to see what pre-existing errors exist. If the ${2:dev} branch contains pre-existing errors, you **MUST** preserve them when you merge it into the $1 branch (if you just ran these same tests on the ${2:dev} branch recently, you **MAY** skip re-running them and use the results that you saw a moment ago).
 
 Then, you **MUST** check out the $1 branch, merge the local ${2:dev} branch into it and resolve any conflicts. The ${2:dev} branch is likely to have been merged into the $1 branch many times previously using earlier versions of the ${2:dev} branch! 
 
@@ -39,7 +39,7 @@ You may need to run `bun install` again after performing the merge. .Make sure t
 
 **CRITICAL:** You **MUST** use only the locally available copies of the branch and the ${2:dev} branch. You **MUST NOT** ever pull changes from remote branches!
 
-If a pre-existing failure was occurring on the death branch, then the same error will likely recur in a pre-push hook when you try to push the merged branch to origin. If a pre-push hook is failing due to pre-existing errors, you **SHOULD** use the --no-verify flag on the push to make the push succeed.
+If a pre-existing failure was occurring on the ${2:dev} branch, then the same error will likely recur in a pre-push when you try to push the merged branch to origin. If a pre-push hook is failing due to pre-existing errors, you **SHOULD** use the --no-verify flag on the push to make the push succeed.
 
 **CRITICAL**: Do not fast forward merges. Do not rebase or cherry-pick. If conflicts occur, think them through thoroughly and carefully resolve them by hand to ensure that important changes from the current branch are not lost. The $1 branch is a tightly-scoped branch that implements a single featur and/or fix, and so you **MUST NOT** break the feature/fix that the $1 branch is meant to implement! You **MUST NOT** use the `--ours` or `--theirs` switches! When resolving conflicts you **MUST** be sure to pay special attention to any agent-directed defensive comments that begin with strings like `// AGENTS: ` or `// **CRITICAL** `since these are often used to guide agent behaviour during merging.
 
@@ -47,7 +47,7 @@ If a pre-existing failure was occurring on the death branch, then the same error
 
 If you are not able to resolve any conflicts or the tests do not pass afterwards, you **MUST NOT** push the changes to git and you **MUST** ask me to step in and help you out instead. If any conflics did occur but you were able to resolve them, report on how the conflics were resolved.
 
-**CRITICAL**: You **MUST NOT** correct pre-existing errors from ${2:dev}! You **MUST** only correct new errors introduced by the merge, pre-existing errors **MUST** be preserved exactly. CORRECTING PRE-EXISTING ERRORS FROM THE ${2:dev} BRANCH WOULD BE A CATASTROPHIC FAILURE THAT **MUST** BE AVOIDED AT ALL COSTS!
+**CRITICAL**: You **MUST NOT** correct pre-existing errors from the ${2:dev} branch! You **MUST** only correct new errors introduced by the merge, pre-existing errors **MUST** be preserved exactly. CORRECTING PRE-EXISTING ERRORS FROM THE ${2:dev} BRANCH WOULD BE A CATASTROPHIC FAILURE THAT **MUST** BE AVOIDED AT ALL COSTS!
 
 **CRITICAL**: You **MUST NOT** do anything that could close any active pull requests!
 
