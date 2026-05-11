@@ -74,7 +74,6 @@
 - fix/session-list-delete-selection
 - feat/kimi-with-claude-system-prompt
 - fix/less-bottom-padding
-- fix/no-footer-context-when-sidebar
 - fix/session-timestamp-regression
 - feat/persistent-session-id-in-sidebar-toggle
 - fix/preserve-quotes-in-arguments
