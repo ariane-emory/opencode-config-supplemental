@@ -77,5 +77,6 @@
 - fix/no-footer-context-when-sidebar
 - fix/session-timestamp-regression
 - feat/persistent-session-id-in-sidebar-toggle
+- fix/preserve-quotes-in-arguments
 
 (you **MUST** ignore any branches whose names begin with `archived`/`obsolete`/ or `failed/`!)
