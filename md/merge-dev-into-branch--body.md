@@ -1,5 +1,11 @@
 ## Task: Merge the latest changes from the ${2:dev} branch into the $1 branch:
 
+#1 = [$1]
+#2 = [$2]
+#3 = [$3]
+#4 = [$4]
+#5 = [$5]
+
 ### Preparation:
 
 First, you **MUST.** check out the ${2:dev} branch.
