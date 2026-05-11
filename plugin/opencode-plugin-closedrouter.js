@@ -7,6 +7,7 @@ var PROVIDER_ID = "closedrouter";
 var API_BASE = "https://router.queef.in/v1";
 var DEFAULT_CONTEXT_WINDOW = 128000;
 var DEFAULT_OUTPUT_TOKENS = 8192;
+var DEFAULT_REASONING_OUTPUT_TOKENS = 32000;
 var MODEL_CACHE_TTL_MS = 60000;
 var authCache = new Map;
 var modelCache = new Map;
@@ -42,6 +43,34 @@ function buildBaseOptions(apiKey) {
     baseURL: API_BASE,
     ...apiKey ? { apiKey } : {}
   };
+}
+function buildReasoningModelOptions(maxOutputTokens) {
+  return {
+    max_output_tokens: Math.min(maxOutputTokens ?? DEFAULT_REASONING_OUTPUT_TOKENS, DEFAULT_REASONING_OUTPUT_TOKENS),
+    text: {
+      verbosity: "low"
+    },
+    store: false,
+    include: ["reasoning.encrypted_content"],
+    reasoning: {
+      summary: "auto"
+    }
+  };
+}
+function buildReasoningVariants(efforts) {
+  if (!efforts?.length)
+    return;
+  return Object.fromEntries(efforts.map((effort) => [effort, { reasoningEffort: effort }]));
+}
+function supportsOpenAIReasoningOptions(npmPackage) {
+  return npmPackage === "@ai-sdk/openai";
+}
+function getInterleavedReasoningField(model) {
+  if (model.interleaved && typeof model.interleaved === "object" && !Array.isArray(model.interleaved)) {
+    const field = model.interleaved.field;
+    return field === "reasoning_content" || field === "reasoning_details" ? field : undefined;
+  }
+  return model.capabilities?.interleaved_reasoning ? "reasoning_content" : undefined;
 }
 function getCachedApiKey() {
   return authCache.get(PROVIDER_ID) || process.env.CLOSEDROUTER_API_KEY || readStoredKeyFallback();
@@ -103,10 +132,23 @@ var ClosedRouterPlugin = async (_input) => {
         const inputModalities = normalizeModalities(model.modalities?.input, ["text"]);
         const outputModalities = normalizeModalities(model.modalities?.output, ["text"]);
         const hasImageInput = inputModalities.includes("image");
+        const supportsReasoning = model.capabilities?.reasoning ?? false;
+        const interleavedReasoningField = supportsReasoning ? getInterleavedReasoningField(model) : undefined;
+        const reasoningVariants = buildReasoningVariants(model.capabilities?.reasoning_efforts);
         config.provider[providerKey].models[model.id] = {
           name: model.id,
           attachment: model.capabilities?.attachment ?? hasImageInput,
-          reasoning: model.capabilities?.reasoning ?? false,
+          reasoning: supportsReasoning,
+          ...model.capabilities?.reasoning_efforts?.length ? { reasoning_efforts: model.capabilities.reasoning_efforts } : {},
+          ...reasoningVariants ? { variants: reasoningVariants } : {},
+          ...interleavedReasoningField ? {
+            interleaved: {
+              field: interleavedReasoningField
+            }
+          } : {},
+          ...supportsReasoning && supportsOpenAIReasoningOptions(npmPackage) ? {
+            options: buildReasoningModelOptions(model.max_output_tokens)
+          } : {},
           tool_call: model.capabilities?.tool_call ?? true,
           modalities: {
             input: inputModalities,
