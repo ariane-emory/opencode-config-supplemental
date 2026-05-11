@@ -63,6 +63,6 @@ There is no particular time constraint here, so don't rush, take the time that y
 
 The $1 branch is meant to implement this PR: `gh --repo ariane-emory/opencode pr view $2`
 
-While updating this branch with the newest changes, you **MUST** ensure that you preserve the feature/fix described in that pull request.
+While updating this branch with the newest changes, you **MUST** ensure that you preserve the feature/fix described PR #$2.
 
 ${3..}
