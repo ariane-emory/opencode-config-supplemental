@@ -10,7 +10,7 @@ Next, you **MUST** run `bun install`.
 
 Then, you **MUST** run the tests to see what pre-existing errors exist. If the dev branch contains pre-existing errors, you **MUST** preserve them when you merge it into the $1 branch. If you just ran these same tests on the dev branch recently, you **SHOULD** skip re-running them and reuse the results that you saw a moment ago the last time that you ran them.
 
-Then, you **MUST** check out the $1 branch, merge the local dev branch into it and resolve any conflicts. The dev branch is likely to have been merged into the $1 branch many times previously using earlier versions of the dev branch! 
+Then, you **MUST** check out the $1 branch, merge the local dev branch into it and resolve any conflicts. Bear in mind that earlier versions of the dev branch are likely to have been merged into the $1 branch many times previously! 
 
 **CRITICAL**: You **MUST** make sure that you first discard any uncommited local changes before merging the dev branch in, it would a catastrophic failure if any unrelated local changes were accidentally commited/pushed into our target branch! You **MUST NOT** stash any pre-existing local changes, you **MUST** discard them!
 
@@ -61,7 +61,11 @@ There is no particular time constraint here, so don't rush, take the time that y
 
 ### Remember: 
 
-The $1 branch is meant to implement this PR: `gh --repo ariane-emory/opencode pr view $2`
+The $1 branch is meant to implement PR #$2.
+
+You **SHOULD** run the `gh --repo ariane-emory/opencode pr view $2` command to examine PR #$2's description to see what feature/fix/change the branch we are updating is meant to implement.
+
+You **SHOULD** also run `gh --repo ariane-emory/opencode pr diff $2` command to see how this branch differs from the `dev` branch prior to performing the merge.
 
 While updating this branch with the newest changes, you **MUST** ensure that you preserve the feature/fix described in PR #$2.
 
