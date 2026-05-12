@@ -4,4 +4,4 @@ agent: build
 model: zai-coding-plan/glm-5.1
 ignored: false
 ---
-!`baseone expand ~/.config/opencode/md/merge-dev-into-branch--body--2.md $ARGUMENTS`
+!`baseone expand ~/.config/opencode/md/merge-dev-into-branch--body.md $ARGUMENTS`
