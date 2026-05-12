@@ -1,81 +1,81 @@
-- feat/gignit--markdown-renderer
-- feat/rcdailey--thinking-indicator-hidden
-- feat/aspiers--readline-additions
-- feat/base-one-rebrand (**MERGE ADVICE:** remember that, amongst it's many other changes, this branch is meant to **REMOVE** the animation effects on the art on the startup screen, and that you **MUST NOT** do anything that could mess with the background colouring of the art that is displayed after exiting the program!) 
-- feat/sinister-quotes (**MERGE ADVICE:** the placeholders used **MUST** be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, **NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!**)
-- feat/session-grouping
-- feat/session-bookmarks
-- fix/dialog-datetime-alignment (**MERGE ADVICE:** for best results, merge this one immediately after feat/session-bookmarks. This feature **MUST** not be clobbered; if there is a conflict, it **MUST** be combined with the other feature with which it is conflicting!)
-- feat/keybindable-commands
-- feat/automatic-list-continuation
-- feat/continue-command
-- feat/configurable-snapshot-lifespan
-- feat/configurable-new-plan-mode
-- feat/enable-exa-setting
-- feat/canceled-prompts-in-history (**MERGE ADVICE:**Careful not to clobber this while merging! Merging this branch **MUST** add the new item to the command palette.)
-- feat/permission-spinner
-- feat/opencode-expand
-- refactor/shared-substitute
-- feat/argument-range-syntax
-- feat/default-arguments (**MERGE ADVICE:** When merging this branch, make sure that you don't accidentally reintroduce the swallowing behaviour that the feat/argument-range-syntax branch was meant to eliminate.)
-- fix/history-navigation-key-commands
-- fix/build-with-short-version (**MERGE ADVICE:** Automatically uses short timestamp version for integration branches without requiring OPENCODE_VERSION to be set)
-- fix/autocompletion-filtered-order
-- fix/modal-menus-filtered-order
-- fix/config-package-json-pollution (**MERGE ADVICE:** This branch **MUST** be included in integration branches to prevent package.json pollution with non-SemVer versions)
-- fix/session-list-viewport-jumping
-- fix/merging-multiple-configs
-- fix/markdown-codeblock-theme-property
-- fix/persist-sidebar (**MERGE ADVICE:** This branch is meant not only to make the sidebar display state persistent across bestarts if the progran but also  to remove the normal behaviour where the sidebar is hidden when the terminal is not wide enough! There **MUST NOT** be a way to return to the auto state after transitioning to the "show" or "hide" state. This change in the sidebar behaviour **MUST NOT** be clobbered while merging!)
-- feat/persist-sidebar-group-folding-states (**MERGE ADVICE**: Be sure not to let this feature get clobbered by subsequent merges!)
-- feat/command-palette-consistency (**MERGE ADVICE:** to prevent recurence of a past mistake: this branch is meant to **MOVE** several items from the Session category to the System category in the command palette. You **MUST NOT** duplicate them into both categories when resolving merge conflicts! Additionally, if fix/persist-sidebar was merged previously, be sue to properly move the new logic for the sidebar that it added: no return to "auto" after leaving, et cetera) 
-- feat/persistant-sidebar-overlay-behaviour
-- feat/opeoginni--display-message-tps
-- feat/kv-diff-style-clean
-- feat/global-compaction-threshold
-- feat/configurable-message-and-session-limit (**MERGE ADVICE:** Don't forget that both the `experimental._message__limit` and `experimental.session_list_limit` settings should accept either positive integers or the string value "none"!) 
-- feat/experimental-dont-cache-command-markdown
-- feat/jsonc-user-themes
-- feat/improve-bash-tool-git-advice (**MERGE ADVICE**: Make sure to combine this properly with the changes to the bash tool's description that are made in the feat/shell-advice branch, both sets of changes must be synthesized!)
-- feat/shell-advice (**MERGE ADVICE**: Make sure to combine this properly with the changes to the bash tool's description that are made in the feat/improve-bash-tool-git-advice branch, both sets of changes must be synthesized! **NO** shells must be blacklisted!)
-- feat/edit-tool-description
-- feat/renaming-doesnt-close-session-list
-- feat/session-child-toggle-key
-- feat/set-session-title
-- feat/get-session-title
-- feat/no-disabled-lsps-in-sidebar (**MERGE ADVICE**: Remember, the whole purpose of this branch is to cause the LSPs to not be displayed in the sidebar at all when the LSPs have been disabled in the configuration. Make sure that you don't clobber this while merging!)
-- fix/inline-datetime-no-padding (**MERGE ADVICE:** This branch adds `datetimeCompact()` and `todayTimeOrDateTimeCompact()` to `packages/opencode/src/util/locale.ts`. It **MUST** be merged before `feat/agent-timestamps` so that the compact datetime functions are available for inline timestamps.)
-- feat/agent-timestamps (**MERGE ADVICE:** This branch adds inline timestamps to agent messages. It **MUST** use `Locale.todayTimeOrDateTimeCompact()` instead of `Locale.todayTimeOrDateTime()` for inline timestamps to avoid space-padding on single-digit days (e.g., "5/ 6/2026"). The compact variant is defined in `packages/opencode/src/util/locale.ts` and must be available before this branch is merged.)
-- feat/rewind-modal-option
-- feat/alphabetize-command-palette-groups
-- feat/taller-dialogs
-- feat/add-arianes-themes
-- feat/sidebar-clock
-- feat/alphabetical-message-modal
-- feat/toggle-sidebar-scrollbar
-- feat/full-datetimes-in-fork-and-timeline-dialogues
-- feat/configurable-maximum-prompt-input-size
-- feat/clickable-sidebar-mcps
-- feat/clickable-dialogue-mcps
-- feat/clickable-status-mcps
-- feat/ignored-commands
-- feat/dialogue-background-overlay-setting
-- fix/no-split-database
-- feat/elapsed-timer
-- fix/rfc2119-question-tool
-- feat/sidebar-header-accent-colours
-- feat/distinct-title-colour (**MERGE ADVICE:** Make sure that this change in the title's colouring is made compatible with the reformatting in grouped session titles that comes from the feat/session-grouping branch, **BOTH** the distinct colour for the titles **AND** the formatting of grouped sessions' titles)
-- feat/tool-output-colour
-- feat/improve-experimental-plan-mode-prompt
-- fix/input-enter-keybindings
-- fix/escape-from-status
-- fix/restore-footer (**MERGE ADVICE:** As its name suggests, this feature restores the footer it was removed in a previous version; it must not be allowed to be clobbered by other branches when merging!)
-- feat/remove-canned-jokes
-- fix/session-list-delete-selection
-- feat/kimi-with-claude-system-prompt
-- fix/less-bottom-padding
-- fix/session-timestamp-regression
-- feat/persistent-session-id-in-sidebar-toggle
-- fix/preserve-quotes-in-arguments
+- feat/gignit--markdown-renderer (PR#273)
+- feat/rcdailey--thinking-indicator-hidden (PR#274)
+- feat/aspiers--readline-additions (PR#211)
+- feat/base-one-rebrand (PR#52, **MERGE ADVICE:** remember that, amongst it's many other changes, this branch is meant to **REMOVE** the animation effects on the art on the startup screen, and that you **MUST NOT** do anything that could mess with the background colouring of the art that is displayed after exiting the program!) 
+- feat/sinister-quotes (PR#73, **MERGE ADVICE:** the placeholders used **MUST** be the SINISTER_PLACEHOLDERS array in this branch's packages/ui/src/constants/placeholders.ts file, **NO OTHER PLACEHOLDER SOURCE/LOCATION IS PERMISSIBLE!**)
+- feat/session-grouping (PR#194)
+- feat/session-bookmarks (PR#102)
+- fix/dialog-datetime-alignment (PR#113, **MERGE ADVICE:** for best results, merge this one immediately after feat/session-bookmarks. This feature **MUST** not be clobbered; if there is a conflict, it **MUST** be combined with the other feature with which it is conflicting!)
+- feat/keybindable-commands (PR#48)
+- feat/automatic-list-continuation (PR#112)
+- feat/continue-command (PR#11)
+- feat/configurable-snapshot-lifespan (PR#157)
+- feat/configurable-new-plan-mode (PR#143)
+- feat/improve-experimental-plan-mode-prompt (PR#232)
+- feat/enable-exa-setting (PR#257)
+- feat/canceled-prompts-in-history (PR#151, **MERGE ADVICE:** Careful not to clobber this while merging! Merging this branch **MUST** add the new item to the command palette.)
+- feat/permission-spinner (PR#36)
+- feat/opencode-expand (PR#67)
+- refactor/shared-substitute (PR#203)
+- feat/argument-range-syntax (PR#149)
+- feat/default-arguments (PR#217, **MERGE ADVICE:** When merging this branch, make sure that you don't accidentally reintroduce the swallowing behaviour that the feat/argument-range-syntax branch was meant to eliminate.)
+- fix/history-navigation-key-commands (PR#237)
+- fix/build-with-short-version (PR#240, **MERGE ADVICE:** Automatically uses short timestamp version for integration branches without requiring OPENCODE_VERSION to be set)
+- fix/autocompletion-filtered-order (PR#76)
+- fix/modal-menus-filtered-order (PR#77)
+- fix/config-package-json-pollution (PR#176, **MERGE ADVICE:** This branch **MUST** be included in integration branches to prevent package.json pollution with non-SemVer versions)
+- fix/session-list-viewport-jumping (PR#197)
+- fix/merging-multiple-configs (PR#205)
+- fix/markdown-codeblock-theme-property (PR#222)
+- fix/persist-sidebar (PR#80, **MERGE ADVICE:** This branch is meant not only to make the sidebar display state persistent across bestarts if the progran but also  to remove the normal behaviour where the sidebar is hidden when the terminal is not wide enough! There **MUST NOT** be a way to return to the auto state after transitioning to the "show" or "hide" state. This change in the sidebar behaviour **MUST NOT** be clobbered while merging!)
+- feat/persist-sidebar-group-folding-states (PR#98, **MERGE ADVICE**: Be sure not to let this feature get clobbered by subsequent merges!)
+- feat/command-palette-consistency (PR#244, **MERGE ADVICE:** to prevent recurence of a past mistake: this branch is meant to **MOVE** several items from the Session category to the System category in the command palette. You **MUST NOT** duplicate them into both categories when resolving merge conflicts! Additionally, if fix/persist-sidebar was merged previously, be sue to properly move the new logic for the sidebar that it added: no return to "auto" after leaving, et cetera)
+- feat/persistant-sidebar-overlay-behaviour (PR#71)
+- feat/opeoginni--display-message-tps (PR#83)
+- feat/kv-diff-style-clean (PR#134)
+- feat/global-compaction-threshold (PR#63)
+- feat/configurable-message-and-session-limit (PR#177, **MERGE ADVICE:** Don't forget that both the `experimental._message__limit` and `experimental.session_list_limit` settings should accept either positive integers or the string value "none"!) 
+- feat/experimental-dont-cache-command-markdown (PR#252)
+- feat/jsonc-user-themes (PR#97)
+- feat/improve-bash-tool-git-advice (PR#215, **MERGE ADVICE**: Make sure to combine this properly with the changes to the bash tool's description that are made in the feat/shell-advice branch, both sets of changes must be synthesized!)
+- feat/shell-advice (PR#28, **MERGE ADVICE**: Make sure to combine this properly with the changes to the bash tool's description that are made in the feat/improve-bash-tool-git-advice branch, both sets of changes must be synthesized! **NO** shells must be blacklisted!)
+- feat/edit-tool-description (PR#142)
+- feat/renaming-doesnt-close-session-list (PR#233)
+- feat/session-child-toggle-key (PR#238)
+- feat/get-session-title (PR#144)
+- feat/set-session-title (PR#106)
+- feat/no-disabled-lsps-in-sidebar (PR#186, **MERGE ADVICE**: Remember, the whole purpose of this branch is to cause the LSPs to not be displayed in the sidebar at all when the LSPs have been disabled in the configuration. Make sure that you don't clobber this while merging!)
+- fix/inline-datetime-no-padding (PR#275, **MERGE ADVICE:** This branch adds `datetimeCompact()` and `todayTimeOrDateTimeCompact()` to `packages/opencode/src/util/locale.ts`. It **MUST** be merged before `feat/agent-timestamps` so that the compact datetime functions are available for inline timestamps.)
+- feat/agent-timestamps (PR#191, **MERGE ADVICE:** This branch adds inline timestamps to agent messages. It **MUST** use `Locale.todayTimeOrDateTimeCompact()` instead of `Locale.todayTimeOrDateTime()` for inline timestamps to avoid space-padding on single-digit days (e.g., "5/ 6/2026"). The compact variant is defined in `packages/opencode/src/util/locale.ts` and must be available before this branch is merged.)
+- feat/rewind-modal-option (PR#192)
+- feat/alphabetize-command-palette-groups (PR#195)
+- feat/taller-dialogs (PR#196)
+- feat/add-arianes-themes (PR#212)
+- feat/sidebar-clock (PR#207)
+- feat/alphabetical-message-modal (PR#219)
+- feat/toggle-sidebar-scrollbar (PR#224)
+- feat/full-datetimes-in-fork-and-timeline-dialogues (PR#223)
+- feat/configurable-maximum-prompt-input-size (PR#242)
+- feat/clickable-sidebar-mcps (PR#227)
+- feat/clickable-dialogue-mcps (PR#225)
+- feat/clickable-status-mcps (PR#241)
+- feat/ignored-commands (PR#216)
+- feat/dialogue-background-overlay-setting (PR#249)
+- fix/no-split-database (PR#235)
+- feat/elapsed-timer (PR#54)
+- fix/rfc2119-question-tool (PR#118)
+- feat/sidebar-header-accent-colours (PR#229)
+- feat/distinct-title-colour (PR#226, **MERGE ADVICE:** Make sure that this change in the title's colouring is made compatible with the reformatting in grouped session titles that comes from the feat/session-grouping branch, **BOTH** the distinct colour for the titles **AND** the formatting of grouped sessions' titles)
+- feat/tool-output-colour (PR#230)
+- fix/input-enter-keybindings (PR#243)
+- fix/escape-from-status (PR#245)
+- fix/restore-footer (PR#175, **MERGE ADVICE:** As its name suggests, this feature restores the footer it was removed in a previous version; it must not be allowed to be clobbered by other branches when merging!)
+- feat/remove-canned-jokes (PR#247)
+- fix/session-list-delete-selection (PR#255)
+- feat/kimi-with-claude-system-prompt (PR#246)
+- fix/less-bottom-padding (PR#263)
+- fix/session-timestamp-regression (PR#268)
+- feat/persistent-session-id-in-sidebar-toggle (PR#276)
+- fix/preserve-quotes-in-arguments (PR#239)
 
 (you **MUST** ignore any branches whose names begin with `archived`/`obsolete`/ or `failed/`!)
