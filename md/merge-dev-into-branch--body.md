@@ -61,7 +61,7 @@ There is no particular time constraint here, so don't rush, take the time that y
 
 ### Remember: 
 
-The $1 branch is meant to implement PR #$2.
+The $1 branch is meant to implement PR #$2 on the http://github.com/ariane-emory/opencode repository..
 
 You **SHOULD** run the `gh --repo ariane-emory/opencode pr view $2` command to examine PR #$2's description to see what feature/fix/change the branch we are updating is meant to implement.
 
