@@ -1,4 +1,5 @@
-!`{ git reset --hard HEAD && echo "echo "SYSTEM: Reset local repo."; } || echo "echo "SYSTEM: Failed to run git reset. ";`
-!`git clean -fd && "echo "SYSTEM: Cleaned the local git repository of untracked changes. "`
-!`git checkout dev && echo "SYSTEM: Checked out dev branch."`
-!`baseone expand ~/.config/opencode/md/integrate-branches--body.md $(date +%Y-%m-%d-%H-%M)`
+!`git reset --hard HEAD > /dev/null && echo "- SYSTEM: Reset repo state."; 
+ git clean -fd > /dev/null && echo "- SYSTEM: Cleaned untracked files.";
+ git checkout dev > /dev/null && echo "- SYSTEM: Checked out the dev branch.";`
+
+!`baseone expand ~/.config/opencode/md/integrate-branches--body.md $(date +%Y-%m-%d-%H-%) $ARGUMENTS`
