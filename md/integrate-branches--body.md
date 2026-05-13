@@ -81,8 +81,8 @@ m# Integration Branch: integration/YYYY-MM-DD-HH-MM
 ```
 
 **REQUIREMENTS:**
-- Copy **ALL** branches from branch-list.md into the checklist
-- Include merge advice from branch-list.md in the "Description" column
+- Copy **ALL** branches from ~/.config/opencode/md/branch-list.md into the checklist
+- Include merge advice from ~/.config/opencode/md/branch-list.md in the "Description" column
 - Use ☐ for unchecked (starts as this for ALL branches)
 - Commit Hash starts as "TBD", updated after each merge
 - Number sequentially from 1 to $BRANCH_COUNT
@@ -169,7 +169,7 @@ Before merging the first branch, verify:
 **MANDATORY: Before starting, you MUST count the branches and record the expected total:**
 
 ```fish
-# Count branches in branch-list.md
+# Count branches in ~/.config/opencode/md/branch-list.md
 grep "^- " ~/.config/opencode/md/branch-list.md | wc -l
 # Record this number - you MUST merge exactly this many branches!
 ```
