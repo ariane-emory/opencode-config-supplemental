@@ -1,6 +1,6 @@
 ---
 description: Integrate feature branches.
 agent: build
-new_session: true
+ignored: false
 ---
 !`baseone expand ~/.config/opencode/md/integrate-branches--in-toto.md`
