@@ -1,5 +1,5 @@
-!`git reset --hard HEAD >/dev/null 2>/dev/null; and echo 'SYSTEM: Reset local repo.'; or echo 'SYSTEM: Failed to run git reset.'`
-!`git clean -fd && "echo "SYSTEM: Cleaned the local git repository of untracked changes. "`
-!`git checkout dev && echo "SYSTEM: Checked out dev branch."`
+!`git reset --hard HEAD > /dev/null 2>&1 && echo "SYSTEM: Reset repo state."; 
+ git clean -fd > /dev/null 2>&1 && echo "SYSTEM: Cleaned untracked files.";
+ git checkout $(gh --repo ariane-emory/opencode pr view $1 --json headRefName --jq .headRefName) > /dev/null 2>&1 && echo "SYSTEM: Checked out the $(gh --repo ariane-emory/opencode pr view $1 --json headRefName --jq .headRefName) branch.";`
 
-!`baseone expand ~/.config/opencode/md/integrate-branches-2--body.md $(date +%Y-%m-%d-%H-%M)`
+!`baseone expand ~/.config/opencode/md/merge-dev-into-branch--body.md $(gh --repo ariane-emory/opencode pr view $1 --json headRefName --jq .headRefName) $1 ${2..}`
