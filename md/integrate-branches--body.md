@@ -8,7 +8,7 @@ The directory that you're in now is used only for assembling single-use integrat
 
 Using the dev branch as the starting point, you **MUST** start a new integration branch with explicit tracking to origin to avoid upstream tracking issues. You **MUST** start a new branch, do not try to start from any prior integration branch! Name this new branch: integration/$1
 
-You **MUST** set the title of the current session to "integrations|integration/$1" ("integrations|" followed by the name of the integration branch) and **MUST** bookmark it using the `bookmark_current_session` tool. You **MUST NOT** forget to include the pipe character in the session title! This is critical for compatibility with our other tools!
+You **MUST** set the title of the current session to "integrations|integration/$1" ("integrations|" followed by the name of the integration branch) and **MUST** bookmark it using the `bookmark_current_session` tool. You **MUST NOT** forget to include the pipe character in the session title! Using this exact sche for the titles is **CRUCIAL** for compatibility with our CI tools!
 
 **CRITICAL**: After creating the integration branch, you **MUST** configure it to track origin (**NOT** upstream) to prevent push issues:
 
