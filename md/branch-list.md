@@ -67,7 +67,7 @@
 - feat/sidebar-header-accent-colours (PR#229)
 - feat/distinct-title-colour (PR#226, **MERGE ADVICE:** Make sure that this change in the title's colouring is made compatible with the reformatting in grouped session titles that comes from the feat/session-grouping branch, **BOTH** the distinct colour for the titles **AND** the formatting of grouped sessions' titles)
 - feat/tool-output-colour (PR#230)
-- fix/input-enter-keybindings (PR#243)
+- fix/autocompletion-input-enter-keybindings (PR#277)
 - fix/escape-from-status (PR#245)
 - fix/restore-footer (PR#175, **MERGE ADVICE:** As its name suggests, this feature restores the footer it was removed in a previous version; it must not be allowed to be clobbered by other branches when merging!)
 - feat/remove-canned-jokes (PR#247)
