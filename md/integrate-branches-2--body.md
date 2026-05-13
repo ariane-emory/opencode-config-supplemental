@@ -205,12 +205,12 @@ grep "^\- " ~/.config/opencode/md/branch-list-2.md | wc -l
 The document **MUST** contain a Markdown table (NOT a bullet list) with checkboxes for tracking. Use this exact format:
 
 ```markdown
-| Status | # | Branch Name | Remote | Commit Hash | Description |
-|--------|---|-------------|--------|-------------|-------------|
-| ☐ | 1 | split-config-fixes | upstream | TBD | MUST use only local copy, do NOT pull from upstream |
-| ☐ | 2 | feat/base-one-rebrand | origin | TBD | |
-| ☐ | 3 | feat/sinister-quotes | origin | TBD | Placeholders MUST be SINISTER_PLACEHOLDERS array |
-| ... | ... | ... | ... | ... | ... |
+| Status | # | Branch Name | PR | Remote | Commit Hash | Description |
+|--------|---|-------------|--------|----|-------------|-------------|
+| ☐ | 1 | split-config-fixes | 1234 | upstream | TBD | MUST use only local copy, do NOT pull from upstream |
+| ☐ | 2 | feat/base-one-rebrand | 2345 | origin | TBD | |
+| ☐ | 3 | feat/sinister-quotes | 3456 | origin | TBD | Placeholders MUST be SINISTER_PLACEHOLDERS array |
+| ... | ... | ... | ... | ... | ... | ... |
 ```
 
 **NOT** this format:
@@ -223,6 +223,7 @@ The table **MUST** include:
 - **Status column**: Use ☐ for unchecked, ☑ for checked
 - Sequential numbering (#)
 - Full branch name
+- The PR number (if from the `ariane-emory/opencode` repository)
 - Remote source (upstream, origin, gignit, etc.)
 - Commit Hash: Start as "TBD", update after each merge
 - Merge Advice: Copy relevant advice from branch-list-2.md
