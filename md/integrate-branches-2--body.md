@@ -53,7 +53,7 @@ Do **NOT** switch away from the integration branch during the merge process.
 
 These are the branches you **MUST** merge into the new integration branch:
 
-!`baseone expand ~/.config/opencode/md/branch-list.md`
+!`baseone expand ~/.config/opencode/md/branch-list-2.md`
 
 ### Step 1: Create MERGED-BRANCHES.md Checklist
 
@@ -81,8 +81,8 @@ m# Integration Branch: integration/YYYY-MM-DD-HH-MM
 ```
 
 **REQUIREMENTS:**
-- Copy **ALL** branches from ~/.config/opencode/md/branch-list.md into the checklist
-- Include merge advice from ~/.config/opencode/md/branch-list.md in the "Description" column
+- Copy **ALL** branches from ~/.config/opencode/md/branch-list-2.md into the checklist
+- Include merge advice from ~/.config/opencode/md/branch-list-2.md in the "Description" column
 - Use ☐ for unchecked (starts as this for ALL branches)
 - Commit Hash starts as "TBD", updated after each merge
 - Number sequentially from 1 to $BRANCH_COUNT
@@ -91,10 +91,10 @@ m# Integration Branch: integration/YYYY-MM-DD-HH-MM
 **VERIFICATION**: After creating, run:
 
 ```fish
-# Count unchecked branches - MUST equal branch-list count
+# Count unchecked branches - MUST equal branch-list-2 count
 grep "^| ☐ |" MERGED-BRANCHES.md | wc -l
 # Compare to:
-grep "^- " ~/.config/opencode/md/branch-list.md | wc -l
+grep "^- " ~/.config/opencode/md/branch-list-2.md | wc -l
 # These two numbers MUST match!
 ```
 
@@ -114,7 +114,7 @@ git push
 
 ```fish
 # Get the branch count
-set BRANCH_COUNT (grep "^- " ~/.config/opencode/md/branch-list.md | wc -l)
+set BRANCH_COUNT (grep "^- " ~/.config/opencode/md/branch-list-2.md | wc -l)
 echo "Creating $BRANCH_COUNT todo items..."
 ```
 
@@ -135,7 +135,7 @@ Before starting merges, run these verification commands:
 ```fish
 # Verify all branches exist locally
 echo "Verifying all branches exist..."
-for branch in (grep "^- " ~/.config/opencode/md/branch-list.md | sed 's/^- //')
+for branch in (grep "^- " ~/.config/opencode/md/branch-list-2.md | sed 's/^- //')
     if not git branch --list $branch | grep -q $branch
         echo "ERROR: Branch $branch does not exist locally!"
         echo "You MUST fetch all branches before starting."
@@ -169,8 +169,8 @@ Before merging the first branch, verify:
 **MANDATORY: Before starting, you MUST count the branches and record the expected total:**
 
 ```fish
-# Count branches in ~/.config/opencode/md/branch-list.md
-grep "^- " ~/.config/opencode/md/branch-list.md | wc -l
+# Count branches in ~/.config/opencode/md/branch-list-2.md
+grep "^- " ~/.config/opencode/md/branch-list-2.md | wc -l
 # Record this number - you MUST merge exactly this many branches!
 ```
 
@@ -178,7 +178,7 @@ grep "^- " ~/.config/opencode/md/branch-list.md | wc -l
 
 ```fish
 # Count branches dynamically - DO NOT hardcode this number
-set BRANCH_COUNT (grep "^- " ~/.config/opencode/md/branch-list.md | wc -l)
+set BRANCH_COUNT (grep "^- " ~/.config/opencode/md/branch-list-2.md | wc -l)
 echo "Total branches to merge: $BRANCH_COUNT"
 ```
 
@@ -188,11 +188,11 @@ Before starting, verify the branch list format to avoid common errors:
 
 ```fish
 # Check for concatenated branches (multiple branch names on one line)
-grep "\- feat/" ~/.config/opencode/md/branch-list.md | grep "feat/.*feat/"
+grep "\- feat/" ~/.config/opencode/md/branch-list-2.md | grep "feat/.*feat/"
 # If this outputs anything, branches are concatenated and must be split into separate lines
 
 # Count total branches dynamically
-grep "^\- " ~/.config/opencode/md/branch-list.md | wc -l
+grep "^\- " ~/.config/opencode/md/branch-list-2.md | wc -l
 # Record this number - you will need it for MERGED-BRANCHES.md
 ```
 
@@ -225,14 +225,14 @@ The table **MUST** include:
 - Full branch name
 - Remote source (upstream, origin, gignit, etc.)
 - Commit Hash: Start as "TBD", update after each merge
-- Merge Advice: Copy relevant advice from branch-list.md
+- Merge Advice: Copy relevant advice from branch-list-2.md
 
 **CRITICAL**: Create ALL rows with ☐ status before merging any branches. The checklist serves as your source of truth for what remains to be done.
 
 **CRITICAL - MERGED-BRANCHES.md AS CHECKLIST**: MERGED-BRANCHES.md is your PRIMARY tracking mechanism. Before merging ANY branches:
 
 1. Create MERGED-BRANCHES.md with ALL branches listed as ☐ (unchecked)
-2. Copy merge advice from branch-list.md into the Description column
+2. Copy merge advice from branch-list-2.md into the Description column
 3. After each merge, immediately update the file:
    - Change ☐ to ☑ 
    - Replace "TBD" with the actual commit hash
@@ -248,7 +248,7 @@ This persistent checklist ensures no branches are skipped and survives session r
 - **Typecheck failures**: Batch merging multiple branches makes it impossible to determine which branch introduced a type error
 - **Incomplete merges**: The `MERGE_HEAD` variable gets overwritten, making it impossible to see what each branch contributed
 
-**YOU MUST**: Process branches individually, one at a time, in the exact order listed in branch-list.md.
+**YOU MUST**: Process branches individually, one at a time, in the exact order listed in branch-list-2.md.
 
 **CORRECT WORKFLOW**:
 ```fish
@@ -584,7 +584,7 @@ If this outputs anything other than 0, you have NOT completed all merges! Go bac
 ```fish
 # Count checked branches
 grep "^| ☑ |" MERGED-BRANCHES.md | wc -l
-# This should equal: grep "^- " ~/.config/opencode/md/branch-list.md | wc -l
+# This should equal: grep "^- " ~/.config/opencode/md/branch-list-2.md | wc -l
 
 # If they don't match, investigate which branches are missing
 ```
@@ -609,12 +609,12 @@ grep "export const VERSION" packages/opencode/src/installation/index.ts
 grep "^| ☐ |" MERGED-BRANCHES.md | wc -l
 # **MUST** output: 0 (all branches checked off)
 
-# Also verify count matches branch-list.md
+# Also verify count matches branch-list-2.md
 grep "^| ☑ |" MERGED-BRANCHES.md | wc -l
-# This should equal: grep "^- " ~/.config/opencode/md/branch-list.md | wc -l
+# This should equal: grep "^- " ~/.config/opencode/md/branch-list-2.md | wc -l
 
 # 4. Verify no concatenated branches were missed
-grep "\- feat/" ~/.config/opencode/md/branch-list.md | grep "feat/.*feat/"
+grep "\- feat/" ~/.config/opencode/md/branch-list-2.md | grep "feat/.*feat/"
 # **MUST** output nothing (empty). If it outputs anything, branches were concatenated.
 
 # 5. Verify dev branch wasn't touched
@@ -623,7 +623,7 @@ git log origin/dev..dev --oneline
 ```
 
 **Final checklist**:
-- [ ] **ALL** branches from branch-list.md have been merged: `grep "^| ☐ |" MERGED-BRANCHES.md | wc -l` **MUST** output 0
+- [ ] **ALL** branches from branch-list-2.md have been merged: `grep "^| ☐ |" MERGED-BRANCHES.md | wc -l` **MUST** output 0
 - [ ] Integration branch has been pushed to origin
 - [ ] MERGED-BRANCHES.md including Markdown table is complete and committed
 - [ ] Tests pass on the integration branch
