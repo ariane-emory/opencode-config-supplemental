@@ -277,9 +277,6 @@ For each of these branches, you **SHOULD**:
 When you encounter merge conflicts, follow this protocol to ensure you properly incorporate changes from **BOTH** branches:
 
 **Step 1: Understand what each branch contributed**
-
-In the `~/.config/opencode/md/branch-list.md file that we got out llist of branches to merge from, each branch has a PR num  ber bee <WIP!>
-
 ```fish
 # See what the integration branch (base) has:
 git show HEAD:path/to/conflicting/file > /tmp/ours.txt
