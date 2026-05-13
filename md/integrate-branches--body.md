@@ -10,7 +10,7 @@ Using the dev branch as the starting point, you **MUST** start a new integration
 
 You **MUST** set the title of the current session to "integrations|integration/$1" ("integrations|" followed by the name of the integration branch) and **MUST** bookmark it using the `bookmark_current_session` tool.
 
-**CRITICAL**: After creating the integration branch, you **MUST** configure it to track origin (not upstream) to prevent push issues:
+**CRITICAL**: After creating the integration branch, you **MUST** configure it to track origin (**NOT** upstream) to prevent push issues:
 
 ```fish
 # Replace BRANCH-NAME with the actual integration branch name
