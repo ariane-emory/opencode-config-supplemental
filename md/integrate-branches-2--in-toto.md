@@ -2,4 +2,4 @@
  git clean -fd > /dev/null 2>&1 && echo "SYSTEM: Cleaned untracked files.";
  git checkout dev > /dev/null 2>&1 && echo "SYSTEM: Checked out the dev branch.";`
 
-!`baseone expand ~/.config/opencode/md/integrate-branches-2--body.md $(date +%Y-%m-%d-%H-%)`
+!`baseone expand ~/.config/opencode/md/merge-dev-into-branch--body.md dev $1 ${2..}`
