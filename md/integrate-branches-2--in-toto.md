@@ -1,4 +1,5 @@
-!`git reset --hard HEAD > /dev/null 2>&1 && echo "SYSTEM: Reset repo state."; 
- git clean -fd > /dev/null 2>&1 && echo "SYSTEM: Cleaned untracked files.";
- git checkout dev > /dev/null 2>&1 && echo "SYSTEM: Checked out the dev branch.";`
+!`git reset --hard HEAD > /dev/null && echo "SYSTEM: Reset repo state."; 
+ git clean -fd > /dev/null && echo "SYSTEM: Cleaned untracked files.";
+ git checkout dev > /dev/null && echo "SYSTEM: Checked out the dev branch.";`
 
+!`baseone expand ~/.config/opencode/md/integrate-branches-2--body.md $(date +%Y-%m-%d-%H-%) $ARGUMENTS`
