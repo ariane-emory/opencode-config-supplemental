@@ -278,6 +278,11 @@ For each of these branches, you **SHOULD**:
 When you encounter merge conflicts, follow this protocol to ensure you properly incorporate changes from **BOTH** branches:
 
 **Step 1: Understand what each branch contributed**
+
+First, read the pull request associated with the branch you're about to merge into the integration branch to make sure you understand the branch's purpose:
+
+!`baseone expand ~/oc/md/read-prs.md`
+
 ```fish
 # See what the integration branch (base) has:
 git show HEAD:path/to/conflicting/file > /tmp/ours.txt
@@ -302,6 +307,7 @@ diff -u /tmp/ours.txt /tmp/theirs.txt
 - Keep the integration branch's structure/context
 - Add the feature branch's new functionality
 - Ensure the result compiles and makes logical sense
+- You **MUST** be sure that you are preserving the feature/fix that was described in the associated pull request!
 
 **CRITICAL - DO NOT RESURRECT DEAD CODE**: When resolving conflicts, you **MUST NOT** drag obsolete code forward from older ancestry if the branch HEADs have already converged on a newer structure. This kind of merge necromancy is forbidden.
 
