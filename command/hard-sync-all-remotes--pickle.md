@@ -2,7 +2,6 @@
 description: Sync all remotes to match upstream (source of truth) using Pickle.
 agent: build
 model: opencode/big-pickle
-new_session: true
 ---
 !`baseone expand ~/.config/opencode/md/hard-sync-all-remotes.md`
 

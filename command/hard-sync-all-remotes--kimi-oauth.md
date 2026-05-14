@@ -1,7 +1,7 @@
 ---
 description: Sync all remotes to match upstream (source of truth) using GLM.
 agent: build
-model: zai-coding-plan/glm-5-turbo
+model: kimi-for-coding-oauth/kimi-for-coding
 ---
 !`baseone expand ~/.config/opencode/md/hard-sync-all-remotes.md`
 
