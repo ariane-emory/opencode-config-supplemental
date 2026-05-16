@@ -1,7 +1,7 @@
 ---
 description: Merge dev into branch.
 agent: build
-model: zai-coding-plan/glm-5.1
+model: closedrouter/openai/gpt-5.5
 ignored: false
 ---
 !`baseone expand ~/.config/opencode/md/merge-dev-into-branch--in-toto.md $ARGUMENTS`
