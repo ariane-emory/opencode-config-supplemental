@@ -16,17 +16,6 @@ Then, you **MUST** check out the $1 branch, merge the local dev branch into it a
 
 If a git lock file gets in your way, you **SHOULD** delete it and keep working on merging.
 
-### CRITICAL: Setting the session's title:
-
-You **MUST** use the `set_current_session_title` tool to give the session a title maching this format:
-`merging dev|Merging dev into $1` 
-
-**CRITICAL**: You **MUST** follow this format exactly! The prefixed part prior prior to the \pipe character is **CRUCIAL** for our other tools to function proparly, If you do not properly add this prefix to the session title, then **NONE** of this work can be used, and the task is a total failure!
-
-**CRITICAL**: Do **NOT** forget the pipe character shown in the title format!
-
-You **MUST NOT** bookmark this session!
-
 ### Notes:
 
 You may need to run `bun install` again after performing the merge. .Make sure that no new test failures were introduced by the merge: you may disregard any pre-existing test failures in the dev branch, but we don't want to add any new test failures relative to dev. If tests fail due to a timeout (in either branch), try waiting a moment and rerunning them, it may just mean that that test is a bit flaky.
@@ -68,5 +57,16 @@ You **SHOULD** run the `gh --repo ariane-emory/opencode pr view $2` command to e
 You **SHOULD** also run `gh --repo ariane-emory/opencode pr diff $2` command to see how this branch differs from the `dev` branch prior to performing the merge.
 
 While updating this branch with the newest changes, you **MUST** ensure that you preserve the feature/fix described in PR #$2.
+
+### CRITICAL: Setting the session's title:
+
+You **MUST** use the `set_current_session_title` tool to give the session a title maching this format:
+`merging dev|Merging dev into $1` 
+
+**CRITICAL**: You **MUST** follow this format exactly! The prefixed part prior prior to the \pipe character is **CRUCIAL** for our other tools to function proparly, If you do not properly add this prefix to the session title, then **NONE** of this work can be used, and the task is a total failure!
+
+**CRITICAL**: Do **NOT** forget the pipe character shown in the title format!
+
+You **MUST NOT** bookmark this session!
 
 ${3..}
