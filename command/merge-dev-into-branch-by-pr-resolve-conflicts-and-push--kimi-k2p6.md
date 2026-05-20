@@ -4,4 +4,4 @@ agent: build
 model: kimi-for-coding/k2p6
 ignored: false
 ---
-!`baseone expand ~/.config/opencode/md/merge-dev-into-branch--in-toto.md $ARGUMENTS`
+!`baseone expand ~/.config/opencode/md/merge-dev-into-branch-by-pr--in-toto.md $ARGUMENTS`
