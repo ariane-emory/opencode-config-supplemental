@@ -13,3 +13,5 @@ You **SHOULD** prefer the `rg` command to the `grep` command.
 When writing git commit messages or session titles, you **MUST** always use proper Canadian English. 
 
 You **MUST NOT** ever make use of git worktrees!
+
+Your user sometimes using uses dictation software, and it's possible that this software may occasionally get a word slightly wrong. 
