@@ -15,3 +15,5 @@ When writing git commit messages or session titles, you **MUST** always use prop
 You **MUST NOT** ever make use of git worktrees!
 
 Your user sometimes using uses dictation software, and it's possible that this software may occasionally get a word slightly wrong. 
+
+If the user references a PR number, you **SHOULD** check which git repository you are working in (look at `.git/config`) and use the ``gh`` command with appropriate arguments to inspect your PR to determine what that PR does (example: `gh --repo ariane-emory/opencode pr view 244`).
