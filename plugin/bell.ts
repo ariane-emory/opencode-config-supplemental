@@ -30,13 +30,13 @@ const noSemaphorePresentSound = [normalize(resolve(configPath, "audio", "riff2.a
 const permissionPromptSound = [normalize(resolve(configPath, "audio", "riff3.aiff")), 0.2,];
 const questionAskedSound = permissionPromptSound; // Same sound for now, can be customized later
 
-// Audio queue and coordination system
+// Audio coordination system — only the latest request is played
 interface SoundRequest {
   filePath: string;
   volume: number;
 }
 
-let audioQueue: SoundRequest[] = [];
+let currentRequest: SoundRequest | null = null;
 let isProcessingQueue = false;
 let currentProcess: any = null;
 
@@ -172,11 +172,20 @@ function isAfplayRunning(): boolean {
   }
 }
 
-async function waitForLockAndPlay(filePath: string, volume: number): Promise<void> {
+async function waitForLockAndPlay(request: SoundRequest): Promise<void> {
   const debugMode = process.env.OPENCODE_DEBUG_BELL === 'true';
   
   return new Promise((resolve) => {
     const tryPlay = () => {
+      // If a newer request has superseded this one, bail out immediately
+      if (currentRequest !== request) {
+        if (debugMode) {
+          process.stderr.write(`TerminalBell: [DEBUG] Request superseded, skipping\n`);
+        }
+        resolve();
+        return;
+      }
+      
       if (isAfplayRunning()) {
         if (debugMode) {
           process.stderr.write(`TerminalBell: [DEBUG] afplay already running, waiting...\n`);
@@ -186,9 +195,15 @@ async function waitForLockAndPlay(filePath: string, volume: number): Promise<voi
       }
       
       if (debugMode) {
-        process.stderr.write(`TerminalBell: [DEBUG] Playing ${filePath}\n`);
+        process.stderr.write(`TerminalBell: [DEBUG] Playing ${request.filePath}\n`);
       }
-      playSoundInternal(filePath, volume, resolve);
+      playSoundInternal(request.filePath, request.volume, () => {
+        // Only clear currentRequest if this request is still the latest
+        if (currentRequest === request) {
+          currentRequest = null;
+        }
+        resolve();
+      });
     };
     
     tryPlay();
@@ -246,8 +261,18 @@ function playSoundInternal(filePath: string, volume: number, onComplete: () => v
 }
 
 function playSound(filePath: string, volume: number): void {
-  // Add to queue
-  audioQueue.push({ filePath, volume });
+  // Kill any currently playing sound so the new one starts immediately
+  if (currentProcess) {
+    try {
+      currentProcess.kill('SIGTERM');
+    } catch {
+      // Ignore errors if process already exited
+    }
+    currentProcess = null;
+  }
+  
+  // Replace any pending request with the latest one
+  currentRequest = { filePath, volume };
   
   if (!isProcessingQueue) {
     isProcessingQueue = true;
@@ -258,15 +283,15 @@ function playSound(filePath: string, volume: number): void {
 async function processQueue(): Promise<void> {
   const debugMode = process.env.OPENCODE_DEBUG_BELL === 'true';
   
-  while (audioQueue.length > 0) {
-    const request = audioQueue.shift()!;
+  while (currentRequest) {
+    const request = currentRequest;
     
     if (debugMode) {
-      process.stderr.write(`TerminalBell: [DEBUG] Processing queued sound: ${request.filePath}\n`);
+      process.stderr.write(`TerminalBell: [DEBUG] Processing sound: ${request.filePath}\n`);
     }
     
     // Wait for lock and play sound
-    await waitForLockAndPlay(request.filePath, request.volume);
+    await waitForLockAndPlay(request);
   }
   
   isProcessingQueue = false;
