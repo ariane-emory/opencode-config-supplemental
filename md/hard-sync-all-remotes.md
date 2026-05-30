@@ -6,13 +6,15 @@ You **MUST NOT** ever consider the `upstream/dev` branch! The only relevant `dev
 
 **FIRST**: Use the `set_current_session_title` tool to name the session "sync|Syncronizing branches with remotes".
 
+**NEXT**: run `bun install` on the dev branch.
+
 **CRITICAL FISH SHELL SYNTAX NOTE**: All fish shell code blocks in this document MUST be executed as multi-line code with proper indentation. **DO NOT** convert to single-line semicolon-separated commands, as this will cause "'end' outside of a block" errors. Fish shell requires proper line breaks for block structures (if/for/while/end).
 
 **RULES:**
 1. All branches on origin must be made available locally
 2. All branches that exist locally must be brought up to date with their remote counterparts (may include branches manually checked-out from remotes other than origin)
 3. **NEVER** modify remote repositories - this is a **READ-ONLY** synchronization operation
-
+4. You must complete the task by running commands manually, **NOT** by creating helper scripts!kkk
 **IMPORTANT**: You **MUST** delete any orphaned local branches!
 
 **CRITICAL PRINCIPLE**: Remote repositories are **ALWAYS** the single source of truth. Only delete branches that truly have no remote counterpart anywhere.
@@ -317,4 +319,4 @@ Use your todo list tools to keep track of your progress.
 
 **REMEMBER**: No branch should have any local changes once you are done! Any local changes should have been discarded in order to match the remote state!
 
-**IMPORTANT**: After you have finished, return to the dev branch and run `bun install`.
+**IMPORTANT**: After you have finished, return to the dev branch.
