@@ -317,4 +317,4 @@ Use your todo list tools to keep track of your progress.
 
 **REMEMBER**: No branch should have any local changes once you are done! Any local changes should have been discarded in order to match the remote state!
 
-**IMPORTANT**: After you have finished, return to the dev branch.
+**IMPORTANT**: After you have finished, return to the dev branch and run `bun install`.
