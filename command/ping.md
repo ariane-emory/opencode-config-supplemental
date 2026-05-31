@@ -1,7 +1,5 @@
 ---
 description: Communication test.
-kagent: plan
-
+agent: plan
 ---
-
 Testing communications, can you hear me?
