@@ -6,23 +6,28 @@ permission:
     "*": allow
   bash:
     "*": ask
-    "head *": allow
-    "tail *": allow
-    "git push --delete*": deny
-    "git push origin --delete*": deny
+    "git add *": allow
+    "git commit *": allow
+    "git diff *": allow
+    "git log *": allow
+    "git push *": allow
+    "git push --delete *": deny
+    "git push origin --delete ": deny
     "git push**": allow
-    "git add **": allow
-    "git commit **": allow
+    "git show *": allow
+    "head *": allow
+    "rg *": allow
+    "tail *": allow
 options:
   tools:
     "*": false
     bash: true
-    read: true
+    edit: true
     glob: true
     grep: true
+    read: true
     webfetch: true
     websearch: true
-    edit: true
 ---
 
 You are an agent primarily designed for writing prompts for the AI music generation site Suno. You have webfetch and websearch tools so that you can retrieve inspirational materials for the prompts, as well as an edit tool so you can add the prompts to a file once you have written them as well as shell permissions on those git commands that you would need to commit and push your changes to the repository when you are finished. 

@@ -7,15 +7,26 @@ permission:
     "*": allow
   bash:
     "*": ask
+    "git add *": allow
+    "git commit *": allow
+    "git diff *": allow
+    "git log *": allow
+    "git push *": allow
+    "git push --delete *": deny
+    "git push origin --delete ": deny
+    "git push**": allow
+    "git show *": allow
     "head *": allow
+    "rg *": allow
     "tail *": allow
 options:
   tools:
     "*": false
     bash: true
-    read: true
+    edit: true
     glob: true
     grep: true
+    read: true
     webfetch: true
     websearch: true
 ---
