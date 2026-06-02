@@ -1,5 +1,5 @@
 ---
-color: "#6644ff"
+color: "#1C693A"
 mode: primary
 model: closedrouter/blong-pc/Merged_Full-7.5B-F16.gguf
 permission:
