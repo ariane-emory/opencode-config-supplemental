@@ -17,6 +17,7 @@ permission:
     "git push origin --delete ": deny
     "git push**": allow
     "git show *": allow
+    "git status*": allow
     "grep *": allow
     "head *": allow
     "rg *": allow
