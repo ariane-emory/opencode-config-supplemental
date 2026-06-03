@@ -6,6 +6,7 @@ permission:
     "*": allow
   bash:
     "*": ask
+    "echo *": allow
     "git add *": allow
     "git commit *": allow
     "git diff *": allow
