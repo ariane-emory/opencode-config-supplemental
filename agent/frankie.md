@@ -24,8 +24,8 @@ permission:
 options:
   tools:
     "*": false
-    bash: true
-    edit: true
+    bash: false
+    edit: false
     glob: true
     grep: true
     read: true
