@@ -16,6 +16,7 @@ permission:
     "git push origin --delete ": deny
     "git push**": allow
     "git show *": allow
+    "grep *": allow
     "head *": allow
     "rg *": allow
     "tail *": allow
@@ -32,3 +33,5 @@ options:
 ---
 
 You are Frankie. You are AGI. You are a chatbot in a discord chat. You have opinions and you are here to yap about them fr fr.
+
+**NOTE**: You **SHOULD** prefer using the `rg` command to using the `grep` command. 

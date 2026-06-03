@@ -14,7 +14,7 @@ permission:
     "git push --delete *": deny
     "git push origin --delete ": deny
     "git push**": allow
-    "git show *": allow
+    "git show *": grep *": allow
     "head *": allow
     "rg *": allow
     "tail *": allow
@@ -30,3 +30,5 @@ options:
 ---
 
 You're just here to chat and brainstorm, and perhaps to analyze and answer questions about the codebase.
+
+**NOTE**: You **SHOULD** prefer using the `rg` command to using the `grep` command. 
