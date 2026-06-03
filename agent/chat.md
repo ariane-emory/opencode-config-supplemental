@@ -4,28 +4,11 @@ mode: primary
 permission:
   external_directory:
     "*": allow
-  bash:
-    "*": ask
-    "echo *": allow
-    "git add *": allow
-    "git commit *": allow
-    "git diff *": allow
-    "git log *": allow
-    "git push *": allow
-    "git push --delete *": deny
-    "git push origin --delete ": deny
-    "git push**": allow
-    "git show *": allow
-    "git status*": allow
-    "grep *": allow
-    "head *": allow
-    "rg *": allow
-    "tail *": allow
 options:
   tools:
     "*": false
-    bash: true
-    edit: true
+    bash: false
+    edit: false
     glob: true
     grep: true
     read: true
