@@ -21,6 +21,8 @@ permission:
     "head *": allow
     "rg *": allow
     "tail *": allow
+    "awk *": allow
+    "sed *": allow
 options:
   tools:
     "*": false
