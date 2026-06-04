@@ -320,3 +320,5 @@ Use your todo list tools to keep track of your progress.
 **REMEMBER**: No branch should have any local changes once you are done! Any local changes should have been discarded in order to match the remote state!
 
 **IMPORTANT**: After you have finished, return to the dev branch.
+
+**CONFIRM**: Double check that you have used the `set_current_session_title` tool to name the session "sync|Syncronizing branches with remotes", and if you have not then do so now.
