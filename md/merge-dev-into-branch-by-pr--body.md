@@ -24,6 +24,8 @@ You may need to run `bun install` again after performing the merge. .Make sure t
 
 **REMEMBER**: The global Opencode configuration is most likely **NOT** configured to be compatible with the branch on which you are working!
 
+**REMEMBER**: You **SHOULD** use the `todowrite` tool to maintain a to-do list to keep track of your progress and to ensure that the user can easily monitor it as you proceed. 
+
 ### Merge procedure rules:
 
 **CRITICAL:** You **MUST** use only the locally available copies of the branch and the dev branch. You **MUST NOT** ever pull changes from remote branches!
