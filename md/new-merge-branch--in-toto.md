@@ -1,8 +1,8 @@
 ### This text is from the new merge command in toto. 
 
-*In toto first:* "$1"
-*In toto second:* "$2"
-*In toto rest:* "${2..}"
+**SYSTEM:** *In toto first:* "$1"
+**SYSTEM:** *In toto second:* "$2"
+**SYSTEM:** *In toto rest:* "${2..}"
 
 !`git reset --hard HEAD > /dev/null 2>&1 && echo "**SYSTEM:** *Reset repo state.*"; `
 !`git clean -fd > /dev/null 2>&1 && echo "**SYSTEM:** *Cleaned untracked files.*";`
