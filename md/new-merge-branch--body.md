@@ -1,5 +1,5 @@
 This is the new merge command body!
 
-Branch: "$1"
-PR number: "$2"
-Rest: "${3..}"
+SYSTEM: Branch: "$1"
+SYSTEM: PR number: "$2"
+SYSTEM: Rest: "${3..}"
