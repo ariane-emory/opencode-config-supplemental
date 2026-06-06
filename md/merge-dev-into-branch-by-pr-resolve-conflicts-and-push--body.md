@@ -5,9 +5,7 @@
 
 ### Preparation:
 
-First, you **MUST** check out the dev branch.
-
-You **SHOULD** take my word that both of these branches already exist locally, so you don't have to waste time checking if they do before you start. We **SHOULD** currently be on the $1 branch.
+You **SHOULD** take my word that the dev branch and the $1 branch already exist locally, so you don't have to waste time checking if they do before you start. We **SHOULD** currently be on the $1 branch.
 
 Next, you **MUST** run `bun install`.
 
