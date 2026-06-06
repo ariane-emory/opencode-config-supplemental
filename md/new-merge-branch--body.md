@@ -1,4 +1,4 @@
-### This is from the new merge command body!
+### This text is from the new merge command body!
 
 **SYSTEM:** *Branch: "$1"*
 **SYSTEM:** *PR number: "$2"*

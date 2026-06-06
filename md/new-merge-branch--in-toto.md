@@ -1,4 +1,4 @@
-### This is from the new merge command in toto. 
+### This text is from the new merge command in toto. 
 
 *In toto first:* "$1"
 *In toto second:* "$2"
