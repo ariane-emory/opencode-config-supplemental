@@ -4,6 +4,4 @@ agent: build
 model: closedrouter/openai/gpt-5.5
 ignored: false
 ---
-### This text is from the new merge command.
-
 !`baseone expand ~/ocs/md/merge-dev-into-branch-by-pr-resolve-conflicts-and-push--in-toto.md $ARGUMENTS`
