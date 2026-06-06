@@ -4,4 +4,4 @@ In toto first: "$1"
 In toto second: "$2"
 In toto rest: "${2..}"
 
-!`baseone expand ~/ocs/md/new-merge-branch--body.md $ARGUMENTS`
+!`baseone expand ~/ocs/md/new-merge-branch--body.md $(gh --repo ariane-emory/opencode pr view $1 --json headRefName --jq .headRefName) $1 ${2..}`
