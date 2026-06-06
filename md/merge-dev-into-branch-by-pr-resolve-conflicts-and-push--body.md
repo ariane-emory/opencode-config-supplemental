@@ -1,4 +1,7 @@
-## Task: Merge the latest changes from the dev branch into the $1 branch:
+**SYSTEM:** *Working branch: "$1"*
+**SYSTEM:** *PR number for this branch: "$2"*
+
+### Your mission: Merge the latest changes from the dev branch into the $1 branch
 
 ### Preparation:
 
