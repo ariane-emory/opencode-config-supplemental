@@ -21,7 +21,7 @@ If a git lock file gets in your way, you **SHOULD** delete it and keep working o
 You **MUST** use the `set_current_session_title` tool to give the session a title maching this format:
 `merging ${2:dev}|Merging ${2:dev} into $1` 
 
-**CRITICAL**: You **MUST** follow this format exactly! The prefixed part prior prior to the \pipe character is **CRUCIAL** for our other tools to function proparly, If you do not properly add this prefix to the session title, then **NONE** of this work can be used, and the task is a total failure!
+**CRITICAL**: You **MUST** follow this format exactly! The prefixed part prior prior to the pipe character is **CRUCIAL** for our other tools to function proparly, If you do not properly add this prefix to the session title, then **NONE** of this work can be used, and the task is a total failure!
 
 **CRITICAL**: Do **NOT** forget the pipe character shown in the title format!
 
