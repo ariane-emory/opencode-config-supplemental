@@ -5,9 +5,9 @@
 
 ### Preparation:
 
-You **SHOULD** take my word that the dev branch and the $1 branch already exist locally, so you don't have to waste time checking if they do before you start. We **SHOULD** currently be on the $1 branch.
+You **SHOULD** take my word for it that the dev branch and the $1 branch already exist locally, so you don't have to waste time checking if they do before you start. We **SHOULD** currently be on the dev branch.
 
-Next, you **MUST** run `bun install`.
+First, you **MUST** run `bun install`.
 
 Then, you **MUST** run the tests to see what pre-existing errors exist. If the dev branch contains pre-existing errors, you **MUST** preserve them when you merge it into the $1 branch. If you just ran these same tests on the dev branch recently, you **SHOULD** skip re-running them and reuse the results that you saw a moment ago the last time that you ran them. The tests can take a while to run, so you **SHOULD** be sure to use a long timeout value, if any — using no time at value at all is very likely the safest option!
 
