@@ -453,6 +453,10 @@ grep -rn "NewTypeName" packages/
 - Multiple branches modifying the same file - Later merges may need to incorporate changes from **BOTH** the integration branch **AND** the feature branch
 - **REBASING THE INTEGRATION BRANCH** - This is the most dangerous pitfall! Never rebase an integration branch as it will destroy merge commits and lose changes
 
+### Set Integration Branch CHANNEL
+
+The value of `CHANNEL` **MUST** be "latest" in **ALL** circumstances: whether running a compiled binary or running using `bun dev`. It must **NEVER** be set to "local" or **ANY** other value! 
+
 ## Set Integration Branch Version
 
 You **MUST** update the VERSION constant in `packages/opencode/src/installation/index.ts` to display the integration branch name instead of "local". Find this line:
