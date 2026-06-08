@@ -9,6 +9,13 @@ You **SHOULD** take my word for it that the dev branch and the $1 branch already
 
 First, you **MUST** run `bun install`.
 
+**NOTE**: You **SHOULD** run the tests from the package directories (such as `packages/opencode`). If you try to run the tests from the root directory, you will receive an error similar to the following: 
+
+```
+bun test v1.3.14 (0d9b296a)
+Failed to scan non-existent root directory for tests: "/Volumes/K/Code/go/opencode2/do-not-run-tests-from-root" in --cwd="/Volumes/K/Code/go/opencode2"
+```
+
 Then, you **MUST** run the tests to see what pre-existing errors exist. If the dev branch contains pre-existing errors, you **MUST** preserve them when you merge it into the $1 branch. If you just ran these same tests on the dev branch recently, you **SHOULD** skip re-running them and reuse the results that you saw a moment ago the last time that you ran them. The tests can take a while to run, so you **SHOULD** be sure to use a long timeout value, if any — using no time at value at all is very likely the safest option!
 
 Then, you **MUST** check out the $1 branch, merge the local dev branch into it and resolve any conflicts. Bear in mind that earlier versions of the dev branch are likely to have been merged into the $1 branch many times previously! 
