@@ -81,5 +81,6 @@
 - fix/integration-version-plugin-compatibility (PR#281)
 - fix/hide-session-pinning-feature (PR#282)
 - fix/variant-list-toast-no-variants (PR#283)
+- fix/dev-mode-version-fallback
 
 (you **MUST** ignore any branches whose names begin with `archived`/`obsolete`/ or `failed/`!)
