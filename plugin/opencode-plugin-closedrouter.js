@@ -1,69 +1,14 @@
 // @bun
-// src/index.ts
-import { readFileSync } from "fs";
-import { homedir } from "os";
-import { join } from "path";
+// src/types.ts
 var PROVIDER_ID = "closedrouter";
 var API_BASE = "https://router.queef.in/v1";
-var DEFAULT_CONTEXT_WINDOW = 128000;
-var DEFAULT_OUTPUT_TOKENS = 8192;
-var DEFAULT_REASONING_OUTPUT_TOKENS = 32000;
-var MODEL_CACHE_TTL_MS = 60000;
-var authCache = new Map;
-var modelCache = new Map;
-function getAuthPath() {
-  const dataHome = process.env.XDG_DATA_HOME || join(homedir(), ".local", "share");
-  return join(dataHome, "opencode", "auth.json");
-}
-function readStoredKeyFallback() {
-  try {
-    const raw = readFileSync(getAuthPath(), "utf-8");
-    const data = JSON.parse(raw);
-    const entry = data?.[PROVIDER_ID];
-    if (entry?.type === "api" && typeof entry.key === "string") {
-      authCache.set(PROVIDER_ID, entry.key);
-      return entry.key;
-    }
-  } catch {}
-  return;
-}
+
+// src/models.ts
+var DEFAULT_NPM = "@ai-sdk/openai";
+var ALLOWED_MODALITIES = new Set(["text", "audio", "image", "video", "pdf"]);
 function normalizeModalities(values, fallback) {
-  const allowed = new Set(["text", "audio", "image", "video", "pdf"]);
-  const normalized = (values ?? fallback).filter((value) => allowed.has(value));
-  return normalized.length > 0 ? normalized : fallback;
-}
-function getProviderKey(npmPackage) {
-  if (npmPackage === "@ai-sdk/openai")
-    return PROVIDER_ID;
-  const suffix = npmPackage.replace(/^@ai-sdk\//, "").trim().toLowerCase().replace(/[^a-z0-9._-]+/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
-  return suffix ? `${PROVIDER_ID}-${suffix}` : PROVIDER_ID;
-}
-function buildBaseOptions(apiKey) {
-  return {
-    baseURL: API_BASE,
-    ...apiKey ? { apiKey } : {}
-  };
-}
-function buildReasoningModelOptions(maxOutputTokens) {
-  return {
-    max_output_tokens: Math.min(maxOutputTokens ?? DEFAULT_REASONING_OUTPUT_TOKENS, DEFAULT_REASONING_OUTPUT_TOKENS),
-    text: {
-      verbosity: "low"
-    },
-    store: false,
-    include: ["reasoning.encrypted_content"],
-    reasoning: {
-      summary: "auto"
-    }
-  };
-}
-function buildReasoningVariants(efforts) {
-  if (!efforts?.length)
-    return;
-  return Object.fromEntries(efforts.map((effort) => [effort, { reasoningEffort: effort }]));
-}
-function supportsOpenAIReasoningOptions(npmPackage) {
-  return npmPackage === "@ai-sdk/openai";
+  const result = (values ?? fallback).filter((v) => ALLOWED_MODALITIES.has(v));
+  return result.length > 0 ? result : fallback;
 }
 function getInterleavedReasoningField(model) {
   if (model.interleaved && typeof model.interleaved === "object" && !Array.isArray(model.interleaved)) {
@@ -72,151 +17,190 @@ function getInterleavedReasoningField(model) {
   }
   return model.capabilities?.interleaved_reasoning ? "reasoning_content" : undefined;
 }
-function getCachedApiKey() {
-  return authCache.get(PROVIDER_ID) || process.env.CLOSEDROUTER_API_KEY || readStoredKeyFallback();
+function buildReasoningVariants(efforts) {
+  if (!efforts?.length)
+    return;
+  return Object.fromEntries(efforts.map((effort) => [effort, { reasoningEffort: effort }]));
 }
-async function fetchModels(apiKey) {
-  const cached = modelCache.get(apiKey);
-  if (cached && cached.expiresAt > Date.now()) {
-    return cached.models;
-  }
-  try {
-    const res = await fetch(`${API_BASE}/models`, {
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        Accept: "application/json"
+function build(model) {
+  const npmPackage = model.aisdk_provider || DEFAULT_NPM;
+  const inputModalities = normalizeModalities(model.modalities?.input, ["text"]);
+  const outputModalities = normalizeModalities(model.modalities?.output, ["text"]);
+  const hasImageInput = inputModalities.includes("image");
+  const supportsReasoning = model.capabilities?.reasoning ?? false;
+  const interleavedField = supportsReasoning ? getInterleavedReasoningField(model) : undefined;
+  const reasoningVariants = buildReasoningVariants(model.capabilities?.reasoning_efforts);
+  const needsProviderOverride = npmPackage !== DEFAULT_NPM;
+  const sdkModel = {
+    id: model.id,
+    providerID: PROVIDER_ID,
+    api: {
+      id: model.id,
+      url: API_BASE,
+      npm: npmPackage
+    },
+    name: model.id,
+    status: "active",
+    capabilities: {
+      temperature: true,
+      reasoning: supportsReasoning,
+      attachment: model.capabilities?.attachment ?? hasImageInput,
+      toolcall: model.capabilities?.tool_call ?? true,
+      input: {
+        text: inputModalities.includes("text"),
+        audio: inputModalities.includes("audio"),
+        image: inputModalities.includes("image"),
+        video: inputModalities.includes("video"),
+        pdf: inputModalities.includes("pdf")
+      },
+      output: {
+        text: outputModalities.includes("text"),
+        audio: outputModalities.includes("audio"),
+        image: outputModalities.includes("image"),
+        video: outputModalities.includes("video"),
+        pdf: outputModalities.includes("pdf")
+      },
+      interleaved: interleavedField ? { field: interleavedField } : false
+    },
+    cost: {
+      input: 0,
+      output: 0,
+      cache: {
+        read: 0,
+        write: 0
       }
-    });
-    if (!res.ok)
-      return [];
-    const json = await res.json();
-    const models = json.data ?? [];
-    modelCache.set(apiKey, {
-      expiresAt: Date.now() + MODEL_CACHE_TTL_MS,
-      models
-    });
-    return models;
+    },
+    limit: {
+      context: model.context_window,
+      input: undefined,
+      output: model.max_output_tokens
+    },
+    options: {
+      ...reasoningVariants ? { variants: reasoningVariants } : {}
+    },
+    headers: {},
+    release_date: "",
+    ...needsProviderOverride ? { provider: { npm: npmPackage } } : {}
+  };
+  if (reasoningVariants) {
+    sdkModel.variants = reasoningVariants;
+  }
+  return sdkModel;
+}
+async function get(baseURL, headers = {}, existing = {}) {
+  const res = await fetch(`${baseURL}/models`, {
+    headers,
+    signal: AbortSignal.timeout(5000)
+  });
+  if (!res.ok) {
+    throw new Error(`Failed to fetch models: ${res.status}`);
+  }
+  const data = await res.json();
+  const remoteModels = data.data ?? [];
+  const result = { ...existing };
+  for (const model of remoteModels) {
+    if (model.id && model.context_window != null && model.max_output_tokens != null) {
+      result[model.id] = build(model);
+    }
+  }
+  return result;
+}
+
+// src/index.ts
+import { readFileSync } from "fs";
+import { appendFileSync } from "fs";
+var LOG_FILE = "/tmp/closedrouter-debug.log";
+function log(message, level = "DEBUG") {
+  const line = `[${new Date().toISOString()}] [closedrouter-plugin ${level}] ${message}
+`;
+  try {
+    appendFileSync(LOG_FILE, line);
+  } catch {}
+}
+function getAuthKey() {
+  try {
+    const authPath = `${process.env.HOME}/.local/share/opencode/auth.json`;
+    const data = JSON.parse(readFileSync(authPath, "utf-8"));
+    const auth = data[PROVIDER_ID];
+    if (auth?.type === "api" && auth.key) {
+      return auth.key;
+    }
+    return;
   } catch {
-    return [];
+    return;
   }
 }
-var ClosedRouterPlugin = async (_input) => {
+async function ClosedRouterPlugin(input, _options) {
+  let models = {};
+  log("=== Plugin starting ===");
   return {
     config: async (config) => {
+      log("config hook called");
       config.provider ??= {};
       config.provider[PROVIDER_ID] ??= {};
       config.provider[PROVIDER_ID].npm = "@ai-sdk/openai";
       config.provider[PROVIDER_ID].api = API_BASE;
-      config.provider[PROVIDER_ID].options = {
-        ...config.provider[PROVIDER_ID].options ?? {},
-        ...buildBaseOptions(getCachedApiKey())
-      };
-      const key = getCachedApiKey();
-      if (!key)
+      log(`config set: provider.${PROVIDER_ID}.api = ${API_BASE}`);
+      const apiKey = getAuthKey();
+      if (!apiKey) {
+        log("no auth key found in auth.json");
         return;
-      const models = await fetchModels(key);
-      if (models.length === 0)
-        return;
-      let smallModelId;
-      for (const model of models) {
-        const npmPackage = model.aisdk_provider || "@ai-sdk/openai";
-        const providerKey = getProviderKey(npmPackage);
-        config.provider[providerKey] ??= {};
-        config.provider[providerKey].npm = npmPackage;
-        config.provider[providerKey].api = API_BASE;
-        config.provider[providerKey].options = {
-          ...config.provider[providerKey].options ?? {},
-          ...buildBaseOptions(key)
-        };
-        config.provider[providerKey].models ??= {};
-        const inputModalities = normalizeModalities(model.modalities?.input, ["text"]);
-        const outputModalities = normalizeModalities(model.modalities?.output, ["text"]);
-        const hasImageInput = inputModalities.includes("image");
-        const supportsReasoning = model.capabilities?.reasoning ?? false;
-        const interleavedReasoningField = supportsReasoning ? getInterleavedReasoningField(model) : undefined;
-        const reasoningVariants = buildReasoningVariants(model.capabilities?.reasoning_efforts);
-        config.provider[providerKey].models[model.id] = {
-          name: model.id,
-          attachment: model.capabilities?.attachment ?? hasImageInput,
-          reasoning: supportsReasoning,
-          ...model.capabilities?.reasoning_efforts?.length ? { reasoning_efforts: model.capabilities.reasoning_efforts } : {},
-          ...reasoningVariants ? { variants: reasoningVariants } : {},
-          ...interleavedReasoningField ? {
-            interleaved: {
-              field: interleavedReasoningField
-            }
-          } : {},
-          ...supportsReasoning && supportsOpenAIReasoningOptions(npmPackage) ? {
-            options: buildReasoningModelOptions(model.max_output_tokens)
-          } : {},
-          tool_call: model.capabilities?.tool_call ?? true,
-          modalities: {
-            input: inputModalities,
-            output: outputModalities
-          },
-          ...model.context_window != null || model.max_output_tokens != null ? {
-            limit: {
-              context: model.context_window ?? DEFAULT_CONTEXT_WINDOW,
-              output: model.max_output_tokens ?? DEFAULT_OUTPUT_TOKENS
-            }
-          } : {}
-        };
-        if (!smallModelId && model.id === "title-gen") {
-          smallModelId = `${providerKey}/title-gen`;
-        }
       }
-      if (!config.small_model && smallModelId) {
-        config.small_model = smallModelId;
+      log(`fetching models with auth key (prefix: ${apiKey.substring(0, 10)}...)`);
+      try {
+        const result = await get(API_BASE, {
+          Authorization: `Bearer ${apiKey}`,
+          Accept: "application/json"
+        });
+        log(`fetched ${Object.keys(result).length} models`);
+        for (const [id, model] of Object.entries(result)) {
+          log(`  model: ${id} -> api.id=${model.api.id} npm=${model.api.npm}`);
+        }
+        config.provider[PROVIDER_ID].models ??= {};
+        for (const [id, model] of Object.entries(result)) {
+          config.provider[PROVIDER_ID].models[id] = model;
+        }
+        log(`added ${Object.keys(result).length} models to provider config`);
+      } catch (error) {
+        log(`failed to fetch models: ${error instanceof Error ? error.message : String(error)}`, "ERROR");
       }
     },
     auth: {
       provider: PROVIDER_ID,
-      loader: async (getAuth, providerInfo) => {
-        try {
-          const stored = await getAuth();
-          if (!stored || stored.type !== "api") {
-            return buildBaseOptions();
+      async loader(getAuth) {
+        const info = await getAuth();
+        log(`auth loader called, auth.type=${info?.type || "none"}`);
+        if (!info || info.type !== "api")
+          return {};
+        log(`returning auth with key prefix: ${info.key.substring(0, 10)}...`);
+        return {
+          apiKey: "",
+          async fetch(request, init) {
+            const info2 = await getAuth();
+            if (info2.type !== "api")
+              return fetch(request, init);
+            const headers = {
+              ...init?.headers,
+              Authorization: `Bearer ${info2.key}`
+            };
+            delete headers["x-api-key"];
+            delete headers["authorization"];
+            return fetch(request, {
+              ...init,
+              headers
+            });
           }
-          authCache.set(providerInfo.id, stored.key);
-          authCache.set(PROVIDER_ID, stored.key);
-          return buildBaseOptions(stored.key);
-        } catch {
-          return buildBaseOptions();
-        }
+        };
       },
       methods: [
         {
           type: "api",
-          label: "API Key",
-          prompts: [
-            {
-              type: "text",
-              key: "apiKey",
-              message: "ClosedRouter API key",
-              placeholder: "cr-...",
-              validate: (value) => value.trim().length === 0 ? "API key must not be empty" : undefined
-            }
-          ],
-          async authorize(inputs) {
-            const apiKey = inputs?.apiKey?.trim();
-            if (!apiKey)
-              return { type: "failed" };
-            return { type: "success", key: apiKey };
-          }
+          label: "API Key"
         }
       ]
-    },
-    "chat.headers": async (input, output) => {
-      const providerId = input.provider.info?.id ?? input.model?.providerID;
-      if (typeof providerId !== "string" || !providerId.startsWith(PROVIDER_ID))
-        return;
-      const apiKey = (typeof input.provider.options?.apiKey === "string" ? input.provider.options.apiKey : undefined) ?? authCache.get(providerId) ?? authCache.get(PROVIDER_ID) ?? readStoredKeyFallback();
-      if (!apiKey)
-        return;
-      output.headers.Authorization = `Bearer ${apiKey}`;
     }
   };
-};
+}
 var src_default = ClosedRouterPlugin;
 export {
   src_default as default,
