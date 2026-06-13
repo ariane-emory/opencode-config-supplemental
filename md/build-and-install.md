@@ -7,7 +7,7 @@
 
 **BACKUP IF NEEDED**: If a file already exists at the binary path, use `mv` to add the suffix `.bak` end of its name. If an older backup file with this name exists, it may be deleted. 
 
-**INSTALLATION**: You **MUST** perfrm these steps to install the binary globally:
+**INSTALLATION**: You **MUST** perform these steps to install the binary globally:
 - Copy the binary to `~/.local/bin/baseone.YYYY-MM-DD-HH-mm-ss` (substituting in the timestamp from this integration branch's name).
 - Ensure that it's executable: `chmod +x ~/.local/bin/baseone.YYYY-MM-DD-HH-mm-ss`
 - You **MUST** create a symbolic link to the binary at `~/.local/bin/baseone`: `ln -s ~/.local/bin/baseone.YYYY-MM-DD-HH-mm-ss ~/.local/bin/baseone`.

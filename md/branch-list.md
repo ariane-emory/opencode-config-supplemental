@@ -83,5 +83,6 @@
 - fix/variant-list-toast-no-variants (PR#283)
 - fix/dev-mode-version-fallback (PR#284)
 - fix/embed-skill-file-in-binary (PR#285)
+- fix/dialog-prompt-submit-hints (PR#287)
 
 (you **MUST** ignore any branches whose names begin with `archived`/`obsolete`/ or `failed/`!)
