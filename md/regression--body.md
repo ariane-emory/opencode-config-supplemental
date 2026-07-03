@@ -2,7 +2,7 @@
 **DIAGNOSTIC:** *Body second:* "$2"
 **DIAGNOSTIC:** *Body rest:* "${3..}"
 
-Great, now on to the next item on the agenda: there is a problem with the feature or fix from the $1 branch (PR #$2). 
+Great, now on to the next item on the agenda: there is a problem with the feature or fix from the $1 branch (PR #$2). You should use the `gh` command to review the PR and its description to make sure that you understand its intended purpose. 
 
 ${3..}
 
@@ -12,4 +12,4 @@ The $1 branch was recently updated with the latest changes from upstream/dev, so
 
 If the problem was in the original feature/fix branch, we **SHOULD** check it out, fix the problem there, push that fixed version to origin, then return to this integration branch and merge that updated branch back into this integration branch. If instead the regression occurred during the merging process (perhaps a bad conflict resolution or the like), then we **SHOULD** simply fix here it in this integration branch. 
 
-You **SHOULD** determine the correct branch to fix the problem in, make a plan to fix it, and proceed to do so, thank you.
+You **SHOULD** determine the correct branch to fix the problem in, make a plan to fix it, and proceed to do so. Thank you.
