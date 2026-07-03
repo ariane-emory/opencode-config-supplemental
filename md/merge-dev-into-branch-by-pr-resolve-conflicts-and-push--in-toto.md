@@ -8,5 +8,4 @@
 !`git checkout $(gh --repo ariane-emory/opencode pr view $1 --json headRefName --jq .headRefName) > /dev/null 2>&1 && echo "**SYSTEM:** *Checked out the $(gh --repo ariane-emory/opencode pr view $1 --json headRefName --jq .headRefName) branch.*"`
 !`git checkout dev > /dev/null 2>&1 && echo "**SYSTEM:** *Checked out the dev branch.*"`
 
-
 !`baseone expand ~/ocs/md/merge-dev-into-branch-by-pr-resolve-conflicts-and-push--body.md $(gh --repo ariane-emory/opencode pr view $1 --json headRefName --jq .headRefName) $1 ${2..}`
