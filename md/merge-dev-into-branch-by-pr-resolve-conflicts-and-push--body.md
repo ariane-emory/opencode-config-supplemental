@@ -23,7 +23,7 @@ You may need to run `bun install` again after performing the merge. .Make sure t
 
 **NOTE**: If you get an error about a bun version mismatch, you may need to first install the correct version of bun! 
 
-**REMEMBER**: The global Opencode configuration is most likely **NOT** configured to be compatible with the branch on which you are working!
+**REMEMBER**: The global OpenCode configuration is most likely **NOT** configured to be compatible with the branch on which you are working!
 
 **REMEMBER**: You **SHOULD** use the `todowrite` tool to maintain a to-do list to keep track of your progress and to ensure that the user can easily monitor it as you proceed. 
 
