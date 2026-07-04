@@ -1,7 +1,7 @@
 **SYSTEM:** *Branch to work on: "$1"*
 **SYSTEM:** *PR number for this branch: "$2"*
 
-### Your mission: Merge the latest changes from the dev branch into the $1 branch while resolving any conflicts that occur
+### Your mission: Merge the latest changes from the dev branch into the $1 branch (branch for PR #$2) while resolving any conflicts that occur
 
 ### Preparation:
 
