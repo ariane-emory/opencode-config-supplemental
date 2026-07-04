@@ -19,7 +19,7 @@ If a git lock file gets in your way, you **SHOULD** delete it and keep working o
 
 ### Notes:
 
-You may need to run `bun install` again after performing the merge. .Make sure that no new test failures were introduced by the merge: you may disregard any pre-existing test failures in the dev branch, but we don't want to add any new test failures relative to dev. If tests fail due to a timeout (in either branch), try waiting a moment and rerunning them, it may just mean that that test is a bit flaky.
+You may need to run `bun install` again after performing the merge. You **MUST** sure that no new test failures were introduced by the merge: you **SHOULD** disregard any pre-existing test failures in the dev branch, but we don't want to add any new test failures relative to dev. If tests fail due to a timeout (in either branch), try waiting a moment and rerunning them, it may just mean that that test is a bit flaky.
 
 **NOTE**: If you get an error about a bun version mismatch, you may need to first install the correct version of bun! 
 
