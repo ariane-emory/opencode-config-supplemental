@@ -1,7 +1,6 @@
 **DIAGNOSTIC:** *In toto first:* "$1"
 **DIAGNOSTIC:** *In toto second:* "$2"
 **DIAGNOSTIC:** *In toto rest:* "${3..}"
-
 !`git reset --hard HEAD > /dev/null 2>&1 && echo "**SYSTEM:** *Reset repo state.*"; `
 !`git clean -fd > /dev/null 2>&1 && echo "**SYSTEM:** *Cleaned untracked files.*";`
 !`git fetch > /dev/null 2>&1 && echo "**SYSTEM:** *Ran git fetch.*"; `
