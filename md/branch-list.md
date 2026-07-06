@@ -69,7 +69,6 @@
 - fix/textarea-input-enter-keybindings (PR#286)
 - fix/escape-from-status (PR#245)
 - fix/restore-footer (PR#175, **MERGE ADVICE:** As its name suggests, this feature restores the footer it was removed in a previous version; it must not be allowed to be clobbered by other branches when merging!)
-- feat/remove-canned-jokes (PR#247)
 - fix/session-list-delete-selection (PR#255)
 - feat/kimi-with-claude-system-prompt (PR#246)
 - fix/less-bottom-padding (PR#263)
