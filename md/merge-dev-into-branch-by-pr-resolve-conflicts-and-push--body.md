@@ -11,7 +11,7 @@ You **SHOULD** take my word for it that the dev branch and the $1 branch already
 
 Then, you **MUST** run the tests to see what pre-existing errors exist. If the dev branch contains pre-existing errors, you **MUST** preserve them when you merge it into the $1 branch. If you just ran these same tests on the dev branch recently, you **SHOULD** skip re-running them and reuse the results that you saw a moment ago the last time that you ran them. The tests can take a while to run, so you **SHOULD** be sure to use a long timeout value, if any — using no time at value at all is very likely the safest option!
 
-**NOTE**: If you happen to discover pre-existing errors in the feature $1 branch while you're worrking, then fixing those is alright so long as the central feature of the branch described in the pull request is preserved. If you're not sure, you can pause and ask me using the `question` tool. 
+**NOTE**: If you happen to discover pre-existing errors in the $1 branch while you're worrking, then fixing those is alright so long as the central feature of the branch described in the pull request is preserved. If you're not sure, you can pause and ask me using the `question` tool. 
 
 Then, you **MUST** check out the $1 branch, merge the local dev branch into it and resolve any conflicts. Bear in mind that earlier versions of the dev branch are likely to have been merged into the $1 branch many times previously! 
 
