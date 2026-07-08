@@ -53,7 +53,7 @@ There is no particular time constraint here, so don't rush, take the time that y
 
 **CRITICAL**: You **MUST NOT** forget to push the merged $1 branch to origin once you have finished. 
 
-**IMPORTANT**: Focus on preserving the central feature or fix that this branch provides, as described in its pull request! The structure in the newer dev branch HEAD may have changed, in which case it is more important to adapt the intended feature or fix to the new structure rather than to preserve the exact structure in the original branch! We want to be sure to make sure that the central fix or feature provided by the branch is made to work with the current structure of the dev branch! 
+**IMPORTANT**: Focus on preserving the central feature or fix that this branch provides, as described in its pull request! The structure in the newer dev branch HEAD may have changed, in which case it is more important to adapt the intended feature or fix to the new structure rather than to preserve the exact structure in the original branch! We want to be sure to make sure that the central fix or feature provided by the branch is made to work with the current structure of the dev branch! If the branch that we are updating is a fix branch (rather than a feature branch) then is within the realm of possibility that the branch  may have been rendered obsolete: perhaps the error that the branch had been originally meant to fix was already fixed in the newer dev branch and there is thus no longer any need for this branch. If you think this occurred, feel encouraged to pause and ask me questions (you can use the `question` tool) and confirm whether you should proceed further. 
 
 ### Remember: 
 
