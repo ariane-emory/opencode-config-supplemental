@@ -78,7 +78,6 @@
 - fix/model-selection-follows-favorite (PR#280)
 - fix/integration-version-plugin-compatibility (PR#281)
 - fix/hide-session-pinning-feature (PR#282)
-- fix/variant-list-toast-no-variants (PR#283)
 - fix/dev-mode-version-fallback (PR#284)
 - fix/embed-skill-file-in-binary (PR#285)
 - fix/dialog-prompt-submit-hints (PR#287)
